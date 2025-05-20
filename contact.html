@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Proces360°</title>
+  <meta name="description" content="Neem contact op met Proces360° – we reageren binnen één werkdag.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.png"> <style>
+    /* Stijlen voor de content-article-achtige opmaak op deze pagina */
+    .content-article, /* Ook toegepast als u .intro/.visie vervangt door .content-article */
+    .intro, /* Huidige class voor het formulierblok */
+    .visie  /* Huidige class voor het Quickscan-call blok */ {
+      padding: 2rem 3rem;
+      width: 95%; /* Of de breedte die u nu voor .intro/.visie in styles.css heeft staan */
+      /* max-width: 1000px; */ /* Max breedte uit uw styles.css voor .intro/.visie */
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 10px; /* Consistent met .intro/.visie uit styles.css */
+      box-shadow: var(--shadow);
+    }
+    .content-article h2,
+    .intro h2,
+    .visie h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--orange);
+      display: inline-block;
+    }
+    .content-article h2:first-of-type,
+    .intro h2:first-of-type, /* Voor het formulierblok */
+    .visie h2:first-of-type { /* Voor het Quickscan-call blok */
+        margin-top: 0;
+    }
+    .content-article p,
+    .intro p, /* Als er p's in .intro zijn */
+    .visie p,
+    .content-article ul,
+    .intro ul,
+    .visie ul,
+    .content-article ol,
+    .intro ol,
+    .visie ol {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      max-width: 75ch;
+    }
+    .content-article ul, .content-article ol,
+    .intro ul, .intro ol, /* Styling voor lijsten binnen .intro en .visie, indien aanwezig */
+    .visie ul, .visie ol {
+      padding-left: 2rem;
+    }
+    .content-article ul li,
+    .intro ul li,
+    .visie ul li {
+      margin-bottom: 0.5rem;
+    }
+    .content-article .note, /* Als .note class gebruikt wordt */
+    .intro .note,
+    .visie .note {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #555;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid var(--orange);
+      margin-top: 1rem;
+      max-width: 75ch;
+    }
+    .subtle-divider { /* Als u <hr class="subtle-divider"> gebruikt */
+      border: 0;
+      height: 1px;
+      background-color: #e0e0e0;
+      margin: 3rem auto;
+      max-width: 75ch;
+    }
+    /* Formulier specifieke styling (uit uw styles.css overgenomen en iets verfijnd) */
+    .intro form { /* Doelgericht op form binnen .intro */
+        max-width: 100%; /* Formulier neemt breedte van .intro aan */
+        padding: 0; /* Geen extra padding als .intro al padding heeft */
+        box-shadow: none; /* Geen dubbele schaduw */
+        background: transparent; /* Geen extra achtergrond */
+    }
+    .intro form .row{ margin-bottom:1.2rem; }
+    .intro form label{
+      display:block;
+      font-weight:600;
+      margin-bottom:.4rem;
+      color: var(--text);
+    }
+    .intro form input,
+    .intro form textarea{
+      width:100%;
+      padding:.8rem;
+      border:1px solid #ccc; /* var(--form-border) */
+      border-radius:6px;
+      background:#f9f9f9; /* var(--form-bg) */
+      font-size:1rem;
+    }
+    .intro form input:focus,
+    .intro form textarea:focus{
+      border-color:var(--orange);
+      outline:none;
+    }
+    .intro form .cta-button { /* Zorgt dat de button binnen het form de juiste styling heeft */
+        margin-top: 1rem; /* Ruimte boven de verstuurknop */
+    }
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="nav-wrap">
+    <img src="img/LOGO_proces360.png" alt="Proces360°" class="logo"> <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="quickscan.html">Quickscan</a></li>
+      <li><a href="roi-calculator-toegang.html">ROI Calculator</a></li> <li><a href="diensten.html">Diensten</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li> </ul>
+    <div class="language-switcher">
+      <a href="contact.html" class="lang-btn active">NL</a> </div>
+  </div>
+</header>
+<section class="hero">
+  <h1>Laat ons samenwerken aan uw rendement</h1>
+  <p>Bel, mail of gebruik de live chat – we reageren binnen één werkdag.</p>
+</section>
+
+<section class="intro"> <h2>Neem direct contact op</h2>
+  <form action="mailto:info@proces360.com" method="post" enctype="text/plain">
+    <div class="row">
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" name="Naam" required>
+    </div>
+    <div class="row">
+      <label for="bedrijf">Bedrijf</label>
+      <input type="text" id="bedrijf" name="Bedrijf">
+    </div>
+    <div class="row">
+      <label for="telefoon">Telefoon</label>
+      <input type="tel" id="telefoon" name="Telefoon">
+    </div>
+    <div class="row">
+      <label for="bericht">Bericht</label>
+      <textarea id="bericht" name="Bericht" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="cta-button">Verstuur</button>
+  </form>
+</section>
+
+<section class="visie"> <h2>Vrijblijvende Quickscan-call?</h2>
+  <p>Twijfelt u nog? Plan een vrijblijvende Quickscan-call van 15 minuten. We kijken samen of een on-site Quickscan zinvol is.</p>
+  <div class="cta-wrapper">
+    <a href="mailto:info@proces360.com?subject=Plan%20Quickscan-call" class="cta-button">Plan gesprek (mail)</a>
+    <a href="https://wa.me/31630185844?text=Hallo%20Rob%2C%20graag%20een%20Quickscan-call" target="_blank" class="cta-button chat">Plan gesprek (WhatsApp)</a> </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Proces360° – Slimme automatisering, advisering en impact.</p>
+  <p><a href="mailto:info@proces360.com">info@proces360.com</a> | <a href="https://www.proces360.com" target="_blank">www.proces360.com</a></p>
+  <p class="legal-links">
+    <a href="legal%20pages/privacy.html">Privacyverklaring</a> |
+    <a href="legal%20pages/cookieverklaring.html">Cookieverklaring</a> |
+    <a href="legal%20pages/disclaimer.html">Disclaimer</a> |
+    <a href="legal%20pages/voorwaarden.html">Algemene Voorwaarden</a> |
+    <a href="legal%20pages/colofon.html">Colofon</a>
+  </p>
+</footer>
+
+<script src="whatsapp.js"></script> </body>
+</html>

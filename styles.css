@@ -1,0 +1,248 @@
+/* ====================== */
+/* FILE: styles.css       */
+/* ====================== */
+
+/* ---------- 1. GLOBAL ---------- */
+:root{
+  /* merk­­kleuren */
+  --brand-blue:   #0336ac;  /* “Proces”  */
+  --brand-orange: #e86a0e;  /* “360°”    */
+
+  /* bestaande palette */
+  --blue:         #1f2e3d; /* Donkerblauw van de header, nu ook voor hero titels */
+  --orange:       #ff7f11;
+  --orange-dark:  #e66900;
+  /* --green:        #10b981; */ /* Groen wordt minder gebruikt */
+  /* --green-dark:   #0e9b70; */ /* Groen wordt minder gebruikt */
+  --bg:           #f5f5f5;
+  --text:         #1a1a1a;
+  --shadow:       0 4px 10px rgba(0,0,0,.05);
+  --footer-link-color: #aabbcc; /* Kleur voor footer links (was al voor legal) */
+}
+
+*,*:before,*:after{box-sizing:border-box}
+body{
+  margin:0;
+  /* NIEUW LETTERTYPE: Vervang 'Segoe UI' door bijvoorbeeld 'Open Sans' */
+  font-family:'Open Sans', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ---------- 2. UTILITIES ---------- */
+/* gebruik: <span class="brand"><b>Proces</b><span>360°</span></span> */
+.brand b        { color:var(--brand-blue); }
+.brand span     { color:var(--brand-orange); }
+
+/* ---------- 3. HEADER & NAV ---------- */
+.main-header{
+  background:var(--blue);
+  padding:.5rem 2rem;
+}
+.nav-wrap{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.logo{ height: 160px; flex-shrink:0; }
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:2rem;
+  margin:0;
+  padding:0;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:650;
+  font-size:1.1rem;
+  padding:12px 20px;
+  border-radius:6px;
+  transition:.2s;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  background:var(--orange);
+  color:#fff;
+}
+
+/* ---------- 4. HERO ---------- */
+.hero{
+  text-align:center;
+  padding:3rem 1.5rem;
+  background:linear-gradient(to right,#e8e8e8,#f2f2f2);
+  /* Kleur van de tekst in .hero sectie wordt niet algemeen gezet, h1 specifiek wel */
+}
+.hero h1 {
+  font-size: 1.8rem; /* Bestaande grootte, lijkt passend */
+  font-weight: 600;
+  line-height: 1.2; /* Iets meer ruimte voor leesbaarheid */
+  /* NIEUWE KLEUR: Alle H1 in hero secties krijgen de donkerblauwe header kleur */
+  color: var(--blue);
+  /* Belangrijk: Dit overschrijft mogelijk inline styles of span kleuren in de H1 tenzij die !important zijn.
+     Voor Index.html H1 met specifieke span kleuren, kan een aanpassing in HTML nodig zijn als dit niet werkt. */
+}
+.hero h1 span { /* Zorg dat spans binnen de H1 ook de ingestelde H1 kleur erven of specifiek krijgen */
+    color: inherit; /* Erft de kleur van de H1, dus var(--blue) */
+}
+.hero p{ font-size:1.1rem; margin:.5em 0; color: var(--text); /* Zorgen dat paragraafkleur consistent is */ }
+
+@media (max-width:500px){
+  .hero h1{ font-size:2.2rem; } /* Blijft behouden voor mobiel */
+}
+
+/* CTA-buttons */
+.cta-wrapper{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:1.5rem;
+}
+.cta-button {
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cta-button:hover{ background:var(--orange-dark); }
+
+/* AANPASSING: Groene chat button wordt nu ook oranje */
+.cta-button.chat{
+  background:var(--orange); /* Was var(--green) */
+}
+.cta-button.chat:hover{
+  background:var(--orange-dark); /* Was var(--green-dark) */
+}
+
+/* ---------- 5. CONTENT BOXES ---------- */
+.intro,
+.visie,
+.services,
+.case-list{
+  padding:3rem 2rem;
+  max-width: 1500px;
+  margin:2rem auto;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+/* h1,h2 hebben al kleur var(--blue) via individuele of section styling, .hero h1 is nu explicieter */
+h2{ color:var(--blue); } /* Standaard H2 kleur */
+
+/* ---------- 6. FOOTER ---------- */
+.footer{
+  text-align:center;
+  padding:2rem;
+  background:var(--blue);
+  color:#fff;
+  font-size:.95rem;
+}
+
+.footer a{
+  /* AANPASSING: Algemene footer links (info@ en www) krijgen nu de --footer-link-color */
+  color:var(--footer-link-color); /* Was var(--green) */
+  text-decoration:none;
+}
+.footer a:hover {
+  color: #ffffff; /* Links worden wit bij hover */
+  text-decoration: underline;
+}
+
+/* ---------- 7. FORM ---------- */
+form{
+  max-width:700px;
+  margin:2rem auto;
+  padding:2rem;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+form .row{ margin-bottom:1.2rem; }
+form label{
+  display:block;
+  font-weight:600;
+  margin-bottom:.4rem;
+}
+form input,
+form textarea{
+  width:100%;
+  padding:.8rem;
+  border:1px solid #ccc;
+  border-radius:6px;
+  background:#f9f9f9;
+  font-size:1rem;
+}
+form input:focus,
+form textarea:focus{
+  border-color:var(--orange);
+  outline:none;
+}
+
+/* ---------- 8. CASES GRID ---------- */
+.case-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.case-card{
+  background:#fff;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  padding:1.5rem;
+}
+.case-card h3{ margin-top:0; color:var(--blue); }
+
+/* ---------- STYLING VOOR TAALBUTTONS (TOEGEVOEGD) ---------- */
+.language-switcher {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.language-switcher .lang-btn {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.language-switcher .lang-btn:hover,
+.language-switcher .lang-btn.active {
+  background-color: var(--orange);
+  color: #ffffff;
+}
+
+/* ---------- STYLING VOOR JURIDISCHE LINKS IN FOOTER (TOEGEVOEGD) ---------- */
+.footer .legal-links {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #4a5e70;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  line-height: 1.5;
+}
+
+.footer .legal-links a {
+  color: var(--footer-link-color); /* Gebruikt nu de CSS variabele */
+  text-decoration: none;
+}
+
+.footer .legal-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eenvoudige ROI Calculator - Proces360°</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
+
+    <style>
+        :root {
+            --blue: #1f2e3d;
+            --blue-light: #2b3f54;
+            --brand-blue: #0336ac; /* Oorspronkelijke blauw, niet meer gebruikt voor header banner */
+            --orange: #ff7f11;
+            --orange-dark: #e66900;
+            --green: #10b981;
+            --green-dark: #0e9b70;
+            --text: #ffffff;
+            --input-bg: #2d4259;
+            --input-border: #47627c;
+        }
+        body {
+            background-color: var(--blue);
+            color: var(--text);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-size: 14px;
+        }
+        .sidebar {
+            width: 350px;
+            background-color: var(--blue-light);
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            color: var(--text);
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .header-banner {
+            background-color: var(--orange); /* Aangepast naar oranje */
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .header-banner h1 {
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+        }
+        .sidebar h2, .sidebar h3 {
+            color: var(--text);
+            border-bottom: 1px solid var(--orange);
+            padding-bottom: 5px;
+        }
+        .main-content h1, .main-content h2, .main-content h3 {
+             color: var(--text);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: var(--text);
+            font-size: 0.9em;
+        }
+        input[type="number"], input[type="text"], select {
+            width: calc(100% - 22px);
+            padding: 8px 10px;
+            background-color: var(--input-bg);
+            color: var(--text);
+            border-radius: 8px;
+            border: 1px solid var(--input-border);
+            box-sizing: border-box;
+        }
+        button { /* Algemene knopstijl */
+            background-color: var(--orange);
+            color: #fff;
+            border-radius: 8px;
+            padding: 10px 18px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: var(--orange-dark);
+        }
+        .metric-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .metric {
+            background-color: var(--blue-light);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 5px;
+            min-width: 200px;
+            border: 1px solid var(--brand-blue);
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .info-banner { /* Ook gebruikt voor totale investering in sidebar */
+            background-color: var(--blue-light);
+            color: var(--text);
+            border: 1px solid var(--brand-blue);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        .warning-banner {
+            background-color: var(--orange-dark);
+            color: var(--text);
+            border: 1px solid var(--orange);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--input-border);
+            margin: 20px 0;
+        }
+        .logo-placeholder {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .footer-caption {
+            text-align: center;
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid var(--input-border);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--blue-light);
+        }
+        .download-buttons {
+            margin-top: 20px;
+        }
+        .download-buttons button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-placeholder">Proces360°</div>
+        <h2>Scenario-configuratie (Eenvoudig)</h2>
+
+        <div id="input-form">
+            <h3>Basisgegevens</h3>
+            <label for="fte_voor">Huidig aantal FTE's (per ploeg):</label>
+            <input type="number" id="fte_voor" value="2.0" step="0.1">
+
+            <label for="fte_na">Aantal FTE's na automatisering (per ploeg):</label>
+            <input type="number" id="fte_na" value="1.0" step="0.1">
+
+            <label for="fte_kosten_jaar">Gemiddelde jaarlijkse kosten per FTE (€):</label>
+            <input type="number" id="fte_kosten_jaar" value="50000.0" step="1000">
+
+            <label for="aantal_ploegen">Aantal ploegen per dag:</label>
+            <select id="aantal_ploegen">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h3>Geschatte Investeringen</h3>
+            <label for="invest_cobot_robot">Geschatte kosten Cobot/Robot (€):</label>
+            <input type="number" id="invest_cobot_robot" value="25000.0" step="500.0">
+
+            <label for="invest_gripper">Geschatte kosten Gripper (€):</label>
+            <input type="number" id="invest_gripper" value="3000.0" step="100.0">
+
+            <label for="invest_training">Geschatte kosten Training (€):</label>
+            <input type="number" id="invest_training" value="1500.0" step="100.0">
+
+            <label for="invest_extra">Geschatte extra kosten (integratie, etc.) (€):</label>
+            <input type="number" id="invest_extra" value="5000.0" step="100.0">
+
+            <div class="info-banner" id="total_investment_display" style="margin-top: 15px; font-weight:bold;">Totale Investering: € 0</div>
+
+            <button onclick="runAnalysis()" style="width:100%; margin-top:20px; padding: 12px;">Analyse Uitvoeren</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header-banner">
+            <h1>Eenvoudige ROI Calculator - Proces360°</h1>
+        </div>
+
+        <div id="results-area" style="display:none;">
+            <h2>Resultaten en Rapportage - Eenvoudige ROI Analyse</h2>
+            <div id="warning-message-area"></div>
+
+            <h3>Financiële Kerncijfers</h3>
+            <div class="metric-container">
+                <div class="metric">
+                    <div class="metric-label">Totale Investering</div>
+                    <div class="metric-value" id="res_totale_investering">€ 0</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Terugverdientijd</div>
+                    <div class="metric-value" id="res_terugverdientijd_mnd">N/A</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Netto Jaarlijkse Baten</div>
+                    <div class="metric-value" id="res_netto_jaarlijkse_baten">€ 0</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Jaarlijkse ROI (%)</div>
+                    <div class="metric-value" id="res_roi_jaarlijks_pct">0.0%</div>
+                </div>
+            </div>
+            <hr>
+
+            <h3>Cumulatieve Netto Baten vs. Investering</h3>
+            <p style="font-size:0.85em; color: #ccc;">Gebaseerd op een standaard levensduur van <span id="chart_lifespan_years">5</span> jaar.</p>
+            <canvas id="cumulativeBenefitsChart" height="120"></canvas>
+            <hr>
+
+            <div id="detailed_results">
+                 <h3>Specificatie Jaarlijkse Baten</h3>
+                 <table id="baten_kosten_table">
+                     <thead><tr><th>Component</th><th>Bedrag (€/jr)</th></tr></thead>
+                     <tbody></tbody>
+                     <tfoot><tr><td><strong>Totaal Netto Jaarlijkse Baten:</strong></td><td style="font-weight:bold; text-align:right;" id="baten_kosten_total">€ 0</td></tr></tfoot>
+                 </table>
+                 <hr>
+
+                 <h3>Specificatie Eenmalige Investeringen</h3>
+                 <table id="investeringen_table">
+                     <thead><tr><th>Item</th><th>Kosten (€)</th></tr></thead>
+                     <tbody></tbody>
+                     <tfoot><tr><td><strong>Totaal Eenmalige Investering:</strong></td><td style="font-weight:bold; text-align:right;" id="investeringen_total">€ 0</td></tr></tfoot>
+                 </table>
+                 <hr>
+
+                 <h3>Jaarlijkse Cashflow Projectie</h3>
+                 <p style="font-size:0.85em; color: #ccc;">Gebaseerd op een standaard levensduur van <span id="cashflow_lifespan_years">5</span> jaar en geen restwaarde.</p>
+                 <table id="cashflow_table">
+                     <thead><tr><th>Jaar</th><th>Cashflow (€)</th><th>Cumulatieve CF (€)</th></tr></thead>
+                     <tbody></tbody>
+                 </table>
+            </div>
+
+            <h3>Downloads</h3>
+            <div class="download-buttons">
+                <button onclick="downloadPDF()">Download Eenvoudige Analyse (PDF)</button>
+            </div>
+        </div>
+         <div class="footer-caption">
+            Eenvoudige ROI Calculator - © <span id="currentYear"></span> Proces360°
+        </div>
+    </div>
+
+<script>
+    const VALUTA_SYMBOOL = "€";
+    const BEDRIJFSNAAM = "Proces360°";
+    const PDF_CONTACT_INFO = "Contact: Rob Derks | rob@proces360.com | 06 30185844"; // Behoud contactinfo
+    const STANDAARD_LEVENSDUUR_JAREN = 5; // Voor grafiek en cashflow
+
+    // Investering keys voor eenvoudige versie
+    const simpleInvestKeys = [
+        'invest_cobot_robot', 'invest_gripper', 'invest_training', 'invest_extra'
+    ];
+
+    let cumulativeBenefitsChartInstance = null; // Grafiek instance
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('chart_lifespan_years').textContent = STANDAARD_LEVENSDUUR_JAREN;
+        document.getElementById('cashflow_lifespan_years').textContent = STANDAARD_LEVENSDUUR_JAREN;
+
+        updateTotalInvestmentDisplay(); // Initieel berekenen
+
+        // Listeners voor dynamische update van totale investering
+        simpleInvestKeys.forEach(key => {
+            document.getElementById(key).addEventListener('input', updateTotalInvestmentDisplay);
+        });
+
+        // Listener voor alle input velden om analyse te triggeren bij wijziging
+        const inputs = document.querySelectorAll('#input-form input, #input-form select');
+        inputs.forEach(input => {
+            input.addEventListener('change', runAnalysis);
+        });
+
+        runAnalysis(); // Initiele run met default waarden
+    });
+
+    function updateTotalInvestmentDisplay() {
+        let total = 0;
+        simpleInvestKeys.forEach(key => {
+            total += parseFloat(document.getElementById(key).value) || 0;
+        });
+        document.getElementById('total_investment_display').textContent = `Totale Investering: ${VALUTA_SYMBOOL} ${total.toLocaleString('nl-NL', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+    }
+
+    function getInputData() {
+        const investSpec = {};
+        let totaleInvestering = 0;
+        simpleInvestKeys.forEach(key => {
+            const val = parseFloat(document.getElementById(key).value) || 0;
+            investSpec[key.replace('invest_', '')] = val; // Sla op met kortere naam
+            totaleInvestering += val;
+        });
+
+        return {
+            fte_voor: parseFloat(document.getElementById('fte_voor').value) || 0,
+            fte_na: parseFloat(document.getElementById('fte_na').value) || 0,
+            fte_kosten_jaar_pfte: parseFloat(document.getElementById('fte_kosten_jaar').value) || 0,
+            aantal_ploegen: parseInt(document.getElementById('aantal_ploegen').value) || 1,
+            invest_spec: investSpec,
+            totale_investering: totaleInvestering,
+            economische_levensduur_jaren: STANDAARD_LEVENSDUUR_JAREN // Vaste levensduur
+        };
+    }
+
+    function bereken_roi_en_metrics(d) {
+        // Arbeidskostenbesparing
+        // (FTE voor - FTE na) geeft besparing per ploeg. Vermenigvuldig met aantal ploegen voor totale FTE besparing.
+        const besparing_fte_totaal = (d.fte_voor - d.fte_na) * d.aantal_ploegen;
+        let arbeidsbesparing_jr = 0;
+        if (besparing_fte_totaal > 0) {
+            arbeidsbesparing_jr = besparing_fte_totaal * d.fte_kosten_jaar_pfte;
+        }
+
+        // Netto jaarlijkse baten (vereenvoudigd)
+        const netto_jaarlijkse_baten = arbeidsbesparing_jr; // Geen andere kosten/baten in deze simpele versie
+
+        // Terugverdientijd
+        const maandelijkse_netto_baten = netto_jaarlijkse_baten / 12.0;
+        const terugverdientijd_mnd = (d.totale_investering > 0 && maandelijkse_netto_baten > 0) ? d.totale_investering / maandelijkse_netto_baten : Infinity;
+
+        // ROI percentage per jaar
+        const roi_jr_pct = (d.totale_investering > 0) ? (netto_jaarlijkse_baten / d.totale_investering) * 100.0 : 0.0;
+
+        // Cashflows voor grafiek (vereenvoudigd, geen restwaarde)
+        const cashflows = [-d.totale_investering];
+        for (let j = 0; j < d.economische_levensduur_jaren; j++) {
+            cashflows.push(netto_jaarlijkse_baten);
+        }
+
+        // Cumulatieve netto baten voor grafiek
+        const cumulatief_netto_baten_grafiek = [0.0]; // Start op maand 0
+        let running_total_baten = 0.0;
+        // Grafiek tot max 60 maanden (5 jaar) of levensduur
+        const maanden_voor_grafiek = Math.min(d.economische_levensduur_jaren * 12 + 1, 61);
+        for (let m = 1; m < maanden_voor_grafiek; m++) {
+            running_total_baten += maandelijkse_netto_baten;
+            cumulatief_netto_baten_grafiek.push(parseFloat(running_total_baten.toFixed(2)));
+        }
+
+        return {
+            netto_jaarlijkse_baten: netto_jaarlijkse_baten,
+            roi_terugverdientijd_mnd: terugverdientijd_mnd,
+            roi_jaarlijks_pct: roi_jr_pct,
+            cumulatief_netto_baten_grafiek: cumulatief_netto_baten_grafiek,
+            cashflows_jaarlijks: cashflows, // Jaarlijkse cashflows
+            details_baten_kosten: {
+                [`Arbeidskostenbesparing (${VALUTA_SYMBOOL}/jr)`]: arbeidsbesparing_jr
+            }
+            // NPV en IRR zijn weggelaten
+        };
+    }
+
+    function displayResults(d_input, r_calc) {
+        const formatCurrency = (value) => `${VALUTA_SYMBOOL} ${value.toLocaleString('nl-NL', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+        const formatMonths = (value) => isFinite(value) ? `${value.toFixed(1)} maanden` : "Niet rendabel";
+        const formatPercent = (value) => !isNaN(value) && isFinite(value) ? `${value.toFixed(1)}%` : "N.v.t.";
+
+        document.getElementById('res_totale_investering').textContent = formatCurrency(d_input.totale_investering);
+        document.getElementById('res_terugverdientijd_mnd').textContent = formatMonths(r_calc.roi_terugverdientijd_mnd);
+        document.getElementById('res_netto_jaarlijkse_baten').textContent = formatCurrency(r_calc.netto_jaarlijkse_baten);
+        document.getElementById('res_roi_jaarlijks_pct').textContent = formatPercent(r_calc.roi_jaarlijks_pct);
+
+        // Update details tabellen
+        const batenKostenTableBody = document.getElementById('baten_kosten_table').getElementsByTagName('tbody')[0];
+        batenKostenTableBody.innerHTML = "";
+        for (const [key, value] of Object.entries(r_calc.details_baten_kosten)) {
+            const row = batenKostenTableBody.insertRow();
+            row.insertCell().textContent = key;
+            const cellVal = row.insertCell();
+            cellVal.textContent = formatCurrency(value);
+            cellVal.style.textAlign = "right";
+        }
+        document.getElementById('baten_kosten_total').textContent = formatCurrency(r_calc.netto_jaarlijkse_baten);
+
+        const investeringenTableBody = document.getElementById('investeringen_table').getElementsByTagName('tbody')[0];
+        investeringenTableBody.innerHTML = "";
+        for (const [key, value] of Object.entries(d_input.invest_spec)) {
+            if (value >= 0) { // Toon ook als 0 is ingevuld
+                 const row = investeringenTableBody.insertRow();
+                 row.insertCell().textContent = `Geschatte kosten ${key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ')}`;
+                 const cellVal = row.insertCell();
+                 cellVal.textContent = formatCurrency(value);
+                 cellVal.style.textAlign = "right";
+            }
+        }
+        document.getElementById('investeringen_total').textContent = formatCurrency(d_input.totale_investering);
+
+        const cashflowTableBody = document.getElementById('cashflow_table').getElementsByTagName('tbody')[0];
+        cashflowTableBody.innerHTML = "";
+        let cumulative_cf = 0;
+        r_calc.cashflows_jaarlijks.forEach((cf, index) => {
+            cumulative_cf += cf;
+            const row = cashflowTableBody.insertRow();
+            row.insertCell().textContent = index;
+            const cellCF = row.insertCell(); cellCF.textContent = formatCurrency(cf); cellCF.style.textAlign = "right";
+            const cellCumCF = row.insertCell(); cellCumCF.textContent = formatCurrency(cumulative_cf); cellCumCF.style.textAlign = "right";
+        });
+
+        // Update grafiek
+        const chartData = {
+            labels: Array.from({ length: r_calc.cumulatief_netto_baten_grafiek.length }, (_, i) => i),
+            datasets: [
+                {
+                    label: `Cumulatieve Netto Baten (${VALUTA_SYMBOOL})`,
+                    data: r_calc.cumulatief_netto_baten_grafiek,
+                    borderColor: getComputedStyle(document.documentElement).getPropertyValue('--green').trim(),
+                    backgroundColor: 'transparent',
+                    tension: 0.1
+                },
+                {
+                    label: `Investering (${VALUTA_SYMBOOL})`,
+                    data: Array(r_calc.cumulatief_netto_baten_grafiek.length).fill(d_input.totale_investering),
+                    borderColor: getComputedStyle(document.documentElement).getPropertyValue('--orange').trim(),
+                    backgroundColor: 'transparent',
+                    borderDash: [5, 5],
+                    pointRadius: 0
+                }
+            ]
+        };
+        const chartConfig = {
+            type: 'line', data: chartData,
+            options: {
+                responsive: true, maintainAspectRatio: true,
+                scales: {
+                    x: { title: { display: true, text: 'Maanden na Investering', color: 'var(--text)' }, ticks: { color: 'var(--text)' }, grid: { color: 'var(--input-border)' }},
+                    y: { title: { display: true, text: `Cumulatief Bedrag (${VALUTA_SYMBOOL})`, color: 'var(--text)' }, ticks: { color: 'var(--text)' }, grid: { color: 'var(--input-border)' }}
+                },
+                plugins: { legend: { labels: { color: 'var(--text)' } } },
+                layout: { padding: 10 }
+            }
+        };
+        const ctx = document.getElementById('cumulativeBenefitsChart').getContext('2d');
+        if (cumulativeBenefitsChartInstance) cumulativeBenefitsChartInstance.destroy();
+        cumulativeBenefitsChartInstance = new Chart(ctx, chartConfig);
+    }
+
+    function runAnalysis() {
+        const warningArea = document.getElementById('warning-message-area');
+        warningArea.innerHTML = "";
+
+        const d = getInputData();
+        let validInputs = true;
+
+        if (d.totale_investering <= 0 && (d.invest_spec.cobot_robot > 0 || d.invest_spec.gripper > 0 || d.invest_spec.training > 0 || d.invest_spec.extra > 0) ) {
+             // This case should ideally not happen if updateTotalInvestmentDisplay works correctly
+        } else if (d.totale_investering <=0 ) {
+             warningArea.innerHTML += `<div class="warning-banner">Voer een geldige totale investering in (> 0) om de analyse te starten.</div>`;
+            validInputs = false;
+        }
+
+        if (!validInputs) {
+            document.getElementById('results-area').style.display = 'none';
+            return;
+        }
+
+        document.getElementById('results-area').style.display = 'block';
+        const r = bereken_roi_en_metrics(d);
+
+        if (r.roi_terugverdientijd_mnd === Infinity) {
+             warningArea.innerHTML += `<div class="warning-banner">De jaarlijkse baten zijn nul of negatief. Terugverdientijd kan niet berekend worden.</div>`;
+        }
+        displayResults(d, r);
+        window.currentInputData = d; // Opslaan voor PDF
+        window.currentResults = r;  // Opslaan voor PDF
+    }
+
+    function downloadPDF() {
+        if (!window.currentInputData || !window.currentResults) {
+            alert("Voer eerst een analyse uit.");
+            return;
+        }
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const d = window.currentInputData;
+        const r = window.currentResults;
+        const today = new Date().toLocaleDateString('nl-NL');
+
+        const addText = (text, x, y, size = 10, style = "normal") => {
+            pdf.setFont("helvetica", style); pdf.setFontSize(size); pdf.text(text, x, y);
+        };
+
+        pdf.setFont("helvetica", "bold"); pdf.setFontSize(16);
+        pdf.text(`Eenvoudige ROI Analyse - ${BEDRIJFSNAAM}`, pdf.internal.pageSize.getWidth() / 2, 15, { align: 'center' });
+
+        let currentY = 30;
+        addText("Algemene Informatie", 14, currentY, 12, "bold");
+        pdf.line(14, currentY + 1, 196, currentY + 1); currentY += 7;
+        addText(`Datum: ${today}`, 14, currentY); currentY += 6;
+        addText(PDF_CONTACT_INFO, 14, currentY); currentY += 10;
+
+        addText("Financiële Samenvatting", 14, currentY, 12, "bold");
+        pdf.line(14, currentY + 1, 196, currentY + 1); currentY += 7;
+
+        const summaryData = [
+            ["Totale Eenmalige Investering:", `${VALUTA_SYMBOOL} ${d.totale_investering.toLocaleString('nl-NL')}`],
+            ["Netto Jaarlijkse Baten:", `${VALUTA_SYMBOOL} ${r.netto_jaarlijkse_baten.toLocaleString('nl-NL')}`],
+            ["Terugverdientijd:", isFinite(r.roi_terugverdientijd_mnd) ? `${r.roi_terugverdientijd_mnd.toFixed(1)} maanden` : "Niet rendabel"],
+            ["Jaarlijkse ROI (%):", !isNaN(r.roi_jaarlijks_pct) && isFinite(r.roi_jaarlijks_pct) ? `${r.roi_jaarlijks_pct.toFixed(1)}%` : "N.v.t."]
+        ];
+        pdf.autoTable({ startY: currentY, head: [['Omschrijving', 'Waarde']], body: summaryData, theme: 'striped', styles: { fontSize: 9, cellPadding: 2 }, headStyles: { fillColor: [43, 63, 84] }, columnStyles: { 0: { fontStyle: 'bold' } } });
+        currentY = pdf.autoTable.previous.finalY + 10;
+
+        addText("Specificatie Jaarlijkse Baten", 14, currentY, 12, "bold");
+        pdf.line(14, currentY + 1, 196, currentY + 1); currentY += 7;
+        const batenKostenBody = [];
+        for(const [key, value] of Object.entries(r.details_baten_kosten)){ batenKostenBody.push([key, `${VALUTA_SYMBOOL} ${value.toLocaleString('nl-NL')}`]); }
+        batenKostenBody.push([{content: "Totaal Netto Jaarlijkse Baten:", styles: {fontStyle: 'bold'}}, {content: `${VALUTA_SYMBOOL} ${r.netto_jaarlijkse_baten.toLocaleString('nl-NL')}`, styles: {fontStyle: 'bold', halign: 'right'}}]);
+        pdf.autoTable({ startY: currentY, body: batenKostenBody, theme: 'grid', styles: { fontSize: 9, cellPadding: 2 }, columnStyles: { 1: { halign: 'right' } } });
+        currentY = pdf.autoTable.previous.finalY + 10;
+
+        addText("Specificatie Eenmalige Investeringen", 14, currentY, 12, "bold");
+        pdf.line(14, currentY + 1, 196, currentY + 1); currentY += 7;
+        const investBody = [];
+        for(const [key, value] of Object.entries(d.invest_spec)){ investBody.push([`Geschatte kosten ${key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ')}`, `${VALUTA_SYMBOOL} ${value.toLocaleString('nl-NL')}`]); }
+        investBody.push([{content: "Totaal Eenmalige Investering:", styles: {fontStyle: 'bold'}}, {content: `${VALUTA_SYMBOOL} ${d.totale_investering.toLocaleString('nl-NL')}`, styles: {fontStyle: 'bold', halign: 'right'}}]);
+        pdf.autoTable({ startY: currentY, body: investBody, theme: 'grid', styles: { fontSize: 9, cellPadding: 2 }, columnStyles: { 1: { halign: 'right' } } });
+        currentY = pdf.autoTable.previous.finalY + 10;
+
+        if (currentY > 200) { pdf.addPage(); currentY = 20; }
+        addText("Jaarlijkse Cashflow Projectie", 14, currentY, 12, "bold");
+        pdf.line(14, currentY + 1, 196, currentY + 1); currentY += 7;
+        addText(`(Gebaseerd op ${STANDAARD_LEVENSDUUR_JAREN} jaar, geen restwaarde)`, 14, currentY, 8, "italic"); currentY +=5;
+        const cashflowHead = [['Jaar', `Cashflow (${VALUTA_SYMBOOL})`, `Cumulatieve CF (${VALUTA_SYMBOOL})`]];
+        const cashflowBody = []; let cumulativeCF = 0;
+        r.cashflows_jaarlijks.forEach((cf, index) => { cumulativeCF += cf; cashflowBody.push([index, cf.toLocaleString('nl-NL'), cumulativeCF.toLocaleString('nl-NL')]); });
+        pdf.autoTable({ startY: currentY, head: cashflowHead, body: cashflowBody, theme: 'grid', headStyles: { fillColor: [43, 63, 84], halign: 'center' }, styles: { fontSize: 9, cellPadding: 2, halign: 'right' }, columnStyles: {0: {halign: 'center'}}});
+        currentY = pdf.autoTable.previous.finalY + 10;
+
+        if (cumulativeBenefitsChartInstance) {
+            if (currentY > 180 ) { pdf.addPage(); currentY = 20; }
+            addText("Visualisatie: Cumulatieve Netto Baten vs. Investering", 14, currentY, 12, "bold");
+            pdf.line(14, currentY+1, 196, currentY+1); currentY +=7;
+            addText(`(Gebaseerd op ${STANDAARD_LEVENSDUUR_JAREN} jaar)`, 14, currentY, 8, "italic"); currentY +=5;
+            const chartImage = cumulativeBenefitsChartInstance.toBase64Image(); const imgProps = pdf.getImageProperties(chartImage);
+            const pdfWidth = 180; const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            pdf.addImage(chartImage, 'PNG', 14, currentY, pdfWidth, pdfHeight); currentY += pdfHeight + 10;
+        }
+
+        if (currentY > 230) { pdf.addPage(); currentY = 20; }
+        addText("Disclaimer", 14, currentY, 12, "bold");
+        pdf.line(14, currentY+1, 196, currentY+1); currentY +=7;
+        pdf.setFont("helvetica", "italic"); pdf.setFontSize(9);
+        pdf.text(`Disclaimer: Deze eenvoudige berekening is een indicatie gebaseerd op de ingevoerde schattingen per ${today}. Werkelijke resultaten kunnen variëren. Neem contact op met ${BEDRIJFSNAAM} voor een gedetailleerde analyse en offerte op maat.`, 14, currentY, {maxWidth: 182});
+
+        const pageCount = pdf.internal.getNumberOfPages();
+        for (let i = 1; i <= pageCount; i++) {
+            pdf.setPage(i); pdf.setFontSize(8).setTextColor(128);
+            pdf.text(`Pagina ${i} van ${pageCount}`, pdf.internal.pageSize.width / 2, 287, { align: 'center' });
+            pdf.text(`© ${new Date().getFullYear()} ${BEDRIJFSNAAM}`, 196, 287, {align: 'right'});
+        }
+        pdf.save(`Proces360_Eenvoudige_ROI_Analyse_${new Date().toISOString().slice(0,10)}.pdf`);
+    }
+</script>
+
+</body>
+</html>
