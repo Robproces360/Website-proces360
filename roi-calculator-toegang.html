@@ -268,7 +268,7 @@
     }
     @media (max-width: 600px) {
       .form-container-wrapper {
-          padding: 1.5rem 0.5rem;
+         padding: 1.5rem 0.5rem;
       }
       .form-section-block {
         margin: 0 0.5rem;
@@ -280,7 +280,7 @@
         padding: 0 1rem 1.5rem;
       }
        .content-article-wrapper .content-article-text-block {
-           padding-top: 1.5rem;
+          padding-top: 1.5rem;
        }
     }
   </style>
@@ -319,7 +319,7 @@
           <input type="email" id="email-eenvoudig" name="email-eenvoudig">
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startEenvoudig" class="cta-button">Start Eenvoudige Berekening</button>
+          <button type="button" id="startEenvoudig" class="cta-button">Verstuur Gegevens</button>
         </div>
       </form>
       <div class="form-error" id="errorEenvoudig"></div>
@@ -338,7 +338,7 @@
           <input type="email" id="email-uitgebreid" name="email-uitgebreid">
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startUitgebreid" class="cta-button">Start Uitgebreide Analyse</button>
+          <button type="button" id="startUitgebreid" class="cta-button">Verstuur Gegevens</button>
         </div>
       </form>
       <div class="form-error" id="errorUitgebreid"></div>
@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Formulier validatie en redirect logica ---
+    // --- Formulier validatie en mailto logica ---
     const naamEenvoudigInput = document.getElementById('naam-eenvoudig');
     const emailEenvoudigInput = document.getElementById('email-eenvoudig');
     const startEenvoudigButton = document.getElementById('startEenvoudig');
@@ -478,50 +478,66 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorUitgebreidDiv = document.getElementById('errorUitgebreid');
 
     /**
-     * Valideert de inputvelden en leidt de gebruiker om of toont een foutmelding.
+     * Valideert de inputvelden en genereert een mailto link of toont een foutmelding.
      * @param {HTMLInputElement} naamInput - Het inputveld voor de naam.
      * @param {HTMLInputElement} emailInput - Het inputveld voor het e-mailadres.
      * @param {HTMLDivElement} errorDiv - Het div-element om foutmeldingen in te tonen.
-     * @param {string} redirectUrl - De URL waarheen geredirect moet worden bij succes.
+     * @param {string} formTypeIdentifier - Een string om het type formulier te identificeren (voor onderwerp/body mail).
      */
-    const validateAndRedirect = (naamInput, emailInput, errorDiv, redirectUrl) => {
+    const validateAndGenerateMailto = (naamInput, emailInput, errorDiv, formTypeIdentifier) => {
         const naam = naamInput.value.trim();
         const email = emailInput.value.trim();
         let errorMessage = '';
 
         if (naam === '' || email === '') {
             errorMessage = 'Vul alstublieft zowel uw naam als e-mailadres in om verder te gaan.';
-        } else if (email === '' || !email.includes('@')) { // Extra check voor lege email voor de @-validatie
+        } else if (email === '' || !email.includes('@')) { 
             errorMessage = 'Voer alstublieft een geldig e-mailadres in.';
         }
-
 
         if (errorMessage) {
             errorDiv.textContent = errorMessage;
         } else {
             errorDiv.textContent = ''; // Wis vorige foutmelding
-            window.location.href = redirectUrl;
+            
+            const ontvanger = 'rob@proces360.com';
+            let onderwerpMail = '';
+            let bodyMail = `Hallo Rob,\n\nDe volgende contactgegevens zijn gedeeld via de ROI Calculator toegangspagina:\n\nNaam: ${naam}\nE-mail: ${email}\n\n`;
+
+            if (formTypeIdentifier === 'eenvoudig') {
+                onderwerpMail = 'Contactaanvraag: Eenvoudige ROI Calculator';
+                bodyMail += "Interesse in: Eenvoudige ROI Calculator";
+            } else if (formTypeIdentifier === 'uitgebreid') {
+                onderwerpMail = 'Contactaanvraag: Uitgebreide ROI Analyse';
+                bodyMail += "Interesse in: Uitgebreide ROI Analyse";
+            } else {
+                onderwerpMail = 'Contactaanvraag via ROI Calculator Toegangspagina'; // Fallback
+            }
+
+            // Zorg voor URL encoding van de parameters
+            const mailtoLink = `mailto:${ontvanger}?subject=${encodeURIComponent(onderwerpMail)}&body=${encodeURIComponent(bodyMail)}`;
+            window.location.href = mailtoLink;
         }
     };
 
     if (startEenvoudigButton) {
-        startEenvoudigButton.addEventListener('click', () => { // Gebruik arrow function voor consistentie
-            validateAndRedirect(
+        startEenvoudigButton.addEventListener('click', () => {
+            validateAndGenerateMailto(
                 naamEenvoudigInput,
                 emailEenvoudigInput,
                 errorEenvoudigDiv,
-                'ROI calculator eenvoudig.html'
+                'eenvoudig' // Identifier voor type formulier
             );
         });
     }
 
     if (startUitgebreidButton) {
-        startUitgebreidButton.addEventListener('click', () => { // Gebruik arrow function
-            validateAndRedirect(
+        startUitgebreidButton.addEventListener('click', () => {
+            validateAndGenerateMailto(
                 naamUitgebreidInput,
                 emailUitgebreidInput,
                 errorUitgebreidDiv,
-                'ROI-index.html'
+                'uitgebreid' // Identifier voor type formulier
             );
         });
     }
