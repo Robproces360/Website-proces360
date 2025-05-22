@@ -15,8 +15,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png">
 
   <script type="application/ld+json">
@@ -40,43 +39,47 @@
   <style>
     body {
       background-color: #f0f2f5;
+      /* Basis variabelen (indien niet in styles.css) */
+      --blue: #0d152b;
+      --orange: #e86a0e;
+      --orange-rgb: 232, 106, 14; /* Voor RGBA box-shadow */
+      --shadow: 0 5px 15px rgba(0,0,0,0.1);
+      --text-dark: #333;
     }
 
-    .content-article-wrapper { /* Wrapper voor de content onder de formulieren */
-      padding: 0 1.5rem 2rem; /* Padding alleen horizontaal en onder */
+    .content-article-wrapper {
+      padding: 0 1.5rem 2rem;
       width: 100%;
-      max-width: 1400px; /* Max breedte voor de tekstuele content */
-      margin: 2rem auto 0; /* Ruimte boven, gecentreerd */
+      max-width: 1400px;
+      margin: 2rem auto 0;
       background: #fff;
       border-radius: 10px;
       box-shadow: var(--shadow);
     }
      @media (min-width: 768px) {
       .content-article-wrapper {
-        padding: 0 3rem 2rem; /* Padding alleen horizontaal en onder */
+        padding: 0 3rem 2rem;
       }
     }
-    /* Oorspronkelijke .content-article styling, nu specifiek voor tekst */
     .content-article-wrapper .content-article-text-block {
-        padding-top: 2rem; /* Voeg padding toe aan de bovenkant van het tekstblok */
+        padding-top: 2rem;
     }
-
 
     .form-container-wrapper {
       display: flex;
-      flex-direction: column; /* Standaard onder elkaar voor mobiel */
+      flex-direction: column;
       align-items: center;
       gap: 2.5rem;
-      padding: 2rem 1rem; /* Padding rondom de formulierensectie */
+      padding: 2rem 1rem;
       max-width: 1240px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    @media (min-width: 992px) { /* Vanaf 992px breedte */
+    @media (min-width: 992px) {
       .form-container-wrapper {
         flex-direction: row;
-        align-items: stretch; /* Zorgt dat blokken even hoog worden */
+        align-items: stretch;
         justify-content: center;
       }
     }
@@ -125,7 +128,7 @@
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 2rem;
-      flex-grow: 1; /* Laat paragraaf groeien */
+      flex-grow: 1;
     }
 
     .access-form {
@@ -133,13 +136,12 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      flex-grow: 1; /* Laat formulier groeien binnen .form-section-block */
+      flex-grow: 1;
     }
 
     .access-form .submit-button-container {
-        margin-top: auto; /* Pushes button to the bottom if p.form-explainer is short */
+        margin-top: auto;
     }
-
 
     .form-group {
       margin-bottom: 1.5rem;
@@ -171,118 +173,100 @@
     .form-group input[type="email"]:focus {
       border-color: var(--orange);
       outline: none;
-      box-shadow: 0 0 0 2px rgba(var(--orange-rgb, 255, 107, 0), 0.2);
+      box-shadow: 0 0 0 2px rgba(var(--orange-rgb, 232, 106, 14), 0.2);
     }
 
     .submit-button-container {
       padding-top: 0.5rem;
       text-align: center;
     }
+    /* CTA Button stijl (voorbeeld, pas aan indien nodig) */
+    .cta-button {
+        background-color: var(--orange);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+    .cta-button:hover {
+        background-color: var(--blue);
+    }
+    .cta-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
 
-    .form-error {
-        color: var(--orange);
+    .form-error, .form-success {
         font-weight: bold;
         margin-top: 0.5rem;
         text-align: center;
         font-size: 0.9rem;
-        min-height: 1.2em; /* Reserve space to prevent layout shift */
+        min-height: 1.2em;
+    }
+    .form-error {
+      color: var(--orange);
+    }
+    .form-success {
+      color: green;
     }
 
     .content-article-wrapper h2:not(.form-title):not(.form-section-block h2) {
-      font-size: 1.8rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--orange);
-      display: inline-block;
+      font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--orange); display: inline-block;
     }
      .content-article-wrapper > section:first-of-type + hr + article:first-of-type h2:not(.form-title):not(.form-section-block h2),
-     .content-article-wrapper > article:first-of-type h2:not(.form-title):not(.form-section-block h2) {
-        margin-top:0;
-     }
-     .content-article-wrapper .content-article-text-block:first-child h2:first-child {
-         margin-top: 0;
-     }
+     .content-article-wrapper > article:first-of-type h2:not(.form-title):not(.form-section-block h2) { margin-top:0; }
+     .content-article-wrapper .content-article-text-block:first-child h2:first-child { margin-top: 0; }
 
     .content-article-wrapper p:not(.form-explainer),
     .content-article-wrapper ul,
     .content-article-wrapper ol {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-      max-width: 75ch;
+      font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.25rem; max-width: 75ch;
     }
-     .content-article-wrapper p:not(.intro-text):not(.form-explainer) {
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .content-article-wrapper ul, .content-article-wrapper ol {
-      padding-left: 2rem;
-    }
-    .content-article-wrapper ul li {
-      margin-bottom: 0.5rem;
-    }
+     .content-article-wrapper p:not(.intro-text):not(.form-explainer) { text-align: left; margin-left: 0; margin-right: 0; }
+    .content-article-wrapper ul, .content-article-wrapper ol { padding-left: 2rem; }
+    .content-article-wrapper ul li { margin-bottom: 0.5rem; }
     .content-article-wrapper .note {
-      font-size: 0.95rem;
-      font-style: italic;
-      color: #555;
-      background-color: #f9f9f9;
-      padding: 1rem;
-      border-left: 4px solid var(--orange);
-      margin-top: 1rem;
-      max-width: 75ch;
+      font-size: 0.95rem; font-style: italic; color: #555; background-color: #f9f9f9;
+      padding: 1rem; border-left: 4px solid var(--orange); margin-top: 1rem; max-width: 75ch;
     }
-    .subtle-divider {
-      border: 0;
-      height: 1px;
-      background-color: #e0e0e0;
-      margin: 2rem auto;
-      width: 100%;
-    }
+    .subtle-divider { border: 0; height: 1px; background-color: #e0e0e0; margin: 2rem auto; width: 100%; }
 
-    @media (max-width: 991px) {
-        .form-section-block {
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 95%;
-        }
-    }
-
+    @media (max-width: 991px) { .form-section-block { max-width: 600px; margin-left: auto; margin-right: auto; width: 95%; } }
     @media (max-width: 768px) {
-      .form-section-block h2 {
-        font-size: 1.6rem;
-      }
-      .form-section-block p.form-explainer {
-        font-size: 0.95rem;
-      }
-       .content-article-wrapper h2:not(.form-title):not(.form-section-block h2) {
-        font-size: 1.5rem;
-      }
+      .form-section-block h2 { font-size: 1.6rem; }
+      .form-section-block p.form-explainer { font-size: 0.95rem; }
+      .content-article-wrapper h2:not(.form-title):not(.form-section-block h2) { font-size: 1.5rem; }
       .content-article-wrapper p:not(.form-explainer),
-      .content-article-wrapper ul,
-      .content-article-wrapper ol {
-        font-size: 1rem;
-      }
+      .content-article-wrapper ul, .content-article-wrapper ol { font-size: 1rem; }
     }
     @media (max-width: 600px) {
-      .form-container-wrapper {
-         padding: 1.5rem 0.5rem;
-      }
-      .form-section-block {
-        margin: 0 0.5rem;
-        padding: 1.5rem 1rem;
-        width: calc(100% - 1rem);
-      }
-       .content-article-wrapper {
-        margin: 1rem auto;
-        padding: 0 1rem 1.5rem;
-      }
-       .content-article-wrapper .content-article-text-block {
-          padding-top: 1.5rem;
-       }
+      .form-container-wrapper { padding: 1.5rem 0.5rem; }
+      .form-section-block { margin: 0 0.5rem; padding: 1.5rem 1rem; width: calc(100% - 1rem); }
+      .content-article-wrapper { margin: 1rem auto; padding: 0 1rem 1.5rem; }
+      .content-article-wrapper .content-article-text-block { padding-top: 1.5rem; }
     }
+    /* Stijlen voor header etc. moeten uit styles.css komen of hier worden toegevoegd */
+    .main-header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; }
+    .logo { height: 40px; }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; }
+    .nav-links a.active, .nav-links a:hover { color: var(--orange); }
+    .language-switcher .lang-btn { text-decoration: none; color: var(--text-dark); padding: 0.3rem 0.6rem; border: 1px solid transparent; }
+    .language-switcher .lang-btn.active { border-color: var(--orange); color: var(--orange); }
+    .footer { background-color: var(--blue); color: #f0f2f5; text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
+    .footer a { color: #f0f2f5; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .footer .legal-links { margin-top: 0.5rem; }
+    .footer .legal-links a { margin: 0 0.5rem; }
+
   </style>
 </head>
 <body>
@@ -309,39 +293,41 @@
     <section class="form-section-block">
       <h2>Eenvoudige ROI Calculator</h2>
       <p class="form-explainer">Een snelle inschatting met standaardwaarden – ideaal voor een eerste indicatie van uw terugverdientijd.</p>
-      <form class="access-form">
+      <form class="access-form" id="formEenvoudig">
         <div class="form-group">
           <label for="naam-eenvoudig">Naam:</label>
-          <input type="text" id="naam-eenvoudig" name="naam-eenvoudig">
+          <input type="text" id="naam-eenvoudig" name="naam-eenvoudig" required>
         </div>
         <div class="form-group">
           <label for="email-eenvoudig">E-mailadres:</label>
-          <input type="email" id="email-eenvoudig" name="email-eenvoudig">
+          <input type="email" id="email-eenvoudig" name="email-eenvoudig" required>
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startEenvoudig" class="cta-button">Verstuur Gegevens</button>
+          <button type="submit" id="startEenvoudigButton" class="cta-button">Start Eenvoudige Berekening</button>
         </div>
       </form>
       <div class="form-error" id="errorEenvoudig"></div>
+      <div class="form-success" id="successEenvoudig"></div>
     </section>
 
     <section class="form-section-block">
       <h2>Uitgebreide ROI Analyse</h2>
       <p class="form-explainer">Een volledige analyse inclusief scenario’s, cashflowprojectie en gevoeligheidsberekening.</p>
-      <form class="access-form">
+      <form class="access-form" id="formUitgebreid">
         <div class="form-group">
           <label for="naam-uitgebreid">Naam:</label>
-          <input type="text" id="naam-uitgebreid" name="naam-uitgebreid">
+          <input type="text" id="naam-uitgebreid" name="naam-uitgebreid" required>
         </div>
         <div class="form-group">
           <label for="email-uitgebreid">E-mailadres:</label>
-          <input type="email" id="email-uitgebreid" name="email-uitgebreid">
+          <input type="email" id="email-uitgebreid" name="email-uitgebreid" required>
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startUitgebreid" class="cta-button">Verstuur Gegevens</button>
+          <button type="submit" id="startUitgebreidButton" class="cta-button">Start Uitgebreide Analyse</button>
         </div>
       </form>
       <div class="form-error" id="errorUitgebreid"></div>
+      <div class="form-success" id="successUitgebreid"></div>
     </section>
 
   </div>
@@ -349,15 +335,12 @@
   <div class="content-article-wrapper">
     <div class="content-article-text-block">
         <hr class="subtle-divider">
-
         <article>
         <h2>Waarom een Diepgaande ROI-Analyse Essentieel Is</h2>
         <p>Na een initiële Quickscan, of als u direct concrete financiële onderbouwing zoekt, duiken we met de ROI-analyse dieper de cijfers in. In een markt waar elke investering telt, biedt een onafhankelijke en grondige Return on Investment-analyse de zekerheid die u nodig heeft om met vertrouwen de volgende stap te zetten in automatisering. Geen vage aannames of voorkeur voor specifieke merken – ons rekenmodel is volledig objectief en gericht op úw situatie.</p>
         <p>Met een Proces360 ROI-analyse krijgt u niet alleen een getal, maar een compleet financieel draaiboek voor uw automatiseringsproject.</p>
         </article>
-
         <hr class="subtle-divider">
-
         <article>
         <h2>Wat Krijgt U Concreet van Onze ROI-Analyse?</h2>
         <p>Een Proces360 ROI-analyse levert u een gedetailleerd en visueel rapport (PDF) met daarin heldere antwoorden en inzichten, waaronder:</p>
@@ -370,9 +353,7 @@
         </ul>
         <p class="note">De nauwkeurigheid van de analyse is afhankelijk van de kwaliteit en beschikbaarheid van uw data en de complexiteit van uw processen. Wij begeleiden u in het verzamelen van de benodigde input.</p>
         </article>
-
         <hr class="subtle-divider">
-
         <article>
         <h2>Onze Werkwijze: Gestructureerd naar Inzicht</h2>
         <p>Ons proces voor een ROI-analyse is transparant en efficiënt:</p>
@@ -383,19 +364,15 @@
             <li><strong>Rapportage & Strategisch Advies:</strong> U ontvangt een uitgebreid rapport met alle bevindingen, heldere conclusies, en een strategisch advies over de meest rendabele vervolgstappen voor uw automatiseringsproject.</li>
         </ol>
         </article>
-
         <hr class="subtle-divider">
-
         <section class="cta-section-within-article" style="padding-top: 0.5rem; padding-bottom: 1rem;">
         <h2 style="border-bottom:none; margin-top:0;">Klaar voor Feitelijke Onderbouwing van Uw Investering?</h2>
         <p>Stop met gissen en start met weten. Een Proces360 ROI-analyse geeft u het vertrouwen en de cijfers die u nodig heeft om de juiste automatiseringsbeslissingen te nemen. Ontdek vandaag nog hoe automatisering ook voor ú rendabel kan zijn.</p>
-        <div class="cta-wrapper">
-            <a href="mailto:info@proces360.com?subject=Adviesgesprek%20ROI-analyse" class="cta-button">Plan een Adviesgesprek</a>
+        <div class="cta-wrapper" style="text-align: center;"> <a href="mailto:info@proces360.com?subject=Adviesgesprek%20ROI-analyse" class="cta-button">Plan een Adviesgesprek</a>
         </div>
         </section>
     </div>
   </div>
-
 </main>
 
 <footer class="footer">
@@ -405,142 +382,125 @@
     <a href="https://www.proces360.com" target="_blank">www.proces360.com</a>
   </p>
   <p class="legal-links">
-    <a href="legal pages/privacy.html">Privacyverklaring</a> |
-    <a href="legal pages/cookieverklaring.html">Cookieverklaring</a> |
-    <a href="legal pages/disclaimer.html">Disclaimer</a> |
-    <a href="legal pages/voorwaarden.html">Algemene Voorwaarden</a> |
-    <a href="legal pages/colofon.html">Colofon</a>
+    <a href="legal%20pages/privacy.html">Privacyverklaring</a> |
+    <a href="legal%20pages/cookieverklaring.html">Cookieverklaring</a> |
+    <a href="legal%20pages/disclaimer.html">Disclaimer</a> |
+    <a href="legal%20pages/voorwaarden.html">Algemene Voorwaarden</a> |
+    <a href="legal%20pages/colofon.html">Colofon</a>
   </p>
 </footer>
 
-<script src="whatsapp.js"></script>
-<script>
+<script src="whatsapp.js"></script> <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
 
-    const root = document.documentElement;
-    const orangeColor = getComputedStyle(root).getPropertyValue('--orange').trim();
-    if (orangeColor && !getComputedStyle(root).getPropertyValue('--orange-rgb')) {
-        let r = 255, g = 107, b = 0; // Default --orange values if parsing fails
-        if (orangeColor.startsWith('#')) {
-            const hex = orangeColor.substring(1);
-            if (hex.length === 3) {
-                r = parseInt(hex[0] + hex[0], 16);
-                g = parseInt(hex[1] + hex[1], 16);
-                b = parseInt(hex[2] + hex[2], 16);
-            } else if (hex.length === 6) {
-                r = parseInt(hex.substring(0, 2), 16);
-                g = parseInt(hex.substring(2, 4), 16);
-                b = parseInt(hex.substring(4, 6), 16);
-            }
-        } else if (orangeColor.startsWith('rgb')) {
-            const parts = orangeColor.match(/\d+/g);
-            if (parts && parts.length >= 3) {
-                r = parseInt(parts[0]);
-                g = parseInt(parts[1]);
-                b = parseInt(parts[2]);
-            }
-        }
-        root.style.setProperty('--orange-rgb', `${r}, ${g}, ${b}`);
-    }
-
+    // Active nav link (indien nodig, kan ook met server-side logica)
     const currentPageFile = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
         link.classList.remove('active');
         const linkFile = link.getAttribute('href').split('/').pop();
         if (linkFile === currentPageFile || (currentPageFile === '' && linkFile === 'index.html')) {
-            link.classList.add('active');
+            if (link.getAttribute('href') === 'roi-calculator-toegang.html') { // Specifiek voor deze pagina
+                 link.classList.add('active');
+            }
         }
     });
+    
+    const setupFormSubmission = (formId, nameInputId, emailInputId, errorDivId, successDivId, buttonId, calculatorType, redirectUrl) => {
+        const form = document.getElementById(formId);
+        const nameInput = document.getElementById(nameInputId);
+        const emailInput = document.getElementById(emailInputId);
+        const errorDiv = document.getElementById(errorDivId);
+        const successDiv = document.getElementById(successDivId);
+        const submitButton = document.getElementById(buttonId); // Gebruik buttonId
 
-    const currentPath = window.location.pathname;
-    const langSwitcherLinks = document.querySelectorAll('.language-switcher a.lang-btn');
-    langSwitcherLinks.forEach(link => {
-        const langLinkHref = link.getAttribute('href');
-        link.classList.remove('active');
-        const isEnglishPage = currentPath.includes('/en/');
-        const linksToEnglish = langLinkHref.includes('/en/') || langLinkHref.startsWith('en/');
-        if ((isEnglishPage && linksToEnglish) || (!isEnglishPage && !linksToEnglish)) {
-            link.classList.add('active');
-        }
-    });
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+            submitButton.disabled = true;
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Verwerken...';
 
-    // --- Formulier validatie en mailto logica ---
-    const naamEenvoudigInput = document.getElementById('naam-eenvoudig');
-    const emailEenvoudigInput = document.getElementById('email-eenvoudig');
-    const startEenvoudigButton = document.getElementById('startEenvoudig');
-    const errorEenvoudigDiv = document.getElementById('errorEenvoudig');
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
 
-    const naamUitgebreidInput = document.getElementById('naam-uitgebreid');
-    const emailUitgebreidInput = document.getElementById('email-uitgebreid');
-    const startUitgebreidButton = document.getElementById('startUitgebreid');
-    const errorUitgebreidDiv = document.getElementById('errorUitgebreid');
-
-    /**
-     * Valideert de inputvelden en genereert een mailto link of toont een foutmelding.
-     * @param {HTMLInputElement} naamInput - Het inputveld voor de naam.
-     * @param {HTMLInputElement} emailInput - Het inputveld voor het e-mailadres.
-     * @param {HTMLDivElement} errorDiv - Het div-element om foutmeldingen in te tonen.
-     * @param {string} formTypeIdentifier - Een string om het type formulier te identificeren (voor onderwerp/body mail).
-     */
-    const validateAndGenerateMailto = (naamInput, emailInput, errorDiv, formTypeIdentifier) => {
-        const naam = naamInput.value.trim();
-        const email = emailInput.value.trim();
-        let errorMessage = '';
-
-        if (naam === '' || email === '') {
-            errorMessage = 'Vul alstublieft zowel uw naam als e-mailadres in om verder te gaan.';
-        } else if (email === '' || !email.includes('@')) { 
-            errorMessage = 'Voer alstublieft een geldig e-mailadres in.';
-        }
-
-        if (errorMessage) {
-            errorDiv.textContent = errorMessage;
-        } else {
-            errorDiv.textContent = ''; // Wis vorige foutmelding
-            
-            const ontvanger = 'rob@proces360.com';
-            let onderwerpMail = '';
-            let bodyMail = `Hallo Rob,\n\nDe volgende contactgegevens zijn gedeeld via de ROI Calculator toegangspagina:\n\nNaam: ${naam}\nE-mail: ${email}\n\n`;
-
-            if (formTypeIdentifier === 'eenvoudig') {
-                onderwerpMail = 'Contactaanvraag: Eenvoudige ROI Calculator';
-                bodyMail += "Interesse in: Eenvoudige ROI Calculator";
-            } else if (formTypeIdentifier === 'uitgebreid') {
-                onderwerpMail = 'Contactaanvraag: Uitgebreide ROI Analyse';
-                bodyMail += "Interesse in: Uitgebreide ROI Analyse";
-            } else {
-                onderwerpMail = 'Contactaanvraag via ROI Calculator Toegangspagina'; // Fallback
+            if (name === '' || email === '') {
+                errorDiv.textContent = 'Vul alstublieft zowel uw naam als e-mailadres in.';
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                return;
+            }
+            if (!email.includes('@') || email.split('@')[0].length === 0 || email.split('@')[1].length < 3 || !email.split('@')[1].includes('.')) {
+                errorDiv.textContent = 'Voer alstublieft een geldig e-mailadres in.';
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                return;
             }
 
-            // Zorg voor URL encoding van de parameters
-            const mailtoLink = `mailto:${ontvanger}?subject=${encodeURIComponent(onderwerpMail)}&body=${encodeURIComponent(bodyMail)}`;
-            window.location.href = mailtoLink;
-        }
+            try {
+                // Belangrijk: Vervang '/api/send-submission' met het volledige URL
+                // naar je backend als deze op een andere server/poort draait.
+                // Bijvoorbeeld: 'http://localhost:3000/api/send-submission'
+                const response = await fetch('/api/send-submission', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        calculatorType: calculatorType
+                    }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    successDiv.textContent = 'Gegevens ontvangen! U wordt nu doorgestuurd...';
+                    // Sla e-mail en naam op voor later gebruik op de calculator pagina (rapport verzenden)
+                    sessionStorage.setItem('visitorEmail', email); 
+                    sessionStorage.setItem('visitorName', name);
+                    
+                    setTimeout(() => {
+                        window.location.href = redirectUrl;
+                    }, 1500); // Vertraging zodat gebruiker succesmelding kan lezen
+                } else {
+                    errorDiv.textContent = result.message || 'Fout bij het versturen van gegevens. Probeer het later opnieuw.';
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            } catch (err) {
+                console.error('Submission error:', err);
+                errorDiv.textContent = 'Netwerkfout of server niet bereikbaar. Controleer uw internetverbinding en probeer het later opnieuw. Zorg ervoor dat de backend server draait.';
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
     };
 
-    if (startEenvoudigButton) {
-        startEenvoudigButton.addEventListener('click', () => {
-            validateAndGenerateMailto(
-                naamEenvoudigInput,
-                emailEenvoudigInput,
-                errorEenvoudigDiv,
-                'eenvoudig' // Identifier voor type formulier
-            );
-        });
-    }
+    setupFormSubmission(
+        'formEenvoudig', 
+        'naam-eenvoudig', 
+        'email-eenvoudig', 
+        'errorEenvoudig', 
+        'successEenvoudig',
+        'startEenvoudigButton', // ID van de knop
+        'Eenvoudige ROI Calculator', 
+        'ROI%20calculator%20eenvoudig.html' // Zorg dat dit de correcte URL is (URL encoded)
+    );
 
-    if (startUitgebreidButton) {
-        startUitgebreidButton.addEventListener('click', () => {
-            validateAndGenerateMailto(
-                naamUitgebreidInput,
-                emailUitgebreidInput,
-                errorUitgebreidDiv,
-                'uitgebreid' // Identifier voor type formulier
-            );
-        });
-    }
+    setupFormSubmission(
+        'formUitgebreid', 
+        'naam-uitgebreid', 
+        'email-uitgebreid', 
+        'errorUitgebreid',
+        'successUitgebreid',
+        'startUitgebreidButton', // ID van de knop
+        'Uitgebreide ROI Analyse', 
+        'ROI-index.html' // Zorg dat dit de correcte URL is
+    );
 });
 </script>
 
