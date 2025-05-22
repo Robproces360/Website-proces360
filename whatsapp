@@ -1,0 +1,25 @@
+<!-- whatsapp.js -->
+<script>
+/* ---------- WhatsApp floating button ---------- */
+(function(){
+  const phone   = '31630185844';          // <-- JOUW NR zonder +
+  const message = encodeURIComponent('Hallo, ik heb interesse in een Quickscan.');
+  const link    = `https://wa.me/${phone}?text=${message}`;
+
+  // knop element
+  const btn = document.createElement('a');
+  btn.href = link;
+  btn.target = '_blank';
+  btn.style.cssText = `
+    position:fixed; bottom:24px; right:24px; z-index:9999;
+    background:#25D366; width:56px; height:56px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+  `;
+  btn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 24 24">' +
+    '<path d="M.057 24l1.687-6.163a11.867 ... (svg inkort)"/></svg>';
+
+  document.body.appendChild(btn);
+})();
+</script>
