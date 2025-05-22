@@ -179,7 +179,7 @@
       text-align: center;
     }
     
-    .form-error { /* Stijl voor de foutmelding divs, was al aanwezig */
+    .form-error { /* Stijl voor de foutmelding divs, kan blijven voor browser validatie feedback */
         color: var(--orange);
         font-weight: bold;
         margin-top: 0.5rem;
@@ -268,7 +268,7 @@
     }
     @media (max-width: 600px) {
       .form-container-wrapper {
-         padding: 1.5rem 0.5rem;
+          padding: 1.5rem 0.5rem;
       }
       .form-section-block {
         margin: 0 0.5rem;
@@ -280,7 +280,7 @@
         padding: 0 1rem 1.5rem;
       }
        .content-article-wrapper .content-article-text-block {
-          padding-top: 1.5rem;
+           padding-top: 1.5rem;
        }
     }
   </style>
@@ -309,39 +309,49 @@
     <section class="form-section-block">
       <h2>Eenvoudige ROI Calculator</h2>
       <p class="form-explainer">Een snelle inschatting met standaardwaarden – ideaal voor een eerste indicatie van uw terugverdientijd.</p>
-      <form class="access-form"> {/* Geen action, method, etc. */}
+      <form action="https://formsubmit.co/rob@proces360.com" method="POST" class="access-form">
+        <input type="hidden" name="_next" value="https://www.proces360.com/ROI calculator eenvoudig.html">
+        <input type="hidden" name="_subject" value="Toegang Eenvoudige ROI Calculator - Proces360">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
         <div class="form-group">
           <label for="naam-eenvoudig">Naam:</label>
-          <input type="text" id="naam-eenvoudig" name="naam-eenvoudig"> {/* name teruggezet */}
+          <input type="text" id="naam-eenvoudig" name="Naam" required>
         </div>
         <div class="form-group">
           <label for="email-eenvoudig">E-mailadres:</label>
-          <input type="email" id="email-eenvoudig" name="email-eenvoudig"> {/* name teruggezet */}
+          <input type="email" id="email-eenvoudig" name="E-mail" required>
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startEenvoudig" class="cta-button">Start Eenvoudige Berekening</button> {/* type="button" en id teruggezet */}
+          <button type="submit" class="cta-button">Start Eenvoudige Berekening</button>
         </div>
       </form>
-      <div class="form-error" id="errorEenvoudig"></div> {/* Foutmelding div teruggezet */}
+      <div class="form-error" id="errorEenvoudig"></div>
     </section>
 
     <section class="form-section-block">
       <h2>Uitgebreide ROI Analyse</h2>
       <p class="form-explainer">Een volledige analyse inclusief scenario’s, cashflowprojectie en gevoeligheidsberekening.</p>
-      <form class="access-form"> {/* Geen action, method, etc. */}
+      <form action="https://formsubmit.co/rob@proces360.com" method="POST" class="access-form">
+        <input type="hidden" name="_next" value="https://www.proces360.com/ROI-index.html">
+        <input type="hidden" name="_subject" value="Toegang Uitgebreide ROI Analyse - Proces360">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
         <div class="form-group">
           <label for="naam-uitgebreid">Naam:</label>
-          <input type="text" id="naam-uitgebreid" name="naam-uitgebreid"> {/* name teruggezet */}
+          <input type="text" id="naam-uitgebreid" name="Naam" required>
         </div>
         <div class="form-group">
           <label for="email-uitgebreid">E-mailadres:</label>
-          <input type="email" id="email-uitgebreid" name="email-uitgebreid"> {/* name teruggezet */}
+          <input type="email" id="email-uitgebreid" name="E-mail" required>
         </div>
         <div class="submit-button-container">
-          <button type="button" id="startUitgebreid" class="cta-button">Start Uitgebreide Analyse</button> {/* type="button" en id teruggezet */}
+          <button type="submit" class="cta-button">Start Uitgebreide Analyse</button>
         </div>
       </form>
-      <div class="form-error" id="errorUitgebreid"></div> {/* Foutmelding div teruggezet */}
+      <div class="form-error" id="errorUitgebreid"></div>
     </section>
 
   </div>
@@ -399,7 +409,7 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; <span id="currentYearFooter">2025</span> Proces360° – Slimme automatisering, advisering en impact.</p>
+  <p>© <span id="currentYearFooter">2025</span> Proces360° – Slimme automatisering, advisering en impact.</p>
   <p>
     <a href="mailto:info@proces360.com">info@proces360.com</a> |
     <a href="https://www.proces360.com" target="_blank">www.proces360.com</a>
@@ -466,64 +476,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Formulier validatie en redirect logica (originele versie) ---
-    const naamEenvoudigInput = document.getElementById('naam-eenvoudig');
-    const emailEenvoudigInput = document.getElementById('email-eenvoudig');
-    const startEenvoudigButton = document.getElementById('startEenvoudig');
-    const errorEenvoudigDiv = document.getElementById('errorEenvoudig');
-
-    const naamUitgebreidInput = document.getElementById('naam-uitgebreid');
-    const emailUitgebreidInput = document.getElementById('email-uitgebreid');
-    const startUitgebreidButton = document.getElementById('startUitgebreid');
-    const errorUitgebreidDiv = document.getElementById('errorUitgebreid');
-
-    /**
-     * Valideert de inputvelden en leidt de gebruiker om of toont een foutmelding.
-     * @param {HTMLInputElement} naamInput - Het inputveld voor de naam.
-     * @param {HTMLInputElement} emailInput - Het inputveld voor het e-mailadres.
-     * @param {HTMLDivElement} errorDiv - Het div-element om foutmeldingen in te tonen.
-     * @param {string} redirectUrl - De URL waarheen geredirect moet worden bij succes.
-     */
-    const validateAndRedirect = (naamInput, emailInput, errorDiv, redirectUrl) => {
-        const naam = naamInput.value.trim();
-        const email = emailInput.value.trim();
-        let errorMessage = '';
-
-        if (naam === '' || email === '') {
-            errorMessage = 'Vul alstublieft zowel uw naam als e-mailadres in om verder te gaan.';
-        } else if (email === '' || !email.includes('@')) { 
-            errorMessage = 'Voer alstublieft een geldig e-mailadres in.';
-        }
-
-        if (errorMessage) {
-            errorDiv.textContent = errorMessage;
-        } else {
-            errorDiv.textContent = ''; // Wis vorige foutmelding
-            window.location.href = redirectUrl; // Redirect naar de lokale tool pagina
-        }
-    };
-
-    if (startEenvoudigButton) {
-        startEenvoudigButton.addEventListener('click', () => { 
-            validateAndRedirect(
-                naamEenvoudigInput,
-                emailEenvoudigInput,
-                errorEenvoudigDiv,
-                'ROI calculator eenvoudig.html' // Redirect naar de eenvoudige calculator tool
-            );
-        });
-    }
-
-    if (startUitgebreidButton) {
-        startUitgebreidButton.addEventListener('click', () => { 
-            validateAndRedirect(
-                naamUitgebreidInput,
-                emailUitgebreidInput,
-                errorUitgebreidDiv,
-                'ROI-index.html' // Redirect naar de uitgebreide analyse tool
-            );
-        });
-    }
+    // De JavaScript validatie en redirect logica is hier verwijderd.
+    // Formsubmit handelt de redirect af via de _next parameter.
+    // Browsers handelen basisvalidatie af (bv. voor 'required' en 'type="email"').
 });
 </script>
 
