@@ -119,6 +119,7 @@
 
     .form-section-block p.form-explainer {
       color: #555;
+      /* max-width: 75ch; /* Was te breed voor smalle blokken */
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -136,8 +137,10 @@
       flex-grow: 1; /* Laat formulier groeien binnen .form-section-block */
     }
 
+    .access-form .form-group:nth-last-of-type(2) {
+    }
     .access-form .submit-button-container {
-        margin-top: auto; /* Pushes button to the bottom if p.form-explainer is short */
+        margin-top: auto;
     }
 
 
@@ -259,7 +262,7 @@
     }
     @media (max-width: 600px) {
       .form-container-wrapper {
-         padding: 1.5rem 0.5rem;
+          padding: 1.5rem 0.5rem;
       }
       .form-section-block {
         margin: 0 0.5rem;
@@ -271,7 +274,7 @@
         padding: 0 1rem 1.5rem;
       }
        .content-article-wrapper .content-article-text-block {
-          padding-top: 1.5rem;
+           padding-top: 1.5rem;
        }
     }
   </style>
@@ -300,18 +303,18 @@
     <section class="form-section-block">
       <h2>Eenvoudige ROI Calculator</h2>
       <p class="form-explainer">Een snelle inschatting met standaardwaarden – ideaal voor een eerste indicatie van uw terugverdientijd.</p>
-      <form class="access-form" action="https://formspree.io/f/mrbqvaek" method="POST">
-        <input type="hidden" name="_subject" value="ROI Toegang – Eenvoudig">
-        <input type="hidden" name="_next" value="https://www.proces360.com/bedankt.html">
+      <form action="https://formsubmit.co/el/wanoho" method="POST" class="access-form">
         <div class="form-group">
           <label for="naam-eenvoudig">Naam:</label>
-          <input type="text" id="naam-eenvoudig" name="Naam" required>
+          <input type="text" id="naam-eenvoudig" name="naam" required>
         </div>
         <div class="form-group">
           <label for="email-eenvoudig">E-mailadres:</label>
-          <input type="email" id="email-eenvoudig" name="E-mail" required>
+          <input type="email" id="email-eenvoudig" name="email" required>
         </div>
-        <div class="submit-button-container">
+        <input type="hidden" name="_next" value="eenvoudige-roi-calculator.html">
+        <input type="hidden" name="_subject" value="Toegang Eenvoudige ROI Calculator - Proces360">
+        <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="table"> <div class="submit-button-container">
           <button type="submit" class="cta-button">Start Eenvoudige Berekening</button>
         </div>
       </form>
@@ -320,18 +323,18 @@
     <section class="form-section-block">
       <h2>Uitgebreide ROI Analyse</h2>
       <p class="form-explainer">Een volledige analyse inclusief scenario’s, cashflowprojectie en gevoeligheidsberekening.</p>
-      <form class="access-form" action="https://formspree.io/f/mrbqvaek" method="POST">
-        <input type="hidden" name="_subject" value="ROI Toegang – Uitgebreid">
-        <input type="hidden" name="_next" value="https://www.proces360.com/bedankt.html">
+      <form action="https://formsubmit.co/el/wanoho" method="POST" class="access-form">
         <div class="form-group">
           <label for="naam-uitgebreid">Naam:</label>
-          <input type="text" id="naam-uitgebreid" name="Naam" required>
+          <input type="text" id="naam-uitgebreid" name="naam" required>
         </div>
         <div class="form-group">
           <label for="email-uitgebreid">E-mailadres:</label>
-          <input type="email" id="email-uitgebreid" name="E-mail" required>
+          <input type="email" id="email-uitgebreid" name="email" required>
         </div>
-        <div class="submit-button-container">
+        <input type="hidden" name="_next" value="ROI-index.html">
+        <input type="hidden" name="_subject" value="Toegang Uitgebreide ROI Analyse - Proces360">
+        <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="table"> <div class="submit-button-container">
           <button type="submit" class="cta-button">Start Uitgebreide Analyse</button>
         </div>
       </form>
@@ -414,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const root = document.documentElement;
     const orangeColor = getComputedStyle(root).getPropertyValue('--orange').trim();
     if (orangeColor && !getComputedStyle(root).getPropertyValue('--orange-rgb')) {
-        let r = 255, g = 107, b = 0; // Default --orange values if parsing fails
+        let r = 255, g = 107, b = 0;
         if (orangeColor.startsWith('#')) {
             const hex = orangeColor.substring(1);
             if (hex.length === 3) {
@@ -454,7 +457,9 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.remove('active');
         const isEnglishPage = currentPath.includes('/en/');
         const linksToEnglish = langLinkHref.includes('/en/') || langLinkHref.startsWith('en/');
-        if ((isEnglishPage && linksToEnglish) || (!isEnglishPage && !linksToEnglish)) {
+        if (isEnglishPage && linksToEnglish) {
+            link.classList.add('active');
+        } else if (!isEnglishPage && !linksToEnglish) {
             link.classList.add('active');
         }
     });
