@@ -179,13 +179,13 @@
       text-align: center;
     }
     
-    .form-error { /* Stijl voor de foutmelding divs, kan blijven voor browser validatie feedback */
+    .form-error {
         color: var(--orange);
         font-weight: bold;
         margin-top: 0.5rem;
         text-align: center;
         font-size: 0.9rem;
-        min-height: 1.2em; /* Reserve space to prevent layout shift */
+        min-height: 1.2em; 
     }
 
     .content-article-wrapper h2:not(.form-title):not(.form-section-block h2) {
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const root = document.documentElement;
     const orangeColor = getComputedStyle(root).getPropertyValue('--orange').trim();
     if (orangeColor && !getComputedStyle(root).getPropertyValue('--orange-rgb')) {
-        let r = 255, g = 107, b = 0; // Default --orange values if parsing fails
+        let r = 255, g = 107, b = 0; 
         if (orangeColor.startsWith('#')) {
             const hex = orangeColor.substring(1);
             if (hex.length === 3) {
@@ -475,10 +475,6 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
-
-    // De JavaScript validatie en redirect logica is hier verwijderd.
-    // Formsubmit handelt de redirect af via de _next parameter.
-    // Browsers handelen basisvalidatie af (bv. voor 'required' en 'type="email"').
 });
 </script>
 
