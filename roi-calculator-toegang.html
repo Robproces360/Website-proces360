@@ -178,14 +178,14 @@
       padding-top: 0.5rem;
       text-align: center;
     }
-    
-    .form-error {
+
+    /* Stijl voor statusmeldingen */
+    .form-status {
+        text-align: center;
+        margin-top: 1rem;
         color: var(--orange);
         font-weight: bold;
-        margin-top: 0.5rem;
-        text-align: center;
-        font-size: 0.9rem;
-        min-height: 1.2em; 
+        min-height: 1.2em; /* Voorkomt verspringen layout */
     }
 
     .content-article-wrapper h2:not(.form-title):not(.form-section-block h2) {
@@ -268,7 +268,7 @@
     }
     @media (max-width: 600px) {
       .form-container-wrapper {
-          padding: 1.5rem 0.5rem;
+         padding: 1.5rem 0.5rem;
       }
       .form-section-block {
         margin: 0 0.5rem;
@@ -280,7 +280,7 @@
         padding: 0 1rem 1.5rem;
       }
        .content-article-wrapper .content-article-text-block {
-           padding-top: 1.5rem;
+          padding-top: 1.5rem;
        }
     }
   </style>
@@ -309,12 +309,8 @@
     <section class="form-section-block">
       <h2>Eenvoudige ROI Calculator</h2>
       <p class="form-explainer">Een snelle inschatting met standaardwaarden – ideaal voor een eerste indicatie van uw terugverdientijd.</p>
-      <form action="https://formsubmit.co/rob@proces360.com" method="POST" class="access-form">
-        <input type="hidden" name="_next" value="https://www.proces360.com/ROI calculator eenvoudig.html">
-        <input type="hidden" name="_subject" value="Toegang Eenvoudige ROI Calculator - Proces360">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        
+      <form id="form-eenvoudig" class="access-form" action="https://formspree.io/f/mrbqvaek" method="POST" data-redirect-url="ROI calculator eenvoudig.html">
+        <input type="hidden" name="_subject" value="ROI Toegang – Eenvoudig">
         <div class="form-group">
           <label for="naam-eenvoudig">Naam:</label>
           <input type="text" id="naam-eenvoudig" name="Naam" required>
@@ -326,20 +322,16 @@
         <div class="submit-button-container">
           <button type="submit" class="cta-button">Start Eenvoudige Berekening</button>
         </div>
+        <div class="form-status"></div>
       </form>
-      <div class="form-error" id="errorEenvoudig"></div>
     </section>
 
     <section class="form-section-block">
       <h2>Uitgebreide ROI Analyse</h2>
       <p class="form-explainer">Een volledige analyse inclusief scenario’s, cashflowprojectie en gevoeligheidsberekening.</p>
-      <form action="https://formsubmit.co/rob@proces360.com" method="POST" class="access-form">
-        <input type="hidden" name="_next" value="https://www.proces360.com/ROI-index.html">
-        <input type="hidden" name="_subject" value="Toegang Uitgebreide ROI Analyse - Proces360">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <div class="form-group">
+      <form id="form-uitgebreid" class="access-form" action="https://formspree.io/f/mrbqvaek" method="POST" data-redirect-url="ROI-index.html">
+        <input type="hidden" name="_subject" value="ROI Toegang – Uitgebreid">
+         <div class="form-group">
           <label for="naam-uitgebreid">Naam:</label>
           <input type="text" id="naam-uitgebreid" name="Naam" required>
         </div>
@@ -350,8 +342,8 @@
         <div class="submit-button-container">
           <button type="submit" class="cta-button">Start Uitgebreide Analyse</button>
         </div>
+         <div class="form-status"></div>
       </form>
-      <div class="form-error" id="errorUitgebreid"></div>
     </section>
 
   </div>
@@ -409,7 +401,7 @@
 </main>
 
 <footer class="footer">
-  <p>© <span id="currentYearFooter">2025</span> Proces360° – Slimme automatisering, advisering en impact.</p>
+  <p>&copy; <span id="currentYearFooter">2025</span> Proces360° – Slimme automatisering, advisering en impact.</p>
   <p>
     <a href="mailto:info@proces360.com">info@proces360.com</a> |
     <a href="https://www.proces360.com" target="_blank">www.proces360.com</a>
@@ -426,30 +418,23 @@
 <script src="whatsapp.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // --- BESTAANDE CODE ---
     document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
 
     const root = document.documentElement;
     const orangeColor = getComputedStyle(root).getPropertyValue('--orange').trim();
     if (orangeColor && !getComputedStyle(root).getPropertyValue('--orange-rgb')) {
-        let r = 255, g = 107, b = 0; 
+        let r = 255, g = 107, b = 0;
         if (orangeColor.startsWith('#')) {
             const hex = orangeColor.substring(1);
             if (hex.length === 3) {
-                r = parseInt(hex[0] + hex[0], 16);
-                g = parseInt(hex[1] + hex[1], 16);
-                b = parseInt(hex[2] + hex[2], 16);
+                r = parseInt(hex[0] + hex[0], 16); g = parseInt(hex[1] + hex[1], 16); b = parseInt(hex[2] + hex[2], 16);
             } else if (hex.length === 6) {
-                r = parseInt(hex.substring(0, 2), 16);
-                g = parseInt(hex.substring(2, 4), 16);
-                b = parseInt(hex.substring(4, 6), 16);
+                r = parseInt(hex.substring(0, 2), 16); g = parseInt(hex.substring(2, 4), 16); b = parseInt(hex.substring(4, 6), 16);
             }
         } else if (orangeColor.startsWith('rgb')) {
             const parts = orangeColor.match(/\d+/g);
-            if (parts && parts.length >= 3) {
-                r = parseInt(parts[0]);
-                g = parseInt(parts[1]);
-                b = parseInt(parts[2]);
-            }
+            if (parts && parts.length >= 3) { r = parseInt(parts[0]); g = parseInt(parts[1]); b = parseInt(parts[2]); }
         }
         root.style.setProperty('--orange-rgb', `${r}, ${g}, ${b}`);
     }
@@ -475,6 +460,70 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+
+    // --- NIEUWE CODE VOOR FORMULIERAFHANDELING ---
+
+    async function handleFormSubmit(event) {
+        event.preventDefault(); // Voorkom standaard formulierverzending
+        const form = event.target;
+        const formData = new FormData(form);
+        const statusDiv = form.querySelector('.form-status');
+        const redirectUrl = form.dataset.redirectUrl;
+
+        // Haal naam en e-mail op uit het formulier
+        const naam = formData.get('Naam');
+        const email = formData.get('E-mail');
+
+        if (!statusDiv) {
+            console.error("Status div niet gevonden in formulier:", form);
+            return; // Stop als de status div niet bestaat
+        }
+
+        statusDiv.innerHTML = "Bedankt, een moment geduld. U wordt doorgestuurd...";
+        statusDiv.style.color = 'var(--blue)'; // Blauwe kleur tijdens verzenden
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json' // Belangrijk voor Formspree AJAX
+                }
+            });
+
+            if (response.ok) {
+                // Verzending gelukt, stuur door MET naam en e-mail in URL
+                const separator = redirectUrl.includes('?') ? '&' : '?';
+                window.location.href = `${redirectUrl}${separator}naam=${encodeURIComponent(naam)}&email=${encodeURIComponent(email)}`;
+            } else {
+                // Er ging iets mis bij Formspree
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    statusDiv.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    statusDiv.innerHTML = "Oeps! Er ging iets mis bij het verzenden. Probeer het opnieuw.";
+                }
+                statusDiv.style.color = 'red'; // Rode kleur bij fout
+            }
+        } catch (error) {
+            // Netwerkfout of ander probleem
+            statusDiv.innerHTML = "Oeps! Er is een netwerkfout opgetreden. Controleer uw verbinding en probeer het opnieuw.";
+            statusDiv.style.color = 'red'; // Rode kleur bij fout
+            console.error('Fetch Error:', error);
+        }
+    }
+
+    // Koppel de functie aan beide formulieren
+    const formEenvoudig = document.getElementById('form-eenvoudig');
+    const formUitgebreid = document.getElementById('form-uitgebreid');
+
+    if (formEenvoudig) {
+        formEenvoudig.addEventListener('submit', handleFormSubmit);
+    }
+    if (formUitgebreid) {
+        formUitgebreid.addEventListener('submit', handleFormSubmit);
+    }
+    // --- EINDE NIEUWE CODE ---
 });
 </script>
 
