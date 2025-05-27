@@ -40,13 +40,14 @@
       margin: 2rem auto;
       background: #fff;
       border-radius: 10px;
-      box-shadow: var(--shadow);
+      /* box-shadow: var(--shadow); /* Haal dit weg als var(--shadow) niet gedefinieerd is */
     }
     .content-article h2 {
       margin-top: 2.5rem;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--orange);
+      /* border-bottom: 2px solid var(--orange); /* Haal dit weg als var(--orange) niet gedefinieerd is */
+      border-bottom: 2px solid #e86a0e; /* Gebruik de kleur direct */
       display: inline-block;
     }
     .content-article h2:first-of-type {
@@ -72,7 +73,8 @@
       color: #555;
       background-color: #f9f9f9;
       padding: 1rem;
-      border-left: 4px solid var(--orange);
+      /* border-left: 4px solid var(--orange); /* Haal dit weg als var(--orange) niet gedefinieerd is */
+      border-left: 4px solid #e86a0e; /* Gebruik de kleur direct */
       margin-top: 1rem;
       max-width: 75ch;
     }
@@ -83,6 +85,146 @@
       margin: 3rem auto;
       max-width: 75ch;
     }
+
+    /* STIJLEN VOOR HERO SECTIE MET VIDEO */
+    .hero-with-video {
+      display: flex;
+      flex-direction: row; /* Naast elkaar op grote schermen */
+      align-items: center;
+      justify-content: space-around; /* Iets meer ruimte */
+      gap: 2rem; /* Ruimte tussen tekst en video */
+      text-align: left; /* Zorgt dat tekst links uitlijnt */
+      padding: 3rem 3rem; /* Meer padding */
+      max-width: 1300px; /* Max breedte voor de hero sectie */
+      margin: 1rem auto; /* Centreer de hero sectie */
+      background-color: #f8f9fa; /* Lichte achtergrond */
+      border-radius: 10px; /* Afgeronde hoeken */
+    }
+
+    .hero-with-video .hero-text {
+      flex: 1; /* Neemt beschikbare ruimte in */
+      max-width: 48%;
+      padding-right: 1rem; /* Ruimte rechts van tekst */
+    }
+
+    .hero-with-video .hero-text h1,
+    .hero-with-video .hero-text p {
+        text-align: left; /* Zorg dat tekst links uitgelijnd is */
+    }
+
+    .hero-with-video .hero-video {
+      flex: 1; /* Neemt beschikbare ruimte in */
+      max-width: 48%;
+      min-width: 300px; /* Minimale breedte */
+    }
+
+    .hero-with-video .hero-video iframe {
+        width: 100%; /* Maakt video responsive */
+        aspect-ratio: 16 / 9; /* Behoudt 16:9 ratio */
+        height: auto; /* Hoogte automatisch aanpassen */
+        border-radius: 8px; /* Optioneel: afgeronde hoeken */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Duidelijkere schaduw */
+        border: 1px solid #ddd; /* Lichte rand */
+    }
+
+    @media (max-width: 860px) {
+      .hero-with-video {
+        flex-direction: column; /* Onder elkaar op kleine schermen */
+        text-align: center; /* Centreer alles */
+        padding: 1.5rem 1rem; /* Minder padding op klein scherm */
+      }
+
+      .hero-with-video .hero-text,
+      .hero-with-video .hero-video {
+         max-width: 95%; /* Meer breedte op kleine schermen */
+         text-align: center; /* Centreer tekst */
+         padding-right: 0; /* Geen padding rechts */
+      }
+
+      .hero-with-video .hero-text h1,
+      .hero-with-video .hero-text p {
+          text-align: center; /* Centreer tekst */
+      }
+
+       .hero-with-video .cta-wrapper {
+          justify-content: center; /* Centreer knoppen */
+          flex-direction: column; /* Knoppen onder elkaar */
+          align-items: center; /* Centreer knoppen in kolom */
+          gap: 1rem; /* Ruimte tussen knoppen */
+       }
+       .hero-with-video .cta-button {
+           width: 80%; /* Geef knoppen breedte */
+           text-align: center; /* Centreer tekst in knop */
+       }
+    }
+
+    .cta-wrapper {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        background-color: #e86a0e;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: 600;
+    }
+    .cta-button:hover {
+        background-color: #d15f0c;
+    }
+     .main-header h1 {
+        text-align: left;
+     }
+
+    /* STIJLEN VOOR HET CALL-TO-ACTION BLOK */
+    .cta-section {
+      background-color: #f8f9fa; /* Lichte achtergrond, consistent met hero */
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 4rem auto; /* Ruimte boven/onder en centreren */
+      max-width: 900px; /* Beperkte breedte voor focus */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtiele schaduw */
+    }
+
+    .cta-section h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .cta-section p {
+      max-width: 70ch; /* Goede leesbreedte */
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+      font-weight: 600; /* Behoud het vetgedrukte */
+    }
+
+    .cta-section .cta-wrapper {
+        justify-content: center; /* Zorg dat knoppen gecentreerd zijn */
+        gap: 1.5rem; /* Iets meer ruimte tussen knoppen */
+    }
+
+    @media (max-width: 860px) {
+      .cta-section .cta-wrapper {
+          flex-direction: column; /* Knoppen onder elkaar */
+          align-items: center; /* Centreer knoppen in kolom */
+          gap: 1rem; /* Ruimte tussen knoppen */
+      }
+       .cta-section .cta-wrapper .cta-button {
+           width: 90%; /* Geef knoppen breedte */
+           text-align: center; /* Centreer tekst in knop */
+       }
+    }
+
   </style>
 </head>
 <body>
@@ -98,18 +240,23 @@
       <a href="quickscan.html" class="lang-btn active">NL</a> </div>
   </div>
 </header>
-<section class="hero">
-  <h1><span style>Proces</span><span style="color:#e86a0e">360°</span> – Quickscan</h1>
-  <p>Ontdek snel waar uw productie slimmer kan worden en direct rendement oplevert.</p>
-  <div class="cta-wrapper">
-    <a href="mailto:info@proces360.com?subject=Quickscan%20inplannen" class="cta-button">
-      Plan Quickscan (mail)
-    </a>
-    <a href="https://wa.me/31630185844?text=Hallo%20Proces360%2C%20ik%20wil%20een%20Quickscan%20inplannen" target="_blank" class="cta-button"> Plan Quickscan (WhatsApp)
-    </a>
+
+<section class="hero hero-with-video">
+  <div class="hero-text">
+    <h1><span style>Proces</span><span style="color:#e86a0e">360°</span> – Quickscan</h1>
+    <p>Ontdek snel waar uw productie slimmer kan worden en direct rendement oplevert.</p>
+    <div class="cta-wrapper">
+      <a href="mailto:info@proces360.com?subject=Quickscan%20inplannen" class="cta-button">
+        Plan Quickscan (mail)
+      </a>
+      <a href="https://wa.me/31630185844?text=Hallo%20Proces360%2C%20ik%20wil%20een%20Quickscan%20inplannen" target="_blank" class="cta-button"> Plan Quickscan (WhatsApp)
+      </a>
+    </div>
+  </div>
+  <div class="hero-video">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/7AnsI2ZRcJ0" title="Test Drive │ Sanding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
-
 <main class="content-article">
   <article> <h2>Wat is een Proces360° Quickscan?</h2>
     <p>
@@ -149,12 +296,12 @@
   </article>
 </main>
 
-<section class="visie" style="margin-top: 3rem;">
+<section class="cta-section">
   <h2>Interesse Gewekt? Plan Uw Quickscan!</h2>
-  <p style="text-align:center;font-weight:600; max-width: 75ch; margin-left:auto; margin-right:auto;">
+  <p>
     Zet vandaag nog de eerste stap naar een efficiënter productieproces. Plan uw Quickscan direct via e-mail of WhatsApp. Wij nemen binnen één werkdag contact met u op voor een vrijblijvende intake.
   </p>
-  <div class="cta-wrapper" style="margin-top: 1.5rem;">
+  <div class="cta-wrapper">
     <a href="mailto:info@proces360.com?subject=Quickscan%20inplannen" class="cta-button">
       Plan Quickscan (mail)
     </a>
@@ -162,10 +309,9 @@
     </a>
   </div>
 </section>
-
 <footer class="footer">
   <p>© 2025 Proces360° – Slimme automatisering, advisering en impact.</p>
-  <p><a href="mailto:info@proces360.com">info@proces360.com</a>&ensp;|&ensp;<a href="https://www.proces360.com" target="_blank">www.proces360.com</a></p> <p class="legal-links">
+  <p><a href="mailto:info@proces360.com">info@proces360.com</a> | <a href="https://www.proces360.com" target="_blank">www.proces360.com</a></p> <p class="legal-links">
     <a href="legal%20pages/privacy.html">Privacyverklaring</a> |
     <a href="legal%20pages/cookieverklaring.html">Cookieverklaring</a> |
     <a href="legal%20pages/disclaimer.html">Disclaimer</a> |
