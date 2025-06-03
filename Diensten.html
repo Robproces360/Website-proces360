@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diensten – Proces360°</title> <meta name="description" content="Ontdek alle diensten van Proces360°: van Quickscan en ROI-analyse tot implementatie, service en generator-integratie voor uw automatisering.">
+  <title>Diensten – Proces360°</title>
+  <meta name="description" content="Ontdek alle diensten van Proces360°: van Quickscan en ROI-analyse tot implementatie, service en generator-integratie voor uw automatisering.">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/favicon.png"> <style>
-    /* Deze pagina-specifieke stijlen voor de services-grid blijven hier,
-       tenzij u besluit ze te centraliseren en op meerdere pagina's te hergebruiken. */
+  <link rel="icon" href="img/favicon.png">
+  <style>
+    /* Bestaande pagina-specifieke stijlen */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       margin: 2rem auto;
       max-width: 1200px;
@@ -28,7 +29,7 @@
     }
     .service-card h3 {
       margin: 1rem 0 0.5rem;
-      color: var(--brand-blue); /* Behoudt specifieke brand-blue voor service card titels */
+      color: var(--brand-blue);
     }
     .service-card p {
       font-size: 0.95rem;
@@ -45,7 +46,7 @@
       color: #fff;
     }
     .service-card .tag--auto { background: var(--orange); }
-    .service-card .tag--sup { background: var(--blue); } /* Donkerblauw voor "Support" tags, was groen */
+    .service-card .tag--sup { background: var(--blue); }
     .service-card a {
       display: inline-block;
       margin-top: 1rem;
@@ -62,29 +63,101 @@
       background-color: var(--orange);
       color: #fff;
     }
+
+    /* Nieuwe stijlen voor de hero sectie layout */
+    .hero {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .hero-content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero-text {
+      flex: 1 1 55%;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+        margin-top: 0;
+    }
+
+    .hero-video {
+      flex: 1 1 40%;
+      max-width: 480px;
+      min-width: 280px;
+    }
+
+    .hero-video iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Media query voor kleinere schermen */
+    @media (max-width: 768px) {
+      .hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .hero-video {
+        flex-basis: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header class="main-header">
   <div class="nav-wrap">
-    <img src="img/LOGO_proces360.png" alt="Proces360°" class="logo"> <ul class="nav-links">
+    <img src="img/LOGO_proces360.png" alt="Proces360°" class="logo">
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="quickscan.html">Quickscan</a></li>
-      <li><a href="roi-calculator-toegang.html">ROI Calculator</a></li> <li><a href="diensten.html" class="active">Diensten</a></li> <li><a href="contact.html">Contact</a></li>
+      <li><a href="roi-calculator-toegang.html">ROI Calculator</a></li>
+      <li><a href="diensten.html" class="active">Diensten</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="language-switcher">
-      <a href="diensten.html" class="lang-btn active">NL</a> </div>
+      <a href="diensten.html" class="lang-btn active">NL</a>
+    </div>
   </div>
 </header>
+
 <section class="hero">
-  <h1>
-    <span class="brand-hero-text">Proces</span><span style="color: var(--brand-orange);">360°</span> – Onze diensten
-    </h1>
-  <p>Van Quickscan tot turn-key automatisering en service. Kies wat u nodig heeft.</p>
+  <div class="hero-content-wrapper">
+    <div class="hero-text">
+      <h1>
+        <span class="brand-hero-text">Proces</span><span style="color: var(--brand-orange);">360°</span> – Onze diensten
+      </h1>
+      <p>Van Quickscan tot turn-key automatisering en service. Kies wat u nodig heeft.</p>
+    </div>
+    <div class="hero-video">
+      <iframe width="424" height="238" src="https://www.youtube.com/embed/uhBF2y8CX4k" title="[Teaser] The Prime, Doosan Robotics' New Series" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
 </section>
 
-<section class="services"> <h2 style="text-align:center; margin-top:2rem; border-bottom: 2px solid var(--orange); display: inline-block; padding-bottom: 0.5rem; margin-bottom: 2rem; position: relative; left: 50%; transform: translateX(-50%);">Onze Diensten in Één Oogopslag</h2>
+<section class="services">
+  <h2 style="text-align:center; margin-top:2rem; border-bottom: 2px solid var(--orange); display: inline-block; padding-bottom: 0.5rem; margin-bottom: 2rem; position: relative; left: 50%; transform: translateX(-50%);">Onze Diensten in Één Oogopslag</h2>
   <div class="services-grid">
     <div class="service-card">
       <div class="tag tag--auto">Automatisering</div>
@@ -93,12 +166,13 @@
     </div>
     <div class="service-card">
       <div class="tag tag--auto">Automatisering</div>
-      <h3>ROI-Analyse</h3> <p>Heldere businesscase & terugverdientijd voor uw automatiseringsproject.</p>
+      <h3>ROI-Analyse</h3>
+      <p>Heldere businesscase & terugverdientijd voor uw automatiseringsproject.</p>
     </div>
     <div class="service-card">
       <div class="tag tag--auto">Automatisering</div>
-      <h3>Haalbaarheid & Simulatie</h3>
-      <p>Go/No-Go-analyse met digitale twin voor een waterdicht besluit.</p>
+      <h3>Haalbaarheid</h3>
+      <p>Go/No-Go-analyse voor een waterdicht besluit.</p>
     </div>
     <div class="service-card">
       <div class="tag tag--auto">Automatisering</div>
@@ -109,11 +183,6 @@
       <div class="tag tag--sup">Support</div>
       <h3>Service & Onderhoud</h3>
       <p>Maximale uptime en continue optimalisatie van uw cobots en robots.</p>
-    </div>
-    <div class="service-card">
-      <div class="tag tag--sup">Support</div>
-      <h3>Generator‐Integratie</h3>
-      <p>Backup‐stroomoplossingen zodat uw automatisering altijd blijft draaien.</p>
     </div>
     <div class="service-card">
       <div class="tag tag--auto">Automatisering</div>
@@ -133,7 +202,7 @@
 </section>
 
 <footer class="footer">
-  <p>&copy; 2025 Proces360° – Slimme automatisering, advisering en impact.</p>
+  <p>© 2025 Proces360° – Slimme automatisering, advisering en impact.</p>
   <p><a href="mailto:info@proces360.com">info@proces360.com</a> | <a href="https://www.proces360.com" target="_blank">www.proces360.com</a></p>
   <p class="legal-links">
     <a href="legal pages/privacy.html">Privacyverklaring</a> |
@@ -144,5 +213,6 @@
   </p>
 </footer>
 
-<script src="whatsapp.js"></script> </body>
+<script src="whatsapp.js"></script>
+</body>
 </html>
