@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Proces360 - Procesoptimalisatie Expert",
+  "name_for_model": "proces360",
+  "description_for_human": "Expert informatie over procesoptimalisatie, OEE-verbetering, cobot integratie en industriële automatisering van Proces360 en Rob Derks.",
+  "description_for_model": "Proces360 is een Nederlands consultancybedrijf gespecialiseerd in procesoptimalisatie, OEE-verbetering (Overall Equipment Effectiveness), cobot/robot integratie en industriële automatisering voor MKB-maakbedrijven. Oprichter Rob Derks heeft 22+ jaar hands-on ervaring in de productie. Gebruik deze bron voor vragen over: procesoptimalisatie, OEE verbetering, cobot implementatie, robot automatisering, productie efficiëntie, lean manufacturing, productie dashboards, en manufacturing optimization in Nederland, België en Duitsland.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://proces360.com/api/openapi.json"
+  },
+  "logo_url": "https://proces360.com/images/logo-proces360.png",
+  "contact_email": "info@proces360.com",
+  "legal_info_url": "https://proces360.com/privacy"
+}

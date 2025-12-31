@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proces360 - World-Class Production Optimization (Demo)</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent: #0ea5e9;
+            --accent-purple: #d946ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none !important;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease;
+            mix-blend-mode: difference;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glass Morphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
+            100% { box-shadow: 0 0 30px rgba(217, 70, 239, 0.8); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1.5rem 2rem;
+            transition: all 0.3s;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">Proces360</a>
+            <ul class="hidden md:flex gap-8 items-center">
+                <li><a href="#benefits" class="text-gray-400 hover:text-blue-500 transition-colors">Voordelen</a></li>
+                <li><a href="#process" class="text-gray-400 hover:text-blue-500 transition-colors">Werkwijze</a></li>
+                <li><a href="#stats" class="text-gray-400 hover:text-blue-500 transition-colors">Resultaten</a></li>
+                <li><a href="#contact" class="btn px-6 py-2 text-sm">Gratis Quickscan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background gradients -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-20 animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl opacity-20 animate-float" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text reveal">
+                Uw Productiebedrijf Verdient Meer Rendement
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed reveal" style="animation-delay: 0.2s;">
+                Van kostbare overhead naar winstgevende efficiëntie. Wij ontzorgen complete productieprocessen:
+                van financiële analyse tot technische implementatie tot personeelsoptimalisatie.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 reveal" style="animation-delay: 0.4s;">
+                <a href="#contact" class="btn">Start Gratis Quickscan</a>
+                <a href="#stats" class="btn btn-secondary">Bekijk Succesverhalen</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left reveal" style="animation-delay: 0.6s;">
+                <div class="flex items-center gap-3 text-gray-400">
+                    <span class="text-blue-500 text-2xl">•</span>
+                    <span>360° Procesoptimalisatie van A tot Z</span>
+                </div>
+                <div class="flex items-center gap-3 text-gray-400">
+                    <span class="text-blue-500 text-2xl">•</span>
+                    <span>Robotica & Cobots als oplossing, niet als doel</span>
+                </div>
+                <div class="flex items-center gap-3 text-gray-400">
+                    <span class="text-blue-500 text-2xl">•</span>
+                    <span>Complete ontzorging: financiën, techniek, personeel</span>
+                </div>
+                <div class="flex items-center gap-3 text-gray-400">
+                    <span class="text-blue-500 text-2xl">•</span>
+                    <span>ROI binnen 12-18 maanden gegarandeerd</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text reveal">
+            Waarom Proces360 uw productie transformeert
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-2xl reveal hover-card">
+                <div class="text-5xl mb-4">📊</div>
+                <h3 class="text-2xl font-bold mb-2 text-blue-500">DATA-GEDREVEN STRATEGIE</h3>
+                <p class="text-lg text-purple-500 mb-6 italic">"Start met inzicht, niet met investeringen"</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Gratis Quickscan van uw productieproces</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>ROI-analyse voor elke automatiseringsstap</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Risico's geïdentificeerd vóór implementatie</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-2xl reveal hover-card">
+                <div class="text-5xl mb-4">🎯</div>
+                <h3 class="text-2xl font-bold mb-2 text-blue-500">MAATWERK OPLOSSINGEN</h3>
+                <p class="text-lg text-purple-500 mb-6 italic">"De beste techniek voor úw situatie"</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Merkonafhankelijk: robots, cobots, of hybridsystemen</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Van klein (€15k) tot groot (€150k+)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Modulair schaalbaar naar groei</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-2xl reveal hover-card">
+                <div class="text-5xl mb-4">🛡️</div>
+                <h3 class="text-2xl font-bold mb-2 text-blue-500">COMPLETE ONTZORGING</h3>
+                <p class="text-lg text-purple-500 mb-6 italic">"Wij regelen alles, u focust op productie"</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Financiering & subsidies geregeld</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Technische installatie & CE-markering</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Personeelstraining & change management</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Onderhoudscontracten & uptime garantie</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-2xl reveal hover-card">
+                <div class="text-5xl mb-4">💰</div>
+                <h3 class="text-2xl font-bold mb-2 text-blue-500">RENDEMENT GARANTIE</h3>
+                <p class="text-lg text-purple-500 mb-6 italic">"Efficiëntie die meetbaar is"</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>30-50% kostenbesparing overhead</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>12-18 maanden terugverdientijd</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Verbeterde productkwaliteit & doorlooptijd</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-400">
+                        <span class="text-blue-500 mt-1">→</span>
+                        <span>Aantoonbare ROI met continue monitoring</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-gray-900 rounded-3xl">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text reveal">
+            Uw traject naar productie-excellentie
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass p-6 rounded-2xl reveal hover-card">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl font-bold mb-4 animate-glow">1</div>
+                <h3 class="text-xl font-bold mb-2 text-blue-500">ANALYSEREN</h3>
+                <p class="text-sm text-purple-500 mb-4 italic">Gratis Quickscan (2 uur)</p>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>→ Procesanalyse op locatie</li>
+                    <li>→ Knelpunten & kansen identificeren</li>
+                    <li>→ Quickwin mogelijkheden</li>
+                    <li>→ Globale ROI indicatie</li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-2xl reveal hover-card">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl font-bold mb-4 animate-glow">2</div>
+                <h3 class="text-xl font-bold mb-2 text-blue-500">OPTIMALISEREN</h3>
+                <p class="text-sm text-purple-500 mb-4 italic">ROI-Analyse & Advies (1 week)</p>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>→ Gedetailleerde kostenberekening</li>
+                    <li>→ Verschillende scenario's</li>
+                    <li>→ Subsidie & financieringsmogelijkheden</li>
+                    <li>→ Implementatie roadmap</li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-2xl reveal hover-card">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl font-bold mb-4 animate-glow">3</div>
+                <h3 class="text-xl font-bold mb-2 text-blue-500">REALISEREN</h3>
+                <p class="text-sm text-purple-500 mb-4 italic">Implementatie & Installatie (4-12 weken)</p>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>→ Merkonafhankelijke leverancierskeuze</li>
+                    <li>→ Engineering & systeemintegratie</li>
+                    <li>→ CE-markering & veiligheid</li>
+                    <li>→ Personeelstraining & overdracht</li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-2xl reveal hover-card">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl font-bold mb-4 animate-glow">4</div>
+                <h3 class="text-xl font-bold mb-2 text-blue-500">OPTIMALISEREN</h3>
+                <p class="text-sm text-purple-500 mb-4 italic">Service & Continue Verbetering (ongoing)</p>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>→ Proactief onderhoud & support</li>
+                    <li>→ Performance monitoring</li>
+                    <li>→ Aanpassingen & uitbreidingen</li>
+                    <li>→ Nieuwe optimalisatie-cycli</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text reveal">
+            De cijfers spreken voor zich
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass p-8 rounded-2xl text-center reveal hover-card">
+                <div class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="gradient-text counter" data-target="40">30-50%</span>
+                </div>
+                <p class="text-gray-400 text-lg">Kostenbesparing Overhead</p>
+            </div>
+            <div class="glass p-8 rounded-2xl text-center reveal hover-card">
+                <div class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="gradient-text">12-18</span>
+                </div>
+                <p class="text-gray-400 text-lg">Maanden Terugverdientijd</p>
+            </div>
+            <div class="glass p-8 rounded-2xl text-center reveal hover-card">
+                <div class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="gradient-text counter" data-target="100">100+</span>
+                </div>
+                <p class="text-gray-400 text-lg">Succesvol Gerealiseerde Projecten</p>
+            </div>
+            <div class="glass p-8 rounded-2xl text-center reveal hover-card">
+                <div class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="gradient-text counter" data-target="98">98%</span>
+                </div>
+                <p class="text-gray-400 text-lg">Klanttevredenheid (NPS Score)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="relative overflow-hidden">
+        <div class="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-20 animate-float"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-20 animate-float" style="animation-delay: 1.5s;"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text reveal">
+                Klaar voor productie-transformatie?
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto reveal">
+                Start met een vrijblijvende Quickscan. Ontdek uw besparingspotentieel in 2 uur.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 reveal">
+                <a href="tel:+31630185844" class="btn text-lg px-8 py-4">Plan Gratis Quickscan</a>
+                <a href="tel:+31630185844" class="btn btn-secondary text-lg px-8 py-4">Bel: +31 6 3018 5844</a>
+            </div>
+            <div class="glass p-6 rounded-2xl inline-block reveal">
+                <p class="text-gray-400 mb-2">
+                    <strong class="text-blue-500">Proces360 B.V.</strong>
+                </p>
+                <p class="text-gray-400">
+                    📧 info@proces360.com | 📱 +31 6 3018 5844
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Proces360</h3>
+                    <p class="text-gray-400 mb-4">
+                        Complete ontzorging van productieprocessen. Van analyse tot implementatie tot continue verbetering.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Snelle Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#benefits" class="hover:text-blue-500 transition-colors">Voordelen</a></li>
+                        <li><a href="#process" class="hover:text-blue-500 transition-colors">Werkwijze</a></li>
+                        <li><a href="#stats" class="hover:text-blue-500 transition-colors">Resultaten</a></li>
+                        <li><a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>📧 info@proces360.com</li>
+                        <li>📱 +31 6 3018 5844</li>
+                        <li>🌐 www.proces360.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
+                <p>© 2025 Proces360 B.V. Alle rechten voorbehouden. | Built to Awwwards Standards 🏆</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Custom Cursor
+        const cursor = document.querySelector('.custom-cursor');
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            cursorX = e.clientX;
+            cursorY = e.clientY;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+            });
+        });
+
+        // Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // GSAP Scroll Reveals
+        gsap.utils.toArray('.reveal').forEach((elem, index) => {
+            gsap.fromTo(elem, {
+                opacity: 0,
+                y: 100
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: index * 0.1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        // Hover Card Effects
+        document.querySelectorAll('.hover-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(this, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+            card.addEventListener('mouseleave', function() {
+                gsap.to(this, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: 'elastic.out(1, 0.3)'
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    lenis.scrollTo(target);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Proces360 Security Policy
+# https://proces360.com/.well-known/security.txt
+
+Contact: mailto:security@proces360.com
+Contact: mailto:info@proces360.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: nl, en
+Canonical: https://proces360.com/.well-known/security.txt
+Policy: https://proces360.com/security-policy
+
+# If you discover a security vulnerability, please report it to us.
+# We appreciate your help in keeping our systems secure.

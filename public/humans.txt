@@ -1,0 +1,25 @@
+/* TEAM */
+Founder & Lead Consultant: Rob Derks
+Site: https://proces360.com
+Location: Oss, Noord-Brabant, Netherlands
+LinkedIn: https://www.linkedin.com/in/robderks/
+
+/* COMPANY */
+Name: Proces360 B.V.
+Founded: 2023
+Expertise: Process Optimization, OEE Improvement, Cobot Integration, Industrial Automation
+Contact: info@proces360.com
+Phone: +31 85 401 0752
+
+/* SITE */
+Last update: 2025/12
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: Next.js 14, React 18, TypeScript
+Styling: Tailwind CSS
+Animations: GSAP, Framer Motion, Lenis
+Components: Recharts, Lucide Icons
+Software: Visual Studio Code, Claude Code
+
+/* THANKS */
+Built with passion for manufacturing excellence.
+22+ years of production experience transformed into digital solutions.
