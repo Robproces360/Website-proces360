@@ -88,6 +88,7 @@ export default function Navbar() {
     { href: '#360scan', label: '360Scan' },
     { href: '#aanpak', label: 'Aanpak' },
     { href: '#waarom', label: 'Waarom Ons' },
+    { href: '/blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ];
 

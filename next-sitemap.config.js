@@ -110,6 +110,31 @@ module.exports = {
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
+      // Blog pagina's
+      {
+        loc: '/blog',
+        changefreq: 'daily',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/oee-verbeteren-complete-gids',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/cobot-terugverdientijd-berekenen',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/productie-stilstand-verminderen',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
     ];
   },
 
