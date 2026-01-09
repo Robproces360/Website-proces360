@@ -28,7 +28,7 @@ import {
 const expertStats = [
   { value: '22+', label: 'Jaar Productie-ervaring', icon: Calendar },
   { value: '150+', label: 'Optimalisatie Projecten', icon: Target },
-  { value: '€50M+', label: 'Gerealiseerde Besparingen', icon: TrendingUp },
+  { value: '€10M+', label: 'Gerealiseerde Besparingen', icon: TrendingUp },
   { value: '95%', label: 'Klanttevredenheid', icon: Award },
 ];
 

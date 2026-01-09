@@ -113,7 +113,7 @@ const personJsonLd = {
     ],
     award: [
       '150+ succesvolle optimalisatieprojecten',
-      '€50M+ gerealiseerde besparingen voor klanten',
+      '€10M+ gerealiseerde besparingen voor klanten',
       '95% klanttevredenheid',
     ],
     sameAs: [
