@@ -145,7 +145,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'XZgtpbCEEQDIJ3gXgP6umTDfLAYdpX7Vb1Dn_SNIo2U',
+    google: 'Iloc-dRKtrI0OAh5wZqGTy-Nus8GTuL_1Bygd5Rf5BI',
   },
   category: 'business',
   classification: 'Industrial Automation, Process Optimization, Manufacturing Consulting',
