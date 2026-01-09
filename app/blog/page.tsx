@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Clock, User, Calendar, TrendingUp, Calculator, Bot } from 'lucide-react';
+import { ArrowRight, Clock, User, Calendar, Calculator, Bot } from 'lucide-react';
 
 const blogPosts = [
   {
@@ -15,13 +15,33 @@ const blogPosts = [
     featured: true,
   },
   {
+    slug: 'cobots-in-productie-complete-gids',
+    title: 'Cobots in Productie: De Complete Gids voor MKB-Maakbedrijven',
+    excerpt: 'Van selectie tot implementatie: alles wat je moet weten over collaborative robots (cobots) in de maakindustrie. Inclusief ROI-berekening en veiligheid.',
+    author: 'Rob Derks',
+    date: '9 januari 2026',
+    readTime: '15 min',
+    category: 'Robotisering',
+    featured: false,
+  },
+  {
+    slug: 'productie-strategie-automatisering',
+    title: 'Productiestrategie & Automatisering: Van Visie naar Uitvoering',
+    excerpt: 'Hoe ontwikkel je een automatiseringsstrategie die past bij jouw MKB-maakbedrijf? Van quick wins tot lange termijn roadmap.',
+    author: 'Rob Derks',
+    date: '9 januari 2026',
+    readTime: '14 min',
+    category: 'Strategie',
+    featured: false,
+  },
+  {
     slug: 'cobot-terugverdientijd-berekenen',
     title: 'Cobot Terugverdientijd Berekenen: ROI in 12-18 Maanden',
     excerpt: 'Ontdek hoe je de terugverdientijd van een cobot berekent en wanneer robotisering rendabel is voor jouw MKB-maakbedrijf.',
     author: 'Rob Derks',
-    date: '9 januari 2026',
+    date: '7 januari 2026',
     readTime: '8 min',
-    category: 'Robotisering',
+    category: 'ROI',
     featured: false,
   },
   {
@@ -29,14 +49,47 @@ const blogPosts = [
     title: '10 Praktische Tips om Productie Stilstand te Verminderen',
     excerpt: 'Stilstand kost je duizenden euros per uur. Deze 10 bewezen methodes helpen je om ongeplande stilstand drastisch te verlagen.',
     author: 'Rob Derks',
-    date: '9 januari 2026',
+    date: '5 januari 2026',
     readTime: '10 min',
     category: 'Procesoptimalisatie',
+    featured: false,
+  },
+  {
+    slug: 'lean-manufacturing-mkb',
+    title: 'Lean Manufacturing voor MKB: Praktische Start in 30 Dagen',
+    excerpt: 'Lean is geen grote investering of complexe theorie. Het is een mindset die je morgen kunt starten. Dit zijn de eerste stappen.',
+    author: 'Rob Derks',
+    date: '28 december 2025',
+    readTime: '9 min',
+    category: 'Lean',
+    featured: false,
+  },
+  {
+    slug: 'preventief-onderhoud-tpm',
+    title: 'Preventief Onderhoud & TPM: Van Reactief naar Proactief',
+    excerpt: 'Stop met brandjes blussen. Leer hoe je met Total Productive Maintenance (TPM) storingen voorkomt in plaats van repareert.',
+    author: 'Rob Derks',
+    date: '20 december 2025',
+    readTime: '11 min',
+    category: 'Onderhoud',
+    featured: false,
+  },
+  {
+    slug: 'industrie-4-mkb-praktisch',
+    title: 'Industrie 4.0 voor MKB: Praktisch Beginnen Zonder Miljoeneninvestering',
+    excerpt: 'Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe je met kleine stappen en beperkt budget je fabriek digitaliseert.',
+    author: 'Rob Derks',
+    date: '12 december 2025',
+    readTime: '12 min',
+    category: 'Digitalisering',
     featured: false,
   },
 ];
 
 export default function BlogPage() {
+  const featuredPost = blogPosts.find(post => post.featured);
+  const otherPosts = blogPosts.filter(post => !post.featured);
+
   return (
     <main className="min-h-screen bg-bg-primary pt-24 pb-16">
       {/* Hero Section */}
@@ -56,9 +109,9 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      {blogPosts.filter(post => post.featured).map(post => (
-        <section key={post.slug} className="container mx-auto px-4 mb-16">
-          <Link href={`/blog/${post.slug}`} className="block group">
+      {featuredPost && (
+        <section className="container mx-auto px-4 mb-16">
+          <Link href={`/blog/${featuredPost.slug}`} className="block group">
             <div className="relative bg-gradient-to-br from-bg-secondary to-bg-primary border border-white/10 rounded-2xl p-8 md:p-12 overflow-hidden hover:border-primary-500/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl" />
               <div className="relative z-10">
@@ -66,23 +119,23 @@ export default function BlogPage() {
                   UITGELICHT
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-primary-500 transition-colors">
-                  {post.title}
+                  {featuredPost.title}
                 </h2>
                 <p className="text-lg text-gray-400 mb-6 max-w-2xl">
-                  {post.excerpt}
+                  {featuredPost.excerpt}
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                   <span className="flex items-center gap-2">
                     <User className="w-4 h-4" />
-                    {post.author}
+                    {featuredPost.author}
                   </span>
                   <span className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    {post.date}
+                    {featuredPost.date}
                   </span>
                   <span className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    {post.readTime} leestijd
+                    {featuredPost.readTime} leestijd
                   </span>
                 </div>
                 <div className="mt-6 flex items-center text-primary-500 font-semibold group-hover:gap-3 transition-all">
@@ -92,13 +145,13 @@ export default function BlogPage() {
             </div>
           </Link>
         </section>
-      ))}
+      )}
 
-      {/* Other Posts Grid */}
+      {/* All Posts Grid */}
       <section className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-white mb-8">Alle Artikelen</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map(post => (
+          {otherPosts.map(post => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <article className="bg-bg-secondary border border-white/10 rounded-xl p-6 h-full hover:border-primary-500/50 transition-all duration-300">
                 <span className="inline-block px-3 py-1 bg-primary-500/10 text-primary-500 text-xs font-medium rounded-full mb-4">
@@ -133,7 +186,7 @@ export default function BlogPage() {
             Wil je je OEE direct berekenen?
           </h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-            Gebruik onze gratis OEE Calculator en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
+            Gebruik onze gratis calculators en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

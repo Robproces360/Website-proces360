@@ -124,6 +124,18 @@ module.exports = {
         lastmod: new Date().toISOString(),
       },
       {
+        loc: '/blog/cobots-in-productie-complete-gids',
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/productie-strategie-automatisering',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
         loc: '/blog/cobot-terugverdientijd-berekenen',
         changefreq: 'weekly',
         priority: 0.85,
@@ -131,6 +143,24 @@ module.exports = {
       },
       {
         loc: '/blog/productie-stilstand-verminderen',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/lean-manufacturing-mkb',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/preventief-onderhoud-tpm',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/blog/industrie-4-mkb-praktisch',
         changefreq: 'weekly',
         priority: 0.85,
         lastmod: new Date().toISOString(),

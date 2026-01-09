@@ -32,52 +32,6 @@ const expertStats = [
   { value: '95%', label: 'Klanttevredenheid', icon: Award },
 ];
 
-// Carrière tijdlijn
-const careerTimeline = [
-  {
-    period: '2023 - Heden',
-    title: 'Oprichter & Lead Consultant',
-    company: 'Proces360 B.V.',
-    description: 'Oprichter van Proces360, gespecialiseerd in procesoptimalisatie, OEE-verbetering en cobot/robot integratie voor MKB-maakbedrijven.',
-    achievements: ['Gratis Quickscan ontwikkeld', 'OEE & ROI Calculators gebouwd', '50+ technologiepartners'],
-  },
-  {
-    period: '2018 - 2023',
-    title: 'Operations Manager',
-    company: 'Diverse MKB Maakbedrijven',
-    description: 'Verantwoordelijk voor complete productieoperaties, van strategische planning tot dagelijkse uitvoering.',
-    achievements: ['OEE verhoogd van 55% naar 78%', 'Eerste cobot-implementaties geleid', '€2.5M+ jaarlijkse besparingen'],
-  },
-  {
-    period: '2014 - 2018',
-    title: 'Maintenance Manager',
-    company: 'Productie MKB',
-    description: 'Leiding over technische dienst en onderhoudsplanning. Focus op preventief onderhoud en uptime maximalisatie.',
-    achievements: ['Downtime -40% gereduceerd', 'TPM-programma geïmplementeerd', 'Onderhoudsbudget -25%'],
-  },
-  {
-    period: '2008 - 2014',
-    title: 'Production Manager',
-    company: 'Maakbedrijf',
-    description: 'Verantwoordelijk voor productieplanning, personeelsmanagement en kwaliteitsborging.',
-    achievements: ['Lean manufacturing ingevoerd', 'Productiviteit +30%', 'Afkeur -50%'],
-  },
-  {
-    period: '2004 - 2008',
-    title: 'Teamleider Productie',
-    company: 'Productiebedrijf',
-    description: 'Aansturing van productieteam, eerste stappen in procesverbetering en efficiëntie-optimalisatie.',
-    achievements: ['Team van 15 medewerkers', 'Eerste Kaizen-projecten', 'Shift-output +20%'],
-  },
-  {
-    period: '2001 - 2004',
-    title: 'Operator / Allround Productiemedewerker',
-    company: 'Diverse Productiebedrijven',
-    description: 'Hands-on ervaring met machines, processen en de dagelijkse realiteit van de werkvloer.',
-    achievements: ['CNC-bediening', 'Kwaliteitscontrole', 'Veiligheidsprotocollen'],
-  },
-];
-
 // Expertisegebieden
 const expertiseAreas = [
   {
@@ -316,52 +270,6 @@ export default function RobDerksPage() {
                       </div>
                     </div>
                   </HoverScale>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Career Timeline */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <Reveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Carrière<span className="gradient-text">pad</span>
-                </h2>
-                <p className="text-gray-400 max-w-2xl mx-auto">
-                  Van operator tot operations manager - 22 jaar groei op de werkvloer
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="max-w-4xl mx-auto">
-              {careerTimeline.map((item, index) => (
-                <Reveal key={index} delay={index * 0.1}>
-                  <div className="relative pl-8 pb-12 border-l-2 border-primary-500/30 last:pb-0">
-                    {/* Timeline dot */}
-                    <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-primary-500 rounded-full" />
-
-                    <div className="bg-dark-800/30 border border-white/10 rounded-xl p-6 ml-4 hover:border-primary-500/30 transition-colors">
-                      <div className="flex flex-wrap items-center gap-4 mb-3">
-                        <span className="px-3 py-1 bg-primary-500/10 text-primary-400 text-sm font-semibold rounded-full">
-                          {item.period}
-                        </span>
-                        <span className="text-gray-500 text-sm">{item.company}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                      <p className="text-gray-400 mb-4">{item.description}</p>
-                      <div className="space-y-2">
-                        {item.achievements.map((achievement, i) => (
-                          <div key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                            <CheckCircle2 className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                            <span>{achievement}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
                 </Reveal>
               ))}
             </div>
