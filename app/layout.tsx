@@ -144,12 +144,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Voeg verificatie codes toe wanneer je Google Search Console en Yandex Webmaster configureert
-  // verification: {
-  //   google: 'YOUR_GOOGLE_VERIFICATION_CODE',
-  //   yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
-  //   bing: 'YOUR_BING_VERIFICATION_CODE',
-  // },
+  verification: {
+    google: 'XZgtpbCEEQDIJ3gXgP6umTDfLAYdpX7Vb1Dn_SNIo2U',
+  },
   category: 'business',
   classification: 'Industrial Automation, Process Optimization, Manufacturing Consulting',
   other: {
