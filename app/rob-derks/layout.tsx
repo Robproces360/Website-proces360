@@ -117,7 +117,7 @@ const personJsonLd = {
       '95% klanttevredenheid',
     ],
     sameAs: [
-      'https://www.linkedin.com/in/robderks/',
+      'https://www.linkedin.com/in/rob-derks-15900873/',
     ],
   },
 };

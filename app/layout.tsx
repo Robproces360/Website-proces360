@@ -197,7 +197,7 @@ const organizationSchema = {
     description: 'Rob Derks heeft 22+ jaar ervaring in de productie, van operator tot operations manager. Hij combineert hands-on productie-expertise met moderne automatiserings- en robotica-kennis.',
     url: 'https://proces360.com/rob-derks',
     sameAs: [
-      'https://www.linkedin.com/in/robderks/',
+      'https://www.linkedin.com/in/rob-derks-15900873/',
     ],
   },
   address: {
@@ -251,7 +251,7 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    'https://www.linkedin.com/company/proces360',
+    'https://www.linkedin.com/company/108035287',
     'https://twitter.com/proces360',
   ],
   knowsAbout: [
@@ -451,7 +451,7 @@ const personSchema = {
     },
   ],
   sameAs: [
-    'https://www.linkedin.com/in/robderks/',
+    'https://www.linkedin.com/in/rob-derks-15900873/',
   ],
 };
 

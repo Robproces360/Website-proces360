@@ -2,7 +2,8 @@
 Founder & Lead Consultant: Rob Derks
 Site: https://proces360.com
 Location: Oss, Noord-Brabant, Netherlands
-LinkedIn: https://www.linkedin.com/in/robderks/
+LinkedIn: https://www.linkedin.com/in/rob-derks-15900873/
+Company LinkedIn: https://www.linkedin.com/company/108035287
 
 /* COMPANY */
 Name: Proces360 B.V.

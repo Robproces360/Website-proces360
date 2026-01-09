@@ -148,7 +148,7 @@ export default function RobDerksPage() {
                     </Magnetic>
                     <Magnetic>
                       <a
-                        href="https://www.linkedin.com/in/robderks/"
+                        href="https://www.linkedin.com/in/rob-derks-15900873/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
