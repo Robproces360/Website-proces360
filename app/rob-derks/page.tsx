@@ -82,7 +82,7 @@ const expertStatements = [
     topic: 'Over Cobots',
   },
   {
-    quote: "Na 22 jaar op de werkvloer weet ik één ding zeker: de beste optimalisatie-ideeën komen van de operators zelf. Mijn rol is om die kennis te structureren, te kwantificeren en te vertalen naar concrete businesscases.",
+    quote: "Ik heb zelf jarenlang aan machines gestaan en shifts gedraaid. Daardoor weet ik: de beste optimalisatie-ideeën komen van de operators zelf. Mijn rol is om die kennis te structureren, te kwantificeren en te vertalen naar concrete businesscases die management én werkvloer overtuigen.",
     topic: 'Over Procesoptimalisatie',
   },
   {
@@ -116,11 +116,17 @@ export default function RobDerksPage() {
                     </span>
                   </h1>
 
-                  <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Van operator tot operations manager - 22 jaar hands-on ervaring in de productie.
-                    Ik ken de werkvloer, de machines, én de uitdagingen van MKB-maakbedrijven.
-                    Gedegen advies met daarop volgende acties - van A tot Z ontzorgd.
-                  </p>
+                  <div className="space-y-4 text-lg text-gray-300 mb-8 leading-relaxed">
+                    <p>
+                      In 22 jaar heb ik alle kanten van de productie gezien - van operator aan de lijn tot operations manager met eindverantwoordelijkheid. Ik heb zelf aan machines gestaan, shifts gedraaid, en teams aangestuurd. Die ervaring maakt dat ik precies weet waar de schoen wringt en waar problemen ontstaan.
+                    </p>
+                    <p>
+                      Ik ken de slagen van de zweep. De druk van deadlines, de frustratie van onverklaarbare stilstanden, en de uitdaging om met beperkte middelen maximaal resultaat te behalen. Daarom werk ik niet vanuit een ivoren toren, maar sta ik naast je op de werkvloer.
+                    </p>
+                    <p>
+                      Mijn aanpak? Eerst problemen zichtbaar maken - met data, niet met onderbuikgevoel. Daarna samen oplossen: OEE verhogen, processen stroomlijnen, en waar zinvol automatiseringsoplossingen bedenken én integreren. Van analyse tot implementatie, van A tot Z ontzorgd.
+                    </p>
+                  </div>
 
                   <div className="flex flex-wrap gap-4 mb-8">
                     <div className="flex items-center gap-2 text-gray-400">
@@ -130,6 +136,10 @@ export default function RobDerksPage() {
                     <div className="flex items-center gap-2 text-gray-400">
                       <Factory className="w-5 h-5 text-primary-500" />
                       <span>MKB Maakbedrijven</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <Briefcase className="w-5 h-5 text-primary-500" />
+                      <span>Operator tot Operations Manager</span>
                     </div>
                   </div>
 
