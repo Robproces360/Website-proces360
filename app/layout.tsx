@@ -29,10 +29,10 @@ export const viewport: Viewport = {
 // WERELDKLASSE SEO METADATA - Geoptimaliseerd voor Google, Bing, en AI-zoekmachines
 export const metadata: Metadata = {
   title: {
-    default: "Proces360 | Expert Procesoptimalisatie, OEE-verbetering & Cobot Integratie",
-    template: "%s | Proces360 - Industriële Automatisering Expert",
+    default: "Proces360 | Procesoptimalisatie & OEE Expert",
+    template: "%s | Proces360",
   },
-  description: "Rob Derks, 22+ jaar ervaring in productie-optimalisatie. Specialist in OEE-verbetering (15-40% verhoging), cobot/robot integratie, industriële automatisering en productie-dashboards. Gratis quickscan voor MKB-maakbedrijven in Nederland, België en Duitsland.",
+  description: "Rob Derks: 22+ jaar productie-ervaring. OEE-verbetering (15-40%), cobot integratie & industriële automatisering. Gratis quickscan voor MKB-maakbedrijven.",
   keywords: [
     // Primaire NL keywords
     "procesoptimalisatie", "OEE verbetering", "OEE verhoging", "OEE consultant",

@@ -220,11 +220,10 @@ export default function BlogPage() {
             Kennisbank
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Proces360 <span className="text-primary-500">Blog</span>
+            <span className="text-primary-500">Kennisbank</span> Procesoptimalisatie &amp; Automatisering
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Praktische inzichten over OEE, procesoptimalisatie, robotisering en productie-efficiëntie.
-            Gebaseerd op 22+ jaar hands-on ervaring in de maakindustrie.
+            Praktische gidsen over OEE-verbetering, cobot integratie, productie-optimalisatie en industriele automatisering. Gebaseerd op 22+ jaar hands-on ervaring van Rob Derks in de maakindustrie.
           </p>
         </div>
       </section>

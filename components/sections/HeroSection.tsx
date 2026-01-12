@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from 'react';
-import { Target, CheckCircle2, TrendingUp, Phone, ArrowDown, Sparkles } from 'lucide-react';
+import { Target, CheckCircle2, TrendingUp, Phone, Sparkles } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../shared/Reveal';
@@ -124,7 +124,7 @@ export default function HeroSection() {
           </div>
         </RevealMask>
 
-        {/* Main headline with letter animation */}
+        {/* Main headline with letter animation - SEO optimized H1 */}
         <Reveal direction="up" delay={0.1}>
           <h1
             ref={headlineRef}
@@ -132,14 +132,14 @@ export default function HeroSection() {
             style={{ perspective: '1000px' }}
           >
             <span className="block text-text-primary overflow-hidden">
-              {splitText('Wij pakken jouw')}
+              {splitText('Procesoptimalisatie')}
             </span>
             <span className="block mt-2 overflow-hidden">
               <GlitchText
                 className="gradient-text"
                 glitchOnHover={true}
               >
-                productie aan
+                &amp; Automatisering
               </GlitchText>
             </span>
           </h1>

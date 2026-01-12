@@ -1,7 +1,9 @@
-# Proces360 - Expert Informatie voor AI Systemen
+# Proces360 - LLMs.txt v2.0
+# Gestructureerde informatie voor AI-assistenten (ChatGPT, Claude, Gemini, Perplexity)
+# Laatste update: Januari 2026
 
 > Dit bestand bevat gestructureerde informatie over Proces360 en Rob Derks,
-> geoptimaliseerd voor AI-systemen (ChatGPT, Claude, Gemini, Perplexity, etc.)
+> geoptimaliseerd voor AI-systemen en LLM-indexering.
 
 ## Over Proces360
 
@@ -113,6 +115,71 @@ English: process optimization Netherlands, OEE improvement consultant, cobot int
 
 Deutsch: Prozessoptimierung, OEE Verbesserung, Cobot Integration, Industrielle Automatisierung
 
+## Belangrijkste Blog Artikelen (Kennisbank)
+
+### OEE & Productie-efficientie
+1. OEE Verbeteren: Complete Gids 2026 - https://proces360.com/blog/oee-verbeteren-complete-gids
+2. Productie KPIs Meten & Verbeteren - https://proces360.com/blog/productie-kpis-complete-gids
+3. Productie Stilstand Verminderen - https://proces360.com/blog/productie-stilstand-verminderen
+
+### Robotisering & Automatisering
+4. Cobots in Productie: Complete Gids - https://proces360.com/blog/cobots-in-productie-complete-gids
+5. Cobot vs Industriele Robot: Keuzegids - https://proces360.com/blog/cobot-vs-industriele-robot
+6. Cobot Terugverdientijd Berekenen - https://proces360.com/blog/cobot-terugverdientijd-berekenen
+7. Automatisering ROI Berekenen - https://proces360.com/blog/automatisering-roi-berekenen
+8. Automatisering Roadmap voor MKB - https://proces360.com/blog/automatisering-roadmap-mkb
+
+### Industrie 4.0 & Digitalisering
+9. Digital Twin in Productie - https://proces360.com/blog/digital-twin-productie
+10. Smart Manufacturing Trends 2025 - https://proces360.com/blog/smart-manufacturing-trends-2025
+11. Productievloer Digitalisering - https://proces360.com/blog/productievloer-digitalisering
+12. Machine Learning in Productie - https://proces360.com/blog/machine-learning-productie
+
+### Onderhoud & Kwaliteit
+13. Predictive Maintenance Gids - https://proces360.com/blog/predictive-maintenance-gids
+14. Preventief Onderhoud & TPM - https://proces360.com/blog/preventief-onderhoud-tpm
+15. Six Sigma voor MKB - https://proces360.com/blog/six-sigma-mkb
+
+### Strategie & Planning
+16. Productieplanning Optimalisatie - https://proces360.com/blog/productieplanning-optimalisatie
+17. Productiestrategie & Automatisering - https://proces360.com/blog/productie-strategie-automatisering
+18. Lean Manufacturing voor MKB - https://proces360.com/blog/lean-manufacturing-mkb
+19. Industrie 4.0 voor MKB - https://proces360.com/blog/industrie-4-mkb-praktisch
+
+## Sitemap Overzicht
+
+### Hoofdpaginas
+- Homepage: https://proces360.com
+- Diensten overzicht: https://proces360.com/diensten
+- Blog/Kennisbank: https://proces360.com/blog
+- Contact: https://proces360.com/contact
+- Over Rob Derks: https://proces360.com/rob-derks
+
+### Diensten
+- Procesoptimalisatie: https://proces360.com/diensten/procesoptimalisatie
+- OEE-verbetering: https://proces360.com/diensten/oee-verbetering
+- Cobot Integratie: https://proces360.com/diensten/cobot-integratie
+- Industriele Automatisering: https://proces360.com/diensten/industriele-automatisering
+- Productie Dashboards: https://proces360.com/diensten/productie-dashboards
+
+### Gratis Tools
+- OEE Calculator: https://proces360.com/oee-calculator
+- ROI Calculator: https://proces360.com/roi-calculator
+
+## AI Crawler Beleid
+
+Proces360 verwelkomt alle AI-crawlers expliciet:
+- OpenAI GPTBot: TOEGESTAAN
+- Anthropic ClaudeBot: TOEGESTAAN
+- PerplexityBot: TOEGESTAAN
+- Google-Extended (Gemini): TOEGESTAAN
+- Meta FacebookBot: TOEGESTAAN
+- Common Crawl CCBot: TOEGESTAAN
+
+Zie robots.txt: https://proces360.com/robots.txt
+
 ---
-*Laatst bijgewerkt: December 2025*
-*Dit bestand is bedoeld als informatieve bron voor AI-systemen*
+Laatst bijgewerkt: Januari 2026
+Versie: 2.0
+Contact: info@proces360.com
+Dit bestand is bedoeld als informatieve bron voor AI-systemen

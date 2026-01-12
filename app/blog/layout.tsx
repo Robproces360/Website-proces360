@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Proces360 Blog',
-    default: 'Blog | Proces360 - Kennisbank Procesoptimalisatie & Automatisering',
+    template: '%s | Proces360',
+    default: 'Kennisbank Procesoptimalisatie & Automatisering',
   },
-  description: 'Praktische inzichten over OEE, procesoptimalisatie, cobots en industriële automatisering. Gebaseerd op 22+ jaar hands-on productie-ervaring van Rob Derks.',
+  description: 'Praktische gidsen over OEE-verbetering, cobot integratie en industriele automatisering. 22+ jaar hands-on ervaring van Rob Derks.',
   keywords: [
     'procesoptimalisatie blog',
     'OEE artikelen',
