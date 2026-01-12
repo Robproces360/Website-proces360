@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, CheckCircle, Target, Recycle, Trash2, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, CheckCircle, Target, Recycle, Trash2, TrendingUp, ArrowRight, Cog, BarChart3 } from 'lucide-react';
 
 export default function LeanArticlePage() {
   return (
@@ -110,6 +110,48 @@ export default function LeanArticlePage() {
               <p className="text-gray-400 text-sm mb-3">Oprichter Proces360 | 22+ jaar productie-ervaring</p>
               <Link href="/rob-derks" className="text-primary-500 text-sm font-medium hover:underline">Meer over Rob →</Link>
             </div>
+          </div>
+        </div>
+
+        {/* Related Articles */}
+        <div className="mt-12">
+          <h3 className="text-xl font-bold text-white mb-6">Gerelateerde artikelen</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/oee-verbeteren-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">OEE Verbeteren: De Complete Gids</h4>
+              <p className="text-sm text-gray-400">Alles over Overall Equipment Effectiveness en hoe je van 55% naar 85%+ gaat.</p>
+            </Link>
+            <Link href="/blog/six-sigma-mkb" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Six Sigma voor MKB</h4>
+              <p className="text-sm text-gray-400">DMAIC-methodologie en kwaliteitsverbetering in de praktijk.</p>
+            </Link>
+            <Link href="/blog/productie-stilstand-verminderen" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Productie Stilstand Verminderen</h4>
+              <p className="text-sm text-gray-400">10 praktische tips om ongeplande downtime te reduceren.</p>
+            </Link>
+            <Link href="/blog/productie-kpis-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Productie KPIs: Complete Gids</h4>
+              <p className="text-sm text-gray-400">De 15 belangrijkste KPIs voor productie en hoe je ze implementeert.</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Internal Links Section */}
+        <div className="mt-12 bg-bg-secondary border border-white/10 rounded-xl p-6">
+          <h3 className="text-lg font-bold text-white mb-4">Gerelateerde Diensten</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/diensten/procesoptimalisatie" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <Cog className="w-4 h-4" />
+              Procesoptimalisatie
+            </Link>
+            <Link href="/diensten/oee-verbetering" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <BarChart3 className="w-4 h-4" />
+              OEE Verbetering
+            </Link>
+            <Link href="/diensten/productie-dashboards" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <TrendingUp className="w-4 h-4" />
+              Productie Dashboards
+            </Link>
           </div>
         </div>
       </article>

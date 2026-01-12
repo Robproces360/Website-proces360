@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   CheckCircle,
   Award,
@@ -50,8 +51,8 @@ const expertise = [
 
 const values = [
   {
-    title: 'Pragmatisch',
-    description: 'Geen theoretisch advies, maar praktische oplossingen die direct werken op de werkvloer.',
+    title: 'Van A tot Z Ontzorgd',
+    description: 'Gedegen advies met daarop volgende acties - van analyse tot implementatie volledig begeleid.',
   },
   {
     title: 'Resultaatgericht',
@@ -91,16 +92,15 @@ export default function OverOnsPage() {
         <div className="max-w-5xl mx-auto">
           <div className="bg-bg-secondary border border-white/10 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-3 gap-8 items-start">
-              {/* Photo Placeholder */}
+              {/* Photo */}
               <div className="md:col-span-1">
-                <div className="aspect-square bg-gradient-to-br from-primary-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center border border-primary-500/30">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary-500/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary-500">RD</span>
-                    </div>
-                    <p className="text-white font-bold text-xl">Rob Derks</p>
-                    <p className="text-gray-400 text-sm">Oprichter & Lead Consultant</p>
-                  </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden border border-primary-500/30">
+                  <Image
+                    src="/images/rob-derks.jpg"
+                    alt="Rob Derks - Oprichter Proces360"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="mt-4 flex justify-center">
                   <a
@@ -133,7 +133,7 @@ export default function OverOnsPage() {
                   </p>
                   <p>
                     Die 22+ jaar ervaring - van de werkvloer tot de directiekamer - is nu de
-                    basis van Proces360. Ik geef geen theoretisch advies uit een boek.
+                    basis van Proces360. Gedegen advies met daarop volgende acties - van A tot Z ontzorgd.
                     Ik weet hoe het is om om 3 uur &apos;s nachts gebeld te worden voor een
                     storing. Ik weet hoe het is om een team te motiveren tijdens een
                     onmogelijke deadline.

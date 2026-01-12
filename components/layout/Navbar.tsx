@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Magnetic from '../shared/Magnetic';
-import { Calculator, ChevronDown, X, Menu } from 'lucide-react';
+import { Calculator, ChevronDown, X, Menu, Linkedin, MessageCircle } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -84,12 +84,11 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: '#diensten', label: 'Diensten' },
-    { href: '#360scan', label: '360Scan' },
-    { href: '#aanpak', label: 'Aanpak' },
-    { href: '#waarom', label: 'Waarom Ons' },
+    { href: '/#diensten', label: 'Diensten' },
+    { href: '/#360scan', label: '360Scan' },
+    { href: '/#aanpak', label: 'Aanpak' },
     { href: '/blog', label: 'Blog' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#contact', label: 'Contact' },
   ];
 
   return (
@@ -133,12 +132,12 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <li key={link.href}>
               <Magnetic strength={0.2}>
-                <a
+                <Link
                   href={link.href}
                   className="text-text-secondary hover:text-primary-500 transition-colors duration-300 text-sm font-medium"
                 >
                   {link.label}
-                </a>
+                </Link>
               </Magnetic>
             </li>
           ))}
@@ -210,6 +209,28 @@ export default function Navbar() {
             </div>
           </li>
 
+          {/* Social Icons */}
+          <li className="flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/in/rob-derks-15900873/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-[#0077B5] hover:bg-[#005885] rounded-lg transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4 text-white" />
+            </a>
+            <a
+              href="https://wa.me/31854010752"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-[#25D366] hover:bg-[#1da851] rounded-lg transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-4 h-4 text-white" />
+            </a>
+          </li>
+
           <li>
             <Magnetic strength={0.3}>
               <a href="tel:+31854010752" className="btn px-6 py-2 text-sm font-semibold">
@@ -258,13 +279,13 @@ export default function Navbar() {
               <ul className="space-y-2">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       onClick={closeMobileMenu}
                       className="block py-3 px-4 text-lg text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
 

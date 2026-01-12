@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, CheckCircle, Wrench, AlertTriangle, TrendingUp, Shield, Settings } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, CheckCircle, Wrench, AlertTriangle, TrendingUp, Shield, Settings, BarChart3, Bot, Cog } from 'lucide-react';
 
 export default function TPMArticlePage() {
   return (
@@ -139,6 +139,48 @@ export default function TPMArticlePage() {
               <p className="text-gray-400 text-sm mb-3">Oprichter Proces360 | 22+ jaar productie-ervaring</p>
               <Link href="/rob-derks" className="text-primary-500 text-sm font-medium hover:underline">Meer over Rob →</Link>
             </div>
+          </div>
+        </div>
+
+        {/* Related Articles */}
+        <div className="mt-12">
+          <h3 className="text-xl font-bold text-white mb-6">Gerelateerde artikelen</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/oee-verbeteren-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">OEE Verbeteren: De Complete Gids</h4>
+              <p className="text-sm text-gray-400">OEE beschikbaarheid verhogen door preventief onderhoud.</p>
+            </Link>
+            <Link href="/blog/predictive-maintenance-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Predictive Maintenance: Complete Gids</h4>
+              <p className="text-sm text-gray-400">De volgende stap na preventief: voorspellend onderhoud met sensoren en AI.</p>
+            </Link>
+            <Link href="/blog/productie-stilstand-verminderen" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Productie Stilstand Verminderen</h4>
+              <p className="text-sm text-gray-400">10 praktische tips om ongeplande downtime te reduceren.</p>
+            </Link>
+            <Link href="/blog/cobots-in-productie-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Cobots in Productie: Complete Gids</h4>
+              <p className="text-sm text-gray-400">Automatisering voor meer consistentie en minder menselijke fouten.</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Internal Links Section */}
+        <div className="mt-12 bg-bg-secondary border border-white/10 rounded-xl p-6">
+          <h3 className="text-lg font-bold text-white mb-4">Gerelateerde Diensten</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/diensten/oee-verbetering" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <BarChart3 className="w-4 h-4" />
+              OEE Verbetering
+            </Link>
+            <Link href="/diensten/industriele-automatisering" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <Cog className="w-4 h-4" />
+              Industriële Automatisering
+            </Link>
+            <Link href="/diensten/productie-dashboards" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <TrendingUp className="w-4 h-4" />
+              Productie Dashboards
+            </Link>
           </div>
         </div>
       </article>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, CheckCircle, Wifi, Cloud, BarChart3, Bot, Cpu, Database } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, CheckCircle, Wifi, Cloud, BarChart3, Bot, Cpu, Database, Cog, ChevronRight } from 'lucide-react';
 
 export default function Industrie4ArticlePage() {
   return (
@@ -128,6 +128,74 @@ export default function Industrie4ArticlePage() {
             </div>
           </div>
         </div>
+
+        {/* Related Articles */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-white mb-6">Gerelateerde Artikelen</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Smart Manufacturing Trends 2025",
+                description: "De belangrijkste ontwikkelingen in slimme productie.",
+                href: "/blog/smart-manufacturing-trends-2025",
+                tag: "Trends"
+              },
+              {
+                title: "Machine Learning in Productie",
+                description: "Praktische AI-toepassingen voor MKB-maakbedrijven.",
+                href: "/blog/machine-learning-productie",
+                tag: "AI"
+              },
+              {
+                title: "Digital Twin in Productie",
+                description: "Simuleer en optimaliseer je productieproces digitaal.",
+                href: "/blog/digital-twin-productie",
+                tag: "Digitalisering"
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="bg-bg-secondary rounded-xl p-6 border border-white/10 hover:border-primary-500/50 transition-colors group"
+              >
+                <span className="text-xs text-primary-400 font-medium">{article.tag}</span>
+                <h3 className="text-lg font-semibold text-white mt-2 mb-2 group-hover:text-primary-400 transition-colors">
+                  {article.title}
+                </h3>
+                <p className="text-gray-400 text-sm">{article.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-white mb-6">Ontdek Onze Diensten</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/diensten/procesoptimalisatie", title: "Procesoptimalisatie", desc: "Lean en data-gedreven optimalisatie", icon: Cog },
+              { href: "/diensten/oee-verbetering", title: "OEE Verbetering", desc: "Verhoog machine-effectiviteit", icon: BarChart3 },
+              { href: "/diensten/cobot-integratie", title: "Cobot Integratie", desc: "Automatiseer met cobots", icon: Bot },
+              { href: "/diensten/industriele-automatisering", title: "Industriële Automatisering", desc: "End-to-end automatisering", icon: Cpu },
+              { href: "/diensten/productie-dashboards", title: "Productie Dashboards", desc: "Real-time data-inzicht", icon: BarChart3 },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center p-4 bg-bg-secondary rounded-lg border border-white/10 hover:border-primary-500/50 transition-colors group"
+              >
+                <link.icon className="w-5 h-5 text-primary-500 mr-3" />
+                <div className="flex-1">
+                  <div className="font-semibold text-white group-hover:text-primary-400 transition-colors">
+                    {link.title}
+                  </div>
+                  <div className="text-sm text-gray-400">{link.desc}</div>
+                </div>
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-primary-400 transition-colors" />
+              </Link>
+            ))}
+          </div>
+        </section>
       </article>
     </main>
   );

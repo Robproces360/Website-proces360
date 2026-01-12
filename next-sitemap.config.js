@@ -161,6 +161,73 @@ module.exports = {
         priority: 0.85,
         lastmod: now,
       },
+      // Nieuwere blog artikelen
+      {
+        loc: '/blog/smart-manufacturing-trends-2025',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/productie-kpis-complete-gids',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/automatisering-roadmap-mkb',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/machine-learning-productie',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/productievloer-digitalisering',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/six-sigma-mkb',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/cobot-vs-industriele-robot',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/predictive-maintenance-gids',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/automatisering-roi-berekenen',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/digital-twin-productie',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
+      {
+        loc: '/blog/productieplanning-optimalisatie',
+        changefreq: 'weekly',
+        priority: 0.85,
+        lastmod: now,
+      },
     ];
   },
 

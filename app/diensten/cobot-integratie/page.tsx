@@ -12,7 +12,7 @@ const benefits = [
   'Nazorg en optimalisatie na implementatie',
 ];
 
-const brands = ['Universal Robots', 'FANUC', 'ABB', 'KUKA', 'Doosan', 'Techman', 'Omron', 'Yaskawa'];
+const brands = ['Techman', 'Doosan', 'FANUC', 'ABB', 'KUKA', 'Universal Robots', 'Omron', 'Yaskawa'];
 
 const applications = [
   { title: 'Machine Tending', desc: 'CNC beladen/ontladen, persen, spuitgieten' },

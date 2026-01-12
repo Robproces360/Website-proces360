@@ -8,8 +8,8 @@ export default function WhatsAppButton() {
   const [chatOpen, setChatOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
 
-  // WhatsApp phone number (06 nummer) in international format without + or spaces
-  const phoneNumber = "31630185844"; // +31 6 3018 5844
+  // WhatsApp phone number in international format without + or spaces
+  const phoneNumber = "31630185844"; // +31 6 30 18 58 44
   const message = "Hallo, ik wil graag meer informatie over Proces360.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -37,14 +37,11 @@ export default function WhatsAppButton() {
           <div className="relative">
             <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center overflow-hidden">
               <Image
-                src="/images/rob-avatar.png"
+                src="/images/rob-derks.jpg"
                 alt="Rob"
                 width={24}
                 height={24}
                 className="rounded-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
               />
               <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-[10px]">R</span>
             </div>

@@ -24,6 +24,37 @@ const serviceSchema = {
   offers: { '@type': 'Offer', priceRange: '€8.000 - €75.000', priceCurrency: 'EUR' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Wat is een productie dashboard?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Een productie dashboard toont real-time OEE, KPIs en productiedata op grote schermen bij de productielijn. Het geeft direct inzicht in beschikbaarheid, prestatie en kwaliteit, met automatische alerts bij afwijkingen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hoe snel is een dashboard geïmplementeerd?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Een basis productie dashboard is binnen 2-4 weken operationeel. Complexere implementaties met volledige machine-integratie en ERP-koppeling duren 4-8 weken.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wat kost een productie dashboard?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Productie dashboards kosten €8.000 - €75.000, afhankelijk van het aantal machines, integraties en functionaliteiten. De investering wordt typisch binnen 6-12 maanden terugverdiend door 15%+ efficiëntieverbetering.',
+      },
+    },
+  ],
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -38,6 +69,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>

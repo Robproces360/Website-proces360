@@ -1,10 +1,9 @@
 'use client';
 
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import Reveal from '@/components/shared/Reveal';
 import HoverScale from '@/components/shared/HoverScale';
 import Magnetic from '@/components/shared/Magnetic';
+import Image from 'next/image';
 import {
   Award,
   Briefcase,
@@ -44,7 +43,7 @@ const expertiseAreas = [
     title: 'Cobot & Robot Integratie',
     icon: Settings,
     description: 'Expert in collaborative robot implementatie. Van selectie en ROI-analyse tot programmering en training. Merkonafhankelijk advies uit 50+ technologieën.',
-    keywords: ['Universal Robots', 'FANUC', 'ABB', 'Gripper-selectie', 'Veiligheid'],
+    keywords: ['Techman', 'Doosan', 'FANUC', 'ABB', 'Universal Robots', 'Gripper-selectie', 'Veiligheid'],
   },
   {
     title: 'Procesoptimalisatie',
@@ -94,9 +93,7 @@ const expertStatements = [
 
 export default function RobDerksPage() {
   return (
-    <>
-      <Navbar />
-      <main className="bg-bg-primary">
+    <main className="bg-bg-primary">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           {/* Gradient overlay */}
@@ -122,7 +119,7 @@ export default function RobDerksPage() {
                   <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                     Van operator tot operations manager - 22 jaar hands-on ervaring in de productie.
                     Ik ken de werkvloer, de machines, én de uitdagingen van MKB-maakbedrijven.
-                    Geen theoretisch advies, maar praktische oplossingen die direct werken.
+                    Gedegen advies met daarop volgende acties - van A tot Z ontzorgd.
                   </p>
 
                   <div className="flex flex-wrap gap-4 mb-8">
@@ -161,17 +158,18 @@ export default function RobDerksPage() {
                 </div>
               </Reveal>
 
-              {/* Right: Photo Placeholder + Stats */}
+              {/* Right: Photo + Stats */}
               <Reveal direction="right">
                 <div className="relative">
-                  {/* Profile image placeholder */}
+                  {/* Profile image */}
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary-500/20 to-dark-800 border border-white/10">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <Users className="w-24 h-24 text-primary-500/50 mx-auto mb-4" />
-                        <p className="text-gray-500 text-sm">Profielfoto</p>
-                      </div>
-                    </div>
+                    <Image
+                      src="/images/rob-derks.jpg"
+                      alt="Rob Derks - Expert Procesoptimalisatie & Industriële Automatisering"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
                     {/* Decorative elements */}
                     <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl" />
                     <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-500/10 rounded-full blur-3xl" />
@@ -328,8 +326,6 @@ export default function RobDerksPage() {
             </Reveal>
           </div>
         </section>
-      </main>
-      <Footer />
-    </>
+    </main>
   );
 }

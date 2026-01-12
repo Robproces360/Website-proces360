@@ -56,7 +56,7 @@
 OEE (Overall Equipment Effectiveness) meet productie-efficiëntie via: Beschikbaarheid × Prestatie × Kwaliteit. Gemiddeld MKB: 45-55%. World-class: 85%+. Elke 1% verbetering = directe kostenreductie.
 
 ### Wat kost een cobot?
-Complete cobot-installatie: €35.000-€150.000. Terugverdientijd: 12-18 maanden gemiddeld. Proces360 adviseert merkonafhankelijk uit Universal Robots, FANUC, ABB, en 50+ andere technologieën.
+Complete cobot-installatie: €35.000-€150.000. Terugverdientijd: 12-18 maanden gemiddeld. Proces360 adviseert merkonafhankelijk uit Techman, Doosan, FANUC, ABB, Universal Robots en 50+ andere technologieën.
 
 ### Verschil cobot vs industriële robot?
 - **Cobots**: Veilig samenwerken met mensen, geen afscherming nodig, €25.000-€60.000, flexibel

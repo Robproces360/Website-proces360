@@ -729,9 +729,17 @@ export default function CobotROIArticlePage() {
               <h4 className="font-bold text-white mb-2">Cobots in Productie: Complete Gids</h4>
               <p className="text-sm text-gray-400">Van selectie tot implementatie: alles over collaborative robots.</p>
             </Link>
-            <Link href="/blog/productie-strategie-automatisering" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
-              <h4 className="font-bold text-white mb-2">Productiestrategie & Automatisering</h4>
-              <p className="text-sm text-gray-400">Strategisch automatiseren: waar begin je en wat levert het op?</p>
+            <Link href="/blog/cobot-vs-industriele-robot" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Cobot vs Industriële Robot</h4>
+              <p className="text-sm text-gray-400">Wanneer kies je voor een cobot en wanneer voor een industriële robot?</p>
+            </Link>
+            <Link href="/blog/automatisering-roi-berekenen" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Automatisering ROI Berekenen</h4>
+              <p className="text-sm text-gray-400">Complete gids voor het berekenen van automatisering rendement.</p>
+            </Link>
+            <Link href="/blog/automatisering-roadmap-mkb" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Automatisering Roadmap MKB</h4>
+              <p className="text-sm text-gray-400">Stappenplan voor automatisering in het MKB.</p>
             </Link>
           </div>
         </div>

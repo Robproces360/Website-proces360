@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'Wat is een goede OEE score?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Een OEE onder 50% vraagt urgente aandacht. 50-70% is gemiddeld voor MKB. 85%+ is world-class.',
+        text: 'Een OEE onder 50% vraagt urgente aandacht. 50-70% is gemiddeld voor MKB. 85%+ is world-class. De meeste bedrijven scoren 45-65% voordat ze actief gaan verbeteren.',
       },
     },
     {
@@ -56,7 +56,15 @@ const faqSchema = {
       name: 'Hoe snel zie ik resultaat bij OEE verbetering?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'De eerste quick wins zijn vaak binnen 4-6 weken zichtbaar. Structurele verbetering van 15-40% realiseren we binnen 3-6 maanden.',
+        text: 'De eerste quick wins zijn vaak binnen 4-6 weken zichtbaar. Structurele verbetering van 15-40% OEE verhoging realiseren we binnen 3-6 maanden.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wat kost OEE verbetering?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Een OEE verbetertraject kost €5.000 - €50.000, afhankelijk van scope en complexiteit. De ROI is meestal 3-6 maanden door verhoogde output en lagere kosten.',
       },
     },
   ],

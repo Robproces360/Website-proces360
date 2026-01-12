@@ -24,6 +24,37 @@ const serviceSchema = {
   offers: { '@type': 'Offer', priceRange: '€5.000 - €25.000', priceCurrency: 'EUR' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Wat is procesoptimalisatie?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Procesoptimalisatie is het systematisch verbeteren van productieprocessen om verspilling te elimineren, doorlooptijd te verkorten en kwaliteit te verhogen. We gebruiken methodes als Lean, Six Sigma, Value Stream Mapping en 5S.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hoe snel zie ik resultaat bij procesoptimalisatie?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'De eerste quick wins zijn vaak binnen 4-8 weken zichtbaar. Typische resultaten zijn 20-50% doorlooptijd reductie en 30% minder verspilling binnen 3-6 maanden.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wat kost een procesoptimalisatie traject?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Een procesoptimalisatie traject kost €5.000 - €25.000, afhankelijk van scope en complexiteit. De investering wordt typisch binnen 3-6 maanden terugverdiend door efficiëntieverbetering.',
+      },
+    },
+  ],
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -38,6 +69,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {children}
     </>

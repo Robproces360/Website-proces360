@@ -11,6 +11,8 @@ import NoiseOverlay from "@/components/visuals/NoiseOverlay";
 import FloatingElements from "@/components/visuals/FloatingElements";
 import CookieConsent from "@/components/shared/CookieConsent";
 import { ToastProvider } from "@/components/shared/Toast";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     "productie dashboard", "real-time monitoring", "KPI dashboard",
     // Long-tail NL
     "OEE berekenen", "OEE calculator", "Overall Equipment Effectiveness",
-    "cobot programmeren", "cobot implementatie", "Universal Robots",
+    "cobot programmeren", "cobot implementatie", "Techman cobot", "Doosan cobot", "Universal Robots",
     "lean manufacturing", "continuous improvement", "kaizen",
     "bottleneck analyse", "workflow optimalisatie", "waste reductie",
     "doorlooptijd verkorting", "productiviteit verhogen",
@@ -261,9 +263,11 @@ const organizationSchema = {
     'Lean Manufacturing',
     'Continuous Improvement',
     'Robot Automatisering',
-    'Universal Robots',
+    'Techman Robot',
+    'Doosan Robotics',
     'FANUC',
     'ABB Robotics',
+    'Universal Robots',
     'Productie Efficiëntie',
     'MKB Maakbedrijven',
     'Manufacturing Optimization',
@@ -378,7 +382,7 @@ const faqSchema = {
       name: 'Wat maakt Rob Derks en Proces360 uniek?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Rob Derks heeft 22+ jaar hands-on ervaring in productie: van operator, via teamleider en production manager tot operations manager. Dit betekent geen theoretisch advies, maar praktische oplossingen die direct werken op de werkvloer. Proces360 is merkonafhankelijk en selecteert uit 50+ technologieën de beste oplossing voor uw situatie.',
+        text: 'Rob Derks heeft 22+ jaar hands-on ervaring in productie: van operator, via teamleider en production manager tot operations manager. Dit betekent gedegen advies met daarop volgende acties - van A tot Z ontzorgd. Proces360 is merkonafhankelijk en selecteert uit 50+ technologieën de beste oplossing voor uw situatie.',
       },
     },
   ],
@@ -557,8 +561,10 @@ export default function RootLayout({
         <ToastProvider>
           <SmoothScroll>
             <CustomCursor />
+            <Navbar />
             <WhatsAppButton />
             {children}
+            <Footer />
           </SmoothScroll>
 
           {/* Cookie Consent Banner - AVG Compliant */}

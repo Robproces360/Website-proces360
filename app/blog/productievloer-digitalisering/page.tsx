@@ -567,6 +567,47 @@ export default function ProductievloerDigitaliseringPage() {
         </div>
       </section>
 
+      {/* Related Articles */}
+      <section className="container mx-auto px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6">Gerelateerde Artikelen</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Smart Manufacturing Trends 2025",
+                description: "De belangrijkste ontwikkelingen in slimme productie.",
+                href: "/blog/smart-manufacturing-trends-2025",
+                tag: "Trends"
+              },
+              {
+                title: "Machine Learning in Productie",
+                description: "Praktische AI-toepassingen voor MKB-maakbedrijven.",
+                href: "/blog/machine-learning-productie",
+                tag: "AI"
+              },
+              {
+                title: "Industrie 4.0 voor MKB",
+                description: "Praktisch beginnen zonder miljoeneninvestering.",
+                href: "/blog/industrie-4-mkb-praktisch",
+                tag: "Digitalisering"
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="bg-bg-secondary rounded-xl p-6 border border-white/10 hover:border-primary-500/50 transition-colors group"
+              >
+                <span className="text-xs text-primary-400 font-medium">{article.tag}</span>
+                <h3 className="text-lg font-semibold text-white mt-2 mb-2 group-hover:text-primary-400 transition-colors">
+                  {article.title}
+                </h3>
+                <p className="text-gray-400 text-sm">{article.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Internal Links */}
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">

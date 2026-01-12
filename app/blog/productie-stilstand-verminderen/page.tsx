@@ -110,6 +110,48 @@ export default function StilstandArticlePage() {
             </div>
           </div>
         </div>
+
+        {/* Related Articles */}
+        <div className="mt-12">
+          <h3 className="text-xl font-bold text-white mb-6">Gerelateerde artikelen</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/oee-verbeteren-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">OEE Verbeteren: De Complete Gids</h4>
+              <p className="text-sm text-gray-400">Alles over Overall Equipment Effectiveness: van berekening tot praktische verbetermethodes.</p>
+            </Link>
+            <Link href="/blog/preventief-onderhoud-tpm" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Preventief Onderhoud & TPM</h4>
+              <p className="text-sm text-gray-400">Total Productive Maintenance voor hogere machinebeschikbaarheid en minder storingen.</p>
+            </Link>
+            <Link href="/blog/lean-manufacturing-mkb" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Lean Manufacturing voor MKB</h4>
+              <p className="text-sm text-gray-400">Praktische lean-tools voor het MKB: 5S, SMED, VSM en dagstarts.</p>
+            </Link>
+            <Link href="/blog/predictive-maintenance-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
+              <h4 className="font-bold text-white mb-2">Predictive Maintenance: Complete Gids</h4>
+              <p className="text-sm text-gray-400">Van reactief naar voorspellend onderhoud met sensoren en AI.</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Internal Links Section */}
+        <div className="mt-12 bg-bg-secondary border border-white/10 rounded-xl p-6">
+          <h3 className="text-lg font-bold text-white mb-4">Gerelateerde Diensten</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/diensten/oee-verbetering" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <BarChart3 className="w-4 h-4" />
+              OEE Verbetering
+            </Link>
+            <Link href="/diensten/procesoptimalisatie" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <Target className="w-4 h-4" />
+              Procesoptimalisatie
+            </Link>
+            <Link href="/diensten/productie-dashboards" className="flex items-center gap-2 text-primary-500 hover:underline">
+              <BarChart3 className="w-4 h-4" />
+              Productie Dashboards
+            </Link>
+          </div>
+        </div>
       </article>
     </main>
   );

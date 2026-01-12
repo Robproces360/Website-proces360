@@ -35,8 +35,18 @@ export const metadata: Metadata = {
     images: ['/images/rob-derks-og.png'],
   },
   alternates: {
-    canonical: 'https://proces360.nl/rob-derks',
+    canonical: '/rob-derks',
   },
+};
+
+// Breadcrumb Schema
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://proces360.com' },
+    { '@type': 'ListItem', position: 2, name: 'Rob Derks', item: 'https://proces360.com/rob-derks' },
+  ],
 };
 
 // Person Schema specifiek voor Rob Derks pagina
@@ -72,6 +82,8 @@ const personJsonLd = {
       'OEE-verbetering',
       'Cobot Integratie',
       'Collaborative Robots',
+      'Techman Robot',
+      'Doosan Robotics',
       'Universal Robots',
       'Industriële Automatisering',
       'Robot Automatisering',
@@ -132,6 +144,10 @@ export default function RobDerksLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
     </>

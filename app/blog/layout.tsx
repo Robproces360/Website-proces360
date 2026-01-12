@@ -33,6 +33,16 @@ export const metadata: Metadata = {
   },
 };
 
+// Breadcrumb Schema voor blog overzicht
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://proces360.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://proces360.com/blog' },
+  ],
+};
+
 // CollectionPage Schema voor blog overzicht
 const blogCollectionSchema = {
   '@context': 'https://schema.org',
@@ -64,6 +74,12 @@ export default function BlogLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(blogCollectionSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
       {children}

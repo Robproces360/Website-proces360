@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { Phone, Mail, Globe, MapPin, Building2 } from 'lucide-react';
 import HoverScale from '../shared/HoverScale';
 
@@ -30,19 +31,20 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-text-primary mb-4">Snelle Links</h4>
             <ul className="space-y-2">
               {[
-                { href: '#diensten', label: 'Diensten' },
-                { href: '#360scan', label: '360Scan' },
-                { href: '#aanpak', label: 'Aanpak' },
-                { href: '#waarom', label: 'Waarom Ons' },
+                { href: '/#diensten', label: 'Diensten' },
+                { href: '/#360scan', label: '360Scan' },
+                { href: '/#aanpak', label: 'Aanpak' },
+                { href: '/#team', label: 'Maak kennis met Rob' },
+                { href: '/#waarom', label: 'Waarom Ons' },
               ].map((link) => (
                 <li key={link.href}>
                   <HoverScale scale={1.05}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-text-secondary hover:text-primary-500 transition-colors inline-block text-sm"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </HoverScale>
                 </li>
               ))}
@@ -107,11 +109,11 @@ export default function Footer() {
               © {currentYear} Proces360 B.V. Alle rechten voorbehouden.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/juridisch?tab=privacy" className="hover:text-primary-500 transition-colors">Privacybeleid</a>
+              <Link href="/juridisch?tab=privacy" className="hover:text-primary-500 transition-colors">Privacybeleid</Link>
               <span className="hidden md:inline">|</span>
-              <a href="/juridisch?tab=cookies" className="hover:text-primary-500 transition-colors">Cookiebeleid</a>
+              <Link href="/juridisch?tab=cookies" className="hover:text-primary-500 transition-colors">Cookiebeleid</Link>
               <span className="hidden md:inline">|</span>
-              <a href="/juridisch?tab=voorwaarden" className="hover:text-primary-500 transition-colors">Algemene Voorwaarden</a>
+              <Link href="/juridisch?tab=voorwaarden" className="hover:text-primary-500 transition-colors">Algemene Voorwaarden</Link>
             </div>
             <div className="flex gap-4">
               <span>KvK: 97218774</span>
