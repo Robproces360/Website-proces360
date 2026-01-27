@@ -13,6 +13,7 @@ import CookieConsent from "@/components/shared/CookieConsent";
 import { ToastProvider } from "@/components/shared/Toast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -542,6 +543,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://proces360.com" />
       </head>
       <body className={`${inter.className} antialiased`}>
+        {/* Google Analytics */}
+        <GoogleAnalytics />
+
         {/* Skip to main content - Accessibility */}
         <a href="#main-content" className="skip-link">
           Ga naar hoofdinhoud

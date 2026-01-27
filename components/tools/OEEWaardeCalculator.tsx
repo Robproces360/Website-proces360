@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Percent,
   Euro,
@@ -13,10 +13,25 @@ import {
 import Reveal from '@/components/shared/Reveal';
 import HoverScale from '@/components/shared/HoverScale';
 import Magnetic from '@/components/shared/Magnetic';
+import { analytics } from '@/components/shared/GoogleAnalytics';
 
 export default function OEEWaardeCalculator() {
   const [jaaromzet, setJaaromzet] = useState(5000000);
   const [contributiemarge, setContributiemarge] = useState(35);
+
+  // Track tool usage on mount
+  useEffect(() => {
+    analytics.toolStarted('OEE Waarde Calculator');
+  }, []);
+
+  // Track when user interacts (after first slider change)
+  const [hasInteracted, setHasInteracted] = useState(false);
+  useEffect(() => {
+    if (!hasInteracted && (jaaromzet !== 5000000 || contributiemarge !== 35)) {
+      setHasInteracted(true);
+      analytics.toolCompleted('OEE Waarde Calculator', 'interacted');
+    }
+  }, [jaaromzet, contributiemarge, hasInteracted]);
 
   const calculations = useMemo(() => {
     // 1% OEE verbetering = ~1% meer output = 1% meer omzet
@@ -217,13 +232,21 @@ export default function OEEWaardeCalculator() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Magnetic>
-                <a href="tel:+31854010752" className="btn px-8 py-4 text-lg inline-flex items-center gap-2">
+                <a
+                  href="tel:+31854010752"
+                  className="btn px-8 py-4 text-lg inline-flex items-center gap-2"
+                  onClick={() => analytics.phoneClicked('OEE Waarde Calculator')}
+                >
                   <Phone className="w-5 h-5" />
                   Bel direct: 085 - 401 0752
                 </a>
               </Magnetic>
               <Magnetic>
-                <a href="/#360scan" className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2">
+                <a
+                  href="/#360scan"
+                  className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
+                  onClick={() => analytics.ctaClicked('360Scan', 'OEE Waarde Calculator')}
+                >
                   Gratis 360Scan
                   <ArrowRight className="w-4 h-4" />
                 </a>

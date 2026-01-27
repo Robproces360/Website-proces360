@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Clock,
   Gauge,
@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Reveal from '@/components/shared/Reveal';
 import Magnetic from '@/components/shared/Magnetic';
+import { analytics } from '@/components/shared/GoogleAnalytics';
 
 interface Question {
   id: string;
@@ -81,6 +82,11 @@ export default function ProductieverliesDiagnose() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
 
+  // Track tool usage on mount
+  useEffect(() => {
+    analytics.toolStarted('Productieverlies Diagnose');
+  }, []);
+
   const handleAnswer = (value: string) => {
     const newAnswers = { ...answers, [questions[currentQuestion].id]: value };
     setAnswers(newAnswers);
@@ -89,6 +95,7 @@ export default function ProductieverliesDiagnose() {
       setCurrentQuestion(prev => prev + 1);
     } else {
       setShowResults(true);
+      // Track completion with result when diagnosis is calculated
     }
   };
 
@@ -188,12 +195,19 @@ export default function ProductieverliesDiagnose() {
       }
     };
 
-    return {
+    const result = {
       ...diagnoses[primary],
       primary,
       scores: { beschikbaarheidScore, prestatieScore, kwaliteitScore },
       hasData: answers.data === 'uitgebreid' || answers.data === 'basis'
     };
+
+    // Track tool completion
+    if (showResults) {
+      analytics.toolCompleted('Productieverlies Diagnose', result.title);
+    }
+
+    return result;
   }, [showResults, answers]);
 
   const progress = ((currentQuestion + 1) / questions.length) * 100;
@@ -388,13 +402,21 @@ export default function ProductieverliesDiagnose() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Magnetic>
-                    <a href="tel:+31854010752" className="btn px-8 py-4 text-lg inline-flex items-center gap-2">
+                    <a
+                      href="tel:+31854010752"
+                      className="btn px-8 py-4 text-lg inline-flex items-center gap-2"
+                      onClick={() => analytics.phoneClicked('Productieverlies Diagnose')}
+                    >
                       <Phone className="w-5 h-5" />
                       Bel direct: 085 - 401 0752
                     </a>
                   </Magnetic>
                   <Magnetic>
-                    <a href="/#360scan" className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2">
+                    <a
+                      href="/#360scan"
+                      className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
+                      onClick={() => analytics.ctaClicked('360Scan', 'Productieverlies Diagnose')}
+                    >
                       Gratis 360Scan
                       <ArrowRight className="w-4 h-4" />
                     </a>

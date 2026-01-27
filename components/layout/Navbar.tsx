@@ -302,7 +302,7 @@ export default function Navbar() {
           {/* Social Icons */}
           <li className="flex items-center gap-2">
             <a
-              href="https://www.linkedin.com/in/rob-derks-15900873/"
+              href="https://www.linkedin.com/company/proces360%C2%B0/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-[#0077B5] hover:bg-[#005885] rounded-lg transition-colors"
@@ -323,7 +323,10 @@ export default function Navbar() {
 
           <li>
             <Magnetic strength={0.3}>
-              <a href="tel:+31854010752" className="btn px-6 py-2 text-sm font-semibold">
+              <a
+                href="tel:+31854010752"
+                className="px-5 py-2 text-sm font-medium border border-white/20 rounded-lg text-white hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-300"
+              >
                 085 - 401 0752
               </a>
             </Magnetic>
@@ -442,7 +445,7 @@ export default function Navbar() {
             <div className="pt-6 border-t border-white/10">
               <a
                 href="tel:+31854010752"
-                className="btn w-full text-center py-4"
+                className="w-full text-center py-3 border border-white/20 rounded-lg text-white hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-300 block font-medium"
                 onClick={closeMobileMenu}
               >
                 Bel: 085 - 401 0752

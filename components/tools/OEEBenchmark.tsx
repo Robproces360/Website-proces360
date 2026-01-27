@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   CheckCircle2,
   XCircle,
@@ -13,10 +13,10 @@ import {
   BarChart3,
   Gauge
 } from 'lucide-react';
-// Phone is used in CTA
 import Reveal from '@/components/shared/Reveal';
 import HoverScale from '@/components/shared/HoverScale';
 import Magnetic from '@/components/shared/Magnetic';
+import { analytics } from '@/components/shared/GoogleAnalytics';
 
 interface Question {
   id: string;
@@ -57,6 +57,11 @@ type Answer = 'ja' | 'nee' | 'deels' | null;
 export default function OEEBenchmark() {
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [showResults, setShowResults] = useState(false);
+
+  // Track tool usage on mount
+  useEffect(() => {
+    analytics.toolStarted('OEE Benchmark');
+  }, []);
 
   const allAnswered = questions.every(q => answers[q.id] !== undefined && answers[q.id] !== null);
 
@@ -116,6 +121,7 @@ export default function OEEBenchmark() {
   const handleShowResults = () => {
     if (allAnswered) {
       setShowResults(true);
+      analytics.toolCompleted('OEE Benchmark', category.level);
     }
   };
 
@@ -313,13 +319,21 @@ export default function OEEBenchmark() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Magnetic>
-                    <a href="tel:+31854010752" className="btn px-8 py-4 text-lg inline-flex items-center gap-2">
+                    <a
+                      href="tel:+31854010752"
+                      className="btn px-8 py-4 text-lg inline-flex items-center gap-2"
+                      onClick={() => analytics.phoneClicked('OEE Benchmark')}
+                    >
                       <Phone className="w-5 h-5" />
                       Bel direct: 085 - 401 0752
                     </a>
                   </Magnetic>
                   <Magnetic>
-                    <a href="/#360scan" className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2">
+                    <a
+                      href="/#360scan"
+                      className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
+                      onClick={() => analytics.ctaClicked('360Scan', 'OEE Benchmark')}
+                    >
                       Gratis 360Scan
                       <ArrowRight className="w-4 h-4" />
                     </a>

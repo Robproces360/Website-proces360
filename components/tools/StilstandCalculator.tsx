@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   AlertTriangle,
   Clock,
@@ -8,7 +8,6 @@ import {
   TrendingDown,
   Users,
   Phone,
-  Mail,
   ArrowRight,
   Factory,
   Zap
@@ -16,11 +15,26 @@ import {
 import Reveal from '@/components/shared/Reveal';
 import HoverScale from '@/components/shared/HoverScale';
 import Magnetic from '@/components/shared/Magnetic';
+import { analytics } from '@/components/shared/GoogleAnalytics';
 
 export default function StilstandCalculator() {
   const [productiewaardePerUur, setProductiewaardePerUur] = useState(5000);
   const [stilstandUrenPerWeek, setStilstandUrenPerWeek] = useState(8);
   const [wekenPerJaar, setWekenPerJaar] = useState(48);
+
+  // Track tool usage on mount
+  useEffect(() => {
+    analytics.toolStarted('Stilstand Calculator');
+  }, []);
+
+  // Track when user interacts (after first slider change)
+  const [hasInteracted, setHasInteracted] = useState(false);
+  useEffect(() => {
+    if (!hasInteracted && (productiewaardePerUur !== 5000 || stilstandUrenPerWeek !== 8)) {
+      setHasInteracted(true);
+      analytics.toolCompleted('Stilstand Calculator', 'interacted');
+    }
+  }, [productiewaardePerUur, stilstandUrenPerWeek, hasInteracted]);
 
   const calculations = useMemo(() => {
     const jaarlijkseStilstandUren = stilstandUrenPerWeek * wekenPerJaar;
@@ -237,13 +251,21 @@ export default function StilstandCalculator() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Magnetic>
-                <a href="tel:+31854010752" className="btn px-8 py-4 text-lg inline-flex items-center gap-2">
+                <a
+                  href="tel:+31854010752"
+                  className="btn px-8 py-4 text-lg inline-flex items-center gap-2"
+                  onClick={() => analytics.phoneClicked('Stilstand Calculator')}
+                >
                   <Phone className="w-5 h-5" />
                   Bel direct: 085 - 401 0752
                 </a>
               </Magnetic>
               <Magnetic>
-                <a href="/#360scan" className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2">
+                <a
+                  href="/#360scan"
+                  className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
+                  onClick={() => analytics.ctaClicked('360Scan', 'Stilstand Calculator')}
+                >
                   Gratis 360Scan
                   <ArrowRight className="w-4 h-4" />
                 </a>

@@ -122,7 +122,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/rob-derks-15900873/"
+                  href="https://www.linkedin.com/company/proces360%C2%B0/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors group"
@@ -133,7 +133,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-gray-400">LinkedIn</p>
                     <p className="text-white font-medium group-hover:text-blue-500 transition-colors">
-                      Rob Derks
+                      Proces360
                     </p>
                   </div>
                 </a>

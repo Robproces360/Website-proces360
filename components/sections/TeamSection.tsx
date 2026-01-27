@@ -78,7 +78,7 @@ export default function TeamSection() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                     <a
-                      href="https://www.linkedin.com/in/rob-derks-15900873/"
+                      href="https://www.linkedin.com/company/proces360%C2%B0/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white font-semibold rounded-lg hover:bg-[#005885] transition-colors"

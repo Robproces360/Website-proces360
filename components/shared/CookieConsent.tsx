@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, Shield, BarChart3, Target, ChevronDown, ChevronUp, Check, X } from 'lucide-react';
+import { Cookie, Shield, BarChart3, Target, ChevronDown, ChevronUp, Check } from 'lucide-react';
 import Magnetic from './Magnetic';
+import { updateGAConsent } from './GoogleAnalytics';
 
 interface CookiePreferences {
   necessary: boolean;
@@ -38,15 +39,8 @@ export default function CookieConsent() {
     localStorage.setItem(COOKIE_PREFERENCES_KEY, JSON.stringify(prefs));
     setIsVisible(false);
 
-    // Here you would initialize/disable analytics based on preferences
-    if (prefs.analytics) {
-      // Initialize Google Analytics, etc.
-      console.log('Analytics enabled');
-    }
-    if (prefs.marketing) {
-      // Initialize marketing pixels, etc.
-      console.log('Marketing enabled');
-    }
+    // Update Google Analytics consent
+    updateGAConsent(prefs.analytics, prefs.marketing);
   };
 
   const acceptAll = () => {

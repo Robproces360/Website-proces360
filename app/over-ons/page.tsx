@@ -104,13 +104,13 @@ export default function OverOnsPage() {
                 </div>
                 <div className="mt-4 flex justify-center">
                   <a
-                    href="https://www.linkedin.com/in/rob-derks-15900873/"
+                    href="https://www.linkedin.com/company/proces360%C2%B0/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
-                    LinkedIn Profiel
+                    LinkedIn Bedrijfspagina
                   </a>
                 </div>
               </div>

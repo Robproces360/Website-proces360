@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Bot,
   Package,
@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import Reveal from '@/components/shared/Reveal';
 import Magnetic from '@/components/shared/Magnetic';
+import { analytics } from '@/components/shared/GoogleAnalytics';
 
 interface Question {
   id: string;
@@ -103,6 +104,11 @@ export default function AutomatiseringScan() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
 
+  // Track tool usage on mount
+  useEffect(() => {
+    analytics.toolStarted('Automatisering Scan');
+  }, []);
+
   const handleAnswer = (value: string) => {
     const newAnswers = { ...answers, [questions[currentQuestion].id]: value };
     setAnswers(newAnswers);
@@ -111,6 +117,7 @@ export default function AutomatiseringScan() {
       setCurrentQuestion(prev => prev + 1);
     } else {
       setShowResults(true);
+      // Completion tracking happens in the result useMemo
     }
   };
 
@@ -179,7 +186,7 @@ export default function AutomatiseringScan() {
         maxScore
       };
     }
-    return {
+    const resultData = {
       level: 'Uitdagend',
       color: 'orange',
       icon: <AlertTriangle className="w-10 h-10" />,
@@ -190,6 +197,13 @@ export default function AutomatiseringScan() {
       totalScore,
       maxScore
     };
+
+    // Track tool completion
+    if (showResults) {
+      analytics.toolCompleted('Automatisering Scan', resultData.level);
+    }
+
+    return resultData;
   }, [showResults, answers]);
 
   const progress = ((currentQuestion + 1) / questions.length) * 100;
@@ -369,13 +383,21 @@ export default function AutomatiseringScan() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Magnetic>
-                    <a href="tel:+31854010752" className="btn px-8 py-4 text-lg inline-flex items-center gap-2">
+                    <a
+                      href="tel:+31854010752"
+                      className="btn px-8 py-4 text-lg inline-flex items-center gap-2"
+                      onClick={() => analytics.phoneClicked('Automatisering Scan')}
+                    >
                       <Phone className="w-5 h-5" />
                       Bel direct: 085 - 401 0752
                     </a>
                   </Magnetic>
                   <Magnetic>
-                    <a href="/#360scan" className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2">
+                    <a
+                      href="/#360scan"
+                      className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
+                      onClick={() => analytics.ctaClicked('360Scan', 'Automatisering Scan')}
+                    >
                       Gratis 360Scan
                       <ArrowRight className="w-4 h-4" />
                     </a>
