@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Magnetic from '../shared/Magnetic';
-import { Calculator, ChevronDown, X, Menu, Linkedin, MessageCircle } from 'lucide-react';
+import { Zap, ChevronDown, X, Menu, Linkedin, MessageCircle, Calculator, BarChart3, AlertTriangle, Gauge, Bot, Percent } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -155,54 +155,144 @@ export default function Navbar() {
                 toolsOpen ? 'text-primary-500' : 'text-text-secondary hover:text-primary-500'
               }`}
             >
-              <Calculator className="w-4 h-4" />
-              <span>ROI Tools</span>
+              <Zap className="w-4 h-4" />
+              <span>Gratis Tools</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${toolsOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Dropdown Menu */}
             <div
-              className={`absolute top-full left-0 mt-2 w-72 glass rounded-xl overflow-hidden border border-primary-500/20 shadow-2xl transition-all duration-300 ${
+              className={`absolute top-full right-0 mt-2 w-80 glass rounded-xl overflow-hidden border border-primary-500/20 shadow-2xl transition-all duration-300 ${
                 toolsOpen ? 'opacity-100 translate-y-0 pointer-events-auto visible' : 'opacity-0 -translate-y-2 pointer-events-none invisible'
               }`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
+              {/* Quick Scans Section */}
+              <div className="px-4 py-2 bg-white/5 border-b border-white/10">
+                <span className="text-xs font-semibold text-primary-500 uppercase tracking-wider">Quick Scans</span>
+              </div>
+              <Link
+                href="/tools/stilstand-calculator"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-red-500/10 rounded-lg group-hover:bg-red-500/20 transition-colors">
+                    <AlertTriangle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      Stilstand Schadepost
+                    </div>
+                    <div className="text-xs text-gray-500">Wat kost stilstand u écht?</div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href="/tools/oee-benchmark"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
+                    <BarChart3 className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      OEE Benchmark Check
+                    </div>
+                    <div className="text-xs text-gray-500">Hoe volwassen is uw OEE?</div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href="/tools/productieverlies-diagnose"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-yellow-500/10 rounded-lg group-hover:bg-yellow-500/20 transition-colors">
+                    <Gauge className="w-4 h-4 text-yellow-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      Productieverlies Diagnose
+                    </div>
+                    <div className="text-xs text-gray-500">Ontdek uw grootste verliespost</div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href="/tools/oee-waarde"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                    <Percent className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      1% OEE Waarde
+                    </div>
+                    <div className="text-xs text-gray-500">Wat is 1% OEE u waard?</div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href="/tools/automatisering-scan"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/10 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-cyan-500/10 rounded-lg group-hover:bg-cyan-500/20 transition-colors">
+                    <Bot className="w-4 h-4 text-cyan-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      Automatisering Scan
+                    </div>
+                    <div className="text-xs text-gray-500">Is uw proces geschikt?</div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* ROI Calculators Section */}
+              <div className="px-4 py-2 bg-white/5 border-b border-white/10">
+                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">ROI Calculators</span>
+              </div>
               <Link
                 href="/roi-calculator"
                 onClick={() => setToolsOpen(false)}
-                className="block px-6 py-4 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/10 group"
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
               >
-                <div className="flex items-start gap-3">
-                  <div className="p-2 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
-                    <Calculator className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
+                    <Calculator className="w-4 h-4 text-primary-500 flex-shrink-0" />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-white mb-1 group-hover:text-primary-500 transition-colors">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
                       Robot ROI Calculator
                     </div>
-                    <div className="text-xs text-gray-400 leading-relaxed">
-                      Bereken de ROI van robot automatisering
-                    </div>
+                    <div className="text-xs text-gray-500">Uitgebreide ROI berekening</div>
                   </div>
                 </div>
               </Link>
               <Link
                 href="/oee-calculator"
                 onClick={() => setToolsOpen(false)}
-                className="block px-6 py-4 hover:bg-primary-500/10 transition-all duration-200 group"
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 group"
               >
-                <div className="flex items-start gap-3">
-                  <div className="p-2 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
-                    <Calculator className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
+                    <Calculator className="w-4 h-4 text-primary-500 flex-shrink-0" />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-white mb-1 group-hover:text-primary-500 transition-colors">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
                       OEE Calculator
                     </div>
-                    <div className="text-xs text-gray-400 leading-relaxed">
-                      Bereken financiële impact OEE verhoging
-                    </div>
+                    <div className="text-xs text-gray-500">Financiële impact OEE verhoging</div>
                   </div>
                 </div>
               </Link>
@@ -221,7 +311,7 @@ export default function Navbar() {
               <Linkedin className="w-4 h-4 text-white" />
             </a>
             <a
-              href="https://wa.me/31854010752"
+              href="https://wa.me/31630185844"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-[#25D366] hover:bg-[#1da851] rounded-lg transition-colors"
@@ -289,20 +379,58 @@ export default function Navbar() {
                   </li>
                 ))}
 
-                {/* ROI Tools in mobile */}
+                {/* Gratis Tools in mobile */}
                 <li className="pt-4 border-t border-white/10 mt-4">
-                  <p className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">ROI Tools</p>
+                  <p className="px-4 py-2 text-xs text-primary-500 uppercase tracking-wider font-semibold">Quick Scans</p>
+                  <Link
+                    href="/tools/stilstand-calculator"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    Stilstand Schadepost
+                  </Link>
+                  <Link
+                    href="/tools/oee-benchmark"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    OEE Benchmark Check
+                  </Link>
+                  <Link
+                    href="/tools/productieverlies-diagnose"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    Productieverlies Diagnose
+                  </Link>
+                  <Link
+                    href="/tools/oee-waarde"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    1% OEE Waarde
+                  </Link>
+                  <Link
+                    href="/tools/automatisering-scan"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    Automatisering Scan
+                  </Link>
+                </li>
+                <li className="pt-2">
+                  <p className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">ROI Calculators</p>
                   <Link
                     href="/roi-calculator"
                     onClick={closeMobileMenu}
-                    className="block py-3 px-4 text-lg text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
                   >
                     Robot ROI Calculator
                   </Link>
                   <Link
                     href="/oee-calculator"
                     onClick={closeMobileMenu}
-                    className="block py-3 px-4 text-lg text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
                   >
                     OEE Calculator
                   </Link>
