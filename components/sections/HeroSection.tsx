@@ -176,7 +176,7 @@ export default function HeroSection() {
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
                   <Target className="w-5 h-5 transition-transform group-hover:rotate-90 group-hover:scale-110 duration-300 relative z-10" />
-                  <span className="relative z-10">Gratis 360Scan aanvragen</span>
+                  <span className="relative z-10">Plan uw 360Scan — vanaf €1.450</span>
                   <TrendingUp className="w-5 h-5 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1 duration-300 relative z-10" />
                 </a>
               </HoverGlow>

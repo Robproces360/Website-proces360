@@ -156,7 +156,7 @@ export default function Navbar() {
               }`}
             >
               <Zap className="w-4 h-4" />
-              <span>Gratis Tools</span>
+              <span>Tools</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${toolsOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -382,7 +382,7 @@ export default function Navbar() {
                   </li>
                 ))}
 
-                {/* Gratis Tools in mobile */}
+                {/* Tools in mobile */}
                 <li className="pt-4 border-t border-white/10 mt-4">
                   <p className="px-4 py-2 text-xs text-primary-500 uppercase tracking-wider font-semibold">Quick Scans</p>
                   <Link

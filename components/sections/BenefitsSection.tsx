@@ -10,7 +10,7 @@ const benefits = [
     title: 'DATA-GEDREVEN STRATEGIE',
     subtitle: 'Start met inzicht, niet met investeringen',
     features: [
-      'Gratis Quickscan van uw productieproces',
+      '360Scan van uw productieproces',
       'ROI-analyse voor elke automatiseringsstap',
       'Risico\'s geïdentificeerd vóór implementatie'
     ],

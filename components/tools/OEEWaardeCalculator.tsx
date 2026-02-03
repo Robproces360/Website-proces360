@@ -247,7 +247,7 @@ export default function OEEWaardeCalculator() {
                   className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
                   onClick={() => analytics.ctaClicked('360Scan', 'OEE Waarde Calculator')}
                 >
-                  Gratis 360Scan
+                  Plan uw 360Scan
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </Magnetic>

@@ -1069,15 +1069,15 @@ export default function SmartManufacturingTrends2025Page() {
               Klaar om te starten met Smart Manufacturing?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Laat ons een vrijblijvende smart manufacturing scan uitvoeren voor jouw bedrijf.
+              Plan uw 360Scan en ontdek waar de grootste kansen liggen voor smart manufacturing.
               We identificeren de beste kansen en stellen een concreet implementatieplan op.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact?subject=smart-manufacturing"
+                href="/contact?subject=360scan"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors"
               >
-                Gratis Smart Manufacturing Scan <ArrowRight className="w-5 h-5" />
+                Plan uw 360Scan <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/diensten/industriele-automatisering"

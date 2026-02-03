@@ -258,7 +258,7 @@ export default function OverOnsPage() {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Analyse</h3>
                 <p className="text-gray-400 text-sm">
-                  Grondige quickscan van je huidige situatie, processen en knelpunten.
+                  Grondige 360Scan van uw huidige situatie, processen en knelpunten.
                 </p>
               </div>
               <div className="text-center">
@@ -291,8 +291,8 @@ export default function OverOnsPage() {
             Klaar om te verbeteren?
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Plan een vrijblijvend gesprek of vraag een gratis quickscan aan.
-            Ontdek hoeveel potentieel er in jouw productie zit.
+            Plan een kennismaking of vraag een 360Scan aan.
+            Ontdek hoeveel potentieel er in uw productie zit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

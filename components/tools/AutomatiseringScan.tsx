@@ -154,7 +154,7 @@ export default function AutomatiseringScan() {
         icon: <Sparkles className="w-10 h-10" />,
         description: 'Uw situatie is ideaal voor robot- of cobot-automatisering. Hoge ROI te verwachten.',
         terugverdientijd: '1-2 jaar',
-        advice: 'Dit is een perfecte kandidaat voor automatisering. Bel mij voor een vrijblijvend advies.',
+        advice: 'Dit is een perfecte kandidaat voor automatisering. Bel mij voor een persoonlijk advies.',
         percentage,
         totalScore,
         maxScore
@@ -378,7 +378,7 @@ export default function AutomatiseringScan() {
                     Benieuwd wat automatisering u oplevert?
                   </h3>
                   <p className="text-gray-400">
-                    Ik bekijk graag uw situatie en geef vrijblijvend advies
+                    Ik bekijk graag uw situatie en geef persoonlijk advies
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -398,7 +398,7 @@ export default function AutomatiseringScan() {
                       className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
                       onClick={() => analytics.ctaClicked('360Scan', 'Automatisering Scan')}
                     >
-                      Gratis 360Scan
+                      Plan uw 360Scan
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </Magnetic>

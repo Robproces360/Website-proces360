@@ -4,6 +4,27 @@ import Link from 'next/link';
 import { ArrowRight, Clock, User, Calendar, Calculator, Bot } from 'lucide-react';
 
 const blogPosts = [
+  // Februari 2026
+  {
+    slug: '360scan-foodbedrijf-247k-besparing',
+    title: '€247.000 Jaarlijks Besparingspotentieel bij Foodproducent',
+    excerpt: 'Uitgebreide 360Scan bij versproducent onthult €247.000 potentieel: 3,2 FTE besparing door automatisering, 18% OEE-verhoging en procesverbeteringen.',
+    author: 'Rob Derks',
+    date: '3 februari 2026',
+    readTime: '12 min',
+    category: 'Case Study',
+    featured: true,
+  },
+  {
+    slug: '360scan-case-69k-besparing',
+    title: '€69.000+ Besparingspotentieel Ontdekt met Eén 360Scan',
+    excerpt: 'Hoe een MKB-maakbedrijf in slechts één dag ontdekte waar meer dan €69.000 aan jaarlijkse besparingen verborgen zat — met kleine, praktische ingrepen.',
+    author: 'Rob Derks',
+    date: '3 februari 2026',
+    readTime: '6 min',
+    category: 'Case Study',
+    featured: false,
+  },
   // Januari 2026
   {
     slug: 'productieplanning-optimalisatie',
@@ -13,7 +34,7 @@ const blogPosts = [
     date: '7 januari 2026',
     readTime: '24 min',
     category: 'Procesoptimalisatie',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'oee-verbeteren-complete-gids',

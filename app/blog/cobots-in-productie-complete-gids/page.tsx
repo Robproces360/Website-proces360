@@ -1222,7 +1222,7 @@ export default function CobotArticlePage() {
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition-colors"
                 >
                   <Users className="w-5 h-5" />
-                  Gratis Adviesgesprek
+                  Plan een kennismaking
                 </Link>
               </div>
             </div>

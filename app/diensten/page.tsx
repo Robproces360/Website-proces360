@@ -79,25 +79,25 @@ export default function DienstenPage() {
         </div>
       </section>
 
-      {/* Free Quickscan Banner */}
+      {/* 360Scan Banner */}
       <section className="container mx-auto px-4 mb-16">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 md:p-10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-2">
-                  Start met een Gratis Quickscan
+                  Start met een 360Scan
                 </h2>
                 <p className="text-gray-300">
-                  Ontdek in 2 uur waar jouw verbeterpotentieel ligt. Inclusief concrete aanbevelingen en ROI-schatting.
+                  Ontdek in 1 tot 3 dagen waar uw verbeterpotentieel ligt. Inclusief 360°-Score, besparingspotentieel en implementatieroadmap.
                 </p>
               </div>
               <Link
-                href="/contact?subject=quickscan"
+                href="/contact?subject=360scan"
                 className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Quickscan Aanvragen
+                Plan uw 360Scan
               </Link>
             </div>
           </div>
@@ -152,10 +152,10 @@ export default function DienstenPage() {
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: 1, title: 'Quickscan', desc: 'Analyse van je huidige situatie en verbeterpotentieel' },
-              { step: 2, title: 'Advies', desc: 'Concrete roadmap met prioriteiten en ROI-berekening' },
-              { step: 3, title: 'Implementatie', desc: 'Hands-on uitvoering samen met jouw team' },
-              { step: 4, title: 'Borging', desc: 'Training, documentatie en nazorg voor blijvend resultaat' },
+              { step: 1, title: 'Kennismaking', desc: 'Telefonisch gesprek van 30 minuten. We bespreken uw situatie, doelen en uitdagingen.' },
+              { step: 2, title: '360Scan op locatie', desc: 'In 1 tot 3 dagen analyseren we uw productieproces op de werkvloer.' },
+              { step: 3, title: 'Rapport met 360°-Score', desc: 'Binnen 5 tot 15 werkdagen ontvangt u een compleet rapport met besparingspotentieel.' },
+              { step: 4, title: 'Implementatie', desc: 'Hands-on uitvoering samen met uw team en borging voor blijvend resultaat.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">
@@ -204,7 +204,7 @@ export default function DienstenPage() {
             Welke uitdaging wil jij aanpakken?
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Vertel me over je situatie en ik denk vrijblijvend met je mee over de beste aanpak.
+            Vertel me over uw situatie en ik denk met u mee over de beste aanpak.
           </p>
           <Link
             href="/contact"

@@ -121,7 +121,7 @@ export default function CobotIntegratiePage() {
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-white mb-2">Bereken je ROI</h3>
                 <p className="text-gray-300">
-                  Ontdek de terugverdientijd van een cobot voor jouw specifieke situatie met onze gratis calculator.
+                  Ontdek de terugverdientijd van een cobot voor jouw specifieke situatie met onze ROI Calculator.
                 </p>
               </div>
               <Link href="/roi-calculator" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors flex-shrink-0">
@@ -136,10 +136,10 @@ export default function CobotIntegratiePage() {
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Klaar om te robotiseren?</h2>
-          <p className="text-gray-400 mb-8">Vraag een gratis haalbaarheidsanalyse aan en ontdek of een cobot rendabel is voor jouw situatie.</p>
+          <p className="text-gray-400 mb-8">Plan een kennismaking en ontdek of een cobot rendabel is voor jouw situatie.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact?subject=cobot" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
-              Gratis Haalbaarheidsanalyse <ArrowRight className="w-5 h-5" />
+              Plan een kennismaking <ArrowRight className="w-5 h-5" />
             </Link>
             <Link href="/blog/cobots-in-productie-complete-gids" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors">
               <FileText className="w-5 h-5" /> Lees Cobot Gids

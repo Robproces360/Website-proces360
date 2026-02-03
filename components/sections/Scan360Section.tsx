@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { Search, BarChart3, Target, TrendingUp, CheckCircle2, ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Search, BarChart3, Target, TrendingUp, CheckCircle2, ArrowRight, Sparkles, Zap, Phone, Building2, Users, Factory, Layers, FileText, Calendar } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../shared/Reveal';
@@ -9,19 +9,75 @@ import HoverGlow from '../shared/HoverGlow';
 import RevealMask from '../visuals/RevealMask';
 import MagneticButton from '../visuals/MagneticButton';
 import GlitchText from '../visuals/GlitchText';
-import StaggerGrid from '../visuals/StaggerGrid';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const packages = [
+  {
+    name: '360Scan Inzicht',
+    price: '€ 1.450',
+    tagline: 'Helder beeld van uw verbeterpotentieel — in één dag op locatie',
+    target: 'MKB-maakbedrijven met 10-30 medewerkers',
+    duration: '5 werkdagen',
+    features: [
+      '360°-Scorerapport met sectorbenchmark',
+      'Visuele rapportage met foto\'s van de werkvloer',
+      'OEE-inschatting op basis van observatie',
+      'Top 5 verbeterkansen met geschatte besparing in €',
+      '30 minuten telefonische toelichting',
+    ],
+    color: 'from-blue-500 to-cyan-500',
+    popular: false,
+  },
+  {
+    name: '360Scan Verdieping',
+    price: '€ 2.900',
+    tagline: 'Uitgebreide diagnose met meetdata, procesanalyse en implementatieroadmap',
+    target: 'MKB-maakbedrijven met 20-75 medewerkers',
+    duration: '10 werkdagen',
+    features: [
+      'Alles van Inzicht, plus:',
+      'OEE-analyse op basis van echte weekdata (3-5 machines)',
+      'Value Stream Map (current + future state)',
+      'Benchmarking met sectorgemiddelden',
+      'Besparingspotentieel per maatregel in €',
+      'Implementatieroadmap 6 maanden',
+      'Presentatie + workshop met MT en teamleiders',
+    ],
+    color: 'from-primary-500 to-orange-500',
+    popular: true,
+  },
+  {
+    name: '360Scan Transformatie',
+    price: '€ 4.800',
+    tagline: 'Volledig transformatieplan met business cases, technologie-advies en subsidiekansen',
+    target: 'MKB-maakbedrijven met 50-150 medewerkers',
+    duration: '15 werkdagen',
+    features: [
+      'Alles van Verdieping, plus:',
+      'OEE-analyse alle kritieke machines (2 weken meetdata)',
+      'VSM 2-3 processen (current + future state)',
+      'Business cases top 3 projecten met volledige ROI-berekening',
+      'Technologie-scan met leveranciersopties en prijsindicaties',
+      'Subsidiescan (WBSO, MIT, EIA, MIA)',
+      '12-maanden transformatie-roadmap',
+      'Halve dag workshop + Q&A met volledig team',
+      'Adviesgesprek bij start implementatie inbegrepen',
+    ],
+    color: 'from-purple-500 to-pink-500',
+    popular: false,
+  },
+];
+
+const upgrades = [
+  { from: 'Inzicht', to: 'Verdieping', price: '€ 1.450' },
+  { from: 'Inzicht', to: 'Transformatie', price: '€ 3.350' },
+  { from: 'Verdieping', to: 'Transformatie', price: '€ 1.900' },
+];
 
 export default function Scan360Section() {
   const sectionRef = useRef<HTMLElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
-
-  const benefits = [
-    { icon: BarChart3, text: 'Concrete ROI-berekening', gradient: 'from-green-500 to-emerald-500' },
-    { icon: TrendingUp, text: 'Binnen 2 weken inzicht', gradient: 'from-blue-500 to-cyan-500' },
-    { icon: Target, text: 'Duidelijk stappenplan', gradient: 'from-primary-500 to-orange-500' },
-  ];
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -56,31 +112,8 @@ export default function Scan360Section() {
           }
         );
       });
-
-      // Animate connecting line
-      gsap.fromTo('.timeline-line',
-        { scaleY: 0 },
-        {
-          scaleY: 1,
-          duration: 1.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: timelineRef.current,
-            start: 'top 70%',
-            toggleActions: 'play none none reverse'
-          }
-        }
-      );
     }
   }, []);
-
-  const deliverables = [
-    'Visuele proces-mapping van uw complete productie',
-    'Kosten-baten analyse tot op de cent nauwkeurig',
-    'Top 5 verbeterkansen met directe impact',
-    'Implementatie roadmap met tijdlijn',
-    'Technologie-advies specifiek voor uw situatie',
-  ];
 
   return (
     <section ref={sectionRef} id="360scan" className="py-24 bg-bg-primary relative overflow-hidden">
@@ -96,7 +129,7 @@ export default function Scan360Section() {
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-strong mb-6 border border-primary-500/20">
               <Sparkles className="w-4 h-4 text-primary-500" />
               <Search className="w-4 h-4 text-primary-500" />
-              <span className="text-sm text-gray-300 font-medium">Quickscan</span>
+              <span className="text-sm text-gray-300 font-medium">360Scan Pakketten</span>
             </div>
           </RevealMask>
 
@@ -109,116 +142,178 @@ export default function Scan360Section() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              <span className="text-primary-500 font-semibold">Benieuwd wat het voor úw bedrijf kan betekenen?</span>
+              <span className="text-primary-500 font-semibold">In 1 tot 3 dagen weten waar uw productie geld laat liggen.</span>
               <br />
-              Plan uw 360Scan en krijg heldere inzichten en concrete cijfers.
+              Kies het pakket dat past bij uw bedrijfsgrootte en ambitie.
             </p>
           </Reveal>
         </div>
 
-        {/* Benefits Grid with Stagger */}
-        <StaggerGrid
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
-          stagger={0.15}
-          animation="scale"
-          from="center"
-        >
-          {benefits.map((benefit, index) => (
-            <HoverGlow key={index} glowColor="rgba(249, 115, 22, 0.4)" rounded="xl">
-              <div className="glass p-8 rounded-xl text-center group relative overflow-hidden h-full">
-                {/* Gradient background on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+        {/* Packages Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {packages.map((pkg, index) => (
+            <Reveal key={index} direction="up" delay={index * 0.15}>
+              <HoverTilt>
+                <div className={`glass p-8 rounded-2xl h-full relative group ${pkg.popular ? 'border-2 border-primary-500/50' : 'border border-white/10'} transition-all duration-300 hover:border-primary-500/30`}>
+                  {/* Popular badge */}
+                  {pkg.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary-500 text-white text-sm font-bold rounded-full">
+                      Meest gekozen
+                    </div>
+                  )}
 
-                {/* Icon with glow */}
-                <div className="relative w-16 h-16 mx-auto mb-4">
-                  <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${benefit.gradient} opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-300`} />
-                  <div className="relative w-full h-full rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary-500/30 transition-colors duration-300">
-                    <benefit.icon className="w-8 h-8 text-primary-500 group-hover:scale-110 transition-transform duration-300" />
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                    <div className="flex items-baseline gap-2 mb-3">
+                      <span className="text-4xl font-bold text-primary-500">{pkg.price}</span>
+                      <span className="text-gray-500 text-sm">excl. BTW</span>
+                    </div>
+                    <p className="text-gray-400 text-sm italic">{pkg.tagline}</p>
                   </div>
+
+                  {/* Target & Duration */}
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3 text-sm">
+                      <Users className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                      <span className="text-gray-300">{pkg.target}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <Calendar className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                      <span className="text-gray-300">Doorlooptijd: {pkg.duration}</span>
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="border-t border-white/10 my-6" />
+
+                  {/* Features */}
+                  <div className="mb-8">
+                    <h4 className="text-sm font-semibold text-white mb-4">Wat u krijgt:</h4>
+                    <ul className="space-y-3">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-300">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA */}
+                  <MagneticButton strength={0.3}>
+                    <a
+                      href="#contact"
+                      className={`w-full btn ${pkg.popular ? 'btn' : 'btn-secondary'} py-4 flex items-center justify-center gap-2 group/btn`}
+                    >
+                      <span>Plan een kennismaking</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </MagneticButton>
                 </div>
-
-                <p className="text-white font-semibold text-lg group-hover:text-primary-400 transition-colors duration-300">{benefit.text}</p>
-
-                {/* Bottom accent line */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${benefit.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              </div>
-            </HoverGlow>
+              </HoverTilt>
+            </Reveal>
           ))}
-        </StaggerGrid>
+        </div>
 
-        {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: What you get */}
-          <Reveal direction="left">
-            <HoverTilt>
-              <div className="glass p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-white mb-6">Wat u krijgt:</h3>
-                <ul className="space-y-4">
-                  {deliverables.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </HoverTilt>
-          </Reveal>
+        {/* Upgrade Section */}
+        <Reveal direction="up" delay={0.3}>
+          <div className="glass p-8 rounded-2xl mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">
+                <Layers className="w-6 h-6 inline-block mr-2 text-primary-500" />
+                Flexibel opschalen
+              </h3>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Start laagdrempelig met de 360Scan Inzicht. Wilt u na het rapport meer diepgang?
+                Dan schalen we eenvoudig op. Uw investering telt volledig mee — u betaalt uitsluitend het verschil.
+              </p>
+            </div>
 
-          {/* Right: Process Timeline */}
-          <Reveal direction="right">
-            <div ref={timelineRef} className="relative space-y-6">
-              {/* Animated connecting line */}
-              <div className="timeline-line absolute left-5 top-12 bottom-12 w-0.5 bg-gradient-to-b from-primary-500 via-orange-400 to-primary-500 origin-top" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {upgrades.map((upgrade, index) => (
+                <div key={index} className="bg-white/5 rounded-xl p-6 text-center border border-white/10 hover:border-primary-500/30 transition-colors">
+                  <div className="text-gray-400 text-sm mb-2">{upgrade.from} → {upgrade.to}</div>
+                  <div className="text-2xl font-bold text-primary-500">+ {upgrade.price}</div>
+                  <div className="text-gray-500 text-xs mt-1">bijbetaling</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
+        {/* Process / Werkwijze */}
+        <Reveal direction="up" delay={0.4}>
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white text-center mb-10">Werkwijze</h3>
+            <div ref={timelineRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { num: 1, title: 'Afspraak maken', desc: 'Plan een moment in. We komen binnen 1 week bij u langs.', icon: '📅' },
-                { num: 2, title: 'Analyse op locatie (2 uur)', desc: 'Onze specialist analyseert uw productieproces ter plaatse. Knelpunten, kansen, quick wins.', icon: '🔍' },
-                { num: 3, title: 'Rapport & ROI (binnen 1 week)', desc: 'U ontvangt een uitgebreid rapport met concrete besparingen en implementatie roadmap.', icon: '📊' }
+                {
+                  num: 1,
+                  title: 'Kennismaking',
+                  desc: 'Telefonisch gesprek van 30 minuten. We bespreken uw situatie, doelen en uitdagingen. Geen verplichtingen.',
+                  icon: Phone
+                },
+                {
+                  num: 2,
+                  title: '360Scan op locatie',
+                  desc: 'In 1 tot 3 dagen (afhankelijk van het pakket) analyseren we uw productieproces op de werkvloer. Observaties, interviews, data.',
+                  icon: Factory
+                },
+                {
+                  num: 3,
+                  title: 'Rapport met 360°-Score',
+                  desc: 'Binnen 5 tot 15 werkdagen ontvangt u een compleet rapport: uw 360°-Score, besparingspotentieel in euro\'s en een concrete implementatieroadmap.',
+                  icon: FileText
+                }
               ].map((step, index) => (
                 <div key={index} className="timeline-step glass p-6 rounded-xl relative group hover:border-primary-500/30 border border-transparent transition-all duration-300">
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-xl" />
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500/20 to-orange-500/20 border border-primary-500/30 flex items-center justify-center flex-shrink-0 font-bold text-primary-500 group-hover:scale-110 group-hover:border-primary-500/50 transition-all duration-300 relative z-10">
-                      {step.num}
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500/20 to-orange-500/20 border border-primary-500/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-primary-500/50 transition-all duration-300">
+                      <step.icon className="w-7 h-7 text-primary-500" />
                     </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">{step.title}</h4>
-                      <p className="text-gray-400 text-sm">{step.desc}</p>
-                    </div>
+                    <div className="text-xs text-primary-500 font-bold mb-2">STAP {step.num}</div>
+                    <h4 className="text-lg font-bold text-white mb-3 group-hover:text-primary-400 transition-colors duration-300">{step.title}</h4>
+                    <p className="text-gray-400 text-sm">{step.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
 
         {/* CTA */}
-        <Reveal direction="up" delay={0.4}>
-          <div className="text-center mt-16">
-            <MagneticButton strength={0.5} innerStrength={0.2}>
-              <HoverGlow glowColor="rgba(249, 115, 22, 0.6)" glowSize={120} rounded="xl">
-                <a href="#contact" className="btn text-lg px-10 py-5 inline-flex items-center gap-3 group relative overflow-hidden">
-                  {/* Animated gradient border */}
-                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-[-2px] bg-gradient-to-r from-primary-500 via-orange-400 to-primary-500 rounded-xl animate-spin-slow" style={{ animationDuration: '3s' }} />
-                    <div className="absolute inset-[1px] bg-primary-600 rounded-xl" />
-                  </div>
-
-                  {/* Button shine effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-
-                  <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
-                  <span className="relative z-10">360Scan aanvragen</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
-                </a>
-              </HoverGlow>
-            </MagneticButton>
-            <p className="text-sm text-gray-500 mt-4">
-              Investering op aanvraag · Maatwerk voorstel na scan
-            </p>
+        <Reveal direction="up" delay={0.5}>
+          <div className="text-center">
+            <div className="glass p-8 rounded-2xl max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Klaar om te ontdekken waar uw productie geld laat liggen?
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Plan een kennismaking en we bespreken welk pakket het beste bij uw situatie past.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <MagneticButton strength={0.5} innerStrength={0.2}>
+                  <HoverGlow glowColor="rgba(249, 115, 22, 0.6)" glowSize={120} rounded="xl">
+                    <a href="#contact" className="btn text-lg px-10 py-5 inline-flex items-center gap-3 group relative overflow-hidden">
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                      <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
+                      <span className="relative z-10">Plan een kennismaking</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+                    </a>
+                  </HoverGlow>
+                </MagneticButton>
+                <MagneticButton strength={0.3}>
+                  <a href="tel:+31854010752" className="btn btn-secondary text-lg px-8 py-5 inline-flex items-center gap-2">
+                    <Phone className="w-5 h-5" />
+                    <span>085 - 401 0752</span>
+                  </a>
+                </MagneticButton>
+              </div>
+              <p className="text-sm text-gray-500 mt-6">
+                Of bel direct: <span className="text-primary-500">085 - 401 0752</span>
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

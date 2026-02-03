@@ -1694,7 +1694,7 @@ export default function ProductieplanningOptimalisatiePage() {
               Klaar om je Productieplanning naar het Volgende Niveau te Brengen?
             </h2>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-              Plan een vrijblijvend gesprek om de mogelijkheden voor jouw productieomgeving te bespreken.
+              Plan een kennismaking om de mogelijkheden voor jouw productieomgeving te bespreken.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

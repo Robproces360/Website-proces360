@@ -99,7 +99,7 @@ export default function CTASection() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
-              Vraag een gratis 360Scan aan of neem direct contact op. Wij reageren binnen <span className="text-primary-500 font-semibold">24 uur</span>.
+              Plan uw 360Scan of neem direct contact op. Wij reageren binnen <span className="text-primary-500 font-semibold">24 uur</span>.
             </p>
           </Reveal>
         </div>
@@ -284,7 +284,7 @@ export default function CTASection() {
                   Direct advies nodig?
                 </h3>
                 <p className="text-sm text-text-secondary mb-4 relative z-10">
-                  Bel ons direct voor een vrijblijvend gesprek over uw productie-uitdagingen.
+                  Bel ons direct voor een gesprek over uw productie-uitdagingen.
                 </p>
                 <MagneticButton strength={0.4}>
                   <a

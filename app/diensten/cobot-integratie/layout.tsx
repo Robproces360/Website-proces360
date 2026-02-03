@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cobot Integratie | Merkonafhankelijke Robot Implementatie',
-  description: 'Complete cobot integratie van selectie tot productie. Merkonafhankelijk advies uit 50+ technologieën. Gemiddelde terugverdientijd 12-18 maanden. Gratis haalbaarheidsanalyse.',
+  description: 'Complete cobot integratie van selectie tot productie. Merkonafhankelijk advies uit 50+ technologieën. Gemiddelde terugverdientijd 12-18 maanden.',
   keywords: ['cobot integratie', 'cobot implementatie', 'collaborative robot', 'Techman cobot', 'Doosan cobot', 'FANUC cobot', 'ABB cobot', 'Universal Robots', 'robot automatisering', 'cobot programmeren'],
   openGraph: {
     title: 'Cobot Integratie | Merkonafhankelijke Robot Implementatie - Proces360',

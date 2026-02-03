@@ -58,8 +58,8 @@ export default function ContactPage() {
             Laten we <span className="text-primary-500">praten</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Heb je vragen over procesoptimalisatie, OEE-verbetering of robotisering?
-            Neem vrijblijvend contact op voor een gratis quickscan van jouw productie.
+            Heeft u vragen over procesoptimalisatie, OEE-verbetering of robotisering?
+            Neem contact op voor een 360Scan van uw productie.
           </p>
         </div>
       </section>
@@ -295,7 +295,10 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-bg-primary border border-white/10 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors"
                       >
                         <option value="">Selecteer een onderwerp</option>
-                        <option value="quickscan">Gratis Quickscan aanvragen</option>
+                        <option value="360scan-inzicht">360Scan Inzicht (€1.450)</option>
+                        <option value="360scan-verdieping">360Scan Verdieping (€2.900)</option>
+                        <option value="360scan-transformatie">360Scan Transformatie (€4.800)</option>
+                        <option value="360scan-info">360Scan - Weet ik nog niet</option>
                         <option value="oee">OEE Verbetering</option>
                         <option value="cobot">Cobot / Robot Integratie</option>
                         <option value="automatisering">Industriële Automatisering</option>

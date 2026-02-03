@@ -1342,15 +1342,15 @@ export default function PredictiveMaintenancePage() {
                 Klaar voor Predictive Maintenance?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Plan een vrijblijvende PdM-scan. We analyseren je kritieke assets en geven
+                Plan uw 360Scan. We analyseren je kritieke assets en geven
                 een concreet implementatieadvies met ROI-berekening.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="/contact?subject=360scan"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors"
                 >
-                  Gratis PdM Assessment
+                  Plan uw 360Scan
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link

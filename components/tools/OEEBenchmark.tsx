@@ -334,7 +334,7 @@ export default function OEEBenchmark() {
                       className="btn btn-secondary px-6 py-4 inline-flex items-center gap-2"
                       onClick={() => analytics.ctaClicked('360Scan', 'OEE Benchmark')}
                     >
-                      Gratis 360Scan
+                      Plan uw 360Scan
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </Magnetic>

@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact | Proces360 - Neem Vrijblijvend Contact Op',
-  description: 'Neem contact op met Rob Derks van Proces360 voor vragen over procesoptimalisatie, OEE-verbetering, cobot integratie of een gratis quickscan van jouw productie.',
+  title: 'Contact | Proces360 - Neem Contact Op',
+  description: 'Neem contact op met Rob Derks van Proces360 voor vragen over procesoptimalisatie, OEE-verbetering, cobot integratie of een 360Scan van jouw productie.',
   keywords: [
     'contact proces360',
     'procesoptimalisatie contact',
     'OEE consultant contact',
     'cobot advies',
-    'gratis quickscan',
+    '360Scan',
     'productie consultant',
   ],
   openGraph: {
     title: 'Contact | Proces360',
-    description: 'Neem vrijblijvend contact op voor een gratis quickscan van jouw productie.',
+    description: 'Neem contact op voor een 360Scan van jouw productie. Vanaf €1.450.',
     url: 'https://proces360.com/contact',
     siteName: 'Proces360',
     locale: 'nl_NL',

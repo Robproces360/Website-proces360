@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     default: "Proces360 | Procesoptimalisatie & OEE Expert",
     template: "%s | Proces360",
   },
-  description: "Rob Derks: 22+ jaar productie-ervaring. OEE-verbetering (15-40%), cobot integratie & industriële automatisering. Gratis quickscan voor MKB-maakbedrijven.",
+  description: "Rob Derks: 22+ jaar productie-ervaring. OEE-verbetering (15-40%), cobot integratie & industriële automatisering. 360Scan voor MKB-maakbedrijven vanaf €1.450.",
   keywords: [
     // Primaire NL keywords
     "procesoptimalisatie", "OEE verbetering", "OEE verhoging", "OEE consultant",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "Industrielle Automatisierung", "Produktionsoptimierung",
     // Industrie-specifiek
     "MKB maakbedrijf", "productie MKB", "manufacturing SME",
-    "quickscan productie", "360 graden scan", "productie audit",
+    "360Scan productie", "360 graden scan", "productie audit",
     "interim operations manager", "productie consultant",
   ],
   authors: [
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Proces360 | Expert Procesoptimalisatie & Industriële Automatisering",
-    description: "Rob Derks: 22+ jaar hands-on ervaring in productie. Specialist in OEE-verbetering (15-40%), cobot integratie en industriële automatisering. Gratis quickscan voor MKB-maakbedrijven.",
+    description: "Rob Derks: 22+ jaar hands-on ervaring in productie. Specialist in OEE-verbetering (15-40%), cobot integratie en industriële automatisering. 360Scan voor MKB-maakbedrijven vanaf €1.450.",
     url: 'https://proces360.com',
     siteName: 'Proces360',
     locale: 'nl_NL',
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     site: '@proces360',
     creator: '@robderks_nl',
     title: "Proces360 | Expert Procesoptimalisatie & Industriële Automatisering",
-    description: "22+ jaar ervaring in productie-optimalisatie. OEE-verbetering, cobot integratie, industriële automatisering. Gratis quickscan voor MKB.",
+    description: "22+ jaar ervaring in productie-optimalisatie. OEE-verbetering, cobot integratie, industriële automatisering. 360Scan voor MKB vanaf €1.450.",
     images: {
       url: '/images/og-image.png',
       alt: 'Proces360 - Procesoptimalisatie Expert',
@@ -279,12 +279,12 @@ const organizationSchema = {
     itemListElement: [
       {
         '@type': 'Offer',
-        '@id': 'https://proces360.com/#quickscan',
-        name: 'Gratis Quickscan',
-        description: 'Gratis analyse van uw productieproces met concrete verbeterpunten, ROI-berekening en prioriteitenlijst. Binnen 2 uur inzicht in uw optimalisatiepotentieel.',
-        price: '0',
+        '@id': 'https://proces360.com/#360scan',
+        name: '360Scan',
+        description: 'Professionele analyse van uw productieproces met 360°-Score, besparingspotentieel in euro\'s en implementatieroadmap. In 1 tot 3 dagen inzicht in uw optimalisatiepotentieel.',
+        priceRange: '€1.450 - €4.800',
         priceCurrency: 'EUR',
-        url: 'https://proces360.com/diensten/quickscan',
+        url: 'https://proces360.com/diensten/360scan',
       },
       {
         '@type': 'Offer',
@@ -351,7 +351,7 @@ const faqSchema = {
       name: 'Wat kost een cobot en wat is de terugverdientijd?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Een complete cobot-installatie kost tussen €35.000 en €150.000, afhankelijk van de toepassing, gripper en integratie. De gemiddelde terugverdientijd ligt tussen 12-18 maanden. Gebruik onze gratis ROI Calculator om uw specifieke terugverdientijd te berekenen. Proces360 adviseert merkonafhankelijk uit 50+ cobot- en robot-technologieën.',
+        text: 'Een complete cobot-installatie kost tussen €35.000 en €150.000, afhankelijk van de toepassing, gripper en integratie. De gemiddelde terugverdientijd ligt tussen 12-18 maanden. Gebruik onze ROI Calculator om uw specifieke terugverdientijd te berekenen. Proces360 adviseert merkonafhankelijk uit 50+ cobot- en robot-technologieën.',
       },
     },
     {
@@ -367,7 +367,7 @@ const faqSchema = {
       name: 'Hoe lang duurt een procesoptimalisatie-traject?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Een quickscan duurt 1-2 dagen. Een compleet OEE-verbetertraject neemt 3-6 maanden. Cobot-integratie kost 2-4 maanden van selectie tot productie. De eerste resultaten zijn vaak binnen 4-6 weken zichtbaar. Proces360 levert concrete, meetbare verbeteringen met duidelijke ROI.',
+        text: 'Een 360Scan duurt 1-3 dagen afhankelijk van het gekozen pakket. Een compleet OEE-verbetertraject neemt 3-6 maanden. Cobot-integratie kost 2-4 maanden van selectie tot productie. De eerste resultaten zijn vaak binnen 4-6 weken zichtbaar. Proces360 levert concrete, meetbare verbeteringen met duidelijke ROI.',
       },
     },
     {

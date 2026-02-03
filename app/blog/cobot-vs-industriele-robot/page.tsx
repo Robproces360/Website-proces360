@@ -1293,15 +1293,15 @@ export default function CobotVsRobotPage() {
                 Hulp nodig bij het kiezen tussen cobot en robot?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Plan een vrijblijvende automatiseringsscan. We analyseren je situatie en geven
+                Plan uw 360Scan. We analyseren je situatie en geven
                 onafhankelijk advies over de beste oplossing voor jouw productie.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="/contact?subject=360scan"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors"
                 >
-                  Gratis Automatiseringsscan
+                  Plan uw 360Scan
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link

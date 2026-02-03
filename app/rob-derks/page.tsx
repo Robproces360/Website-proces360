@@ -293,7 +293,7 @@ export default function RobDerksPage() {
                   Klaar om uw productie te <span className="gradient-text">optimaliseren?</span>
                 </h2>
                 <p className="text-xl text-gray-400 mb-8">
-                  Plan een vrijblijvend gesprek of vraag direct uw gratis quickscan aan.
+                  Plan een kennismaking of vraag direct uw 360Scan aan.
                   Binnen 2 weken inzicht in uw optimalisatiepotentieel.
                 </p>
 
@@ -321,7 +321,7 @@ export default function RobDerksPage() {
                 <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
                   <span className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-primary-500" />
-                    Gratis quickscan
+                    360Scan vanaf €1.450
                   </span>
                   <span className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-primary-500" />

@@ -168,7 +168,7 @@ export default function OEEVerbeteringPage() {
                   Bereken je huidige OEE
                 </h3>
                 <p className="text-gray-300">
-                  Gebruik onze gratis OEE Calculator en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
+                  Gebruik onze OEE Calculator en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
                 </p>
               </div>
               <Link
@@ -205,14 +205,14 @@ export default function OEEVerbeteringPage() {
             Klaar om je OEE te verhogen?
           </h2>
           <p className="text-gray-400 mb-8">
-            Vraag een gratis quickscan aan en ontdek waar jouw verbeterpotentieel ligt.
+            Plan uw 360Scan en ontdek waar jouw verbeterpotentieel ligt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact?subject=oee"
+              href="/contact?subject=360scan"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors"
             >
-              Gratis Quickscan Aanvragen
+              Plan uw 360Scan
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link

@@ -1059,7 +1059,7 @@ export default function RobotROICalculator() {
                   Wilt u weten wat uw <span className="gradient-text">mogelijkheden</span> zijn?
                 </h2>
                 <p className="text-xl text-gray-300 mb-6">
-                  Neem dan contact met ons op voor een vrijblijvend gesprek
+                  Neem dan contact met ons op voor een gesprek
                 </p>
                 <p className="text-gray-400 mb-8 italic">
                   <Info className="w-4 h-4 inline-block mr-2" />
@@ -1079,7 +1079,7 @@ export default function RobotROICalculator() {
                   <Magnetic strength={0.5}>
                     <a href="#360scan" className="btn btn-secondary px-8 py-4 text-lg">
                       <BadgeCheck className="w-5 h-5 mr-2" />
-                      Plan Gratis 360Scan
+                      Plan uw 360Scan
                     </a>
                   </Magnetic>
                   <Magnetic strength={0.5}>
