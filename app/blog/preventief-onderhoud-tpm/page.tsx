@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import BlogCTA from '@/components/shared/BlogCTA';
 import { ArrowLeft, Clock, User, Calendar, CheckCircle, Wrench, AlertTriangle, TrendingUp, Shield, Settings, BarChart3, Bot, Cog } from 'lucide-react';
 
 export default function TPMArticlePage() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       <article className="container mx-auto px-4 max-w-4xl">
         <nav className="mb-8">
           <Link href="/blog" className="inline-flex items-center text-gray-400 hover:text-primary-500 transition-colors">
@@ -183,6 +184,7 @@ export default function TPMArticlePage() {
             </Link>
           </div>
         </div>
+        <BlogCTA />
       </article>
     </main>
   );

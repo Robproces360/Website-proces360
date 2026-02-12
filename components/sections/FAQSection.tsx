@@ -1,167 +1,98 @@
 "use client";
-import { useState, useRef, useEffect } from 'react';
-import { ChevronDown, HelpCircle, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState } from 'react';
+import { ChevronDown, MessageCircle, ArrowRight } from 'lucide-react';
 import Reveal from '../shared/Reveal';
-import RevealMask from '../visuals/RevealMask';
-import GlitchText from '../visuals/GlitchText';
 import MagneticButton from '../visuals/MagneticButton';
 
-gsap.registerPlugin(ScrollTrigger);
+/* PSYCHOLOGISCH PRINCIPE: Bezwaar-weerlegging
+   - De FAQ is geen informatiedump maar bezwaren-killer
+   - Elke vraag is een onuitgesproken twijfel van de bezoeker
+   - Antwoorden zijn persoonlijk (ik-vorm), eerlijk en concreet */
 
 const faqs = [
   {
-    question: 'Voor wie is Proces360?',
-    answer: 'MKB productiebedrijven (10-250 medewerkers) die worstelen met kosten, efficiency of automatisering. Of u nu net begint met optimalisatie of al ervaring heeft - wij helpen bij elke stap.'
+    question: 'Ik heb al eens een consultant gehad. Waarom zou het nu anders zijn?',
+    answer: 'Begrijp ik. Veel consultants leveren een rapport af en vertrekken. Ik niet. Ik implementeer mét uw team op de vloer. Werkstandaarden, borging, training — dat is standaard onderdeel. En als het resultaat uitblijft? Dan betaalt u niet. Zo simpel is het.',
   },
   {
-    question: 'Hoe lang duurt een project?',
-    answer: '360Scan: 1-2 weken voor complete analyse en rapport. Totaal traject van analyse tot implementatie: 3-9 maanden, afhankelijk van de complexiteit en scope van uw project.'
+    question: 'Wij zijn maar een klein bedrijf. Is dit niet te duur voor ons?',
+    answer: 'De meeste van mijn klanten hebben 15-75 medewerkers. De 360Scan is bewust zo opgezet dat het betaalbaar is voor MKB. En bij geschikte projecten werk ik op basis van No Cure No Pay — dan betaalt u alleen als het resultaat er is. Daarnaast: als ik denk dat het voor uw situatie niet zinvol is, zeg ik dat eerlijk.',
   },
   {
-    question: 'Werken jullie door heel Nederland?',
-    answer: 'Ja. Primair actief in Brabant en Limburg, maar operationeel door heel Nederland. Voor complexe projecten komen wij overal ter plaatse.'
+    question: "Hoe lang duurt zo'n traject?",
+    answer: 'De 360Scan zelf duurt 1-3 dagen op locatie, met een rapport binnen 5-15 werkdagen. Een compleet verbetertraject — van analyse tot implementatie en borging — loopt gemiddeld 3-9 maanden. Maar u ziet al in de eerste weken de eerste resultaten.',
   },
   {
-    question: 'Wat kost een 360Scan?',
-    answer: 'De investering voor een 360Scan is op aanvraag. Na de scan ontvangt u een maatwerk voorstel met concrete inzichten, ROI-berekeningen en een implementatie roadmap, afgestemd op uw specifieke situatie.'
+    question: 'Werkt u door heel Nederland?',
+    answer: 'Ja. Ik ben primair actief in Brabant en Limburg, maar werk door heel Nederland. Voor uw 360Scan kom ik altijd naar u toe — want de beste inzichten krijg ik op uw werkvloer, niet achter een scherm.',
   },
   {
-    question: 'Zijn jullie gebonden aan bepaalde merken?',
-    answer: 'Nee, wij zijn volledig merkonafhankelijk. We werken samen met 50+ technology partners en kiezen altijd de beste oplossing voor úw specifieke situatie - niet wat voor ons het meest oplevert.'
+    question: 'Zijn jullie gebonden aan bepaalde leveranciers of merken?',
+    answer: 'Nee, en dat is precies het punt. Ik werk merkonafhankelijk en selecteer uit 50+ technologieën wat het beste past bij úw situatie. Geen verborgen belangen. Geen push om dure machines te verkopen die u niet nodig heeft.',
   },
   {
-    question: 'Hoe weet ik of een investering rendabel is?',
-    answer: 'Voordat u investeert maken wij een complete business case met ROI-berekening. U weet exact wat het oplevert, wat de terugverdientijd is, en waar de grootste winstpotentie ligt. Geen verrassingen achteraf.'
+    question: 'Wat als mijn team niet staat te springen om verandering?',
+    answer: 'Dat is vaker dan u denkt — en het is de reden dat ik zo veel aandacht besteed aan people & change. Ik betrek uw team vanaf dag één, luister naar hun zorgen, en zorg dat verbeteringen hún ideeën worden. Mensen verzetten zich niet tegen verandering, ze verzetten zich tegen opgelegde verandering.',
   },
   {
-    question: 'Wat gebeurt er na implementatie?',
-    answer: 'We blijven uw partner. Proactief onderhoud, performance monitoring, helpdesk support en continue optimalisatie zorgen voor blijvend rendement. Uw investering blijft opleveren.'
+    question: 'Hoe weet ik dat de investering zich terugverdient?',
+    answer: 'Voor elke maatregel maak ik een concrete ROI-berekening met terugverdientijd. U investeert niet op basis van een gevoel, maar op basis van getallen die kloppen. En als ik twijfel over de ROI, adviseer ik u om het niet te doen. Mijn reputatie is belangrijker dan één project.',
   },
 ];
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const faqItemsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    // Parallax orbs
-    gsap.to('.faq-orb', {
-      y: -80,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1
-      }
-    });
-
-    // Stagger FAQ items
-    if (faqItemsRef.current) {
-      const items = faqItemsRef.current.querySelectorAll('.faq-item');
-      gsap.fromTo(items,
-        { opacity: 0, y: 40, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: faqItemsRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse'
-          }
-        }
-      );
-    }
-  }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-bg-primary relative overflow-hidden">
-      {/* Animated background */}
+    <section className="py-24 bg-bg-primary relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.015)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      <div className="faq-orb absolute top-[10%] right-[-5%] w-[400px] h-[400px] bg-primary-500/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="faq-orb absolute bottom-[20%] left-[-5%] w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <RevealMask direction="up" duration={0.8}>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-strong mb-6 border border-primary-500/20">
-              <Sparkles className="w-4 h-4 text-primary-500" />
-              <HelpCircle className="w-4 h-4 text-primary-500" />
-              <span className="text-sm text-gray-300 font-medium">Veelgestelde Vragen</span>
-            </div>
-          </RevealMask>
-          <Reveal direction="up" delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-white">Vragen? </span>
-              <GlitchText className="gradient-text" glitchOnHover>Antwoorden!</GlitchText>
+        <div className="text-center mb-12">
+          <Reveal direction="up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-white">Misschien denkt u </span>
+              <span className="gradient-text">nu dit...</span>
             </h2>
+          </Reveal>
+          <Reveal direction="up" delay={0.1}>
+            <p className="text-gray-400">
+              Begrijpelijk. Dit zijn de vragen die ik het vaakst hoor.
+            </p>
           </Reveal>
         </div>
 
         {/* FAQ Items */}
-        <div ref={faqItemsRef} className="space-y-4" role="list">
+        <div className="space-y-3">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
-            const panelId = `faq-panel-${index}`;
-            const buttonId = `faq-button-${index}`;
-
             return (
-              <div
-                key={index}
-                className="faq-item glass rounded-xl overflow-hidden group relative border border-white/10 hover:border-primary-500/30 transition-all duration-300"
-                role="listitem"
-              >
-                {/* Gradient background on open */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-primary-500/5 to-orange-500/5 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
-
-                {/* Shine effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
-
-                <h3 className="relative z-10">
+              <Reveal key={index} direction="up" delay={index * 0.05}>
+                <div className="glass rounded-xl overflow-hidden border border-white/10 hover:border-primary-500/20 transition-all duration-300">
                   <button
-                    id={buttonId}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-white/5 transition-colors"
                     aria-expanded={isOpen}
-                    aria-controls={panelId}
                   >
-                    <span className={`text-lg font-semibold pr-8 transition-colors duration-300 ${isOpen ? 'text-primary-400' : 'text-white group-hover:text-primary-400'}`}>
+                    <span className={`text-base font-semibold pr-6 transition-colors duration-300 ${isOpen ? 'text-primary-400' : 'text-white'}`}>
                       {faq.question}
                     </span>
-                    <div className={`relative w-8 h-8 rounded-full bg-primary-500/10 flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-primary-500/20 rotate-180' : 'group-hover:bg-primary-500/20'}`}>
-                      <ChevronDown
-                        className="w-5 h-5 text-primary-500 flex-shrink-0"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-primary-500 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                </h3>
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  className={`overflow-hidden transition-all duration-500 ease-out relative z-10 ${
-                    isOpen ? 'max-h-96' : 'max-h-0'
-                  }`}
-                  hidden={!isOpen}
-                >
-                  <div className="px-6 pb-5 text-gray-400">
-                    {faq.answer}
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-out ${
+                      isOpen ? 'max-h-96' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed">
+                      {faq.answer}
+                    </div>
                   </div>
                 </div>
-
-                {/* Bottom accent line when open */}
-                <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 via-orange-400 to-primary-500 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
-              </div>
+              </Reveal>
             );
           })}
         </div>
@@ -169,16 +100,26 @@ export default function FAQSection() {
         {/* Bottom CTA */}
         <Reveal direction="up" delay={0.4}>
           <div className="text-center mt-12">
-            <p className="text-gray-400 mb-6">Staat uw vraag er niet bij?</p>
-            <MagneticButton strength={0.4}>
-              <a href="#contact" className="btn px-8 py-4 inline-flex items-center gap-3 group relative overflow-hidden">
-                {/* Button shine effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-                <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
-                <span className="relative z-10">Neem contact op</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+            <p className="text-gray-400 mb-4">Andere vraag? Stel hem gerust.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <MagneticButton strength={0.4}>
+                <a href="#contact" className="btn px-8 py-4 inline-flex items-center gap-3 group relative overflow-hidden">
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                  <MessageCircle className="w-5 h-5 relative z-10" />
+                  <span className="relative z-10">Stuur een bericht</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                </a>
+              </MagneticButton>
+              <a
+                href="https://wa.me/31630185844"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary px-8 py-4 inline-flex items-center gap-2"
+              >
+                <MessageCircle className="w-5 h-5 text-green-500" />
+                WhatsApp
               </a>
-            </MagneticButton>
+            </div>
           </div>
         </Reveal>
       </div>

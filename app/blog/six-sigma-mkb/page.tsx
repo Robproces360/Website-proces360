@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import BlogCTA from '@/components/shared/BlogCTA';
 import {
   ArrowLeft,
   Calendar,
@@ -29,7 +30,7 @@ import {
 
 export default function SixSigmaMKBPage() {
   return (
-    <main className="min-h-screen bg-bg-primary">
+    <main id="main-content" className="min-h-screen bg-bg-primary">
       {/* Breadcrumb */}
       <div className="bg-bg-secondary border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -1498,6 +1499,7 @@ export default function SixSigmaMKBPage() {
             </div>
           </section>
         </div>
+        <BlogCTA />
       </article>
     </main>
   );

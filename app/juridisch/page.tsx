@@ -24,7 +24,7 @@ function JuridischContent() {
   }, [searchParams]);
 
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-6">
         {/* Back link */}
         <Link

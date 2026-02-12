@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import BlogCTA from '@/components/shared/BlogCTA';
 import {
   Brain, CheckCircle, ArrowRight, TrendingUp, Clock, Target, Settings,
   Zap, AlertTriangle, Lightbulb, ChevronRight, BarChart3, Gauge,
@@ -106,7 +107,7 @@ const faqItems = [
 
 export default function MachineLearningProductiePage() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 mb-8">
         <nav className="flex items-center gap-2 text-sm text-gray-400">

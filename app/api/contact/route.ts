@@ -120,21 +120,53 @@ export async function POST(request: Request) {
       ip: ip.split(',')[0].trim(), // First IP if behind proxies
     };
 
-    // Only log in development environment
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Contact form submission:', submission);
-    }
+    // Log naar console (zichtbaar in Vercel logs)
+    console.log('\n========================================');
+    console.log('NIEUW CONTACTBERICHT!');
+    console.log('========================================');
+    console.log(`Naam:      ${submission.naam}`);
+    console.log(`Email:     ${submission.email}`);
+    console.log(`Telefoon:  ${submission.telefoon || 'Niet opgegeven'}`);
+    console.log(`Bedrijf:   ${submission.bedrijf || 'Niet opgegeven'}`);
+    console.log(`Bericht:   ${submission.bericht}`);
+    console.log(`Datum:     ${submission.timestamp}`);
+    console.log('========================================\n');
 
-    // TODO: In production, add one of these:
-    // - Send email via Resend/SendGrid
-    // - Store in database
-    // - Send to CRM (HubSpot, Pipedrive)
-    // - Send to Slack/Discord webhook
+    // Stuur naar Formspree (zelfde systeem als calculators)
+    const FORMSPREE_CONTACT_ID = 'xpqwawzl';
+    try {
+      const formspreeResponse = await fetch(`https://formspree.io/f/${FORMSPREE_CONTACT_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          _replyto: submission.email,
+          _subject: `Nieuw contactbericht: ${submission.naam} (${submission.bedrijf || 'Geen bedrijf'})`,
+          naam: submission.naam,
+          email: submission.email,
+          telefoon: submission.telefoon || 'Niet opgegeven',
+          bedrijf: submission.bedrijf || 'Niet opgegeven',
+          bericht: submission.bericht,
+          bron: 'Contact Pagina',
+          datum: new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam' }),
+        }),
+      });
+
+      if (formspreeResponse.ok) {
+        console.log('Contactbericht verstuurd via Formspree');
+      } else {
+        console.error('Formspree response niet ok:', await formspreeResponse.text());
+      }
+    } catch (formspreeError) {
+      console.error('Formspree fout:', formspreeError);
+    }
 
     // Return success response
     return NextResponse.json({
       success: true,
-      message: 'Bericht succesvol verzonden! We nemen binnen 48 uur contact met u op.',
+      message: 'Bericht succesvol verzonden! Ik neem binnen 24 uur contact met u op.',
       data: {
         reference: `P360-${Date.now().toString(36).toUpperCase()}`,
       }

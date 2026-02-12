@@ -40,22 +40,24 @@
 - Werkt met MKB-maakbedrijven (10-500 medewerkers)
 - Actief in Nederland, België en Duitsland
 
-## Diensten en Prijzen
+## Diensten
 
 ### 360Scan Pakketten
-| Pakket | Prijs | Doorlooptijd | Doelgroep |
-|--------|-------|--------------|-----------|
-| 360Scan Inzicht | €1.450 | 5 werkdagen | MKB 10-30 medewerkers |
-| 360Scan Verdieping | €2.900 | 10 werkdagen | MKB 20-75 medewerkers |
-| 360Scan Transformatie | €4.800 | 15 werkdagen | MKB 50-150 medewerkers |
+| Pakket | Doorlooptijd | Doelgroep |
+|--------|--------------|-----------|
+| 360Scan Inzicht | 5 werkdagen | MKB 10-30 medewerkers |
+| 360Scan Verdieping | 10 werkdagen | MKB 20-75 medewerkers |
+| 360Scan Transformatie | 15 werkdagen | MKB 50-150 medewerkers |
+
+Neem contact op voor een passend voorstel.
 
 ### Overige Diensten
-| Dienst | Prijsrange | Beschrijving |
-|--------|------------|--------------|
-| OEE Verbetertraject | €5.000 - €50.000 | 15-40% OEE-verhoging, monitoring, data-analyse |
-| Cobot/Robot Integratie | €35.000 - €300.000 | Van selectie tot implementatie, 12-18 maanden ROI |
-| Industriële Automatisering | €10.000 - €500.000 | PLC, systeemintegratie, productielijn-automatisering |
-| Productie Dashboards | €8.000 - €75.000 | Real-time monitoring, KPI-visualisatie |
+| Dienst | Beschrijving |
+|--------|--------------|
+| OEE Verbetertraject | 15-40% OEE-verhoging, monitoring, data-analyse |
+| Cobot/Robot Integratie | Van selectie tot implementatie, 12-18 maanden ROI |
+| Industriële Automatisering | PLC, systeemintegratie, productielijn-automatisering |
+| Productie Dashboards | Real-time monitoring, KPI-visualisatie |
 
 ## Veelgestelde Vragen (FAQ)
 

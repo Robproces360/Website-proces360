@@ -1,130 +1,59 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../shared/Reveal';
-import MorphingCounter from '../visuals/MorphingCounter';
-import { TrendingUp, Clock, Users } from 'lucide-react';
+import { TrendingUp, Factory, Euro, Handshake } from 'lucide-react';
 
-gsap.registerPlugin(ScrollTrigger);
+/* PSYCHOLOGISCH PRINCIPE: Social proof met context
+   - Niet zomaar cijfers, maar cijfers die een verhaal vertellen
+   - Elk getal krijgt een "waarom" zodat het geloofwaardig wordt */
 
 const stats = [
   {
-    value: 17.4,
-    suffix: '%',
-    label: 'Efficiëntiewinst',
+    value: '22+',
+    label: 'Jaar productie-ervaring',
+    context: 'Van operator tot operations manager',
+    icon: Factory,
+  },
+  {
+    value: '15-30%',
+    label: 'Meer output',
+    context: 'Gemiddeld bij onze klanten',
     icon: TrendingUp,
   },
   {
-    value: 15,
-    suffix: ' mnd',
-    label: 'Terugverdientijd',
-    icon: Clock,
+    value: '€69K-247K',
+    label: 'Besparingen gevonden',
+    context: 'Per bedrijf, per jaar',
+    icon: Euro,
   },
   {
-    value: 18,
-    suffix: '',
-    label: 'Klanten geholpen',
-    icon: Users,
+    value: '100%',
+    label: 'Eerlijk advies',
+    context: 'Ook als u ons niet nodig heeft',
+    icon: Handshake,
   },
 ];
 
 export default function StatsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!sectionRef.current || !cardsRef.current) return;
-
-    const cards = cardsRef.current.children;
-
-    // Staggered entrance animation
-    gsap.fromTo(cards,
-      {
-        y: 100,
-        opacity: 0,
-        scale: 0.8,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        }
-      }
-    );
-
-    // Hover 3D tilt effect
-    Array.from(cards).forEach((card) => {
-      const el = card as HTMLElement;
-
-      el.addEventListener('mousemove', (e: MouseEvent) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-
-        gsap.to(el, {
-          rotateX,
-          rotateY,
-          duration: 0.3,
-          ease: 'power2.out',
-          transformPerspective: 1000,
-        });
-      });
-
-      el.addEventListener('mouseleave', () => {
-        gsap.to(el, {
-          rotateX: 0,
-          rotateY: 0,
-          duration: 0.5,
-          ease: 'elastic.out(1, 0.5)',
-        });
-      });
-    });
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-12 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        {/* Compact Header */}
-        <Reveal direction="up">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            <span className="text-white">Resultaten die </span>
-            <span className="gradient-text">spreken</span>
-          </h2>
-        </Reveal>
+    <section className="py-16 relative overflow-hidden">
+      {/* Subtle divider line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
 
-        {/* Compact Stats Row */}
-        <div ref={cardsRef} className="flex flex-wrap justify-center gap-8 md:gap-16">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center group"
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <stat.icon className="w-5 h-5 text-primary-500" />
-                <span className="text-3xl md:text-4xl font-bold gradient-text">
-                  <MorphingCounter
-                    end={stat.value}
-                    suffix={stat.suffix}
-                    duration={2.5}
-                  />
-                </span>
+            <Reveal key={index} direction="up" delay={index * 0.1}>
+              <div className="text-center group">
+                <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500/20 group-hover:border-primary-500/40 transition-all duration-300">
+                  <stat.icon className="w-6 h-6 text-primary-500" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold gradient-text mb-1">
+                  {stat.value}
+                </div>
+                <p className="text-text-primary font-medium text-sm mb-1">{stat.label}</p>
+                <p className="text-text-muted text-xs">{stat.context}</p>
               </div>
-              <p className="text-gray-400 text-sm">{stat.label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,206 +1,126 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { Cog, Bot, Euro, Users, Wrench, ArrowRight, Sparkles } from 'lucide-react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowRight, AlertTriangle, Clock, Users, TrendingDown, Cog } from 'lucide-react';
 import Reveal from '../shared/Reveal';
-import HoverTilt from '../shared/HoverTilt';
 import HoverScale from '../shared/HoverScale';
-import StaggerGrid from '../visuals/StaggerGrid';
-import RevealMask from '../visuals/RevealMask';
-import MagneticButton from '../visuals/MagneticButton';
 
-gsap.registerPlugin(ScrollTrigger);
+/* PSYCHOLOGISCH PRINCIPE: Problem-first framing (PAS framework)
+   - Niet beginnen met "onze diensten" maar met herkenbare problemen
+   - Klant ziet zijn eigen situatie en denkt: "dat ben ik"
+   - Dan pas de oplossing presenteren */
 
-const diensten = [
+const problemen = [
   {
-    icon: Cog,
-    title: 'Procesoptimalisatie',
-    subtitle: 'Meer output, minder gedoe',
-    description: 'Uw productie stroomt beter, sneller en met minder fouten.',
-    features: [
-      'Procesanalyse op de werkvloer',
-      'Overbodige stappen elimineren',
-      'Snellere doorlooptijd',
-      'Hogere output zonder extra personeel'
-    ],
-    gradient: 'from-blue-500 to-cyan-500'
+    probleem: 'Te veel ongeplande stilstand',
+    gevoel: "U wordt gebeld om 3 uur 's nachts. Weer een storing. Weer productieverlies. Weer uitleggen aan de klant waarom de levering later is.",
+    oplossing: 'Ik analyseer uw stilstandoorzaken, stel preventief onderhoud in en implementeer een early-warning systeem. Gemiddeld 40-60% minder ongeplande stops.',
+    icon: AlertTriangle,
   },
   {
-    icon: Bot,
-    title: 'Slimme Automatisering',
-    subtitle: 'Eén partij die het regelt',
-    description: 'Geen gedoe met meerdere leveranciers. Wij nemen het project aan en zorgen dat het draait.',
-    features: [
-      'Robotica, cobots & vision systemen',
-      'Onafhankelijk advies & strategie',
-      'Projectmanagement van A tot Z',
-      'Eén aanspreekpunt, volledig ontzorgd'
-    ],
-    gradient: 'from-primary-500 to-orange-500'
-  },
-  {
-    icon: Euro,
-    title: 'Financiële Analyse',
-    subtitle: 'Weet waar uw geld zit én waar het kan groeien',
-    description: 'Inzicht in kostprijs, verlies en winstpotentie. Plus concrete verbetervoorstellen met ROI.',
-    features: [
-      'Kostprijs & verliesposten in kaart',
-      'Verbeterpotentieel geïdentificeerd',
-      'ROI per verbetering berekend',
-      'Investeringsvoorstellen op maat'
-    ],
-    gradient: 'from-green-500 to-emerald-500'
-  },
-  {
+    probleem: 'Processen die afhangen van één persoon',
+    gevoel: 'Die ene operator die alles weet. Als hij ziek is, staat de lijn stil. Kennis zit in hoofden, niet in systemen.',
+    oplossing: 'Ik maak processen inzichtelijk, documenteer werkstandaarden en train uw team. Zodat uw productie niet afhankelijk is van één persoon.',
     icon: Users,
-    title: 'People & Change',
-    subtitle: 'Uw team mee in de verandering',
-    description: 'Technologie werkt pas als uw mensen er achter staan.',
-    features: [
-      'Draagvlak creëren op de werkvloer',
-      'Medewerkers betrekken bij implementatie',
-      'Heldere communicatie & verwachtingen',
-      'Soepele overgang naar nieuwe werkwijze'
-    ],
-    gradient: 'from-purple-500 to-pink-500'
   },
   {
-    icon: Wrench,
-    title: 'Borging & Standaardisatie',
-    subtitle: 'Eenmalig goed = blijvend resultaat',
-    description: 'Wij richten uw proces zo in dat het zichzelf in stand houdt.',
-    features: [
-      'Werkstandaarden vastleggen',
-      'Processen documenteren',
-      'Kennis borgen in de organisatie',
-      'Altijd bereikbaar bij vragen'
-    ],
-    gradient: 'from-amber-500 to-yellow-500'
+    probleem: 'Geen grip op uw werkelijke kosten',
+    gevoel: 'U weet wat u omzet. Maar waar zit de verspilling? Welke machines kosten meer dan ze opleveren? Welke lijn is uw cashcow?',
+    oplossing: 'Met OEE-analyses en kostprijsberekeningen maak ik zichtbaar waar uw geld zit &mdash; en waar het weglekt. In euro&rsquo;s, niet in percentages.',
+    icon: TrendingDown,
+  },
+  {
+    probleem: 'Handmatig werk dat geautomatiseerd kan',
+    gevoel: 'Uw mensen doen repetitief werk dat een cobot sneller en nauwkeuriger kan. Maar welke robot? Welke leverancier? Wat kost het écht?',
+    oplossing: 'Merkonafhankelijk advies uit 50+ technologieën. Van haalbaarheid tot implementatie, één aanspreekpunt. Gemiddelde terugverdientijd: 12-18 maanden.',
+    icon: Cog,
+  },
+  {
+    probleem: 'Verbeteringen die niet beklijven',
+    gevoel: 'U heeft al eens een consultant gehad. Er lag een mooi rapport. Maar na 3 maanden was alles terug bij af.',
+    oplossing: 'Ik implementeer mét uw team, niet voor uw team. Werkstandaarden, borging en training zijn standaard onderdeel. Zodat verbeteringen blijven.',
+    icon: Clock,
   },
 ];
 
 export default function DienstenSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    // Parallax background effect
-    gsap.to('.diensten-bg-orb', {
-      y: -100,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1
-      }
-    });
-  }, []);
-
   return (
-    <section ref={sectionRef} id="diensten" className="py-24 bg-bg-secondary relative overflow-hidden">
-      {/* Background orbs */}
+    <section id="diensten" className="py-24 bg-bg-secondary relative overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="diensten-bg-orb absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[100px]" />
-        <div className="diensten-bg-orb absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <RevealMask direction="up" duration={0.8}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-primary-500/20 mb-6">
-              <Sparkles className="w-4 h-4 text-primary-500" />
-              <span className="text-sm font-medium text-primary-500">Volledig ontzorgd</span>
-            </div>
-          </RevealMask>
-
           <Reveal direction="up">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-white">Onze </span>
-              <span className="gradient-text">Diensten</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-white">Herkent u dit </span>
+              <span className="gradient-text">in uw bedrijf?</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Uw productie-uitdagingen, onze expertise. Complete ontzorging van A tot Z.
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Dit zijn de situaties die ik dagelijks tegenkom bij MKB-maakbedrijven.
+              <span className="text-primary-500 font-semibold"> En die ik oplos.</span>
             </p>
           </Reveal>
         </div>
 
-        {/* Services Grid with Stagger Animation */}
-        <StaggerGrid
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          stagger={0.15}
-          animation="scale"
-          from="center"
-        >
-          {diensten.map((dienst, index) => (
-            <HoverScale key={index} scale={1.03}>
-              <HoverTilt>
-                <div className="glass p-8 rounded-2xl h-full hover:border-primary-500/50 border border-white/10 transition-all duration-500 group relative overflow-hidden">
-                  {/* Gradient background on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${dienst.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+        {/* Problemen grid */}
+        <div className="space-y-6">
+          {problemen.map((item, index) => (
+            <Reveal key={index} direction="up" delay={index * 0.1}>
+              <HoverScale scale={1.01}>
+                <div className="glass p-6 md:p-8 rounded-2xl border border-white/10 hover:border-primary-500/30 transition-all duration-300 group">
+                  <div className="grid md:grid-cols-[1fr_auto_1fr] gap-6 items-start">
+                    {/* Probleem */}
+                    <div>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
+                          <item.icon className="w-5 h-5 text-red-400" />
+                        </div>
+                        <h3 className="text-lg font-bold text-white group-hover:text-red-400 transition-colors">
+                          {item.probleem}
+                        </h3>
+                      </div>
+                      <p className="text-gray-400 text-sm leading-relaxed italic">
+                        {item.gevoel}
+                      </p>
+                    </div>
 
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+                    {/* Arrow separator */}
+                    <div className="hidden md:flex items-center justify-center pt-4">
+                      <div className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
+                        <ArrowRight className="w-5 h-5 text-primary-500" />
+                      </div>
+                    </div>
 
-                  {/* Icon with enhanced glow */}
-                  <div className="relative w-16 h-16 mb-6">
-                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${dienst.gradient} opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-300`} />
-                    <div className="relative w-full h-full rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary-500/30 transition-colors duration-300">
-                      <dienst.icon className="w-8 h-8 text-primary-500 group-hover:scale-110 transition-transform duration-300" />
+                    {/* Oplossing */}
+                    <div>
+                      <p className="text-sm font-semibold text-primary-500 mb-2">
+                        Wat ik doe:
+                      </p>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        {item.oplossing}
+                      </p>
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">
-                    {dienst.title}
-                  </h3>
-                  <p className="text-primary-500/80 text-sm font-semibold mb-4 italic">
-                    &quot;{dienst.subtitle}&quot;
-                  </p>
-                  <p className="text-gray-400 mb-6 text-sm">{dienst.description}</p>
-
-                  {/* Features with stagger reveal */}
-                  <ul className="space-y-2">
-                    {dienst.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
-                        style={{ transitionDelay: `${idx * 50}ms` }}
-                      >
-                        <span className="text-primary-500 mt-0.5 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Bottom gradient line */}
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${dienst.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 </div>
-              </HoverTilt>
-            </HoverScale>
+              </HoverScale>
+            </Reveal>
           ))}
-        </StaggerGrid>
+        </div>
 
-        {/* Bottom CTA */}
+        {/* Bridge text */}
         <Reveal direction="up" delay={0.5}>
-          <div className="text-center mt-16">
-            <p className="text-gray-400 mb-6 text-lg">
-              Niet één puzzelstukje, maar het <span className="text-primary-500 font-semibold">complete plaatje</span>.
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-400">
+              Herkent u zich in één of meer van deze situaties?
             </p>
-            <MagneticButton strength={0.4}>
-              <a
-                href="#360scan"
-                className="btn btn-secondary px-8 py-4 inline-flex items-center gap-3 group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                <span>Meer over de 360Scan</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </a>
-            </MagneticButton>
+            <p className="text-primary-500 font-semibold text-lg mt-2">
+              Scroll verder en ontdek hoe een 360Scan uw vertrekpunt wordt.
+            </p>
           </div>
         </Reveal>
       </div>

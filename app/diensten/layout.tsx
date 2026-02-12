@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     template: '%s | Diensten - Proces360',
     default: 'Diensten | Proces360 - Procesoptimalisatie & Automatisering',
   },
-  description: 'Complete diensten voor MKB-maakbedrijven: procesoptimalisatie, OEE-verbetering, cobot integratie, industriële automatisering en productie dashboards. 360Scan vanaf €1.450.',
+  description: 'Complete diensten voor MKB-maakbedrijven: procesoptimalisatie, OEE-verbetering, cobot integratie, industriële automatisering en productie dashboards.',
   keywords: [
     'procesoptimalisatie diensten',
     'OEE verbetering dienst',

@@ -19,10 +19,10 @@ export default function Footer() {
               <span className="text-primary-500">360</span>
             </h3>
             <p className="text-text-secondary mb-4 text-sm">
-              De one-stop-shop voor MKB productiebedrijven die klaar zijn voor groei.
+              22+ jaar productie-ervaring. Eén man die naast u op de vloer staat.
             </p>
             <p className="text-text-muted text-xs">
-              Complete productie-optimalisatie onder één dak.
+              Eerlijk advies. Meetbaar resultaat.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
                 { href: '/#360scan', label: '360Scan' },
                 { href: '/#aanpak', label: 'Aanpak' },
                 { href: '/#team', label: 'Maak kennis met Rob' },
-                { href: '/#waarom', label: 'Waarom Ons' },
+                { href: '/#waarom', label: 'Resultaten' },
               ].map((link) => (
                 <li key={link.href}>
                   <HoverScale scale={1.05}>

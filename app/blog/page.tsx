@@ -39,7 +39,7 @@ const blogPosts = [
   {
     slug: 'oee-verbeteren-complete-gids',
     title: 'OEE Verbeteren: De Complete Gids voor 2026',
-    excerpt: 'Leer alles over OEE (Overall Equipment Effectiveness), hoe je het berekent, en praktische tips om je OEE te verhogen van 50% naar 85%+.',
+    excerpt: 'Leer alles over OEE (Overall Equipment Effectiveness), hoe u het berekent, en praktische tips om uw OEE te verhogen van 50% naar 85%+.',
     author: 'Rob Derks',
     date: '9 januari 2026',
     readTime: '12 min',
@@ -72,7 +72,7 @@ const blogPosts = [
   {
     slug: 'predictive-maintenance-gids',
     title: 'Predictive Maintenance: Complete Gids voor MKB-Productie',
-    excerpt: 'Van reactief naar voorspellend onderhoud. Leer hoe sensoren, data en AI je helpen storingen te voorkomen voordat ze gebeuren.',
+    excerpt: 'Van reactief naar voorspellend onderhoud. Leer hoe sensoren, data en AI u helpen storingen te voorkomen voordat ze gebeuren.',
     author: 'Rob Derks',
     date: '14 oktober 2025',
     readTime: '21 min',
@@ -83,7 +83,7 @@ const blogPosts = [
   {
     slug: 'cobot-vs-industriele-robot',
     title: 'Cobot vs Industriële Robot: De Ultieme Keuzegids',
-    excerpt: 'Wanneer kies je een cobot en wanneer een industriële robot? Complete vergelijking met beslisboom, TCO-analyse en praktijkcases.',
+    excerpt: 'Wanneer kiest u een cobot en wanneer een industriële robot? Complete vergelijking met beslisboom, TCO-analyse en praktijkcases.',
     author: 'Rob Derks',
     date: '16 september 2025',
     readTime: '19 min',
@@ -105,7 +105,7 @@ const blogPosts = [
   {
     slug: 'productievloer-digitalisering',
     title: 'Productievloer Digitalisering: Van Papier naar Papierloos',
-    excerpt: 'Praktische gids voor het digitaliseren van je productievloer. Werkinstructies, kwaliteitsregistratie en real-time data zonder grote investeringen.',
+    excerpt: 'Praktische gids voor het digitaliseren van uw productievloer. Werkinstructies, kwaliteitsregistratie en real-time data zonder grote investeringen.',
     author: 'Rob Derks',
     date: '8 juli 2025',
     readTime: '16 min',
@@ -126,7 +126,7 @@ const blogPosts = [
   {
     slug: 'cobot-terugverdientijd-berekenen',
     title: 'Cobot Terugverdientijd Berekenen: ROI in 12-18 Maanden',
-    excerpt: 'Ontdek hoe je de terugverdientijd van een cobot berekent en wanneer robotisering rendabel is voor jouw MKB-maakbedrijf.',
+    excerpt: 'Ontdek hoe u de terugverdientijd van een cobot berekent en wanneer robotisering rendabel is voor uw MKB-maakbedrijf.',
     author: 'Rob Derks',
     date: '7 juni 2025',
     readTime: '8 min',
@@ -137,7 +137,7 @@ const blogPosts = [
   {
     slug: 'automatisering-roadmap-mkb',
     title: 'Automatisering Roadmap voor MKB: Van Eerste Stap tot Smart Factory',
-    excerpt: 'Bouw je eigen automatisering roadmap. Van quick wins naar volledige digitalisering met een pragmatische, stapsgewijze aanpak.',
+    excerpt: 'Bouw uw eigen automatisering roadmap. Van quick wins naar volledige digitalisering met een pragmatische, stapsgewijze aanpak.',
     author: 'Rob Derks',
     date: '13 mei 2025',
     readTime: '15 min',
@@ -147,7 +147,7 @@ const blogPosts = [
   {
     slug: 'cobots-in-productie-complete-gids',
     title: 'Cobots in Productie: De Complete Gids voor MKB-Maakbedrijven',
-    excerpt: 'Van selectie tot implementatie: alles wat je moet weten over collaborative robots (cobots) in de maakindustrie. Inclusief ROI-berekening.',
+    excerpt: 'Van selectie tot implementatie: alles wat u moet weten over collaborative robots (cobots) in de maakindustrie. Inclusief ROI-berekening.',
     author: 'Rob Derks',
     date: '6 mei 2025',
     readTime: '15 min',
@@ -158,7 +158,7 @@ const blogPosts = [
   {
     slug: 'smart-manufacturing-trends-2025',
     title: 'Smart Manufacturing Trends 2025: Wat MKB Moet Weten',
-    excerpt: 'De belangrijkste trends in smart manufacturing voor 2025. Van AI tot duurzaamheid - welke ontwikkelingen zijn relevant voor jouw fabriek?',
+    excerpt: 'De belangrijkste trends in smart manufacturing voor 2025. Van AI tot duurzaamheid - welke ontwikkelingen zijn relevant voor uw fabriek?',
     author: 'Rob Derks',
     date: '22 april 2025',
     readTime: '14 min',
@@ -168,7 +168,7 @@ const blogPosts = [
   {
     slug: 'productie-kpis-complete-gids',
     title: 'Productie KPIs Meten & Verbeteren: De Complete Gids',
-    excerpt: 'Welke KPIs moet je meten in productie? Van OEE tot leverbetrouwbaarheid - leer de juiste metrics kiezen en verbeteren.',
+    excerpt: 'Welke KPIs moet u meten in productie? Van OEE tot leverbetrouwbaarheid - leer de juiste metrics kiezen en verbeteren.',
     author: 'Rob Derks',
     date: '15 april 2025',
     readTime: '16 min',
@@ -179,7 +179,7 @@ const blogPosts = [
   {
     slug: 'productie-strategie-automatisering',
     title: 'Productiestrategie & Automatisering: Van Visie naar Uitvoering',
-    excerpt: 'Hoe ontwikkel je een automatiseringsstrategie die past bij jouw MKB-maakbedrijf? Van quick wins tot lange termijn roadmap.',
+    excerpt: 'Hoe ontwikkelt u een automatiseringsstrategie die past bij uw MKB-maakbedrijf? Van quick wins tot lange termijn roadmap.',
     author: 'Rob Derks',
     date: '9 januari 2025',
     readTime: '14 min',
@@ -189,7 +189,7 @@ const blogPosts = [
   {
     slug: 'productie-stilstand-verminderen',
     title: '10 Praktische Tips om Productie Stilstand te Verminderen',
-    excerpt: 'Stilstand kost je duizenden euros per uur. Deze 10 bewezen methodes helpen je om ongeplande stilstand drastisch te verlagen.',
+    excerpt: 'Stilstand kost u duizenden euros per uur. Deze 10 bewezen methodes helpen u om ongeplande stilstand drastisch te verlagen.',
     author: 'Rob Derks',
     date: '5 januari 2025',
     readTime: '10 min',
@@ -199,7 +199,7 @@ const blogPosts = [
   {
     slug: 'lean-manufacturing-mkb',
     title: 'Lean Manufacturing voor MKB: Praktische Start in 30 Dagen',
-    excerpt: 'Lean is geen grote investering of complexe theorie. Het is een mindset die je morgen kunt starten. Dit zijn de eerste stappen.',
+    excerpt: 'Lean is geen grote investering of complexe theorie. Het is een mindset die u morgen kunt starten. Dit zijn de eerste stappen.',
     author: 'Rob Derks',
     date: '28 december 2024',
     readTime: '9 min',
@@ -209,7 +209,7 @@ const blogPosts = [
   {
     slug: 'preventief-onderhoud-tpm',
     title: 'Preventief Onderhoud & TPM: Van Reactief naar Proactief',
-    excerpt: 'Stop met brandjes blussen. Leer hoe je met Total Productive Maintenance (TPM) storingen voorkomt in plaats van repareert.',
+    excerpt: 'Stop met brandjes blussen. Leer hoe u met Total Productive Maintenance (TPM) storingen voorkomt in plaats van repareert.',
     author: 'Rob Derks',
     date: '20 december 2024',
     readTime: '11 min',
@@ -219,7 +219,7 @@ const blogPosts = [
   {
     slug: 'industrie-4-mkb-praktisch',
     title: 'Industrie 4.0 voor MKB: Praktisch Beginnen Zonder Miljoeneninvestering',
-    excerpt: 'Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe je met kleine stappen en beperkt budget je fabriek digitaliseert.',
+    excerpt: 'Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe u met kleine stappen en beperkt budget uw fabriek digitaliseert.',
     author: 'Rob Derks',
     date: '12 december 2024',
     readTime: '12 min',
@@ -233,7 +233,7 @@ export default function BlogPage() {
   const otherPosts = blogPosts.filter(post => !post.featured);
 
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       {/* Hero Section */}
       <section className="container mx-auto px-4 mb-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -324,10 +324,10 @@ export default function BlogPage() {
       <section className="container mx-auto px-4 mt-16">
         <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Wil je je OEE direct berekenen?
+            Wilt u uw OEE direct berekenen?
           </h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-            Gebruik onze gratis calculators en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
+            Gebruik onze gratis calculators en ontdek hoeveel verborgen capaciteit er in uw productie zit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

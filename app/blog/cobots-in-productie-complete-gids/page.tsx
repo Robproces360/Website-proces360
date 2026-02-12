@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import BlogCTA from '@/components/shared/BlogCTA';
 import { ArrowLeft, Clock, User, Calendar, CheckCircle, AlertTriangle, TrendingUp, Target, Bot, Shield, Zap, Euro, Factory, Users, Settings, Wrench, HelpCircle, ArrowRight, Award, BarChart3, Cpu } from 'lucide-react';
 
 export default function CobotArticlePage() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       <article className="container mx-auto px-4 max-w-4xl">
         {/* Breadcrumb */}
         <nav className="mb-8">
@@ -1303,6 +1304,7 @@ export default function CobotArticlePage() {
             </Link>
           </div>
         </div>
+        <BlogCTA />
       </article>
     </main>
   );

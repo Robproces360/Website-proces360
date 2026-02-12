@@ -23,7 +23,7 @@ const expertise = [
 
 export default function IndustrieleAutomatiseringPage() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       <section className="container mx-auto px-4 mb-16">
         <div className="max-w-4xl mx-auto">
           <Link href="/diensten" className="inline-flex items-center text-gray-400 hover:text-primary-500 mb-6 transition-colors">

@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Magnetic from '../shared/Magnetic';
-import { Zap, ChevronDown, X, Menu, Linkedin, MessageCircle, Calculator, BarChart3, AlertTriangle, Gauge, Bot, Percent } from 'lucide-react';
+import { Zap, ChevronDown, X, Menu, Linkedin, MessageCircle, Calculator, BarChart3, AlertTriangle, Gauge, Bot, Percent, ClipboardList, ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -168,6 +168,26 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
+              {/* OEE Quickscan Highlight */}
+              <Link
+                href="/quickscan"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 bg-gradient-to-r from-primary-500/10 to-orange-500/5 hover:from-primary-500/20 hover:to-orange-500/10 transition-all duration-200 border-b border-primary-500/20 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-primary-500/20 rounded-lg group-hover:bg-primary-500/30 transition-colors">
+                    <ClipboardList className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors flex items-center gap-2">
+                      OEE Quickscan
+                      <span className="text-[10px] bg-primary-500 text-white px-1.5 py-0.5 rounded font-bold uppercase">Gratis</span>
+                    </div>
+                    <div className="text-xs text-gray-500 flex items-center gap-1">Download checklist <ArrowRight className="w-3 h-3" /></div>
+                  </div>
+                </div>
+              </Link>
+
               {/* Quick Scans Section */}
               <div className="px-4 py-2 bg-white/5 border-b border-white/10">
                 <span className="text-xs font-semibold text-primary-500 uppercase tracking-wider">Quick Scans</span>
@@ -185,7 +205,7 @@ export default function Navbar() {
                     <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
                       Stilstand Schadepost
                     </div>
-                    <div className="text-xs text-gray-500">Wat kost stilstand u écht?</div>
+                    <div className="text-xs text-gray-500">Wat kost stilstand u &eacute;cht?</div>
                   </div>
                 </div>
               </Link>
@@ -384,7 +404,16 @@ export default function Navbar() {
 
                 {/* Tools in mobile */}
                 <li className="pt-4 border-t border-white/10 mt-4">
-                  <p className="px-4 py-2 text-xs text-primary-500 uppercase tracking-wider font-semibold">Quick Scans</p>
+                  <Link
+                    href="/quickscan"
+                    onClick={closeMobileMenu}
+                    className="block py-3 px-4 text-primary-500 font-medium hover:bg-primary-500/10 rounded-lg transition-colors flex items-center gap-2"
+                  >
+                    <ClipboardList className="w-4 h-4" />
+                    OEE Quickscan
+                    <span className="text-[10px] bg-primary-500 text-white px-1.5 py-0.5 rounded font-bold ml-auto">GRATIS</span>
+                  </Link>
+                  <p className="px-4 py-2 text-xs text-primary-500 uppercase tracking-wider font-semibold mt-2">Quick Scans</p>
                   <Link
                     href="/tools/stilstand-calculator"
                     onClick={closeMobileMenu}

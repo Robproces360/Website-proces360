@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'OEE Verbetering | Verhoog je OEE met 15-40%',
-  description: 'Verhoog je OEE met 15-40% door systematische optimalisatie. Wij meten, analyseren en verbeteren je Overall Equipment Effectiveness met bewezen methodes. 360Scan vanaf €1.450.',
+  description: 'Verhoog je OEE met 15-40% door systematische optimalisatie. Wij meten, analyseren en verbeteren je Overall Equipment Effectiveness met bewezen methodes.',
   keywords: [
     'OEE verbetering',
     'OEE verhogen',

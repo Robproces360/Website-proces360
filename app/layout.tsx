@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     default: "Proces360 | Procesoptimalisatie & OEE Expert",
     template: "%s | Proces360",
   },
-  description: "Rob Derks: 22+ jaar productie-ervaring. OEE-verbetering (15-40%), cobot integratie & industriële automatisering. 360Scan voor MKB-maakbedrijven vanaf €1.450.",
+  description: "Rob Derks: 22+ jaar productie-ervaring. OEE-verbetering (15-30%), cobot integratie & industriële automatisering. 360Scan voor MKB-maakbedrijven.",
   keywords: [
     // Primaire NL keywords
     "procesoptimalisatie", "OEE verbetering", "OEE verhoging", "OEE consultant",
@@ -79,14 +79,12 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'nl-NL': 'https://proces360.com',
-      'en': 'https://proces360.com/en',
-      'de': 'https://proces360.com/de',
       'x-default': 'https://proces360.com',
     },
   },
   openGraph: {
     title: "Proces360 | Expert Procesoptimalisatie & Industriële Automatisering",
-    description: "Rob Derks: 22+ jaar hands-on ervaring in productie. Specialist in OEE-verbetering (15-40%), cobot integratie en industriële automatisering. 360Scan voor MKB-maakbedrijven vanaf €1.450.",
+    description: "Rob Derks: 22+ jaar hands-on ervaring in productie. Specialist in OEE-verbetering (15-30%), cobot integratie en industriële automatisering. 360Scan voor MKB-maakbedrijven.",
     url: 'https://proces360.com',
     siteName: 'Proces360',
     locale: 'nl_NL',
@@ -113,7 +111,7 @@ export const metadata: Metadata = {
     site: '@proces360',
     creator: '@robderks_nl',
     title: "Proces360 | Expert Procesoptimalisatie & Industriële Automatisering",
-    description: "22+ jaar ervaring in productie-optimalisatie. OEE-verbetering, cobot integratie, industriële automatisering. 360Scan voor MKB vanaf €1.450.",
+    description: "22+ jaar ervaring in productie-optimalisatie. OEE-verbetering, cobot integratie, industriële automatisering. 360Scan voor MKB-maakbedrijven.",
     images: {
       url: '/images/og-image.png',
       alt: 'Proces360 - Procesoptimalisatie Expert',
@@ -177,7 +175,7 @@ const organizationSchema = {
   '@id': 'https://proces360.com/#organization',
   name: 'Proces360 B.V.',
   alternateName: ['Proces360', 'Proces 360', 'Process360'],
-  description: 'Proces360 is dé expert in procesoptimalisatie, OEE-verbetering, cobot/robot integratie en industriële automatisering voor MKB-maakbedrijven. Met 22+ jaar hands-on productie-ervaring helpen wij bedrijven hun productiviteit met 15-40% te verhogen.',
+  description: 'Proces360 is dé expert in procesoptimalisatie, OEE-verbetering, cobot/robot integratie en industriële automatisering voor MKB-maakbedrijven. Met 22+ jaar hands-on productie-ervaring helpen wij bedrijven hun productiviteit met 15-30% te verhogen.',
   url: 'https://proces360.com',
   logo: {
     '@type': 'ImageObject',
@@ -282,17 +280,13 @@ const organizationSchema = {
         '@id': 'https://proces360.com/#360scan',
         name: '360Scan',
         description: 'Professionele analyse van uw productieproces met 360°-Score, besparingspotentieel in euro\'s en implementatieroadmap. In 1 tot 3 dagen inzicht in uw optimalisatiepotentieel.',
-        priceRange: '€1.450 - €4.800',
-        priceCurrency: 'EUR',
         url: 'https://proces360.com/diensten/360scan',
       },
       {
         '@type': 'Offer',
         '@id': 'https://proces360.com/#oee-verbetering',
         name: 'OEE Verbetertraject',
-        description: 'Verhoog uw OEE met 15-40% door gerichte optimalisatie van beschikbaarheid, prestatie en kwaliteit. Inclusief real-time monitoring en data-analyse.',
-        priceRange: '€5.000 - €50.000',
-        priceCurrency: 'EUR',
+        description: 'Verhoog uw OEE met 15-30% door gerichte optimalisatie van beschikbaarheid, prestatie en kwaliteit. Inclusief real-time monitoring en data-analyse.',
         url: 'https://proces360.com/diensten/oee-verbetering',
       },
       {
@@ -300,8 +294,6 @@ const organizationSchema = {
         '@id': 'https://proces360.com/#cobot-integratie',
         name: 'Cobot/Robot Integratie',
         description: 'Complete cobot implementatie van selectie tot programmering. Terugverdientijd gemiddeld 12-18 maanden. Merkonafhankelijk advies uit 50+ technologieën.',
-        priceRange: '€35.000 - €300.000',
-        priceCurrency: 'EUR',
         url: 'https://proces360.com/diensten/cobot-integratie',
       },
       {
@@ -309,8 +301,6 @@ const organizationSchema = {
         '@id': 'https://proces360.com/#automatisering',
         name: 'Industriële Automatisering',
         description: 'Van PLC-programmering tot complete productielijnautomatisering. Systeemintegratie, besturingssystemen en optimalisatie van bestaande installaties.',
-        priceRange: '€10.000 - €500.000',
-        priceCurrency: 'EUR',
         url: 'https://proces360.com/diensten/industriele-automatisering',
       },
       {
@@ -318,18 +308,9 @@ const organizationSchema = {
         '@id': 'https://proces360.com/#dashboards',
         name: 'Productie Dashboards',
         description: 'Real-time productie monitoring, KPI-visualisatie en business intelligence voor manufacturing. Inzicht in OEE, output, kwaliteit en downtime.',
-        priceRange: '€8.000 - €75.000',
-        priceCurrency: 'EUR',
         url: 'https://proces360.com/diensten/productie-dashboards',
       },
     ],
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '47',
-    bestRating: '5',
-    worstRating: '1',
   },
 };
 
@@ -343,7 +324,7 @@ const faqSchema = {
       name: 'Wat is OEE en waarom is het belangrijk?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'OEE (Overall Equipment Effectiveness) is dé KPI voor productie-efficiëntie. Het meet de combinatie van Beschikbaarheid × Prestatie × Kwaliteit. Een gemiddeld MKB-maakbedrijf scoort 40-60% OEE, terwijl world-class 85%+ is. Elke 1% OEE-verbetering betekent directe kostenreductie en meer output met dezelfde resources. Proces360 helpt bedrijven hun OEE met 15-40% te verhogen.',
+        text: 'OEE (Overall Equipment Effectiveness) is dé KPI voor productie-efficiëntie. Het meet de combinatie van Beschikbaarheid × Prestatie × Kwaliteit. Een gemiddeld MKB-maakbedrijf scoort 40-60% OEE, terwijl world-class 85%+ is. Elke 1% OEE-verbetering betekent directe kostenreductie en meer output met dezelfde resources. Proces360 helpt bedrijven hun OEE met 15-30% te verhogen.',
       },
     },
     {
@@ -411,7 +392,7 @@ const websiteSchema = {
       'query-input': 'required name=search_term_string',
     },
   ],
-  inLanguage: ['nl-NL', 'en', 'de'],
+  inLanguage: 'nl-NL',
 };
 
 // Person Schema voor Rob Derks (voor expert authority)
@@ -538,8 +519,6 @@ export default function RootLayout({
 
         {/* Canonical en hreflang tags */}
         <link rel="alternate" hrefLang="nl" href="https://proces360.com" />
-        <link rel="alternate" hrefLang="en" href="https://proces360.com/en" />
-        <link rel="alternate" hrefLang="de" href="https://proces360.com/de" />
         <link rel="alternate" hrefLang="x-default" href="https://proces360.com" />
       </head>
       <body className={`${inter.className} antialiased`}>

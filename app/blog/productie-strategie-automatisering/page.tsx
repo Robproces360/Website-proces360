@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import BlogCTA from '@/components/shared/BlogCTA';
 import { ArrowLeft, Clock, User, Calendar, CheckCircle, Target, TrendingUp, Lightbulb, BarChart3, Cog, Factory, Users, ArrowRight, Bot, ChevronRight } from 'lucide-react';
 
 export default function StrategieArticlePage() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-24 pb-16">
+    <main id="main-content" className="min-h-screen bg-bg-primary pt-24 pb-16">
       <article className="container mx-auto px-4 max-w-4xl">
         {/* Breadcrumb */}
         <nav className="mb-8">
@@ -499,6 +500,7 @@ export default function StrategieArticlePage() {
             ))}
           </div>
         </section>
+        <BlogCTA />
       </article>
     </main>
   );

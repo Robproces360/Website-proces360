@@ -48,7 +48,7 @@ const config: Config = {
         text: {
           primary: '#ffffff',
           secondary: '#a1a1aa',
-          muted: '#71717a',
+          muted: '#9ca3af',
         },
         // Brand specific
         brand: {

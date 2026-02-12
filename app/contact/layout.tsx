@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Contact | Proces360',
-    description: 'Neem contact op voor een 360Scan van jouw productie. Vanaf €1.450.',
+    description: 'Neem contact op voor een 360Scan van jouw productie.',
     url: 'https://proces360.com/contact',
     siteName: 'Proces360',
     locale: 'nl_NL',
