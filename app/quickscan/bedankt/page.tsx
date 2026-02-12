@@ -115,7 +115,7 @@ export default function QuickscanBedanktPage() {
               </button>
             </HoverScale>
             <p className="text-text-muted text-sm mt-3">
-              5 pagina&apos;s &middot; Print-vriendelijk &middot; Gratis
+              6 pagina&apos;s &middot; Print-vriendelijk &middot; Gratis
             </p>
           </Reveal>
         </div>
