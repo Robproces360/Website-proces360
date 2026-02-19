@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'OEE Verbeteren: De Complete Gids voor 2026',
-  description: 'Leer alles over OEE (Overall Equipment Effectiveness): berekening, benchmarks, de 6 grote verliezen en 10 praktische tips om je OEE te verhogen van 50% naar 85%+. Door Rob Derks, 22+ jaar productie-ervaring.',
+  description: 'Leer alles over OEE (Overall Equipment Effectiveness): berekening, benchmarks, de 6 grote verliezen en 10 praktische tips om uw OEE te verhogen van 50% naar 85%+. Door Rob Derks, 22+ jaar productie-ervaring.',
   keywords: [
     'OEE verbeteren',
     'OEE verhogen',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Rob Derks', url: 'https://proces360.com/rob-derks' }],
   openGraph: {
     title: 'OEE Verbeteren: De Complete Gids voor 2026 | Proces360',
-    description: 'Alles over OEE: van berekening tot praktische verbetermethodes. Inclusief voorbeelden en stappenplan om je OEE te verhogen.',
+    description: 'Alles over OEE: van berekening tot praktische verbetermethodes. Inclusief voorbeelden en stappenplan om uw OEE te verhogen.',
     url: 'https://proces360.com/blog/oee-verbeteren-complete-gids',
     siteName: 'Proces360',
     locale: 'nl_NL',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OEE Verbeteren: De Complete Gids voor 2026',
-    description: 'Leer alles over OEE en verhoog je score van 50% naar 85%+',
+    description: 'Leer alles over OEE en verhoog uw score van 50% naar 85%+',
     creator: '@robderks_nl',
   },
   alternates: {
@@ -55,7 +55,7 @@ const articleSchema = {
   '@type': 'Article',
   '@id': 'https://proces360.com/blog/oee-verbeteren-complete-gids/#article',
   headline: 'OEE Verbeteren: De Complete Gids voor 2026',
-  description: 'Leer alles over OEE (Overall Equipment Effectiveness): berekening, benchmarks, de 6 grote verliezen en 10 praktische tips om je OEE te verhogen.',
+  description: 'Leer alles over OEE (Overall Equipment Effectiveness): berekening, benchmarks, de 6 grote verliezen en 10 praktische tips om uw OEE te verhogen.',
   image: 'https://proces360.com/images/blog/oee-verbeteren-og.png',
   datePublished: '2026-01-09T08:00:00+01:00',
   dateModified: '2026-01-09T08:00:00+01:00',
@@ -103,7 +103,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Hoe bereken je OEE?',
+      name: 'Hoe berekent u OEE?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'OEE = Beschikbaarheid × Prestatie × Kwaliteit. Beschikbaarheid meet de daadwerkelijke productietijd vs geplande tijd. Prestatie meet de werkelijke snelheid vs maximale snelheid. Kwaliteit meet het percentage goede producten.',
@@ -124,8 +124,8 @@ const faqSchema = {
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'Hoe verbeter je OEE in 10 stappen',
-  description: 'Praktische stappen om je OEE te verhogen van gemiddeld naar world-class niveau.',
+  name: 'Hoe verbetert u OEE in 10 stappen',
+  description: 'Praktische stappen om uw OEE te verhogen van gemiddeld naar world-class niveau.',
   totalTime: 'P3M',
   estimatedCost: {
     '@type': 'MonetaryAmount',

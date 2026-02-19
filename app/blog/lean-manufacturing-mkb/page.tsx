@@ -23,7 +23,7 @@ export default function LeanArticlePage() {
             Lean Manufacturing voor MKB: Praktische Start in 30 Dagen
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Lean is geen grote investering of complexe theorie. Het is een mindset die je morgen kunt starten.
+            Lean is geen grote investering of complexe theorie. Het is een mindset die u morgen kunt starten.
             Dit zijn de eerste stappen voor MKB-maakbedrijven.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -78,11 +78,11 @@ export default function LeanArticlePage() {
               </div>
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
                 <h4 className="font-bold text-blue-400 mb-2">Week 2: Waste Walk</h4>
-                <p className="text-gray-400 text-sm m-0">Loop door de fabriek met de 8 verspillingen in gedachten. Noteer alles wat je ziet. Betrek operators.</p>
+                <p className="text-gray-400 text-sm m-0">Loop door de fabriek met de 8 verspillingen in gedachten. Noteer alles wat u ziet. Betrek operators.</p>
               </div>
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
                 <h4 className="font-bold text-yellow-400 mb-2">Week 3: Quick Wins</h4>
-                <p className="text-gray-400 text-sm m-0">Pak de 3 grootste verspillingen aan die je in week 2 vond. Focus op laaghangend fruit.</p>
+                <p className="text-gray-400 text-sm m-0">Pak de 3 grootste verspillingen aan die u in week 2 vond. Focus op laaghangend fruit.</p>
               </div>
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
                 <h4 className="font-bold text-purple-400 mb-2">Week 4: Visual Management</h4>
@@ -94,7 +94,7 @@ export default function LeanArticlePage() {
           <section className="mb-8">
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Start met Meten</h3>
-              <p className="text-gray-400 mb-6">OEE is de basis-KPI voor Lean. Bereken je huidige situatie.</p>
+              <p className="text-gray-400 mb-6">OEE is de basis-KPI voor Lean. Bereken uw huidige situatie.</p>
               <Link href="/oee-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
                 <TrendingUp className="w-5 h-5" />
                 OEE Calculator
@@ -120,7 +120,7 @@ export default function LeanArticlePage() {
           <div className="grid md:grid-cols-2 gap-4">
             <Link href="/blog/oee-verbeteren-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">OEE Verbeteren: De Complete Gids</h4>
-              <p className="text-sm text-gray-400">Alles over Overall Equipment Effectiveness en hoe je van 55% naar 85%+ gaat.</p>
+              <p className="text-sm text-gray-400">Alles over Overall Equipment Effectiveness en hoe u van 55% naar 85%+ gaat.</p>
             </Link>
             <Link href="/blog/six-sigma-mkb" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Six Sigma voor MKB</h4>
@@ -132,7 +132,7 @@ export default function LeanArticlePage() {
             </Link>
             <Link href="/blog/productie-kpis-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Productie KPIs: Complete Gids</h4>
-              <p className="text-sm text-gray-400">De 15 belangrijkste KPIs voor productie en hoe je ze implementeert.</p>
+              <p className="text-sm text-gray-400">De 15 belangrijkste KPIs voor productie en hoe u ze implementeert.</p>
             </Link>
           </div>
         </div>

@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Welke cobot is het beste voor mijn bedrijf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Dit hangt af van je toepassing, payload en bereik requirements. Populaire merken zijn Techman, Doosan, FANUC, ABB en Universal Robots. Wij adviseren merkonafhankelijk uit 50+ technologieën.',
+        text: 'Dit hangt af van uw toepassing, payload en bereik requirements. Populaire merken zijn Techman, Doosan, FANUC, ABB en Universal Robots. Wij adviseren merkonafhankelijk uit 50+ technologieën.',
       },
     },
     {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   keywords: ['automatisering ROI', 'robot ROI', 'terugverdientijd automatisering', 'investering automatisering', 'business case automatisering', 'payback period'],
   openGraph: {
     title: 'Automatisering ROI Berekenen | Complete Gids',
-    description: 'Bereken de ROI van je automatiseringsinvestering met zekerheid.',
+    description: 'Bereken de ROI van uw automatiseringsinvestering met zekerheid.',
     url: 'https://proces360.com/blog/automatisering-roi-berekenen',
     type: 'article',
     publishedTime: '2025-11-11T08:00:00Z',

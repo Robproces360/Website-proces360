@@ -23,7 +23,7 @@ export default function TPMArticlePage() {
             Preventief Onderhoud & TPM: Van Reactief naar Proactief
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Stop met brandjes blussen. Leer hoe je met Total Productive Maintenance (TPM) storingen voorkomt
+            Stop met brandjes blussen. Leer hoe u met Total Productive Maintenance (TPM) storingen voorkomt
             in plaats van repareert. Inclusief implementatie-stappenplan.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -37,7 +37,7 @@ export default function TPMArticlePage() {
           <div className="bg-gradient-to-r from-primary-500/10 to-orange-500/10 border-l-4 border-primary-500 p-6 rounded-r-xl mb-12">
             <p className="text-white font-medium m-0">
               <strong>Kernboodschap:</strong> Reactief onderhoud kost 3-5x meer dan preventief onderhoud.
-              TPM kan je machine-beschikbaarheid met 10-20% verhogen en je onderhoudskosten met 25% verlagen.
+              TPM kan uw machine-beschikbaarheid met 10-20% verhogen en uw onderhoudskosten met 25% verlagen.
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function TPMArticlePage() {
                 <div className="flex-shrink-0 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
                 <div>
                   <h4 className="font-bold text-white">Start met OEE-meting</h4>
-                  <p className="text-gray-400 m-0">Je kunt niet verbeteren wat je niet meet. Begin met beschikbaarheid registreren.</p>
+                  <p className="text-gray-400 m-0">U kunt niet verbeteren wat u niet meet. Begin met beschikbaarheid registreren.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -122,8 +122,8 @@ export default function TPMArticlePage() {
 
           <section className="mb-8">
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Hoeveel kost stilstand jou?</h3>
-              <p className="text-gray-400 mb-6">Bereken de impact van betere beschikbaarheid op je resultaat.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Hoeveel kost stilstand u?</h3>
+              <p className="text-gray-400 mb-6">Bereken de impact van betere beschikbaarheid op uw resultaat.</p>
               <Link href="/oee-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
                 <TrendingUp className="w-5 h-5" />
                 OEE Calculator

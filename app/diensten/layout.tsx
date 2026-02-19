@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: {
     template: '%s | Diensten - Proces360',
-    default: 'Diensten | Proces360 - Procesoptimalisatie & Automatisering',
+    default: 'Diensten - Procesoptimalisatie & Automatisering',
   },
   description: 'Complete diensten voor MKB-maakbedrijven: procesoptimalisatie, OEE-verbetering, cobot integratie, industriële automatisering en productie dashboards.',
   keywords: [
@@ -54,7 +54,7 @@ const serviceCatalogSchema = {
       item: {
         '@type': 'Service',
         name: 'OEE Verbetering',
-        description: 'Verhoog je OEE met 15-40% door systematische optimalisatie',
+        description: 'Verhoog uw OEE met 15-40% door systematische optimalisatie',
         url: 'https://proces360.com/diensten/oee-verbetering',
         provider: { '@id': 'https://proces360.com/#organization' },
       },

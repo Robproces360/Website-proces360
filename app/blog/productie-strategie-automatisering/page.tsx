@@ -25,7 +25,7 @@ export default function StrategieArticlePage() {
             Productiestrategie & Automatisering: Van Visie naar Uitvoering
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Hoe ontwikkel je een automatiseringsstrategie die past bij jouw MKB-maakbedrijf?
+            Hoe ontwikkelt u een automatiseringsstrategie die past bij uw MKB-maakbedrijf?
             Van quick wins tot lange termijn roadmap. Inclusief prioriteringsmatrix en investeringsframework.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -49,7 +49,7 @@ export default function StrategieArticlePage() {
           <h2 className="text-lg font-bold text-white mb-4">Inhoudsopgave</h2>
           <ul className="space-y-2 text-gray-400">
             <li><a href="#waarom-strategie" className="hover:text-primary-500 transition-colors">1. Waarom een Automatiseringsstrategie?</a></li>
-            <li><a href="#huidige-situatie" className="hover:text-primary-500 transition-colors">2. Je Huidige Situatie Analyseren</a></li>
+            <li><a href="#huidige-situatie" className="hover:text-primary-500 transition-colors">2. Uw Huidige Situatie Analyseren</a></li>
             <li><a href="#prioriteren" className="hover:text-primary-500 transition-colors">3. Automatiseringskansen Prioriteren</a></li>
             <li><a href="#roadmap" className="hover:text-primary-500 transition-colors">4. De Automatiserings-Roadmap</a></li>
             <li><a href="#business-case" className="hover:text-primary-500 transition-colors">5. Business Case Opstellen</a></li>
@@ -67,7 +67,7 @@ export default function StrategieArticlePage() {
             <p className="text-white font-medium m-0">
               <strong>Kernboodschap:</strong> 70% van de automatiseringsprojecten faalt door gebrekkige strategie, niet door technologie.
               Een goede automatiseringsstrategie begint met &quot;waarom&quot;, niet met &quot;welke robot&quot;.
-              In dit artikel leer je hoe je strategisch automatiseert voor maximale ROI.
+              In dit artikel leert u hoe u strategisch automatiseert voor maximale ROI.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function StrategieArticlePage() {
               1. Waarom een Automatiseringsstrategie?
             </h2>
             <p className="text-gray-300 mb-4">
-              Automatisering zonder strategie is als navigeren zonder kompas. Je investeert misschien in de verkeerde dingen,
+              Automatisering zonder strategie is als navigeren zonder kompas. U investeert misschien in de verkeerde dingen,
               op het verkeerde moment, met het verkeerde doel. Een strategie zorgt voor:
             </p>
             <ul className="space-y-3 mb-6">
@@ -107,7 +107,7 @@ export default function StrategieArticlePage() {
                   <div className="flex-shrink-0 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
                   <div>
                     <h4 className="font-bold text-white">WAAROM automatiseren?</h4>
-                    <p className="text-gray-400 text-sm m-0">Kostenbesparing? Kwaliteit? Capaciteit? Personeelsgebrek? Ken je primaire driver.</p>
+                    <p className="text-gray-400 text-sm m-0">Kostenbesparing? Kwaliteit? Capaciteit? Personeelsgebrek? Ken uw primaire driver.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -132,10 +132,10 @@ export default function StrategieArticlePage() {
           <section id="huidige-situatie" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
               <BarChart3 className="w-8 h-8 text-primary-500" />
-              2. Je Huidige Situatie Analyseren
+              2. Uw Huidige Situatie Analyseren
             </h2>
             <p className="text-gray-300 mb-6">
-              Voordat je automatiseert, moet je weten waar je staat. Een goede analyse omvat:
+              Voordat u automatiseert, moet u weten waar u staat. Een goede analyse omvat:
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -191,7 +191,7 @@ export default function StrategieArticlePage() {
 
             <div className="bg-primary-500/10 border border-primary-500/30 rounded-xl p-6">
               <p className="text-white m-0">
-                <strong>Pro tip:</strong> Besteed minimaal 2 weken aan analyse voordat je over oplossingen nadenkt.
+                <strong>Pro tip:</strong> Besteed minimaal 2 weken aan analyse voordat u over oplossingen nadenkt.
                 De beste automatiseringsprojecten komen voort uit diep begrip van het probleem.
               </p>
             </div>
@@ -235,7 +235,7 @@ export default function StrategieArticlePage() {
 
             <h3 className="text-xl font-bold text-white mb-4">Criteria voor Impact-score</h3>
             <ul className="space-y-2 mb-6 text-gray-300">
-              <li><strong className="text-white">Kostenbesparing:</strong> Hoeveel €/jaar bespaar je?</li>
+              <li><strong className="text-white">Kostenbesparing:</strong> Hoeveel €/jaar bespaart u?</li>
               <li><strong className="text-white">Capaciteitsverhoging:</strong> Hoeveel % meer output?</li>
               <li><strong className="text-white">Kwaliteitsverbetering:</strong> Hoeveel % minder afkeur?</li>
               <li><strong className="text-white">Strategisch belang:</strong> Past het bij de bedrijfsvisie?</li>
@@ -415,15 +415,15 @@ export default function StrategieArticlePage() {
               8. Direct aan de Slag
             </h2>
             <p className="text-gray-300 mb-6">
-              Een goede strategie begint met een heldere analyse van je huidige situatie.
-              Proces360 helpt je met het ontwikkelen van een automatiseringsstrategie die past bij jouw bedrijf.
+              Een goede strategie begint met een heldere analyse van uw huidige situatie.
+              Proces360 helpt u met het ontwikkelen van een automatiseringsstrategie die past bij uw bedrijf.
             </p>
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Gratis Strategiegesprek
               </h3>
               <p className="text-gray-400 mb-6">
-                60 minuten sparren over jouw automatiseringsambities. Vrijblijvend.
+                60 minuten sparren over uw automatiseringsambities. Vrijblijvend.
               </p>
               <Link
                 href="/#contact"

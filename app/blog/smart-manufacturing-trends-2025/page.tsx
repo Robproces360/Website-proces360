@@ -10,7 +10,7 @@ import {
 
 const tableOfContents = [
   { id: 'wat-is-smart-manufacturing', title: 'Wat is Smart Manufacturing?' },
-  { id: 'top-10-trends-2025', title: 'Top 10 Trends 2025' },
+  { id: 'top-10-trends-2026', title: 'Top 10 Trends 2026' },
   { id: 'ai-machine-learning', title: 'AI & Machine Learning' },
   { id: 'iot-edge-computing', title: 'IoT & Edge Computing' },
   { id: 'digital-twins', title: 'Digital Twins' },
@@ -108,9 +108,9 @@ const implementatieStappen = [
 ];
 
 const veelgemaakteFouten = [
-  { fout: 'Technologie-first denken', oplossing: 'Start met bedrijfsdoelstellingen, niet met technologie. Bepaal eerst welk probleem je oplost.' },
-  { fout: 'Te groot beginnen', oplossing: 'Start met één pilot op één machine of lijn. Bewijs de waarde voordat je schaalt.' },
-  { fout: 'Data verzamelen zonder doel', oplossing: 'Definieer vooraf welke KPIs je wilt verbeteren en welke data daarvoor nodig is.' },
+  { fout: 'Technologie-first denken', oplossing: 'Start met bedrijfsdoelstellingen, niet met technologie. Bepaal eerst welk probleem u oplost.' },
+  { fout: 'Te groot beginnen', oplossing: 'Start met één pilot op één machine of lijn. Bewijs de waarde voordat u schaalt.' },
+  { fout: 'Data verzamelen zonder doel', oplossing: 'Definieer vooraf welke KPIs u wilt verbeteren en welke data daarvoor nodig is.' },
   { fout: 'IT en OT isoleren', oplossing: 'Zorg voor samenwerking tussen IT-afdeling en productie/onderhoud vanaf dag één.' },
   { fout: 'Training onderschatten', oplossing: 'Investeer minimaal 15-20% van het budget in training en change management.' },
   { fout: 'Cybersecurity vergeten', oplossing: 'Neem OT-security mee in elk project. Segmenteer netwerken en update firmware.' },
@@ -145,7 +145,7 @@ export default function SmartManufacturingTrends2025Page() {
           <ChevronRight className="w-4 h-4" />
           <Link href="/blog" className="hover:text-primary-500 transition-colors">Blog</Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-white">Smart Manufacturing Trends 2025</span>
+          <span className="text-white">Smart Manufacturing Trends 2026</span>
         </nav>
       </div>
 
@@ -160,7 +160,7 @@ export default function SmartManufacturingTrends2025Page() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Smart Manufacturing Trends 2025: De Complete Gids voor MKB-Productiebedrijven
+            Smart Manufacturing Trends 2026: De Complete Gids voor MKB-Productiebedrijven
           </h1>
 
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
@@ -322,7 +322,7 @@ export default function SmartManufacturingTrends2025Page() {
             <h3 className="text-xl font-bold text-white mt-8 mb-4">Waarom nu investeren in Smart Manufacturing?</h3>
             <p className="text-gray-300 mb-4">
               De urgentie voor Nederlandse MKB-productiebedrijven om te investeren in smart manufacturing
-              is in 2025 groter dan ooit:
+              is in 2026 groter dan ooit:
             </p>
             <div className="grid gap-4">
               <div className="flex items-start gap-4 p-4 bg-bg-secondary border border-white/10 rounded-lg">
@@ -357,7 +357,7 @@ export default function SmartManufacturingTrends2025Page() {
                   <h4 className="font-bold text-white mb-1">Klanteisen</h4>
                   <p className="text-gray-400 text-sm">
                     OEM&apos;s en grote afnemers eisen steeds vaker real-time tracking, traceability en
-                    kwaliteitsdata. Zonder smart systemen verlies je orders.
+                    kwaliteitsdata. Zonder smart systemen verliest u orders.
                   </p>
                 </div>
               </div>
@@ -379,18 +379,18 @@ export default function SmartManufacturingTrends2025Page() {
       </section>
 
       {/* Section: Top 10 Trends 2025 */}
-      <section id="top-10-trends-2025" className="container mx-auto px-4 mb-16 scroll-mt-24">
+      <section id="top-10-trends-2026" className="container mx-auto px-4 mb-16 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-4">
             <span className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center">
               <TrendingUp className="w-6 h-6 text-primary-500" />
             </span>
-            Top 10 Smart Manufacturing Trends 2025
+            Top 10 Smart Manufacturing Trends 2026
           </h2>
 
           <p className="text-gray-300 mb-8">
             Op basis van onderzoek onder 500+ Nederlandse maakbedrijven en analyse van technologie-adoptie
-            wereldwijd, presenteren we de belangrijkste trends voor 2025:
+            wereldwijd, presenteren we de belangrijkste trends voor 2026:
           </p>
 
           <div className="overflow-x-auto mb-8">
@@ -439,9 +439,9 @@ export default function SmartManufacturingTrends2025Page() {
               <div>
                 <h4 className="font-bold text-white mb-2">Belangrijkste insight</h4>
                 <p className="text-gray-300 text-sm">
-                  AI-gedreven predictive maintenance en edge computing zijn de game-changers voor 2025.
+                  AI-gedreven predictive maintenance en edge computing zijn de game-changers voor 2026.
                   Deze technologieën bieden de hoogste ROI en zijn inmiddels volwassen genoeg voor
-                  MKB-implementatie. Start hier als je nog geen smart manufacturing strategie hebt.
+                  MKB-implementatie. Start hier als u nog geen smart manufacturing strategie hebt.
                 </p>
               </div>
             </div>
@@ -460,7 +460,7 @@ export default function SmartManufacturingTrends2025Page() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Kunstmatige intelligentie is geen science fiction meer. In 2025 gebruiken duizenden
+            Kunstmatige intelligentie is geen science fiction meer. In 2026 gebruiken duizenden
             productielocaties wereldwijd AI voor concrete, meetbare verbeteringen. De belangrijkste
             toepassingen voor MKB-maakbedrijven:
           </p>
@@ -486,7 +486,7 @@ export default function SmartManufacturingTrends2025Page() {
           <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-4">AI Readiness Check</h3>
             <p className="text-gray-400 mb-4">
-              Voordat je investeert in AI, moet je aan deze voorwaarden voldoen:
+              Voordat u investeert in AI, moet u aan deze voorwaarden voldoen:
             </p>
             <div className="grid md:grid-cols-2 gap-3">
               <div className="flex items-center gap-3 text-gray-300">
@@ -595,7 +595,7 @@ export default function SmartManufacturingTrends2025Page() {
               IoT Quick Start voor MKB
             </h4>
             <p className="text-gray-300 text-sm mb-4">
-              Begin met OEE-monitoring op je bottleneck-machine. Installeer 3-5 sensoren voor:
+              Begin met OEE-monitoring op uw bottleneck-machine. Installeer 3-5 sensoren voor:
             </p>
             <ol className="list-decimal list-inside space-y-2 text-gray-300 text-sm">
               <li>Machine status (aan/uit/storing) via PLC-koppeling of stroomsensor</li>
@@ -660,7 +660,7 @@ export default function SmartManufacturingTrends2025Page() {
               <div>
                 <h4 className="font-bold text-white mb-1">Virtual Commissioning</h4>
                 <p className="text-gray-400 text-sm">
-                  Test nieuwe productlijnen virtueel voordat je investeert. Identificeer knelpunten,
+                  Test nieuwe productlijnen virtueel voordat u investeert. Identificeer knelpunten,
                   optimaliseer layout, en train operators zonder productieverlies.
                 </p>
               </div>
@@ -680,7 +680,7 @@ export default function SmartManufacturingTrends2025Page() {
               <div>
                 <h4 className="font-bold text-white mb-1">Remote Monitoring</h4>
                 <p className="text-gray-400 text-sm">
-                  Bekijk de status van je fabriek vanaf elke locatie. Perfect voor managers
+                  Bekijk de status van uw fabriek vanaf elke locatie. Perfect voor managers
                   en engineers die niet altijd op locatie kunnen zijn.
                 </p>
               </div>
@@ -695,7 +695,7 @@ export default function SmartManufacturingTrends2025Page() {
                 <p className="text-gray-300 text-sm">
                   Digital twins zijn krachtig maar complex. Voor de meeste MKB-bedrijven is een
                   volledige fabriekstwin nog een stap te ver. Start met een simpele process twin
-                  voor je meest kritieke productielijn. Budget: €30.000-80.000 voor een eerste implementatie.
+                  voor uw meest kritieke productielijn. Budget: €30.000-80.000 voor een eerste implementatie.
                 </p>
               </div>
             </div>
@@ -721,7 +721,7 @@ export default function SmartManufacturingTrends2025Page() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Waarom Cobots in 2025?</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Waarom Cobots in 2026?</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -886,7 +886,7 @@ export default function SmartManufacturingTrends2025Page() {
             <div className="mt-6 pt-6 border-t border-white/10">
               <p className="text-gray-400 text-sm">
                 <Link href="/roi-calculator" className="text-primary-400 hover:text-primary-300">
-                  Bereken je eigen ROI →
+                  Bereken uw eigen ROI →
                 </Link>
               </p>
             </div>

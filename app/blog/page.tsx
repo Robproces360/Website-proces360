@@ -157,8 +157,8 @@ const blogPosts = [
   // April 2025
   {
     slug: 'smart-manufacturing-trends-2025',
-    title: 'Smart Manufacturing Trends 2025: Wat MKB Moet Weten',
-    excerpt: 'De belangrijkste trends in smart manufacturing voor 2025. Van AI tot duurzaamheid - welke ontwikkelingen zijn relevant voor uw fabriek?',
+    title: 'Smart Manufacturing Trends 2026: Wat MKB Moet Weten',
+    excerpt: 'De belangrijkste trends in smart manufacturing voor 2026. Van AI tot duurzaamheid - welke ontwikkelingen zijn relevant voor uw fabriek?',
     author: 'Rob Derks',
     date: '22 april 2025',
     readTime: '14 min',

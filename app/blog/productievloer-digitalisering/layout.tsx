@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   keywords: ['productievloer digitalisering', 'papierloos produceren', 'digitale werkbonnen', 'shop floor digitization', 'MES implementatie', 'paperless manufacturing'],
   openGraph: {
     title: 'Productievloer Digitalisering | Van Papier naar Digitaal',
-    description: 'Hoe je je productievloer digitaliseert in 90 dagen.',
+    description: 'Hoe u uw productievloer digitaliseert in 90 dagen.',
     url: 'https://proces360.com/blog/productievloer-digitalisering',
     type: 'article',
     publishedTime: '2025-07-15T08:00:00Z',

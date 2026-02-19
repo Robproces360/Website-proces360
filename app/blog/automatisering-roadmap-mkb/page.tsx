@@ -96,7 +96,7 @@ const praktijkcases = [
 const veelgemaakteFouten = [
   { fout: 'Geen duidelijke businesscase', gevolg: 'Project stopt halverwege of wordt niet goedgekeurd', oplossing: 'Bereken ROI vooraf met realistische aannames. Bouw in buffers.' },
   { fout: 'Te groot beginnen', gevolg: 'Overweldigend, hoge risico\'s, lang wachten op resultaat', oplossing: 'Start met één pilot, bewijs de waarde, schaal daarna op.' },
-  { fout: 'Technologie-gedreven i.p.v. probleem-gedreven', gevolg: 'Oplossing past niet bij het echte probleem', oplossing: 'Begin met het probleem: wat is je bottleneck? Welk proces kost het meest?' },
+  { fout: 'Technologie-gedreven i.p.v. probleem-gedreven', gevolg: 'Oplossing past niet bij het echte probleem', oplossing: 'Begin met het probleem: wat is uw bottleneck? Welk proces kost het meest?' },
   { fout: 'Team niet meenemen', gevolg: 'Weerstand, slechte adoptie, sabotage', oplossing: 'Betrek operators vanaf dag 1. Training en communicatie zijn cruciaal.' },
   { fout: 'Onderschatten van integratie', gevolg: 'Eilandjes van automatisering die niet communiceren', oplossing: 'Plan integratie met ERP/MES/IT vanaf het begin. Kies open standaarden.' },
   { fout: 'Geen onderhoudsstrategie', gevolg: 'Automatisering faalt, hogere stilstand dan voor project', oplossing: 'Plan onderhoud, training technici, spare parts, service contracten.' },
@@ -107,11 +107,11 @@ const veelgemaakteFouten = [
 const faqItems = [
   { vraag: 'Hoeveel kost een automatisering roadmap?', antwoord: 'Een professionele roadmap met assessment kost €5.000-15.000 afhankelijk van bedrijfsgrootte en complexiteit. Dit is een fractie van de potentiële besparing en voorkomt kostbare fouten.' },
   { vraag: 'Hoelang duurt een automatiseringstraject?', antwoord: 'Een pilot duurt 2-4 maanden. Volledige implementatie van een roadmap is typisch 2-4 jaar. Het is een reis, geen project. Start klein en bouw uit.' },
-  { vraag: 'Hebben wij de kennis in huis voor automatisering?', antwoord: 'Meestal niet volledig, en dat is normaal. Werk samen met een integrator voor de eerste projecten en bouw interne kennis op. Na 2-3 projecten kun je steeds meer zelf.' },
+  { vraag: 'Hebben wij de kennis in huis voor automatisering?', antwoord: 'Meestal niet volledig, en dat is normaal. Werk samen met een integrator voor de eerste projecten en bouw interne kennis op. Na 2-3 projecten kunt u steeds meer zelf.' },
   { vraag: 'Wat als onze producten vaak wisselen?', antwoord: 'High-mix productie is juist geschikt voor flexibele automatisering zoals cobots. Moderne robots zijn snel om te programmeren. Focus op taken die bij alle producten voorkomen.' },
   { vraag: 'Verliezen we werknemers door automatisering?', antwoord: 'Zelden. De meeste MKB-bedrijven automatiseren vanwege personeelstekort. Operators krijgen interessanter werk en kunnen meer output realiseren. Communiceer dit duidelijk.' },
   { vraag: 'Wat is de ROI van automatisering?', antwoord: 'Typische ROI is 18-36 maanden voor robotisering, 6-18 maanden voor IoT/monitoring. Belangrijkste factoren: arbeidskosten, volumes, consistentie, en schaalbaarheid.' },
-  { vraag: 'Moeten we wachten op betere technologie?', antwoord: 'Nee. De technologie van vandaag is volwassen en betaalbaar. Wachten kost je nu al geld en concurrenten halen je in. Start en leer, pas aan naarmate technologie evolueert.' },
+  { vraag: 'Moeten we wachten op betere technologie?', antwoord: 'Nee. De technologie van vandaag is volwassen en betaalbaar. Wachten kost u nu al geld en concurrenten halen u in. Start en leer, pas aan naarmate technologie evolueert.' },
   { vraag: 'Hoe overtuig ik de directie/eigenaar?', antwoord: 'Met een solide businesscase: ROI, terugverdientijd, risico-analyse. Laat ze bij een referentiebedrijf kijken. Begin met een kleine pilot om vertrouwen te winnen.' },
 ];
 
@@ -144,7 +144,7 @@ export default function AutomatiseringRoadmapPage() {
           </h1>
 
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-            Een stap-voor-stap gids om je productie te automatiseren zonder kapitaalvernietiging.
+            Een stap-voor-stap gids om uw productie te automatiseren zonder kapitaalvernietiging.
             Van assessment tot implementatie, met business cases, technologiekeuzes en praktijkcases
             van Nederlandse MKB-maakbedrijven.
           </p>
@@ -248,7 +248,7 @@ export default function AutomatiseringRoadmapPage() {
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold text-white mb-1">Strategische richting</h4>
-                  <p className="text-gray-400 text-sm">Weet waar je over 3-5 jaar wilt staan en werk daar naartoe</p>
+                  <p className="text-gray-400 text-sm">Weet waar u over 3-5 jaar wilt staan en werk daar naartoe</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-bg-secondary border border-white/10 rounded-lg">
@@ -269,7 +269,7 @@ export default function AutomatiseringRoadmapPage() {
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold text-white mb-1">Risicoreductie</h4>
-                  <p className="text-gray-400 text-sm">Leer van kleine pilots voordat je groot investeert</p>
+                  <p className="text-gray-400 text-sm">Leer van kleine pilots voordat u groot investeert</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-bg-secondary border border-white/10 rounded-lg">
@@ -290,7 +290,7 @@ export default function AutomatiseringRoadmapPage() {
 
             <h3 className="text-xl font-bold text-white mt-8 mb-4">Automatisering Volwassenheidsniveaus</h3>
             <p className="text-gray-300 mb-6">
-              Voordat je een roadmap maakt, moet je weten waar je staat. De meeste MKB-bedrijven
+              Voordat u een roadmap maakt, moet u weten waar u staat. De meeste MKB-bedrijven
               bevinden zich op niveau 2-3:
             </p>
 
@@ -331,7 +331,7 @@ export default function AutomatiseringRoadmapPage() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Een goede roadmap begint met een eerlijke analyse van je huidige situatie.
+            Een goede roadmap begint met een eerlijke analyse van uw huidige situatie.
             Waar liggen de grootste kansen? Wat zijn de echte bottlenecks?
           </p>
 
@@ -390,7 +390,7 @@ export default function AutomatiseringRoadmapPage() {
             </h4>
             <p className="text-gray-300 text-sm">
               De beste inzichten komen niet uit rapportages maar van observatie. Loop een dag mee met
-              operators. Vraag: &quot;Wat kost je de meeste tijd?&quot; en &quot;Wat frustreert je het meest?&quot;.
+              operators. Vraag: &quot;Wat kost u de meeste tijd?&quot; en &quot;Wat frustreert u het meest?&quot;.
               Operators weten precies waar de kansen liggen.
             </p>
           </div>
@@ -408,7 +408,7 @@ export default function AutomatiseringRoadmapPage() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Niet alles tegelijk. Gebruik de impact/complexiteit matrix om te bepalen waar je begint:
+            Niet alles tegelijk. Gebruik de impact/complexiteit matrix om te bepalen waar u begint:
           </p>
 
           <div className="space-y-4 mb-8">
@@ -572,7 +572,7 @@ export default function AutomatiseringRoadmapPage() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Kies technologie op basis van je specifieke uitdagingen, niet op basis van trends.
+            Kies technologie op basis van uw specifieke uitdagingen, niet op basis van trends.
             Hier zijn de belangrijkste opties voor MKB-productiebedrijven:
           </p>
 
@@ -909,10 +909,10 @@ export default function AutomatiseringRoadmapPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-primary-500/20 to-primary-600/20 border border-primary-500/30 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Klaar voor jouw Automatisering Roadmap?
+              Klaar voor uw Automatisering Roadmap?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Laat ons een assessment doen van je productie en een roadmap opstellen op maat.
+              Laat ons een assessment doen van uw productie en een roadmap opstellen op maat.
               We identificeren de beste kansen en berekenen de ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

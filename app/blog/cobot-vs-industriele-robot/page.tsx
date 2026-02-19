@@ -75,8 +75,8 @@ export default function CobotVsRobotPage() {
           </h1>
 
           <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-            Cobot of traditionele robot? De juiste keuze hangt af van je specifieke situatie.
-            Deze complete gids helpt je de beste beslissing te nemen met een objectieve vergelijking,
+            Cobot of traditionele robot? De juiste keuze hangt af van uw specifieke situatie.
+            Deze complete gids helpt u de beste beslissing te nemen met een objectieve vergelijking,
             beslisboom, en praktijkvoorbeelden uit Nederlandse productiebedrijven.
           </p>
 
@@ -126,8 +126,8 @@ export default function CobotVsRobotPage() {
             {[
               { href: "#fundamentele-verschillen", title: "1. Fundamentele Verschillen Uitgelegd" },
               { href: "#vergelijkingstabel", title: "2. Complete Vergelijkingstabel" },
-              { href: "#wanneer-cobot", title: "3. Wanneer Kies je een Cobot?" },
-              { href: "#wanneer-robot", title: "4. Wanneer Kies je een Industriële Robot?" },
+              { href: "#wanneer-cobot", title: "3. Wanneer Kiest u voor een Cobot?" },
+              { href: "#wanneer-robot", title: "4. Wanneer Kiest u voor een Industriële Robot?" },
               { href: "#beslisboom", title: "5. Beslisboom: 7 Vragen" },
               { href: "#kostenvergelijking", title: "6. TCO Kostenvergelijking" },
               { href: "#case-studies", title: "7. Case Studies MKB" },
@@ -157,7 +157,7 @@ export default function CobotVsRobotPage() {
 
             <p className="text-text-secondary mb-6 leading-relaxed">
               De termen &quot;cobot&quot; en &quot;robot&quot; worden vaak door elkaar gebruikt, maar er zijn fundamentele
-              verschillen die bepalen welke technologie geschikt is voor jouw situatie.
+              verschillen die bepalen welke technologie geschikt is voor uw situatie.
             </p>
 
             {/* Cobot Definition */}
@@ -260,7 +260,7 @@ export default function CobotVsRobotPage() {
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Een objectieve vergelijking op alle relevante criteria helpt je de juiste keuze te maken.
+              Een objectieve vergelijking op alle relevante criteria helpt u de juiste keuze te maken.
             </p>
 
             <div className="overflow-x-auto mb-8">
@@ -354,7 +354,7 @@ export default function CobotVsRobotPage() {
           <section id="wanneer-cobot" className="mb-16">
             <h2 className="text-3xl font-bold text-text-primary mb-6 flex items-center">
               <Hand className="w-8 h-8 mr-3 text-primary-400" />
-              3. Wanneer Kies je een Cobot?
+              3. Wanneer Kiest u voor een Cobot?
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
@@ -498,7 +498,7 @@ export default function CobotVsRobotPage() {
           <section id="wanneer-robot" className="mb-16">
             <h2 className="text-3xl font-bold text-text-primary mb-6 flex items-center">
               <Factory className="w-8 h-8 mr-3 text-primary-400" />
-              4. Wanneer Kies je een Industriële Robot?
+              4. Wanneer Kiest u voor een Industriële Robot?
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
@@ -646,7 +646,7 @@ export default function CobotVsRobotPage() {
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Beantwoord deze 7 vragen om te bepalen welk type robot het beste past bij jouw situatie.
+              Beantwoord deze 7 vragen om te bepalen welk type robot het beste past bij uw situatie.
             </p>
 
             <div className="space-y-4">
@@ -658,7 +658,7 @@ export default function CobotVsRobotPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-text-primary mb-3">
-                      Wat is het gewicht van je producten?
+                      Wat is het gewicht van uw producten?
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="p-3 bg-primary-500/10 rounded-lg">
@@ -682,7 +682,7 @@ export default function CobotVsRobotPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-text-primary mb-3">
-                      Wat is je gewenste cyclustijd?
+                      Wat is uw gewenste cyclustijd?
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="p-3 bg-primary-500/10 rounded-lg">
@@ -754,7 +754,7 @@ export default function CobotVsRobotPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-text-primary mb-3">
-                      Heb je ruimte voor een afgeschermde cel?
+                      Hebt u ruimte voor een afgeschermde cel?
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="p-3 bg-primary-500/10 rounded-lg">
@@ -778,7 +778,7 @@ export default function CobotVsRobotPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-text-primary mb-3">
-                      Hoe vaak wissel je van product/taak?
+                      Hoe vaak wisselt u van product/taak?
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="p-3 bg-primary-500/10 rounded-lg">
@@ -802,7 +802,7 @@ export default function CobotVsRobotPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-text-primary mb-3">
-                      Wat is je budget (inclusief integratie)?
+                      Wat is uw budget (inclusief integratie)?
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="p-3 bg-primary-500/10 rounded-lg">
@@ -823,7 +823,7 @@ export default function CobotVsRobotPage() {
             <div className="mt-8 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-xl p-6 border border-primary-500/20">
               <h3 className="text-xl font-semibold text-text-primary mb-4">Snelle Score</h3>
               <p className="text-text-secondary mb-4">
-                Tel je antwoorden: Meer antwoorden links (groen) = <span className="text-primary-400 font-semibold">Cobot</span>.
+                Tel uw antwoorden: Meer antwoorden links (groen) = <span className="text-primary-400 font-semibold">Cobot</span>.
                 Meer antwoorden rechts (blauw) = <span className="text-accent-400 font-semibold">Industriële robot</span>.
               </p>
               <p className="text-text-secondary text-sm">
@@ -1182,9 +1182,9 @@ export default function CobotVsRobotPage() {
                 Advies voor 2025-2027
               </h4>
               <p className="text-text-secondary">
-                Kies vandaag op basis van je huidige needs, niet op basis van toekomstige productfeatures.
+                Kies vandaag op basis van uw huidige needs, niet op basis van toekomstige productfeatures.
                 Zowel cobots als industriële robots hebben bewezen technologie met jarenlange support.
-                De &quot;perfecte hybride&quot; robot bestaat nog niet - en als die komt, kun je upgraden.
+                De &quot;perfecte hybride&quot; robot bestaat nog niet - en als die komt, kunt u upgraden.
               </p>
             </div>
           </section>
@@ -1200,7 +1200,7 @@ export default function CobotVsRobotPage() {
               {[
                 {
                   q: "Kan een cobot net zo snel zijn als een industriële robot?",
-                  a: "Nee, niet in collaboratieve modus. Cobots zijn beperkt tot ~1,5 m/s arm snelheid vanwege ISO/TS 15066 veiligheidsstandaarden. Industriële robots halen 10+ m/s. Sommige cobots hebben een 'industriële modus' achter afscherming, maar dan verlies je het cobot-voordeel."
+                  a: "Nee, niet in collaboratieve modus. Cobots zijn beperkt tot ~1,5 m/s arm snelheid vanwege ISO/TS 15066 veiligheidsstandaarden. Industriële robots halen 10+ m/s. Sommige cobots hebben een 'industriële modus' achter afscherming, maar dan verliest u het cobot-voordeel."
                 },
                 {
                   q: "Hebben cobots echt geen afscherming nodig?",
@@ -1212,11 +1212,11 @@ export default function CobotVsRobotPage() {
                 },
                 {
                   q: "Kan ik een cobot later upgraden naar een industriële robot?",
-                  a: "Niet direct - het zijn verschillende machines. Maar je cobot-investering is niet verloren: de cobot kan naar een andere taak verplaatst worden terwijl je een industriële robot installeert voor de high-volume taak. Dit is een veelgebruikt groeipad."
+                  a: "Niet direct - het zijn verschillende machines. Maar uw cobot-investering is niet verloren: de cobot kan naar een andere taak verplaatst worden terwijl u een industriële robot installeert voor de high-volume taak. Dit is een veelgebruikt groeipad."
                 },
                 {
                   q: "Wat als ik twijfel tussen beide?",
-                  a: "Begin met de toepassing die de duidelijkste ROI heeft. Vaak is dat een cobot voor een eerste automatisering vanwege lagere kosten en risico. Na succesvolle implementatie heb je ervaring om te bepalen of industriële robots nodig zijn voor andere toepassingen."
+                  a: "Begin met de toepassing die de duidelijkste ROI heeft. Vaak is dat een cobot voor een eerste automatisering vanwege lagere kosten en risico. Na succesvolle implementatie hebt u ervaring om te bepalen of industriële robots nodig zijn voor andere toepassingen."
                 },
                 {
                   q: "Hoe zit het met programmering - moet ik een expert inhuren?",
@@ -1239,7 +1239,7 @@ export default function CobotVsRobotPage() {
               </h2>
               <p className="text-text-secondary mb-6 leading-relaxed">
                 Er is geen universeel &quot;beste&quot; keuze tussen cobot en industriële robot. De beste robot
-                is degene die aansluit bij jouw specifieke situatie: payload, snelheid, flexibiliteit,
+                is degene die aansluit bij uw specifieke situatie: payload, snelheid, flexibiliteit,
                 budget, en ruimte. Voor veel MKB-bedrijven is een cobot de ideale eerste stap in
                 automatisering, terwijl industriële robots onverslaanbaar blijven voor high-volume,
                 high-speed toepassingen.
@@ -1294,8 +1294,8 @@ export default function CobotVsRobotPage() {
                 Hulp nodig bij het kiezen tussen cobot en robot?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Plan uw 360Scan. We analyseren je situatie en geven
-                onafhankelijk advies over de beste oplossing voor jouw productie.
+                Plan uw 360Scan. We analyseren uw situatie en geven
+                onafhankelijk advies over de beste oplossing voor uw productie.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -1322,7 +1322,7 @@ export default function CobotVsRobotPage() {
               {[
                 {
                   title: "Cobot Terugverdientijd Berekenen",
-                  description: "Bereken de ROI van je cobot-investering met onze calculator.",
+                  description: "Bereken de ROI van uw cobot-investering met onze calculator.",
                   href: "/blog/cobot-terugverdientijd-berekenen",
                   tag: "ROI"
                 },

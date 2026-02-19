@@ -25,7 +25,7 @@ export default function CobotArticlePage() {
             Cobots in Productie: De Complete Gids voor MKB-Maakbedrijven in 2025
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Van selectie tot implementatie: alles wat je moet weten over collaborative robots (cobots) in de maakindustrie.
+            Van selectie tot implementatie: alles wat u moet weten over collaborative robots (cobots) in de maakindustrie.
             Inclusief 10 praktijkcases, ROI-berekening, veiligheidsnormen, en merkenvergelijking.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -71,7 +71,7 @@ export default function CobotArticlePage() {
             <p className="text-white font-medium m-0">
               <strong>Kernboodschap:</strong> Een cobot kost €25.000-€75.000 en verdient zichzelf gemiddeld terug in 12-18 maanden.
               Voor MKB-maakbedrijven is dit dé toegangspoort tot automatisering: flexibel, veilig, en snel te implementeren.
-              In dit artikel leer je alles over selectie, implementatie, en hoe je maximale ROI behaalt.
+              In dit artikel leert u alles over selectie, implementatie, en hoe u maximale ROI behaalt.
             </p>
           </div>
 
@@ -153,8 +153,8 @@ export default function CobotArticlePage() {
               2. Cobot vs. Industriële Robot: Keuzecriteria
             </h2>
             <p className="text-gray-300 mb-6">
-              Wanneer kies je voor een cobot en wanneer voor een traditionele industriële robot?
-              De keuze hangt af van je specifieke toepassing, productieomgeving en bedrijfsstrategie.
+              Wanneer kiest u voor een cobot en wanneer voor een traditionele industriële robot?
+              De keuze hangt af van uw specifieke toepassing, productieomgeving en bedrijfsstrategie.
             </p>
 
             <div className="overflow-x-auto mb-6">
@@ -771,7 +771,7 @@ export default function CobotArticlePage() {
             </div>
 
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-xl p-6 text-center">
-              <p className="text-white font-semibold mb-3">Bereken je eigen ROI</p>
+              <p className="text-white font-semibold mb-3">Bereken uw eigen ROI</p>
               <Link
                 href="/roi-calculator"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors"
@@ -790,7 +790,7 @@ export default function CobotArticlePage() {
             </h2>
             <p className="text-gray-300 mb-6">
               &quot;Cobot = veilig&quot; is een gevaarlijke oversimplificatie. De veiligheid hangt af van de complete applicatie:
-              cobot + gripper + product + omgeving. Hier is wat je moet weten.
+              cobot + gripper + product + omgeving. Hier is wat u moet weten.
             </p>
 
             <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 mb-6">
@@ -811,7 +811,7 @@ export default function CobotArticlePage() {
             <div className="space-y-4 mb-6">
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-white mb-2">Machinerichtlijn 2006/42/EG</h4>
-                <p className="text-gray-400 text-sm">Europese wetgeving. Bij installatie van een cobot creëer je een &quot;samenstel van machines&quot; – nieuwe CE-markering vereist. Geldt ook voor kleine wijzigingen aan bestaande machines.</p>
+                <p className="text-gray-400 text-sm">Europese wetgeving. Bij installatie van een cobot creëert u een &quot;samenstel van machines&quot; – nieuwe CE-markering vereist. Geldt ook voor kleine wijzigingen aan bestaande machines.</p>
               </div>
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-white mb-2">ISO 10218-1 & 10218-2</h4>
@@ -1013,7 +1013,7 @@ export default function CobotArticlePage() {
               8. Grippers & End-Effectors Kiezen
             </h2>
             <p className="text-gray-300 mb-6">
-              De gripper bepaalt 50% van het succes van je cobot-project. Investeer tijd in de juiste selectie.
+              De gripper bepaalt 50% van het succes van uw cobot-project. Investeer tijd in de juiste selectie.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -1145,15 +1145,15 @@ export default function CobotArticlePage() {
             <div className="space-y-4">
               {[
                 { fout: 'Te optimistische cyclustijd', uitleg: 'Cobots zijn langzamer dan industriële robots. Reken met realistische snelheden inclusief veiligheidsvertragingen. Factor 1.5-2× manual tijd is realistisch.' },
-                { fout: 'Gripper als afterthought', uitleg: 'De gripper bepaalt 50% van het succes. Investeer tijd in selectie en test met echte producten voordat je bestelt.' },
+                { fout: 'Gripper als afterthought', uitleg: 'De gripper bepaalt 50% van het succes. Investeer tijd in selectie en test met echte producten voordat u bestelt.' },
                 { fout: 'Veiligheid onderschatten', uitleg: 'Cobot ≠ automatisch veilig. De combinatie met gripper, product en omgeving bepaalt het risico. CE-markering is verplicht!' },
                 { fout: 'Operators niet betrekken', uitleg: 'Betrek operators vanaf dag 1. Zij kennen de taken het beste en moeten straks met de robot werken. Weerstand = mislukt project.' },
-                { fout: 'Geen plan voor stilstand', uitleg: 'Wat als de cobot uitvalt? Zorg voor fallback-scenario: kan een operator de taak overnemen? Heb je spare parts?' },
+                { fout: 'Geen plan voor stilstand', uitleg: 'Wat als de cobot uitvalt? Zorg voor fallback-scenario: kan een operator de taak overnemen? Hebt u spare parts?' },
                 { fout: 'Te complexe eerste applicatie', uitleg: 'Start simpel! Eerste project moet succesvol zijn voor draagvlak. Kies een duidelijke, repetitieve taak met lage variatie.' },
                 { fout: 'Integratie onderschatten', uitleg: 'Cobot + machine = integratie-uitdaging. Plan tijd en budget voor PLC-koppeling, signalen, en timing.' },
                 { fout: 'Geen eigenaar aanwijzen', uitleg: 'Wie is verantwoordelijk voor de cobot? Programmering, onderhoud, troubleshooting? Wijs een interne &quot;cobot-champion&quot; aan.' },
                 { fout: 'ROI alleen op arbeidsbesparing', uitleg: 'Kijk ook naar: kwaliteitsverbetering, capaciteitsuitbreiding, ziekteverzuim, en indirecte baten. Totale business case is breder.' },
-                { fout: 'Leverancier niet evalueren', uitleg: 'Koop niet alleen een cobot – koop een partner. Evalueer: support, training, ervaring in jouw sector, referenties.' },
+                { fout: 'Leverancier niet evalueren', uitleg: 'Koop niet alleen een cobot – koop een partner. Evalueer: support, training, ervaring in uw sector, referenties.' },
               ].map((item, i) => (
                 <div key={i} className="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
                   <div className="flex items-start gap-3">
@@ -1181,7 +1181,7 @@ export default function CobotArticlePage() {
                 { q: 'Heb ik een robotprogrammeur nodig?', a: 'Nee, niet voor standaard applicaties. Moderne cobots hebben intuïtieve interfaces (teach-in, drag & drop). Na 1-2 dagen training kan een operator basis-programmas maken.' },
                 { q: 'Is een cobot écht veilig?', a: 'De cobot zelf heeft veiligheidsfuncties, maar de totale applicatie (gripper + product + omgeving) bepaalt de veiligheid. Een risicobeoordeling en eventuele maatregelen zijn altijd nodig. CE-markering is verplicht.' },
                 { q: 'Kan een cobot 24/7 draaien?', a: 'Ja, cobots zijn ontworpen voor continue productie. Ze hebben geen pauzes nodig. Wel periodiek onderhoud plannen (smeren, controles). MTBF (mean time between failures) is typisch >80.000 uur.' },
-                { q: 'Welk merk moet ik kiezen?', a: 'Universal Robots is marktleider met het grootste ecosysteem – veilige keuze. FANUC voor industriële omgeving en service. Doosan voor scherpe prijs. TM Robot als vision belangrijk is. Laat je adviseren op basis van jouw specifieke applicatie.' },
+                { q: 'Welk merk moet ik kiezen?', a: 'Universal Robots is marktleider met het grootste ecosysteem – veilige keuze. FANUC voor industriële omgeving en service. Doosan voor scherpe prijs. TM Robot als vision belangrijk is. Laat u adviseren op basis van uw specifieke applicatie.' },
                 { q: 'Past een cobot in mijn bestaande productieomgeving?', a: 'Meestal wel. Cobots zijn compact en flexibel. Ze kunnen naast bestaande machines geplaatst worden zonder grote aanpassingen. Wel checken: vloersterkte, stroomvoorziening, eventueel perslucht.' },
                 { q: 'Wat zijn de onderhoudskosten?', a: 'Laag. Cobots hebben weinig slijtonderdelen. Typisch €500-€2.000/jaar voor onderhoud. Belangrijkste: periodieke smering (elk 1-2 jaar) en visuele inspectie. Geen jaarlijkse calibratie verplicht.' },
               ].map((item, i) => (
@@ -1200,15 +1200,15 @@ export default function CobotArticlePage() {
               12. Direct aan de Slag
             </h2>
             <p className="text-gray-300 mb-6">
-              Overweeg je een cobot voor jouw productie? Proces360 helpt je van analyse tot implementatie.
+              Overweegt u een cobot voor uw productie? Proces360 helpt u van analyse tot implementatie.
               Merkonafhankelijk advies, ervaring met 50+ cobot-projecten.
             </p>
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Bereken je cobot-ROI in 3 minuten
+                Bereken uw cobot-ROI in 3 minuten
               </h3>
               <p className="text-gray-400 mb-6">
-                Ontdek of robotisering rendabel is voor jouw bedrijf – en wat de terugverdientijd is.
+                Ontdek of robotisering rendabel is voor uw bedrijf – en wat de terugverdientijd is.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -1261,11 +1261,11 @@ export default function CobotArticlePage() {
             </Link>
             <Link href="/blog/oee-verbeteren-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">OEE Verbeteren: De Complete Gids</h4>
-              <p className="text-sm text-gray-400">Hoe cobots je OEE verbeteren met hogere beschikbaarheid en consistente kwaliteit.</p>
+              <p className="text-sm text-gray-400">Hoe cobots uw OEE verbeteren met hogere beschikbaarheid en consistente kwaliteit.</p>
             </Link>
             <Link href="/blog/productie-strategie-automatisering" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Productiestrategie & Automatisering</h4>
-              <p className="text-sm text-gray-400">Strategisch automatiseren: waar begin je en wat levert het op?</p>
+              <p className="text-sm text-gray-400">Strategisch automatiseren: waar begint u en wat levert het op?</p>
             </Link>
             <Link href="/blog/industrie-4-mkb-praktisch" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Industrie 4.0 voor MKB: Praktisch</h4>

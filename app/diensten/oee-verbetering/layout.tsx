@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'OEE Verbetering | Verhoog je OEE met 15-40%',
-  description: 'Verhoog je OEE met 15-40% door systematische optimalisatie. Wij meten, analyseren en verbeteren je Overall Equipment Effectiveness met bewezen methodes.',
+  title: 'OEE Verbetering | Verhoog uw OEE met 15-40%',
+  description: 'Verhoog uw OEE met 15-40% door systematische optimalisatie. Wij meten, analyseren en verbeteren uw Overall Equipment Effectiveness met bewezen methodes.',
   keywords: [
     'OEE verbetering',
     'OEE verhogen',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     '6 grote verliezen',
   ],
   openGraph: {
-    title: 'OEE Verbetering | Verhoog je OEE met 15-40% - Proces360',
+    title: 'OEE Verbetering | Verhoog uw OEE met 15-40% - Proces360',
     description: 'Systematische OEE verbetering voor MKB-maakbedrijven. Verhoog beschikbaarheid, prestatie en kwaliteit.',
     url: 'https://proces360.com/diensten/oee-verbetering',
   },
@@ -28,7 +28,7 @@ const serviceSchema = {
   '@type': 'Service',
   '@id': 'https://proces360.com/diensten/oee-verbetering/#service',
   name: 'OEE Verbetertraject',
-  description: 'Verhoog je OEE met 15-40% door gerichte optimalisatie van beschikbaarheid, prestatie en kwaliteit.',
+  description: 'Verhoog uw OEE met 15-40% door gerichte optimalisatie van beschikbaarheid, prestatie en kwaliteit.',
   provider: { '@id': 'https://proces360.com/#organization' },
   areaServed: ['NL', 'BE', 'DE'],
   serviceType: 'OEE Improvement Consulting',

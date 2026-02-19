@@ -119,9 +119,9 @@ export default function CobotIntegratiePage() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Calculator className="w-16 h-16 text-primary-500 flex-shrink-0" />
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-white mb-2">Bereken je ROI</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Bereken uw ROI</h3>
                 <p className="text-gray-300">
-                  Ontdek de terugverdientijd van een cobot voor jouw specifieke situatie met onze ROI Calculator.
+                  Ontdek de terugverdientijd van een cobot voor uw specifieke situatie met onze ROI Calculator.
                 </p>
               </div>
               <Link href="/roi-calculator" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors flex-shrink-0">
@@ -136,7 +136,7 @@ export default function CobotIntegratiePage() {
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Klaar om te robotiseren?</h2>
-          <p className="text-gray-400 mb-8">Plan een kennismaking en ontdek of een cobot rendabel is voor jouw situatie.</p>
+          <p className="text-gray-400 mb-8">Plan een kennismaking en ontdek of een cobot rendabel is voor uw situatie.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact?subject=cobot" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
               Plan een kennismaking <ArrowRight className="w-5 h-5" />

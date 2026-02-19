@@ -167,7 +167,7 @@ export default function SixSigmaMKBPage() {
 
             <p className="text-text-secondary mb-6">
               Het Griekse letter σ (sigma) staat voor standaardafwijking - een maat voor spreiding in data.
-              Hoe hoger het sigma-niveau, hoe consistenter je proces:
+              Hoe hoger het sigma-niveau, hoe consistenter uw proces:
             </p>
 
             <div className="overflow-x-auto mb-8">
@@ -287,7 +287,7 @@ export default function SixSigmaMKBPage() {
             </div>
 
             <p className="text-text-secondary">
-              De beste resultaten behaal je met <strong className="text-text-primary">Lean Six Sigma</strong>:
+              De beste resultaten behaalt u met <strong className="text-text-primary">Lean Six Sigma</strong>:
               Lean voor snelheid en efficiëntie, Six Sigma voor kwaliteit en consistentie. In de praktijk
               worden beide methodologieën vaak gecombineerd toegepast.
             </p>
@@ -526,7 +526,7 @@ export default function SixSigmaMKBPage() {
                   <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs">Quick Win</span>
                 </div>
                 <p className="text-text-secondary mb-4">
-                  Graaf dieper dan symptomen door steeds &quot;waarom?&quot; te vragen tot je de grondoorzaak vindt.
+                  Graaf dieper dan symptomen door steeds &quot;waarom?&quot; te vragen tot u de grondoorzaak vindt.
                 </p>
                 <div className="bg-bg-primary rounded-lg p-4 border border-white/5">
                   <h4 className="font-semibold text-text-primary mb-3">Voorbeeld:</h4>
@@ -551,7 +551,7 @@ export default function SixSigmaMKBPage() {
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Geavanceerd</span>
                 </div>
                 <p className="text-text-secondary mb-4">
-                  Meet hoe goed je proces presteert ten opzichte van specificatiegrenzen.
+                  Meet hoe goed uw proces presteert ten opzichte van specificatiegrenzen.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-bg-primary rounded-lg p-4 border border-white/5">
@@ -629,12 +629,12 @@ export default function SixSigmaMKBPage() {
                   <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs">Ondergewaardeerd</span>
                 </div>
                 <p className="text-text-secondary mb-4">
-                  Valideer dat je meetsysteem betrouwbaar is voordat je conclusies trekt uit data.
+                  Valideer dat uw meetsysteem betrouwbaar is voordat u conclusies trekt uit data.
                 </p>
                 <div className="bg-primary-500/10 rounded-lg p-4">
                   <p className="text-text-secondary">
-                    <strong className="text-primary-400">Let op:</strong> Als je meetsysteem 30% van de variatie veroorzaakt,
-                    kun je procesprestaties niet betrouwbaar beoordelen. Gage R&R moet &lt;10% zijn voor
+                    <strong className="text-primary-400">Let op:</strong> Als uw meetsysteem 30% van de variatie veroorzaakt,
+                    kunt u procesprestaties niet betrouwbaar beoordelen. Gage R&R moet &lt;10% zijn voor
                     kritieke metingen, &lt;30% voor algemene metingen.
                   </p>
                 </div>
@@ -650,8 +650,8 @@ export default function SixSigmaMKBPage() {
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Het sigma-niveau van je proces bepalen is essentieel voor benchmarking en doelstelling.
-              Hier leer je het te berekenen en interpreteren.
+              Het sigma-niveau van uw proces bepalen is essentieel voor benchmarking en doelstelling.
+              Hier leert u het te berekenen en interpreteren.
             </p>
 
             <div className="bg-bg-secondary rounded-xl p-6 mb-8 border border-white/10">
@@ -1319,11 +1319,11 @@ export default function SixSigmaMKBPage() {
               {[
                 {
                   q: "Hebben we een Black Belt nodig om Six Sigma toe te passen?",
-                  a: "Nee, voor de meeste MKB-projecten is een Green Belt niveau voldoende, of zelfs gewoon kennis van de basis DMAIC-tools. Black Belts zijn vooral waardevol voor complexe, statistische analyses of wanneer je meerdere projecten parallel wilt uitvoeren."
+                  a: "Nee, voor de meeste MKB-projecten is een Green Belt niveau voldoende, of zelfs gewoon kennis van de basis DMAIC-tools. Black Belts zijn vooral waardevol voor complexe, statistische analyses of wanneer u meerdere projecten parallel wilt uitvoeren."
                 },
                 {
                   q: "Hoe lang duurt het om Six Sigma te implementeren?",
-                  a: "Een eerste pilotproject kun je binnen 12 weken afronden. Voor een organisatiebrede cultuurverandering moet je 2-3 jaar rekenen. Start klein, bewijs de waarde, en schaal dan op."
+                  a: "Een eerste pilotproject kunt u binnen 12 weken afronden. Voor een organisatiebrede cultuurverandering moet u 2-3 jaar rekenen. Start klein, bewijs de waarde, en schaal dan op."
                 },
                 {
                   q: "Wat kost Six Sigma implementatie voor een MKB?",
@@ -1377,7 +1377,7 @@ export default function SixSigmaMKBPage() {
                 </div>
               </div>
               <p className="text-text-secondary">
-                Begin vandaag met het identificeren van je grootste kwaliteitsprobleem. Verzamel data.
+                Begin vandaag met het identificeren van uw grootste kwaliteitsprobleem. Verzamel data.
                 Analyseer de grondoorzaken. Test oplossingen. Borg de verbetering. En herhaal. Dat is
                 Six Sigma in de praktijk.
               </p>
@@ -1411,7 +1411,7 @@ export default function SixSigmaMKBPage() {
                 Klaar om kwaliteit te verbeteren met Six Sigma?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Ontdek hoe Proces360 je kan helpen bij het opzetten van een succesvol Six Sigma programma,
+                Ontdek hoe Proces360 u kan helpen bij het opzetten van een succesvol Six Sigma programma,
                 van pilotproject tot organisatiebrede implementatie.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1439,7 +1439,7 @@ export default function SixSigmaMKBPage() {
               {[
                 {
                   title: "OEE Verbeteren: Complete Gids",
-                  description: "Verhoog je Overall Equipment Effectiveness met bewezen methodieken.",
+                  description: "Verhoog uw Overall Equipment Effectiveness met bewezen methodieken.",
                   href: "/blog/oee-verbeteren-complete-gids",
                   tag: "OEE"
                 },

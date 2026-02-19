@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cobot vs Industriële Robot: Welke Past Bij Jouw Productie? [2025 Keuzegids]',
+  title: 'Cobot vs Industriële Robot: Welke Past Bij Uw Productie? [2025 Keuzegids]',
   description: 'Complete vergelijking cobot vs industriële robot: snelheid, payload, veiligheid, kosten en ROI. Met keuzematrix en praktijkvoorbeelden voor MKB-productiebedrijven.',
   keywords: ['cobot vs robot', 'collaborative robot', 'industriële robot', 'robot keuze', 'cobot selectie', 'robotisering MKB', 'robot vergelijking'],
   openGraph: {
     title: 'Cobot vs Industriële Robot | Keuzegids 2025',
-    description: 'Welke robot past bij jouw productie? Complete vergelijking.',
+    description: 'Welke robot past bij uw productie? Complete vergelijking.',
     url: 'https://proces360.com/blog/cobot-vs-industriele-robot',
     type: 'article',
     publishedTime: '2025-09-16T08:00:00Z',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Cobot vs Industriële Robot: Welke Past Bij Jouw Productie?',
+  headline: 'Cobot vs Industriële Robot: Welke Past Bij Uw Productie?',
   description: 'Complete vergelijking cobot vs industriële robot met keuzematrix.',
   author: { '@type': 'Person', name: 'Rob Derks', url: 'https://proces360.com/rob-derks' },
   publisher: { '@id': 'https://proces360.com/#organization' },

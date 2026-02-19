@@ -23,7 +23,7 @@ export default function CobotROIArticlePage() {
             Cobot Terugverdientijd Berekenen: Complete ROI-Gids 2025
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Ontdek hoe je de terugverdientijd van een cobot berekent en wanneer robotisering rendabel is voor jouw MKB-maakbedrijf.
+            Ontdek hoe u de terugverdientijd van een cobot berekent en wanneer robotisering rendabel is voor uw MKB-maakbedrijf.
             Met praktische rekenvoorbeelden, ROI-formules en 5 case studies uit de Nederlandse maakindustrie.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -53,8 +53,8 @@ export default function CobotROIArticlePage() {
           <div className="bg-gradient-to-r from-primary-500/10 to-orange-500/10 border-l-4 border-primary-500 p-6 rounded-r-xl mb-12">
             <p className="text-white font-medium m-0">
               <strong>Kernboodschap:</strong> De gemiddelde cobot verdient zichzelf terug in 12-18 maanden.
-              Met de juiste toepassing en berekening kun je dit terugbrengen tot 8-10 maanden.
-              In dit artikel leer je exact hoe je een realistische ROI-berekening maakt.
+              Met de juiste toepassing en berekening kunt u dit terugbrengen tot 8-10 maanden.
+              In dit artikel leert u exact hoe u een realistische ROI-berekening maakt.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function CobotROIArticlePage() {
 
             <h3 className="text-xl font-bold text-white mb-4">Uitgebreide ROI-Berekening</h3>
             <p className="text-gray-300 mb-4">
-              Voor een complete business case gebruik je de uitgebreide formule:
+              Voor een complete business case gebruikt u de uitgebreide formule:
             </p>
             <div className="bg-bg-secondary border border-white/10 rounded-xl p-6 mb-6">
               <p className="text-lg font-mono text-primary-500 text-center mb-4">
@@ -524,7 +524,7 @@ export default function CobotROIArticlePage() {
             </h2>
             <p className="text-gray-300 mb-6">
               Niet elke taak is geschikt voor een cobot. Hier zijn de criteria om te bepalen of robotisering
-              rendabel is voor jouw situatie:
+              rendabel is voor uw situatie:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -576,7 +576,7 @@ export default function CobotROIArticlePage() {
                   'Kost de taak nu minimaal €40.000/jaar aan arbeid?',
                   'Duurt de taak minimaal 4 uur per dag?',
                   'Is de taak fysiek belastend of gevaarlijk?',
-                  'Kun je operators herplaatsen naar waardevollere taken?',
+                  'Kunt u operators herplaatsen naar waardevollere taken?',
                   'Is er ruimte voor 24/7 productie of capaciteitsuitbreiding?',
                 ].map((q, i) => (
                   <div key={i} className="flex items-center gap-3 text-gray-300">
@@ -601,7 +601,7 @@ export default function CobotROIArticlePage() {
               6. Subsidies en Financiering
             </h2>
             <p className="text-gray-300 mb-6">
-              Er zijn diverse regelingen die je cobot-investering aantrekkelijker maken:
+              Er zijn diverse regelingen die uw cobot-investering aantrekkelijker maken:
             </p>
 
             <div className="space-y-4 mb-6">
@@ -629,7 +629,7 @@ export default function CobotROIArticlePage() {
 
             <div className="bg-primary-500/10 border border-primary-500/30 rounded-xl p-6">
               <p className="text-white m-0">
-                <strong>Impact op ROI:</strong> Met fiscale regelingen en subsidies kun je de effectieve investering
+                <strong>Impact op ROI:</strong> Met fiscale regelingen en subsidies kunt u de effectieve investering
                 met 20-40% verlagen, wat de terugverdientijd aanzienlijk verkort. Een cobot van €55.000
                 kan netto €35.000-€44.000 kosten.
               </p>
@@ -646,7 +646,7 @@ export default function CobotROIArticlePage() {
                 { fout: 'Alleen directe arbeidskosten tellen', uitleg: 'Vergeet indirecte baten niet: kwaliteitsverbetering, flexibiliteit, ziekteverzuim, kennisbehoud. Deze kunnen 20-40% van de totale baten zijn.' },
                 { fout: 'Te optimistische cyclustijden', uitleg: 'Cobots zijn 10-30% langzamer dan ervaren operators. Reken met realistische snelheden inclusief veiligheidsvertragingen.' },
                 { fout: 'Integratie onderschatten', uitleg: 'De cobot is 40-60% van de investering. Gripper, vision, installatie en engineering zijn de rest. Budget dit realistisch.' },
-                { fout: 'Aanloopverliezen negeren', uitleg: 'De eerste 2-4 weken draait de cobot niet op vol vermogen. Reken met 1-2 maanden aanlooptijd voordat je de volle besparing realiseert.' },
+                { fout: 'Aanloopverliezen negeren', uitleg: 'De eerste 2-4 weken draait de cobot niet op vol vermogen. Reken met 1-2 maanden aanlooptijd voordat u de volle besparing realiseert.' },
                 { fout: 'Geen TCO-berekening', uitleg: 'Kijk naar Total Cost of Ownership over 5-8 jaar: onderhoud (~€1.500/jaar), updates, verbruiksmaterialen, energie.' },
               ].map((item, i) => (
                 <div key={i} className="bg-red-500/5 border border-red-500/20 rounded-xl p-6">
@@ -666,10 +666,10 @@ export default function CobotROIArticlePage() {
             <div className="space-y-4">
               {[
                 { q: 'Wat is de gemiddelde terugverdientijd van een cobot?', a: '12-18 maanden is typisch voor MKB-maakbedrijven. Bij goede toepassing en 2-ploegen/24u productie kan dit dalen tot 8-10 maanden.' },
-                { q: 'Kan ik een cobot leasen in plaats van kopen?', a: 'Ja, operational lease is mogelijk vanaf ~€1.500/maand voor een complete installatie. Dit kan aantrekkelijk zijn voor cashflow of als je eerst wilt testen.' },
+                { q: 'Kan ik een cobot leasen in plaats van kopen?', a: 'Ja, operational lease is mogelijk vanaf ~€1.500/maand voor een complete installatie. Dit kan aantrekkelijk zijn voor cashflow of als u eerst wilt testen.' },
                 { q: 'Hoeveel kost onderhoud van een cobot per jaar?', a: 'Reken op €1.000-€2.500/jaar voor preventief onderhoud, software updates en verbruiksmaterialen (tandriemen, vet, grippers).' },
-                { q: 'Wat als de cobot kapot gaat?', a: 'Cobots zijn zeer betrouwbaar (MTBF >80.000 uur). Bij storing: 24u service beschikbaar, leenunit mogelijk. Bouw een fallback-scenario in je planning.' },
-                { q: 'Moet ik een cobot afschrijven?', a: 'Ja, over 5-8 jaar lineair. Met KIA kun je extra aftrek krijgen. Technisch gaat een cobot 10-15 jaar mee.' },
+                { q: 'Wat als de cobot kapot gaat?', a: 'Cobots zijn zeer betrouwbaar (MTBF >80.000 uur). Bij storing: 24u service beschikbaar, leenunit mogelijk. Bouw een fallback-scenario in uw planning.' },
+                { q: 'Moet ik een cobot afschrijven?', a: 'Ja, over 5-8 jaar lineair. Met KIA kunt u extra aftrek krijgen. Technisch gaat een cobot 10-15 jaar mee.' },
                 { q: 'Wat zijn verborgen kosten bij cobots?', a: 'Productie-stillstand tijdens installatie, aanloopverliezen, gripper-slijtage, updates, training nieuwe medewerkers. Budget 10-15% extra.' },
               ].map((item, i) => (
                 <div key={i} className="bg-bg-secondary border border-white/10 rounded-xl p-6">
@@ -686,12 +686,12 @@ export default function CobotROIArticlePage() {
               9. Direct aan de Slag
             </h2>
             <p className="text-gray-300 mb-6">
-              Klaar om de ROI van een cobot voor jouw situatie te berekenen? Gebruik onze gratis ROI Calculator
+              Klaar om de ROI van een cobot voor uw situatie te berekenen? Gebruik onze gratis ROI Calculator
               of plan een adviesgesprek voor een uitgebreide analyse.
             </p>
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Bereken Jouw Cobot-ROI</h3>
-              <p className="text-gray-400 mb-6">In 3 minuten weet je of robotisering rendabel is voor jouw bedrijf.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Bereken Uw Cobot-ROI</h3>
+              <p className="text-gray-400 mb-6">In 3 minuten weet u of robotisering rendabel is voor uw bedrijf.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/roi-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
                   <Bot className="w-5 h-5" />
@@ -732,7 +732,7 @@ export default function CobotROIArticlePage() {
             </Link>
             <Link href="/blog/cobot-vs-industriele-robot" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Cobot vs Industriële Robot</h4>
-              <p className="text-sm text-gray-400">Wanneer kies je voor een cobot en wanneer voor een industriële robot?</p>
+              <p className="text-sm text-gray-400">Wanneer kiest u voor een cobot en wanneer voor een industriële robot?</p>
             </Link>
             <Link href="/blog/automatisering-roi-berekenen" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Automatisering ROI Berekenen</h4>

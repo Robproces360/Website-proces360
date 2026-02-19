@@ -23,7 +23,7 @@ export default function StilstandArticlePage() {
             10 Praktische Tips om Productie Stilstand te Verminderen
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Stilstand kost je duizenden euros per uur. Deze 10 bewezen methodes helpen je om ongeplande stilstand drastisch te verlagen.
+            Stilstand kost u duizenden euros per uur. Deze 10 bewezen methodes helpen u om ongeplande stilstand drastisch te verlagen.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
             <span className="flex items-center gap-2"><User className="w-4 h-4" />Rob Derks</span>
@@ -65,13 +65,13 @@ export default function StilstandArticlePage() {
             <h2 className="text-3xl font-bold text-white mb-6">De 10 Tips</h2>
             <div className="space-y-6">
               {[
-                { num: 1, title: 'Implementeer OEE-monitoring', desc: 'Wat je niet meet, kun je niet verbeteren. Start met het registreren van elke minuut stilstand en de oorzaak.' },
+                { num: 1, title: 'Implementeer OEE-monitoring', desc: 'Wat u niet meet, kunt u niet verbeteren. Start met het registreren van elke minuut stilstand en de oorzaak.' },
                 { num: 2, title: 'Categoriseer stilstandoorzaken', desc: 'Maak onderscheid tussen gepland (omstellen, onderhoud) en ongepland (storingen, wachten). Focus op ongepland.' },
-                { num: 3, title: 'Pareto-analyse: top 3 aanpakken', desc: '80% van je stilstand komt vaak door 20% van de oorzaken. Identificeer en elimineer de top 3.' },
+                { num: 3, title: 'Pareto-analyse: top 3 aanpakken', desc: '80% van uw stilstand komt vaak door 20% van de oorzaken. Identificeer en elimineer de top 3.' },
                 { num: 4, title: 'Preventief onderhoud invoeren', desc: 'Gepland onderhoud buiten productietijd voorkomt ongeplande storingen tijdens productie.' },
-                { num: 5, title: 'Spare parts op voorraad', desc: 'Kritieke onderdelen op voorraad = sneller herstel. Identificeer je kritische spare parts.' },
+                { num: 5, title: 'Spare parts op voorraad', desc: 'Kritieke onderdelen op voorraad = sneller herstel. Identificeer uw kritische spare parts.' },
                 { num: 6, title: 'Operator-onderhoud (TPM)', desc: 'Train operators om basis-onderhoud zelf te doen: smeren, schoonmaken, inspecteren.' },
-                { num: 7, title: 'Snellere omsteltijden (SMED)', desc: 'Analyseer je omstelprocedure. Wat kan voorbereid worden? Streef naar single-digit minuten.' },
+                { num: 7, title: 'Snellere omsteltijden (SMED)', desc: 'Analyseer uw omstelprocedure. Wat kan voorbereid worden? Streef naar single-digit minuten.' },
                 { num: 8, title: 'Standaard werkprocedures', desc: 'Documenteer de beste manier om taken uit te voeren. Consistentie voorkomt fouten.' },
                 { num: 9, title: 'Real-time monitoring', desc: 'Sensoren en dashboards die afwijkingen signaleren voordat ze storingen worden.' },
                 { num: 10, title: 'Wekelijkse stilstand-review', desc: 'Bespreek wekelijks de grootste stilstandoorzaken en de genomen acties.' },
@@ -91,7 +91,7 @@ export default function StilstandArticlePage() {
 
           <section className="mb-8">
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Hoeveel kost stilstand jou?</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Hoeveel kost stilstand u?</h3>
               <p className="text-gray-400 mb-6">Bereken de financiële impact van OEE-verhoging met onze calculator.</p>
               <Link href="/oee-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
                 <BarChart3 className="w-5 h-5" />

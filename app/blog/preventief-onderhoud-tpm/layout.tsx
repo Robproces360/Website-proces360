@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Preventief Onderhoud & TPM: Van Reactief naar Proactief',
-  description: 'Stop met brandjes blussen. Leer hoe je met Total Productive Maintenance (TPM) storingen voorkomt. Implementeer preventief onderhoud en verhoog je OEE.',
+  description: 'Stop met brandjes blussen. Leer hoe u met Total Productive Maintenance (TPM) storingen voorkomt. Implementeer preventief onderhoud en verhoog uw OEE.',
   keywords: [
     'preventief onderhoud',
     'TPM',

@@ -79,7 +79,7 @@ export default function PredictiveMaintenancePage() {
 
           <p className="text-xl text-text-secondary mb-8 leading-relaxed">
             Stop met onverwachte stilstand. Leer hoe predictive maintenance werkt, welke sensoren
-            en technologieën je nodig hebt, en implementeer voorspellend onderhoud in je MKB-productie
+            en technologieën u nodig hebt, en implementeer voorspellend onderhoud in uw MKB-productie
             met dit praktische stappenplan.
           </p>
 
@@ -356,8 +356,8 @@ export default function PredictiveMaintenancePage() {
                 </div>
               </div>
               <p className="text-text-secondary text-sm">
-                <strong className="text-primary-400">P-F interval:</strong> De tijd tussen P en F is je window of opportunity.
-                Predictive maintenance detecteert het P-punt vroeg, zodat je weken of maanden de tijd hebt
+                <strong className="text-primary-400">P-F interval:</strong> De tijd tussen P en F is uw window of opportunity.
+                Predictive maintenance detecteert het P-punt vroeg, zodat u weken of maanden de tijd hebt
                 om onderhoud te plannen in plaats van uren of minuten.
               </p>
             </div>
@@ -677,7 +677,7 @@ export default function PredictiveMaintenancePage() {
                   </div>
                 </div>
                 <p className="text-text-secondary mb-4">
-                  Identificeer je meest kritieke assets. Niet elke machine verdient predictive maintenance.
+                  Identificeer uw meest kritieke assets. Niet elke machine verdient predictive maintenance.
                 </p>
                 <div className="bg-bg-primary rounded-lg p-4">
                   <h4 className="font-semibold text-text-primary mb-2">Criteria voor selectie:</h4>
@@ -1252,7 +1252,7 @@ export default function PredictiveMaintenancePage() {
               {[
                 {
                   q: "Hoe lang duurt het voordat predictive maintenance waarde levert?",
-                  a: "De eerste alerts komen na 2-4 weken (baseline periode). Echte ROI - in de vorm van vermeden storingen - zie je typisch binnen 3-6 maanden. De meeste bedrijven halen terugverdientijd binnen 12 maanden."
+                  a: "De eerste alerts komen na 2-4 weken (baseline periode). Echte ROI - in de vorm van vermeden storingen - ziet u typisch binnen 3-6 maanden. De meeste bedrijven halen terugverdientijd binnen 12 maanden."
                 },
                 {
                   q: "Werkt PdM ook voor oudere machines?",
@@ -1268,11 +1268,11 @@ export default function PredictiveMaintenancePage() {
                 },
                 {
                   q: "Vervangt PdM preventief onderhoud volledig?",
-                  a: "Niet volledig. Sommige onderhoudstaken (smering, filters) blijven time-based. PdM vervangt vooral de component-vervanging: in plaats van elke X uur vervangen, vervang je wanneer de sensor zegt dat het nodig is."
+                  a: "Niet volledig. Sommige onderhoudstaken (smering, filters) blijven time-based. PdM vervangt vooral de component-vervanging: in plaats van elke X uur vervangen, vervangt u wanneer de sensor zegt dat het nodig is."
                 },
                 {
                   q: "Wat als ik geen historische faaldata heb?",
-                  a: "Geen probleem. Start met anomaly detection (leert 'normaal' gedrag) en threshold monitoring. Na 1-2 jaar verzamel je vanzelf data over degradatie en falen die de modellen verbeteren."
+                  a: "Geen probleem. Start met anomaly detection (leert 'normaal' gedrag) en threshold monitoring. Na 1-2 jaar verzamelt u vanzelf data over degradatie en falen die de modellen verbeteren."
                 },
               ].map((item, index) => (
                 <div key={index} className="bg-bg-secondary rounded-xl p-6 border border-white/10">
@@ -1292,7 +1292,7 @@ export default function PredictiveMaintenancePage() {
               <p className="text-text-secondary mb-6 leading-relaxed">
                 Predictive maintenance is geen toekomstmuziek meer - het is vandaag beschikbaar en
                 betaalbaar voor MKB-productiebedrijven. Met IoT-sensoren vanaf €300, cloud-AI platforms,
-                en bewezen ROI binnen 12 maanden is er geen reden om te wachten. Begin klein met je
+                en bewezen ROI binnen 12 maanden is er geen reden om te wachten. Begin klein met uw
                 meest kritieke machines en bouw van daaruit verder.
               </p>
               <div className="grid md:grid-cols-4 gap-4">
@@ -1343,7 +1343,7 @@ export default function PredictiveMaintenancePage() {
                 Klaar voor Predictive Maintenance?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Plan uw 360Scan. We analyseren je kritieke assets en geven
+                Plan uw 360Scan. We analyseren uw kritieke assets en geven
                 een concreet implementatieadvies met ROI-berekening.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

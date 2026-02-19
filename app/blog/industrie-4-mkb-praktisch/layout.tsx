@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Industrie 4.0 voor MKB: Praktisch Beginnen Zonder Miljoeneninvestering',
-  description: 'Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe je met kleine stappen en beperkt budget je fabriek digitaliseert. Praktische Industrie 4.0 gids voor MKB.',
+  description: 'Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe u met kleine stappen en beperkt budget uw fabriek digitaliseert. Praktische Industrie 4.0 gids voor MKB.',
   keywords: [
     'industrie 4.0',
     'smart industry',

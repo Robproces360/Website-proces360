@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Productiestrategie & Automatisering: Van Visie naar Uitvoering',
-  description: 'Hoe ontwikkel je een automatiseringsstrategie die past bij jouw MKB-maakbedrijf? Van quick wins tot lange termijn roadmap. Praktische aanpak van Rob Derks.',
+  description: 'Hoe ontwikkelt u een automatiseringsstrategie die past bij uw MKB-maakbedrijf? Van quick wins tot lange termijn roadmap. Praktische aanpak van Rob Derks.',
   keywords: [
     'productiestrategie',
     'automatiseringsstrategie',

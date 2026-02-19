@@ -11,11 +11,13 @@ import {
   TrendingUp,
   ArrowRight,
   Linkedin,
+  ExternalLink,
   Factory,
   Cog,
   Heart,
   Phone,
   MessageCircle,
+  Quote,
 } from 'lucide-react';
 import Reveal from '@/components/shared/Reveal';
 
@@ -208,6 +210,69 @@ export default function OverOnsPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Referenties */}
+      <section className="container mx-auto px-4 mb-20">
+        <div className="max-w-5xl mx-auto">
+          <Reveal direction="up">
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Wat opdrachtgevers <span className="text-primary-500">zeggen</span>
+            </h2>
+            <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+              Echte referenties van mensen met wie ik samenwerk
+            </p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Reveal direction="up" delay={0.1}>
+              <div className="bg-bg-secondary border border-white/10 rounded-xl p-8 h-full flex flex-col">
+                <Quote className="w-8 h-8 text-primary-500/50 mb-4" />
+                <p className="text-gray-300 italic leading-relaxed mb-6 flex-grow">
+                  &ldquo;Rob combineert een open persoonlijkheid met een professionele, hands-on
+                  mentaliteit en stevige vakinhoudelijke kennis. Wat hem echt onderscheidt, is zijn
+                  innovatieve kijk op processen. Rob ziet kansen waar anderen knelpunten zien en weet
+                  deze om te zetten in slimme, efficiënte oplossingen die direct bijdragen aan hogere
+                  marges en betere prestaties. Een impactmaker pur sang!&rdquo;
+                </p>
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-white font-semibold">Robert van Sligter</p>
+                  <p className="text-gray-400 text-sm">CEO &amp; Eigenaar &middot; Interfilling B.V.</p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal direction="up" delay={0.2}>
+              <div className="bg-bg-secondary border border-white/10 rounded-xl p-8 h-full flex flex-col">
+                <Quote className="w-8 h-8 text-primary-500/50 mb-4" />
+                <p className="text-gray-300 italic leading-relaxed mb-6 flex-grow">
+                  &ldquo;Ik werk momenteel prettig samen met Rob bij Interfilling.
+                  Hij is een fijne interim collega die kritisch meedenkt en zich altijd
+                  met volle inzet inzet voor het team. Betrouwbaar en heel betrokken.&rdquo;
+                </p>
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-white font-semibold">Kelly van Loon</p>
+                  <p className="text-gray-400 text-sm">General Manager &middot; Interfilling B.V.</p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal direction="up" delay={0.3}>
+            <div className="text-center mt-8">
+              <a
+                href="https://www.linkedin.com/in/rob-derks-15900873/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-primary-500 hover:text-primary-400 transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                Bekijk alle referenties op LinkedIn
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 

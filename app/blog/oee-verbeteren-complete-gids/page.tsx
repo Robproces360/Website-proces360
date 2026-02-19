@@ -25,7 +25,7 @@ export default function OEEArticlePage() {
             OEE Verbeteren: De Complete Gids voor Productiebedrijven in 2025
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Alles wat je moet weten over Overall Equipment Effectiveness: van berekening tot praktische verbetermethodes.
+            Alles wat u moet weten over Overall Equipment Effectiveness: van berekening tot praktische verbetermethodes.
             Inclusief 8 praktijkcases, benchmark-data, en een bewezen stappenplan om van 55% naar 85%+ OEE te gaan.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
@@ -70,7 +70,7 @@ export default function OEEArticlePage() {
             <p className="text-white font-medium m-0">
               <strong>Kernboodschap:</strong> De gemiddelde MKB-fabriek scoort een OEE van 45-55%.
               World-class fabrieken scoren 85%+. Het verschil? <strong>€100.000 tot €500.000 per jaar</strong> aan onbenutte capaciteit.
-              In dit artikel leer je precies hoe je van gemiddeld naar excellent gaat, met bewezen methodes uit 50+ OEE-projecten.
+              In dit artikel leert u precies hoe u van gemiddeld naar excellent gaat, met bewezen methodes uit 50+ OEE-projecten.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function OEEArticlePage() {
             </h2>
             <p className="text-gray-300 mb-4">
               <strong className="text-white">OEE staat voor Overall Equipment Effectiveness</strong> – in het Nederlands:
-              Totale Effectiviteit van Apparatuur. Het is wereldwijd dé standaard KPI om te meten hoe effectief je productieapparatuur
+              Totale Effectiviteit van Apparatuur. Het is wereldwijd dé standaard KPI om te meten hoe effectief uw productieapparatuur
               daadwerkelijk wordt ingezet ten opzichte van het theoretisch maximum.
             </p>
             <p className="text-gray-300 mb-4">
@@ -110,7 +110,7 @@ export default function OEEArticlePage() {
                   <TrendingUp className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-white font-medium">Verborgen Fabriek Ontdekken</p>
-                    <p className="text-gray-400 text-sm">OEE maakt zichtbaar dat je fabriek vaak maar op 50-60% van de werkelijke capaciteit draait.</p>
+                    <p className="text-gray-400 text-sm">OEE maakt zichtbaar dat uw fabriek vaak maar op 50-60% van de werkelijke capaciteit draait.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -139,9 +139,9 @@ export default function OEEArticlePage() {
 
             <p className="text-gray-300">
               Het mooie van OEE is dat het de <strong className="text-white">&quot;verborgen fabriek&quot;</strong> zichtbaar maakt.
-              Je denkt misschien dat je fabriek op 80% capaciteit draait, maar als je echt gaat meten,
+              U denkt misschien dat uw fabriek op 80% capaciteit draait, maar als u echt gaat meten,
               blijkt de OEE vaak 50-60% te zijn. Dat betekent dat er 40-50% capaciteit onbenut blijft –
-              zonder dat je een extra machine hoeft te kopen.
+              zonder dat u een extra machine hoeft te kopen.
             </p>
           </section>
 
@@ -187,7 +187,7 @@ export default function OEEArticlePage() {
 
             <h3 className="text-xl font-bold text-white mb-4">Compleet Rekenvoorbeeld</h3>
             <p className="text-gray-300 mb-4">
-              Stel je hebt een CNC-freesmachine met de volgende gegevens voor één shift:
+              Stel u hebt een CNC-freesmachine met de volgende gegevens voor één shift:
             </p>
             <div className="bg-bg-secondary border border-white/10 rounded-xl p-6 mb-6 space-y-4">
               <div className="grid md:grid-cols-3 gap-4">
@@ -223,7 +223,7 @@ export default function OEEArticlePage() {
                 <div>
                   <h4 className="text-lg font-bold text-yellow-400 mb-2">Belangrijke Inzicht</h4>
                   <p className="text-gray-300 m-0">
-                    Elk onderdeel lijkt &quot;acceptabel&quot; (87.5%, 75%, 97%), maar gecombineerd verlies je <strong className="text-white">meer dan een derde</strong> van je productiecapaciteit.
+                    Elk onderdeel lijkt &quot;acceptabel&quot; (87.5%, 75%, 97%), maar gecombineerd verliest u <strong className="text-white">meer dan een derde</strong> van uw productiecapaciteit.
                     Dit is de kracht van OEE: het maakt de multiplicatieve impact van kleine verliezen zichtbaar.
                   </p>
                 </div>
@@ -232,7 +232,7 @@ export default function OEEArticlePage() {
 
             <p className="text-gray-300">
               Dit voorbeeld toont een typische MKB-situatie. De grootste winst zit hier in <strong className="text-white">Prestatie (75%)</strong>.
-              Door micro-stops te elimineren en cyclustijd te optimaliseren, kun je naar 85%+ prestatie.
+              Door micro-stops te elimineren en cyclustijd te optimaliseren, kunt u naar 85%+ prestatie.
               Dat verhoogt de OEE van 63.7% naar 73.9% – een stijging van 16% output uit dezelfde machine.
             </p>
           </section>
@@ -244,7 +244,7 @@ export default function OEEArticlePage() {
               3. OEE Benchmarks per Industrie
             </h2>
             <p className="text-gray-300 mb-6">
-              Wat is een &quot;goede&quot; OEE? Dit hangt af van je industrie, producttype en productiecomplexiteit.
+              Wat is een &quot;goede&quot; OEE? Dit hangt af van uw industrie, producttype en productiecomplexiteit.
               Hier zijn realistische benchmarks gebaseerd op data uit honderden productiebedrijven:
             </p>
 
@@ -335,7 +335,7 @@ export default function OEEArticlePage() {
             </h2>
             <p className="text-gray-300 mb-6">
               Het Total Productive Maintenance (TPM) framework definieert 6 categorieën van OEE-verlies.
-              Door te begrijpen waar je verlies zit, kun je gericht verbeteren. Hier is een gedetailleerd overzicht:
+              Door te begrijpen waar uw verlies zit, kunt u gericht verbeteren. Hier is een gedetailleerd overzicht:
             </p>
             <div className="space-y-4 mb-6">
               <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
@@ -421,7 +421,7 @@ export default function OEEArticlePage() {
               <h4 className="text-lg font-bold text-white mb-3">Prioriteit bepalen: Pareto-analyse</h4>
               <p className="text-gray-300 m-0">
                 In de meeste fabrieken veroorzaakt <strong className="text-white">20% van de problemen 80% van het OEE-verlies</strong> (Pareto-principe).
-                Start met een Pareto-analyse van je stilstandredenen. Focus verbeterenergie op de top 3 oorzaken –
+                Start met een Pareto-analyse van uw stilstandredenen. Focus verbeterenergie op de top 3 oorzaken –
                 daar zit het meeste rendement.
               </p>
             </div>
@@ -686,13 +686,13 @@ export default function OEEArticlePage() {
               6. OEE Verbeteren: 15 Bewezen Strategieën
             </h2>
             <p className="text-gray-300 mb-6">
-              Gestructureerde aanpak om je OEE te verhogen. Gerangschikt van &quot;quick win&quot; naar &quot;strategische investering&quot;.
+              Gestructureerde aanpak om uw OEE te verhogen. Gerangschikt van &quot;quick win&quot; naar &quot;strategische investering&quot;.
             </p>
 
             <h3 className="text-xl font-bold text-white mb-4">Quick Wins (Weken 1-4)</h3>
             <div className="space-y-4 mb-8">
               {[
-                { num: 1, title: 'Start met Meten', desc: 'Je kunt niet verbeteren wat je niet meet. Begin vandaag met het registreren van stilstand, output en afkeur. Zelfs een Excel-sheet is een start.', link: '/diensten/productie-dashboards' },
+                { num: 1, title: 'Start met Meten', desc: 'U kunt niet verbeteren wat u niet meet. Begin vandaag met het registreren van stilstand, output en afkeur. Zelfs een Excel-sheet is een start.', link: '/diensten/productie-dashboards' },
                 { num: 2, title: 'Pareto-analyse Stilstand', desc: 'Identificeer de top 3 stilstandoorzaken. Vaak veroorzaakt 20% van de problemen 80% van het verlies. Focus hier eerst.', link: null },
                 { num: 3, title: 'Maak OEE Zichtbaar', desc: 'Toon real-time OEE op grote schermen bij de productielijn. Wat zichtbaar is, krijgt aandacht. Teams gaan vanzelf verbeteren.', link: '/diensten/productie-dashboards' },
                 { num: 4, title: 'Dagelijkse Stand-up', desc: 'Start elke shift met 10-minuten bespreking: gisteren OEE, top-3 issues, acties vandaag. Structurele aandacht = structurele verbetering.', link: null },
@@ -885,10 +885,10 @@ export default function OEEArticlePage() {
                 { fout: 'Geen root-cause analyse', uitleg: '"Machine stond stil" is geen oorzaak. Graaf dieper: waarom stond hij stil? 5× Waarom tot de werkelijke oorzaak.' },
                 { fout: 'Operators niet betrekken', uitleg: 'De mensen aan de lijn weten precies waar de problemen zitten. Betrek ze bij OEE-analyse en verbetervoorstellen.' },
                 { fout: 'OEE vergelijken tussen machines', uitleg: 'Een verpakkingsmachine en CNC-freesbank hebben totaal verschillende benchmarks. Vergelijk appels met appels.' },
-                { fout: 'Geplande tijd verkeerd definiëren', uitleg: 'Tel je pauzes, onderhoud, vergaderingen mee? Wees consistent. World-class definitie: alle uren dat de fabriek open is.' },
+                { fout: 'Geplande tijd verkeerd definiëren', uitleg: 'Telt u uw pauzes, onderhoud, vergaderingen mee? Wees consistent. World-class definitie: alle uren dat de fabriek open is.' },
                 { fout: 'Micro-stops negeren', uitleg: 'Stops <5 minuten worden vaak niet geregistreerd. Maar 50× per dag 2 minuten = 100 minuten verlies. Meet ze!' },
-                { fout: 'Ideale cyclustijd te laag', uitleg: 'Als je theoretische cyclustijd te ambitieus is, lijkt je OEE altijd slecht. Gebruik realistische, haalbare waardes.' },
-                { fout: 'Data manipuleren', uitleg: 'OEE "mooi" maken door definities aan te passen. Je bedriegt alleen jezelf. Eerlijke data = echte verbetering.' },
+                { fout: 'Ideale cyclustijd te laag', uitleg: 'Als uw theoretische cyclustijd te ambitieus is, lijkt uw OEE altijd slecht. Gebruik realistische, haalbare waardes.' },
+                { fout: 'Data manipuleren', uitleg: 'OEE "mooi" maken door definities aan te passen. U bedriegt alleen uzelf. Eerlijke data = echte verbetering.' },
                 { fout: 'OEE als strafmiddel gebruiken', uitleg: 'OEE moet een verbeterinstrument zijn, geen controlemiddel. Angst leidt tot data-manipulatie, niet tot verbetering.' },
               ].map((item, i) => (
                 <div key={i} className="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
@@ -911,7 +911,7 @@ export default function OEEArticlePage() {
               9. OEE Implementatie Stappenplan
             </h2>
             <p className="text-gray-300 mb-6">
-              Een gestructureerd 12-weken plan om OEE succesvol te implementeren in je organisatie.
+              Een gestructureerd 12-weken plan om OEE succesvol te implementeren in uw organisatie.
             </p>
 
             <div className="space-y-6">
@@ -955,7 +955,7 @@ export default function OEEArticlePage() {
             </h2>
             <div className="space-y-4">
               {[
-                { q: 'Wat is een goede OEE voor mijn bedrijf?', a: 'Dit hangt af van je industrie en productiecomplexiteit. Gemiddeld MKB: 45-55%. Goed: 65-75%. World-class: 85%+. Start met je huidige niveau meten en verbeter van daaruit stapsgewijs.' },
+                { q: 'Wat is een goede OEE voor mijn bedrijf?', a: 'Dit hangt af van uw industrie en productiecomplexiteit. Gemiddeld MKB: 45-55%. Goed: 65-75%. World-class: 85%+. Start met uw huidige niveau meten en verbeter van daaruit stapsgewijs.' },
                 { q: 'Hoe lang duurt het voordat ik resultaat zie?', a: 'Quick wins (5-10% verbetering) zijn vaak binnen 4-6 weken te realiseren door beter meten en bewustzijn. Structurele verbetering (15-25%) duurt typisch 3-6 maanden.' },
                 { q: 'Moet ik per machine of per lijn OEE meten?', a: 'Start met de bottleneck-machine of kritieke lijn. Breidt later uit. Per machine meten geeft het meeste inzicht voor gerichte verbetering.' },
                 { q: 'Wat kost OEE-software?', a: 'Excel: gratis. Dedicated OEE-software: €5.000-€30.000. Volledig geautomatiseerd (MES): €30.000-€150.000+. ROI is typisch 6-18 maanden.' },
@@ -979,14 +979,14 @@ export default function OEEArticlePage() {
               11. Direct aan de Slag
             </h2>
             <p className="text-gray-300 mb-6">
-              Klaar om je OEE te berekenen en te verbeteren? Start vandaag met onze gratis tools of plan een adviesgesprek.
+              Klaar om uw OEE te berekenen en te verbeteren? Start vandaag met onze gratis tools of plan een adviesgesprek.
             </p>
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Bereken je OEE in 60 seconden
+                Bereken uw OEE in 60 seconden
               </h3>
               <p className="text-gray-400 mb-6">
-                Ontdek hoeveel verborgen capaciteit er in jouw productie zit – en wat dat in euro&apos;s betekent.
+                Ontdek hoeveel verborgen capaciteit er in uw productie zit – en wat dat in euro&apos;s betekent.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -1039,7 +1039,7 @@ export default function OEEArticlePage() {
             </Link>
             <Link href="/blog/cobots-in-productie-complete-gids" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Cobots in Productie: De Complete Gids</h4>
-              <p className="text-sm text-gray-400">Hoe collaborative robots je OEE verbeteren met hogere beschikbaarheid en consistente kwaliteit.</p>
+              <p className="text-sm text-gray-400">Hoe collaborative robots uw OEE verbeteren met hogere beschikbaarheid en consistente kwaliteit.</p>
             </Link>
             <Link href="/blog/cobot-terugverdientijd-berekenen" className="bg-bg-secondary border border-white/10 rounded-xl p-6 hover:border-primary-500/50 transition-colors">
               <h4 className="font-bold text-white mb-2">Cobot Terugverdientijd Berekenen</h4>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Rob Derks', url: 'https://proces360.com/rob-derks' }],
   openGraph: {
     title: 'Cobots in Productie: De Complete Gids voor MKB | Proces360',
-    description: 'Van selectie tot implementatie: alles wat je moet weten over cobots in de maakindustrie.',
+    description: 'Van selectie tot implementatie: alles wat u moet weten over cobots in de maakindustrie.',
     url: 'https://proces360.com/blog/cobots-in-productie-complete-gids',
     siteName: 'Proces360',
     locale: 'nl_NL',
@@ -51,7 +51,7 @@ const articleSchema = {
   '@type': 'Article',
   '@id': 'https://proces360.com/blog/cobots-in-productie-complete-gids/#article',
   headline: 'Cobots in Productie: De Complete Gids voor MKB-Maakbedrijven',
-  description: 'Van selectie tot implementatie: alles wat je moet weten over collaborative robots (cobots) in de maakindustrie.',
+  description: 'Van selectie tot implementatie: alles wat u moet weten over collaborative robots (cobots) in de maakindustrie.',
   image: 'https://proces360.com/images/blog/cobots-productie-og.png',
   datePublished: '2026-01-09T08:00:00+01:00',
   dateModified: '2026-01-09T08:00:00+01:00',

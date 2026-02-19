@@ -810,11 +810,11 @@ export default function FoodCaseStudy247kPage() {
         <section className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 mb-12">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary mb-4">
-              Wat zit er verborgen in jouw foodproductie?
+              Wat zit er verborgen in uw foodproductie?
             </h2>
             <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
-              Of je nu verse producten, maaltijden of ingrediënten produceert — er zit vrijwel
-              altijd meer potentieel dan je denkt. Een 360Scan brengt het objectief in kaart.
+              Of u nu verse producten, maaltijden of ingrediënten produceert — er zit vrijwel
+              altijd meer potentieel dan u denkt. Een 360Scan brengt het objectief in kaart.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

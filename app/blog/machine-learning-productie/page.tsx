@@ -96,10 +96,10 @@ const roiFactoren = [
 
 const faqItems = [
   { vraag: 'Wat is machine learning in productie?', antwoord: 'Machine learning in productie is het toepassen van algoritmes die automatisch leren van productiedata om voorspellingen te doen, patronen te herkennen en processen te optimaliseren—zonder expliciet geprogrammeerd te worden voor elke situatie.' },
-  { vraag: 'Hoeveel data heb ik nodig voor ML?', antwoord: 'Voor de meeste toepassingen heb je minimaal 6-12 maanden historische data nodig. Voor seizoensgebonden patronen is 2-3 jaar ideaal. Quality vision kan al werken met 500-1000 gelabelde voorbeelden.' },
+  { vraag: 'Hoeveel data heb ik nodig voor ML?', antwoord: 'Voor de meeste toepassingen hebt u minimaal 6-12 maanden historische data nodig. Voor seizoensgebonden patronen is 2-3 jaar ideaal. Quality vision kan al werken met 500-1000 gelabelde voorbeelden.' },
   { vraag: 'Wat kost ML implementatie?', antwoord: 'Een eerste ML-pilot kost typisch €25.000-75.000 inclusief hardware, software en consultancy. Schaalbare productie-implementaties kosten €50.000-200.000. Cloud-oplossingen verlagen de initiële investering.' },
   { vraag: 'Hebben we datascientists nodig?', antwoord: 'Voor de eerste projecten niet perse. Werk samen met een ML-partner die de modellen bouwt. AutoML en no-code platforms maken simpele toepassingen toegankelijk. Voor structurele toepassing is interne ML-kennis aan te raden.' },
-  { vraag: 'Wat als onze data "rommelig" is?', antwoord: '80% van ML-projecten gaat over data-preparatie. Start met de data die je hebt, verbeter de dataverzameling tijdens het project. Perfecte data is niet nodig om te beginnen, maar wel om te schalen.' },
+  { vraag: 'Wat als onze data "rommelig" is?', antwoord: '80% van ML-projecten gaat over data-preparatie. Start met de data die u hebt, verbeter de dataverzameling tijdens het project. Perfecte data is niet nodig om te beginnen, maar wel om te schalen.' },
   { vraag: 'Vervangt AI onze operators?', antwoord: 'Nee, ML augmenteert operators. Het geeft hen betere informatie en neemt routinebeslissingen over. Operators blijven nodig voor complexe situaties, troubleshooting en procesinnovatie.' },
   { vraag: 'Hoe lang duurt een ML-project?', antwoord: 'Proof of Concept: 4-8 weken. Pilot in productie: 2-3 maanden. Volledige uitrol: 6-12 maanden. Continu verbeteren van modellen is een doorlopend proces.' },
   { vraag: 'Welke ML-toepassing heeft de snelste ROI?', antwoord: 'Predictive maintenance en quality vision hebben typisch de snelste en hoogste ROI. Ze bouwen op bestaande sensordata en hebben duidelijk meetbare resultaten (stilstand, uitval).' },
@@ -134,7 +134,7 @@ export default function MachineLearningProductiePage() {
           </h1>
 
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-            Van predictive maintenance tot quality vision: ontdek hoe machine learning je productie
+            Van predictive maintenance tot quality vision: ontdek hoe machine learning uw productie
             slimmer, efficiënter en voorspelbaarder maakt. Geen science fiction, maar bewezen
             technologie die nu beschikbaar is voor MKB-maakbedrijven.
           </p>
@@ -747,10 +747,10 @@ export default function MachineLearningProductiePage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-primary-500/20 to-primary-600/20 border border-primary-500/30 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Klaar om ML toe te passen in jouw productie?
+              Klaar om ML toe te passen in uw productie?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Laat ons een ML-assessment doen. We identificeren de beste use cases voor jouw
+              Laat ons een ML-assessment doen. We identificeren de beste use cases voor uw
               situatie en schatten de potentiële ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

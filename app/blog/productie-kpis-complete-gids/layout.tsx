@@ -54,7 +54,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Hoe bereken je OEE?',
+      name: 'Hoe berekent u OEE?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'OEE = Beschikbaarheid × Prestatie × Kwaliteit. Beschikbaarheid = (Geplande tijd - Stilstand) / Geplande tijd. Prestatie = (Werkelijke output / Theoretische output). Kwaliteit = (Goede producten / Totale producten).',

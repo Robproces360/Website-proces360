@@ -13,12 +13,12 @@ const benefits = [
 ];
 
 const methods = [
-  { name: 'Value Stream Mapping', desc: 'Visualiseer je gehele waardestroom en identificeer verbeterkansen' },
+  { name: 'Value Stream Mapping', desc: 'Visualiseer uw gehele waardestroom en identificeer verbeterkansen' },
   { name: 'Lean Six Sigma', desc: 'Combinatie van waste reductie en variatie vermindering' },
   { name: '5S Implementatie', desc: 'Werkplek organisatie voor efficiëntie en veiligheid' },
   { name: 'SMED', desc: 'Single Minute Exchange of Die - omsteltijden halveren' },
-  { name: 'Kaizen Events', desc: 'Gerichte verbeterworkshops met je team' },
-  { name: 'Theory of Constraints', desc: 'Focus op de zwakste schakel in je proces' },
+  { name: 'Kaizen Events', desc: 'Gerichte verbeterworkshops met uw team' },
+  { name: 'Theory of Constraints', desc: 'Focus op de zwakste schakel in uw proces' },
 ];
 
 export default function ProcesoptimalisatiePage() {
@@ -36,7 +36,7 @@ export default function ProcesoptimalisatiePage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Procesoptimalisatie</h1>
               <p className="text-xl text-gray-400">
-                Identificeer bottlenecks, elimineer verspilling en optimaliseer je productieprocessen met bewezen lean-methodes en praktische aanpak.
+                Identificeer bottlenecks, elimineer verspilling en optimaliseer uw productieprocessen met bewezen lean-methodes en praktische aanpak.
               </p>
             </div>
           </div>

@@ -78,7 +78,7 @@ export default function AutomatiseringROIPage() {
           </h1>
 
           <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-            Hoe bereken je de werkelijke ROI van automatisering? Van TCO-analyse tot verborgen
+            Hoe berekent u de werkelijke ROI van automatisering? Van TCO-analyse tot verborgen
             kostenposten en risicofactoren. Met praktische rekentools, templates en benchmarks
             voor MKB-productiebedrijven.
           </p>
@@ -127,7 +127,7 @@ export default function AutomatiseringROIPage() {
           </h2>
           <nav className="grid md:grid-cols-2 gap-2">
             {[
-              { href: "#roi-basics", title: "1. ROI Basics: Wat Meet Je?" },
+              { href: "#roi-basics", title: "1. ROI Basics: Wat Meet U?" },
               { href: "#tco-model", title: "2. TCO Model voor Automatisering" },
               { href: "#besparingen", title: "3. Alle Besparingscategorieën" },
               { href: "#verborgen-kosten", title: "4. Verborgen Kosten Ontmaskerd" },
@@ -155,13 +155,13 @@ export default function AutomatiseringROIPage() {
           <section id="roi-basics" className="mb-16">
             <h2 className="text-3xl font-bold text-text-primary mb-6 flex items-center">
               <Calculator className="w-8 h-8 mr-3 text-primary-400" />
-              1. ROI Basics: Wat Meet Je Precies?
+              1. ROI Basics: Wat Meet U Precies?
             </h2>
 
             <p className="text-text-secondary mb-6 leading-relaxed">
               ROI (Return on Investment) klinkt eenvoudig, maar bij automatiseringsprojecten
               zijn er meerdere manieren om rendement te meten. Kies de juiste metrics voor
-              jouw situatie.
+              uw situatie.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -175,7 +175,7 @@ export default function AutomatiseringROIPage() {
                   <span className="px-3 py-1 bg-primary-500/20 text-primary-400 rounded-full text-xs">Meest gebruikt</span>
                 </div>
                 <p className="text-text-secondary mb-4">
-                  Het percentage rendement op je investering over een bepaalde periode.
+                  Het percentage rendement op uw investering over een bepaalde periode.
                 </p>
                 <div className="bg-bg-primary rounded-lg p-4 font-mono text-sm">
                   <p className="text-primary-400">ROI = ((Totale Besparingen - Totale Investering) / Totale Investering) × 100%</p>
@@ -252,7 +252,7 @@ export default function AutomatiseringROIPage() {
               <p className="text-text-secondary">
                 Voor MKB-automatisering raden we aan: <strong className="text-text-primary">Payback Period</strong> voor
                 snelle beslissingen, <strong className="text-text-primary">5-jaars ROI</strong> voor de business case,
-                en <strong className="text-text-primary">NPV</strong> als je financiële goedkeuring nodig hebt van
+                en <strong className="text-text-primary">NPV</strong> als u financiële goedkeuring nodig hebt van
                 bank of investeerders.
               </p>
             </div>
@@ -438,7 +438,7 @@ export default function AutomatiseringROIPage() {
 
             <p className="text-text-secondary mb-8 leading-relaxed">
               Automatisering levert waarde op meerdere fronten. Hier zijn alle categorieën
-              om te kwantificeren in je business case.
+              om te kwantificeren in uw business case.
             </p>
 
             <div className="space-y-6">
@@ -734,7 +734,7 @@ export default function AutomatiseringROIPage() {
                 Pro Tip: Buffer Inbouwen
               </h4>
               <p className="text-text-secondary">
-                Voeg <strong className="text-text-primary">15-25% contingency</strong> toe aan je initiële budget.
+                Voeg <strong className="text-text-primary">15-25% contingency</strong> toe aan uw initiële budget.
                 Dit is geen pessimisme maar realisme. Projecten die &quot;on budget&quot; eindigen hebben bijna
                 altijd een buffer gehad.
               </p>
@@ -891,7 +891,7 @@ export default function AutomatiseringROIPage() {
 
             <p className="text-text-secondary mb-8 leading-relaxed">
               Een business case is gebaseerd op aannames. Wat als die aannames niet kloppen?
-              Test de robuustheid van je ROI.
+              Test de robuustheid van uw ROI.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -1009,7 +1009,7 @@ export default function AutomatiseringROIPage() {
             </h2>
 
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Vergelijk je business case met branchegemiddelden om te zien of je aannames realistisch zijn.
+              Vergelijk uw business case met branchegemiddelden om te zien of uw aannames realistisch zijn.
             </p>
 
             <div className="overflow-x-auto mb-8">
@@ -1269,7 +1269,7 @@ export default function AutomatiseringROIPage() {
                 },
                 {
                   q: "Hoe ga ik om met 'zachte' besparingen in mijn ROI?",
-                  a: "Zachte besparingen (ergonomie, flexibiliteit, klantbehoud) zijn reëel maar moeilijk te kwantificeren. Regel: bouw je business case primair op 'harde' besparingen (arbeid, output, kwaliteit). Zachte voordelen zijn bonus, niet de basis."
+                  a: "Zachte besparingen (ergonomie, flexibiliteit, klantbehoud) zijn reëel maar moeilijk te kwantificeren. Regel: bouw uw business case primair op 'harde' besparingen (arbeid, output, kwaliteit). Zachte voordelen zijn bonus, niet de basis."
                 },
                 {
                   q: "Moet ik subsidies meenemen in mijn ROI berekening?",
@@ -1277,11 +1277,11 @@ export default function AutomatiseringROIPage() {
                 },
                 {
                   q: "Hoe bereken ik de waarde van capaciteitsuitbreiding?",
-                  a: "Dit is lastig omdat het afhankelijk is van extra omzet die je kunt genereren. Aanpak: bereken de marginale winst op extra productie × verwachte extra orders. Wees conservatief - alleen meenemen als er concrete vraag is."
+                  a: "Dit is lastig omdat het afhankelijk is van extra omzet die u kunt genereren. Aanpak: bereken de marginale winst op extra productie × verwachte extra orders. Wees conservatief - alleen meenemen als er concrete vraag is."
                 },
                 {
                   q: "Wat als de technologie veroudert binnen 5 jaar?",
-                  a: "Automatiseringsapparatuur gaat typisch 10-15+ jaar mee. Software/interface kan sneller verouderen maar is vaak te updaten. Risico is beperkt als je kiest voor gevestigde leveranciers met lange support trajecten."
+                  a: "Automatiseringsapparatuur gaat typisch 10-15+ jaar mee. Software/interface kan sneller verouderen maar is vaak te updaten. Risico is beperkt als u kiest voor gevestigde leveranciers met lange support trajecten."
                 },
                 {
                   q: "Hoe vergelijk ik verschillende automatiseringsopties?",
@@ -1305,7 +1305,7 @@ export default function AutomatiseringROIPage() {
               <p className="text-text-secondary mb-6 leading-relaxed">
                 Een solide ROI-analyse is het verschil tussen een succesvol automatiseringsproject
                 en een duur leermomenten. Neem de tijd om alle kosten en besparingen te kwantificeren,
-                test je aannames met scenario&apos;s, en bouw voldoende buffer in. De beste business cases
+                test uw aannames met scenario&apos;s, en bouw voldoende buffer in. De beste business cases
                 zijn conservatief maar nog steeds overtuigend.
               </p>
               <div className="grid md:grid-cols-4 gap-4">
@@ -1353,11 +1353,11 @@ export default function AutomatiseringROIPage() {
           <section className="mb-16">
             <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Hulp nodig bij je Automatisering Business Case?
+                Hulp nodig bij uw Automatisering Business Case?
               </h2>
               <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Laat ons je helpen met een realistische ROI-analyse. We berekenen de business case
-                voor jouw specifieke situatie, inclusief alle verborgen kosten en risico&apos;s.
+                Laat ons u helpen met een realistische ROI-analyse. We berekenen de business case
+                voor uw specifieke situatie, inclusief alle verborgen kosten en risico&apos;s.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -1390,13 +1390,13 @@ export default function AutomatiseringROIPage() {
                 },
                 {
                   title: "Automatisering Roadmap MKB",
-                  description: "Plan je automatiseringsstrategie stap voor stap.",
+                  description: "Plan uw automatiseringsstrategie stap voor stap.",
                   href: "/blog/automatisering-roadmap-mkb",
                   tag: "Strategie"
                 },
                 {
                   title: "Cobot vs Industriële Robot",
-                  description: "Kies de juiste technologie voor jouw situatie.",
+                  description: "Kies de juiste technologie voor uw situatie.",
                   href: "/blog/cobot-vs-industriele-robot",
                   tag: "Keuze"
                 },

@@ -26,7 +26,7 @@ const approach = [
   {
     phase: 'Meten',
     title: 'OEE Baseline bepalen',
-    description: 'We meten je huidige OEE en analyseren waar de verliezen zitten: beschikbaarheid, prestatie of kwaliteit.',
+    description: 'We meten uw huidige OEE en analyseren waar de verliezen zitten: beschikbaarheid, prestatie of kwaliteit.',
     duration: '1-2 weken',
   },
   {
@@ -82,7 +82,7 @@ export default function OEEVerbeteringPage() {
                 OEE Verbetering
               </h1>
               <p className="text-xl text-gray-400">
-                Verhoog je Overall Equipment Effectiveness met 15-40% door systematische optimalisatie van beschikbaarheid, prestatie en kwaliteit.
+                Verhoog uw Overall Equipment Effectiveness met 15-40% door systematische optimalisatie van beschikbaarheid, prestatie en kwaliteit.
               </p>
             </div>
           </div>
@@ -165,10 +165,10 @@ export default function OEEVerbeteringPage() {
               <Calculator className="w-16 h-16 text-primary-500 flex-shrink-0" />
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  Bereken je huidige OEE
+                  Bereken uw huidige OEE
                 </h3>
                 <p className="text-gray-300">
-                  Gebruik onze OEE Calculator en ontdek hoeveel verborgen capaciteit er in jouw productie zit.
+                  Gebruik onze OEE Calculator en ontdek hoeveel verborgen capaciteit er in uw productie zit.
                 </p>
               </div>
               <Link
@@ -202,10 +202,10 @@ export default function OEEVerbeteringPage() {
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Klaar om je OEE te verhogen?
+            Klaar om uw OEE te verhogen?
           </h2>
           <p className="text-gray-400 mb-8">
-            Plan uw 360Scan en ontdek waar jouw verbeterpotentieel ligt.
+            Plan uw 360Scan en ontdek waar uw verbeterpotentieel ligt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

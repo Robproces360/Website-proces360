@@ -141,14 +141,14 @@ export default function ProductieplanningOptimalisatiePage() {
         <section className="prose prose-lg max-w-none mb-12">
           <p className="text-lg text-text-secondary leading-relaxed">
             &quot;Elke ochtend begin ik met het herschikken van de planning vanwege spoedorders,
-            machinestoringen of materiaal dat niet op tijd is.&quot; Herkenbaar? Je bent niet alleen.
+            machinestoringen of materiaal dat niet op tijd is.&quot; Herkenbaar? U bent niet alleen.
             Uit onderzoek blijkt dat 67% van MKB-maakbedrijven nog steeds plaat met Excel of
             vergelijkbare tools, wat leidt tot suboptimale beslissingen en constante brandjes blussen.
           </p>
 
           <p className="text-lg text-text-secondary leading-relaxed">
-            Effectieve productieplanning is geen luxe maar noodzaak. Het bepaalt je leverbetrouwbaarheid,
-            machinebezetting, voorraden en uiteindelijk je winstgevendheid. In deze gids delen we
+            Effectieve productieplanning is geen luxe maar noodzaak. Het bepaalt uw leverbetrouwbaarheid,
+            machinebezetting, voorraden en uiteindelijk uw winstgevendheid. In deze gids delen we
             bewezen methoden om van reactieve planning naar proactieve optimalisatie te gaan.
           </p>
 
@@ -447,12 +447,12 @@ export default function ProductieplanningOptimalisatiePage() {
         {/* Section 3: Scheduling Methods */}
         <section id="scheduling-methoden" className="mb-16">
           <h2 className="text-3xl font-bold text-text-primary mb-6">
-            3. Scheduling Methoden: Welke Past bij Jou?
+            3. Scheduling Methoden: Welke Past bij U?
           </h2>
 
           <p className="text-text-secondary mb-8">
             Er zijn verschillende scheduling methoden, elk met eigen sterktes.
-            De juiste keuze hangt af van je productieomgeving.
+            De juiste keuze hangt af van uw productieomgeving.
           </p>
 
           <div className="overflow-x-auto mb-8">
@@ -544,7 +544,7 @@ export default function ProductieplanningOptimalisatiePage() {
                 </div>
                 <p className="text-red-800 text-sm">
                   De bottleneck bepaalt het tempo. Plan deze resource 100% benut.
-                  Dit is het &apos;ritme&apos; van je fabriek.
+                  Dit is het &apos;ritme&apos; van uw fabriek.
                 </p>
               </div>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -575,7 +575,7 @@ export default function ProductieplanningOptimalisatiePage() {
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-yellow-800 text-sm">
-                <strong>Praktijktip:</strong> Identificeer je bottleneck door te kijken waar werk
+                <strong>Praktijktip:</strong> Identificeer uw bottleneck door te kijken waar werk
                 ophoopt. Dit is vaak de meest bezette machine, de langste cyclustijd, of het
                 station met de meeste wachtrij.
               </p>
@@ -628,7 +628,7 @@ export default function ProductieplanningOptimalisatiePage() {
           </h2>
 
           <p className="text-text-secondary mb-8">
-            Capaciteitsplanning is de brug tussen wat je verkoopt en wat je kunt maken.
+            Capaciteitsplanning is de brug tussen wat u verkoopt en wat u kunt maken.
             Het gaat om het balanceren van vraag en aanbod op de juiste tijdschaal.
           </p>
 
@@ -674,7 +674,7 @@ export default function ProductieplanningOptimalisatiePage() {
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
             <p className="text-text-secondary mb-4">
-              RCCP is een snelle methode om te checken of je MPS uitvoerbaar is
+              RCCP is een snelle methode om te checken of uw MPS uitvoerbaar is
               op kritieke resources.
             </p>
 
@@ -949,7 +949,7 @@ export default function ProductieplanningOptimalisatiePage() {
                 <p className="text-yellow-800 text-sm">
                   De meeste MKB-maakbedrijven (20-200 medewerkers) zijn het beste gediend met
                   <strong> Niveau 2 of 3</strong>. APS is vaak overkill en te duur voor de
-                  complexiteit. Focus eerst op discipline in planning voordat je investeert in
+                  complexiteit. Focus eerst op discipline in planning voordat u investeert in
                   geavanceerde tools.
                 </p>
               </div>
@@ -1207,7 +1207,7 @@ export default function ProductieplanningOptimalisatiePage() {
               {
                 number: 1,
                 title: "Plan de bottleneck, niet alles",
-                description: "Focus je detailplanning op de constraint. Andere stations volgen.",
+                description: "Focus uw detailplanning op de constraint. Andere stations volgen.",
                 category: "Strategie"
               },
               {
@@ -1255,7 +1255,7 @@ export default function ProductieplanningOptimalisatiePage() {
               {
                 number: 9,
                 title: "Cyclustijden blijven meten",
-                description: "Data veroudert. Hervalideer regelmatig je basisdata.",
+                description: "Data veroudert. Hervalideer regelmatig uw basisdata.",
                 category: "Data"
               },
               {
@@ -1461,7 +1461,7 @@ export default function ProductieplanningOptimalisatiePage() {
 
           <p className="text-text-secondary mb-8">
             De ROI van betere planning komt uit meerdere bronnen. Hier is een framework
-            om de business case voor jouw situatie op te bouwen.
+            om de business case voor uw situatie op te bouwen.
           </p>
 
           <div className="bg-bg-secondary rounded-xl p-8 mb-8">
@@ -1597,11 +1597,11 @@ export default function ProductieplanningOptimalisatiePage() {
             {[
               {
                 q: "Hoeveel tijd kost het om een goede planning op te zetten?",
-                a: "Een basisverbetering (gestructureerde Excel, vaste vergaderingen, standaard procedures) kun je in 4-8 weken realiseren. Een volledige transformatie met software en proceswijzigingen duurt typisch 4-6 maanden. Focus op quick wins terwijl je aan de fundamenten werkt."
+                a: "Een basisverbetering (gestructureerde Excel, vaste vergaderingen, standaard procedures) kunt u in 4-8 weken realiseren. Een volledige transformatie met software en proceswijzigingen duurt typisch 4-6 maanden. Focus op quick wins terwijl u aan de fundamenten werkt."
               },
               {
                 q: "Kunnen we planningsoptimalisatie combineren met onze huidige ERP?",
-                a: "Absoluut. De meeste ERP-systemen hebben basisplanningsfunctionaliteit die vaak onderbenut wordt. Start met het optimaal gebruiken van wat je hebt. Als je meer nodig hebt, kun je dedicated planning software toevoegen die integreert met je ERP."
+                a: "Absoluut. De meeste ERP-systemen hebben basisplanningsfunctionaliteit die vaak onderbenut wordt. Start met het optimaal gebruiken van wat u hebt. Als u meer nodig hebt, kunt u dedicated planning software toevoegen die integreert met uw ERP."
               },
               {
                 q: "Hoe gaan we om met spoedorders in een geoptimaliseerde planning?",
@@ -1617,7 +1617,7 @@ export default function ProductieplanningOptimalisatiePage() {
               },
               {
                 q: "Wat is de ideale planningshorizon voor MKB-productie?",
-                a: "Dit hangt af van je doorlooptijd en levertijden. Vuistregel: Je tactische planning (MPS) moet minstens 2x je langste doorlooptijd vooruit kijken. Je dagelijkse scheduling focust op 1-2 weken. S&OP kijkt 3-12 maanden vooruit."
+                a: "Dit hangt af van uw doorlooptijd en levertijden. Vuistregel: Uw tactische planning (MPS) moet minstens 2x uw langste doorlooptijd vooruit kijken. Uw dagelijkse scheduling focust op 1-2 weken. S&OP kijkt 3-12 maanden vooruit."
               },
               {
                 q: "Hoe meten we of onze planning verbetert?",
@@ -1640,7 +1640,7 @@ export default function ProductieplanningOptimalisatiePage() {
         <section className="mb-16">
           <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">
-              Van Chaos naar Controle in je Productieplanning
+              Van Chaos naar Controle in uw Productieplanning
             </h2>
             <p className="text-blue-100 mb-6">
               Betere planning is geen kwestie van complexe software maar van
@@ -1650,11 +1650,11 @@ export default function ProductieplanningOptimalisatiePage() {
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="bg-white/10 rounded-lg p-4 text-center">
                 <p className="text-2xl font-bold mb-1">Week 1</p>
-                <p className="text-blue-200 text-sm">Meet je baseline KPIs</p>
+                <p className="text-blue-200 text-sm">Meet uw baseline KPIs</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 text-center">
                 <p className="text-2xl font-bold mb-1">Week 4</p>
-                <p className="text-blue-200 text-sm">Standaardiseer je processen</p>
+                <p className="text-blue-200 text-sm">Standaardiseer uw processen</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 text-center">
                 <p className="text-2xl font-bold mb-1">Week 12</p>
@@ -1692,10 +1692,10 @@ export default function ProductieplanningOptimalisatiePage() {
         <section className="mb-12">
           <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Klaar om je Productieplanning naar het Volgende Niveau te Brengen?
+              Klaar om uw Productieplanning naar het Volgende Niveau te Brengen?
             </h2>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-              Plan een kennismaking om de mogelijkheden voor jouw productieomgeving te bespreken.
+              Plan een kennismaking om de mogelijkheden voor uw productieomgeving te bespreken.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -1722,13 +1722,13 @@ export default function ProductieplanningOptimalisatiePage() {
             {[
               {
                 title: "OEE Verbeteren: Complete Gids",
-                description: "Maximaliseer je machine-effectiviteit met bewezen methoden.",
+                description: "Maximaliseer uw machine-effectiviteit met bewezen methoden.",
                 href: "/blog/oee-verbeteren",
                 category: "OEE"
               },
               {
                 title: "Digital Twin in Productie",
-                description: "Simuleer en optimaliseer je productie virtueel.",
+                description: "Simuleer en optimaliseer uw productie virtueel.",
                 href: "/blog/digital-twin-productie",
                 category: "Industrie 4.0"
               },

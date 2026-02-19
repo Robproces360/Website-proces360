@@ -399,8 +399,8 @@ export default function CaseStudy69kBesparingPage() {
 
           <p className="text-text-secondary leading-relaxed">
             Dit is precies waarom de 360Scan zo waardevol is. Niet omdat er altijd grote
-            problemen zijn, maar omdat een frisse, objectieve blik ziet wat je zelf over
-            het hoofd ziet. Na 10 jaar werken in dezelfde productie word je blind voor
+            problemen zijn, maar omdat een frisse, objectieve blik ziet wat u zelf over
+            het hoofd ziet. Na 10 jaar werken in dezelfde productie wordt u blind voor
             inefficiënties die een buitenstaander direct opvallen.
           </p>
         </section>
@@ -430,7 +430,7 @@ export default function CaseStudy69kBesparingPage() {
                 <Target className="w-6 h-6 text-primary-500" />
               </div>
               <h3 className="text-lg font-semibold text-text-primary mb-2">
-                Je hoeft niet ziek te zijn om beter te worden
+                U hoeft niet ziek te zijn om beter te worden
               </h3>
               <p className="text-text-secondary text-sm">
                 Dit bedrijf draaide prima. Toch zat er €69.000 verborgen potentieel.
@@ -459,8 +459,8 @@ export default function CaseStudy69kBesparingPage() {
                 Externe blik is waardevol
               </h3>
               <p className="text-text-secondary text-sm">
-                Na jaren in dezelfde omgeving zie je inefficiënties niet meer.
-                Een objectieve 360Scan brengt in één dag in kaart wat je zelf mist.
+                Na jaren in dezelfde omgeving ziet u inefficiënties niet meer.
+                Een objectieve 360Scan brengt in één dag in kaart wat u zelf mist.
               </p>
             </div>
           </div>
@@ -470,10 +470,10 @@ export default function CaseStudy69kBesparingPage() {
         <section className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 mb-12">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary mb-4">
-              Hoeveel verborgen potentieel zit er in jouw productie?
+              Hoeveel verborgen potentieel zit er in uw productie?
             </h2>
             <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
-              Een 360Scan brengt in één dag objectief in kaart waar jouw verbeterkansen liggen.
+              Een 360Scan brengt in één dag objectief in kaart waar uw verbeterkansen liggen.
               Geen dikke rapporten, maar concrete quick wins met directe impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

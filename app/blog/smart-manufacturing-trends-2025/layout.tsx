@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Smart Manufacturing Trends 2025: De Complete Gids voor MKB-Productiebedrijven',
-  description: 'Ontdek de belangrijkste smart manufacturing trends van 2025: AI in productie, IoT-sensoren, digital twins, en edge computing. Praktische implementatiegids voor Nederlandse MKB-maakbedrijven.',
-  keywords: ['smart manufacturing', 'industrie 4.0', 'smart factory', 'manufacturing trends 2025', 'IoT productie', 'AI manufacturing', 'digital twin', 'edge computing productie', 'MKB automatisering'],
+  title: 'Smart Manufacturing Trends 2026: De Complete Gids voor MKB-Productiebedrijven',
+  description: 'Ontdek de belangrijkste smart manufacturing trends van 2026: AI in productie, IoT-sensoren, digital twins, en edge computing. Praktische implementatiegids voor Nederlandse MKB-maakbedrijven.',
+  keywords: ['smart manufacturing', 'industrie 4.0', 'smart factory', 'manufacturing trends 2026', 'IoT productie', 'AI manufacturing', 'digital twin', 'edge computing productie', 'MKB automatisering'],
   openGraph: {
-    title: 'Smart Manufacturing Trends 2025 | De Complete Gids',
-    description: 'De belangrijkste smart manufacturing trends voor MKB-productiebedrijven in 2025.',
+    title: 'Smart Manufacturing Trends 2026 | De Complete Gids',
+    description: 'De belangrijkste smart manufacturing trends voor MKB-productiebedrijven in 2026.',
     url: 'https://proces360.com/blog/smart-manufacturing-trends-2025',
     type: 'article',
     publishedTime: '2025-04-22T08:00:00Z',
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Smart Manufacturing Trends 2025: De Complete Gids voor MKB-Productiebedrijven',
-  description: 'Ontdek de belangrijkste smart manufacturing trends van 2025 met praktische implementatietips voor Nederlandse MKB-maakbedrijven.',
+  headline: 'Smart Manufacturing Trends 2026: De Complete Gids voor MKB-Productiebedrijven',
+  description: 'Ontdek de belangrijkste smart manufacturing trends van 2026 met praktische implementatietips voor Nederlandse MKB-maakbedrijven.',
   author: { '@type': 'Person', name: 'Rob Derks', url: 'https://proces360.com/rob-derks' },
   publisher: { '@id': 'https://proces360.com/#organization' },
   datePublished: '2025-04-22',
-  dateModified: '2025-04-22',
+  dateModified: '2026-01-15',
   mainEntityOfPage: 'https://proces360.com/blog/smart-manufacturing-trends-2025',
   image: 'https://proces360.com/images/blog/smart-manufacturing-trends.jpg',
   articleSection: 'Industrie 4.0',
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://proces360.com' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://proces360.com/blog' },
-    { '@type': 'ListItem', position: 3, name: 'Smart Manufacturing Trends 2025', item: 'https://proces360.com/blog/smart-manufacturing-trends-2025' },
+    { '@type': 'ListItem', position: 3, name: 'Smart Manufacturing Trends 2026', item: 'https://proces360.com/blog/smart-manufacturing-trends-2025' },
   ],
 };
 
@@ -62,7 +62,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Wat zijn de belangrijkste smart manufacturing trends in 2025?',
+      name: 'Wat zijn de belangrijkste smart manufacturing trends in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'De top trends zijn: (1) AI-gedreven predictive maintenance, (2) Edge computing voor real-time besluitvorming, (3) Digital twins voor procesoptimalisatie, (4) Collaborative robots (cobots), (5) Low-code platforms voor snelle automatisering.',

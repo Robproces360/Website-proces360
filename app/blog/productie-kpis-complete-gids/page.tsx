@@ -123,17 +123,17 @@ const veelgemaakteFouten = [
   { fout: 'KPIs als straf gebruiken', impact: 'Weerstand, gaming', oplossing: 'Gebruik KPIs voor verbetering, niet voor afrekenen.' },
   { fout: 'Geen context geven', impact: 'Verkeerde conclusies', oplossing: 'Toon altijd target, trend en benchmark.' },
   { fout: 'OEE als enige metric', impact: 'Onvolledig beeld', oplossing: 'Combineer OEE met kwaliteit, levering en kostenmetics.' },
-  { fout: 'Benchmarks blind volgen', impact: 'Niet relevant voor jouw situatie', oplossing: 'Pas benchmarks aan op jouw productmix en uitdagingen.' },
+  { fout: 'Benchmarks blind volgen', impact: 'Niet relevant voor uw situatie', oplossing: 'Pas benchmarks aan op uw productmix en uitdagingen.' },
 ];
 
 const faqItems = [
   { vraag: 'Wat zijn de belangrijkste productie KPIs?', antwoord: 'De top 5 productie KPIs zijn: OEE (Overall Equipment Effectiveness), First Pass Yield, On-Time Delivery, doorlooptijd en capaciteitsbenutting. Deze metrics geven samen een compleet beeld van productie-efficiëntie.' },
-  { vraag: 'Hoe bereken je OEE?', antwoord: 'OEE = Beschikbaarheid × Prestatie × Kwaliteit. Beschikbaarheid = (Geplande tijd - Stilstand) / Geplande tijd. Prestatie = (Werkelijke cyclustijd × Producten) / Netto productietijd. Kwaliteit = (Goede producten / Totaal geproduceerd). Alle percentages vermenigvuldigen geeft de OEE.' },
-  { vraag: 'Wat is een goede OEE score?', antwoord: 'Een OEE van 85% wordt beschouwd als world-class. Het gemiddelde MKB-maakbedrijf scoort 60-65%. Een score van 70-75% is goed voor discrete manufacturing. Belangrijker dan de absolute score is de trend: stijgt je OEE?' },
+  { vraag: 'Hoe berekent u OEE?', antwoord: 'OEE = Beschikbaarheid × Prestatie × Kwaliteit. Beschikbaarheid = (Geplande tijd - Stilstand) / Geplande tijd. Prestatie = (Werkelijke cyclustijd × Producten) / Netto productietijd. Kwaliteit = (Goede producten / Totaal geproduceerd). Alle percentages vermenigvuldigen geeft de OEE.' },
+  { vraag: 'Wat is een goede OEE score?', antwoord: 'Een OEE van 85% wordt beschouwd als world-class. Het gemiddelde MKB-maakbedrijf scoort 60-65%. Een score van 70-75% is goed voor discrete manufacturing. Belangrijker dan de absolute score is de trend: stijgt uw OEE?' },
   { vraag: 'Wat is het verschil tussen OEE en TEEP?', antwoord: 'OEE meet effectiviteit tijdens geplande productietijd. TEEP (Total Effective Equipment Performance) meet effectiviteit over alle beschikbare tijd, inclusief nachten, weekenden en feestdagen. TEEP = OEE × Benutting, en is lager dan OEE.' },
-  { vraag: 'Hoeveel KPIs moet ik meten?', antwoord: 'Start met 5-7 KPIs die direct aansluiten bij je bedrijfsdoelen. Te veel KPIs leidt tot focus verlies. Kies minimaal: 1 efficiency-KPI (OEE), 1 kwaliteits-KPI (FPY), 1 levering-KPI (OTD) en 1 kosten-KPI.' },
+  { vraag: 'Hoeveel KPIs moet ik meten?', antwoord: 'Start met 5-7 KPIs die direct aansluiten bij uw bedrijfsdoelen. Te veel KPIs leidt tot focus verlies. Kies minimaal: 1 efficiency-KPI (OEE), 1 kwaliteits-KPI (FPY), 1 levering-KPI (OTD) en 1 kosten-KPI.' },
   { vraag: 'Hoe vaak moet ik KPIs reviewen?', antwoord: 'Operationele KPIs (OEE, output) dagelijks bij de dagstart. Tactische KPIs (trends, verbeterprojecten) wekelijks. Strategische KPIs (kosten, capaciteit, benchmarks) maandelijks. Real-time dashboards voor directe actie bij afwijkingen.' },
-  { vraag: 'Kan ik KPIs meten zonder dure software?', antwoord: 'Ja, start eenvoudig met Excel/Google Sheets voor kleine producties. Verzamel data handmatig of via basis PLC-uitlezing. Wanneer je groeit, investeer in dedicated productie-software of MES-systemen.' },
+  { vraag: 'Kan ik KPIs meten zonder dure software?', antwoord: 'Ja, start eenvoudig met Excel/Google Sheets voor kleine producties. Verzamel data handmatig of via basis PLC-uitlezing. Wanneer u groeit, investeer in dedicated productie-software of MES-systemen.' },
   { vraag: 'Hoe voorkom ik dat KPIs gemanipuleerd worden?', antwoord: 'Automatiseer dataverzameling om menselijke input te minimaliseren. Combineer meerdere KPIs (hoge OEE + hoge kwaliteit + lage kosten). Creëer een cultuur waarin problemen melden gewaardeerd wordt, niet bestraft.' },
 ];
 
@@ -166,7 +166,7 @@ export default function ProductieKPIsGidsPage() {
           </h1>
 
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-            Van OEE tot First Pass Yield: ontdek welke KPIs je écht moet meten om je productie naar
+            Van OEE tot First Pass Yield: ontdek welke KPIs u écht moet meten om uw productie naar
             het volgende niveau te tillen. Met formules, benchmarks per sector, dashboardvoorbeelden
             en een implementatie-stappenplan.
           </p>
@@ -261,7 +261,7 @@ export default function ProductieKPIsGidsPage() {
 
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-gray-300 mb-6 leading-relaxed">
-              <em>&quot;Je kunt niet verbeteren wat je niet meet.&quot;</em> Dit klassieke management-adagium
+              <em>&quot;U kunt niet verbeteren wat u niet meet.&quot;</em> Dit klassieke management-adagium
               is nergens zo waar als in de productie. Toch meten veel MKB-maakbedrijven hun prestaties
               nog steeds met &quot;gevoel&quot; of verouderde Excel-sheets die niemand bekijkt.
             </p>
@@ -352,8 +352,8 @@ export default function ProductieKPIsGidsPage() {
 
           <p className="text-gray-300 mb-8">
             Dit zijn de 15 belangrijkste KPIs voor MKB-productiebedrijven, gerangschikt op impact en
-            relevantie. Je hoeft ze niet allemaal te meten—start met de top 5 en breid uit naarmate
-            je KPI-volwassenheid groeit.
+            relevantie. U hoeft ze niet allemaal te meten—start met de top 5 en breid uit naarmate
+            uw KPI-volwassenheid groeit.
           </p>
 
           <div className="space-y-4 mb-8">
@@ -508,7 +508,7 @@ export default function ProductieKPIsGidsPage() {
 
           <p className="text-gray-300 mb-8">
             Kwaliteitsproblemen zijn duur: herwerk kost 2-5x zoveel als het eerste keer goed doen,
-            en klachten kosten nog meer. Deze KPIs helpen je kwaliteit te monitoren en te verbeteren.
+            en klachten kosten nog meer. Deze KPIs helpen u kwaliteit te monitoren en te verbeteren.
           </p>
 
           <div className="grid gap-6 mb-8">
@@ -533,7 +533,7 @@ export default function ProductieKPIsGidsPage() {
               <h3 className="text-xl font-bold text-white mb-3">Scrap Rate</h3>
               <p className="text-gray-400 mb-4">
                 Percentage materiaal/producten dat wordt afgekeurd en weggegooid.
-                Dit is direct zichtbaar in je kosten en duurzaamheidsprestaties.
+                Dit is direct zichtbaar in uw kosten en duurzaamheidsprestaties.
               </p>
               <div className="bg-white/5 rounded-lg p-3 mb-4">
                 <p className="text-gray-300 font-mono text-sm">
@@ -602,7 +602,7 @@ export default function ProductieKPIsGidsPage() {
             <div className="bg-bg-secondary border border-white/10 rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-3">Capaciteitsbenutting</h3>
               <p className="text-gray-400 mb-4">
-                Hoeveel van je beschikbare capaciteit gebruik je daadwerkelijk? Te laag is
+                Hoeveel van uw beschikbare capaciteit gebruikt u daadwerkelijk? Te laag is
                 verspilling, te hoog leidt tot geen flexibiliteit voor spoedorders.
               </p>
               <div className="bg-white/5 rounded-lg p-3 mb-4">
@@ -700,7 +700,7 @@ export default function ProductieKPIsGidsPage() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            KPIs zijn alleen zinvol in context. Vergelijk je prestaties met sectorgenoten, maar
+            KPIs zijn alleen zinvol in context. Vergelijk uw prestaties met sectorgenoten, maar
             onthoud: elke situatie is uniek. Gebruik benchmarks als richtlijn, niet als wet.
           </p>
 
@@ -735,7 +735,7 @@ export default function ProductieKPIsGidsPage() {
               Benchmark Advies
             </h4>
             <p className="text-gray-300 text-sm">
-              Vergelijk je niet alleen met je sector, maar ook met jezelf. Een bedrijf dat van 55%
+              Vergelijk u niet alleen met uw sector, maar ook met uzelf. Een bedrijf dat van 55%
               naar 70% OEE gaat heeft meer bereikt dan een bedrijf dat stabiel op 75% blijft.
               <strong className="text-white"> De trend is belangrijker dan het absolute getal.</strong>
             </p>
@@ -935,8 +935,8 @@ export default function ProductieKPIsGidsPage() {
               Start met Meten, Start met Verbeteren
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Wil je weten hoe je productie écht presteert? Laat ons een KPI-assessment doen en
-              een dashboard-prototype bouwen voor jouw situatie.
+              Wilt u weten hoe uw productie écht presteert? Laat ons een KPI-assessment doen en
+              een dashboard-prototype bouwen voor uw situatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

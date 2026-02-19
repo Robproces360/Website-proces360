@@ -23,8 +23,8 @@ export default function Industrie4ArticlePage() {
             Industrie 4.0 voor MKB: Praktisch Beginnen Zonder Miljoeneninvestering
           </h1>
           <p className="text-xl text-gray-400 mb-8">
-            Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe je met kleine stappen
-            en beperkt budget je fabriek digitaliseert. Focus op ROI, niet op buzzwords.
+            Smart Industry hoeft niet duur of complex te zijn. Ontdek hoe u met kleine stappen
+            en beperkt budget uw fabriek digitaliseert. Focus op ROI, niet op buzzwords.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 pb-8 border-b border-white/10">
             <span className="flex items-center gap-2"><User className="w-4 h-4" />Rob Derks</span>
@@ -109,7 +109,7 @@ export default function Industrie4ArticlePage() {
 
           <section className="mb-8">
             <div className="bg-gradient-to-r from-primary-500/20 to-orange-500/20 border border-primary-500/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Waar ligt jouw digitale kans?</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Waar ligt uw digitale kans?</h3>
               <p className="text-gray-400 mb-6">Start met OEE-meting - de basis van elke Smart Factory.</p>
               <Link href="/oee-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
                 <BarChart3 className="w-5 h-5" />
@@ -136,7 +136,7 @@ export default function Industrie4ArticlePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Smart Manufacturing Trends 2025",
+                title: "Smart Manufacturing Trends 2026",
                 description: "De belangrijkste ontwikkelingen in slimme productie.",
                 href: "/blog/smart-manufacturing-trends-2025",
                 tag: "Trends"
@@ -149,7 +149,7 @@ export default function Industrie4ArticlePage() {
               },
               {
                 title: "Digital Twin in Productie",
-                description: "Simuleer en optimaliseer je productieproces digitaal.",
+                description: "Simuleer en optimaliseer uw productieproces digitaal.",
                 href: "/blog/digital-twin-productie",
                 tag: "Digitalisering"
               },

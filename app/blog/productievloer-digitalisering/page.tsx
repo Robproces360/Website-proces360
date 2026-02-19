@@ -115,9 +115,9 @@ const faqItems = [
   { vraag: 'Hoeveel kost productievloer digitalisering?', antwoord: 'Budget €20.000-75.000 voor een gemiddeld MKB met 30-100 medewerkers. Dit omvat hardware (€5.000-25.000), software (€5.000-20.000 jaar 1) en implementatie (€10.000-30.000).' },
   { vraag: 'Kunnen oudere werknemers hiermee werken?', antwoord: 'Ja, met de juiste aanpak. Kies intuïtieve touch-interfaces, grote knoppen, en investeer in training. Betrek oudere medewerkers bij het ontwerp. Zij kennen de processen het beste.' },
   { vraag: 'Wat als internet uitvalt?', antwoord: 'Kies software met offline-modus. Data wordt lokaal opgeslagen en gesynchroniseerd zodra verbinding terugkomt. Dit is standaard bij goede shop floor apps.' },
-  { vraag: 'Hoe lang duurt de implementatie?', antwoord: 'Een pilot op 1 afdeling: 4-8 weken. Volledige uitrol: 8-16 weken. Met het 90-dagen plan kun je van start tot volledig papierloos in 3 maanden.' },
+  { vraag: 'Hoe lang duurt de implementatie?', antwoord: 'Een pilot op 1 afdeling: 4-8 weken. Volledige uitrol: 8-16 weken. Met het 90-dagen plan kunt u van start tot volledig papierloos in 3 maanden.' },
   { vraag: 'Moeten we alles in één keer digitaliseren?', antwoord: 'Nee, start met één high-impact proces (bijv. werkbonnen of kwaliteits checklists). Bewijs de waarde, leer, en rol dan verder uit.' },
-  { vraag: 'Wat met handtekeningen en goedkeuringen?', antwoord: 'Digitale handtekeningen zijn juridisch geldig (eIDAS regelgeving). Je kunt eenvoudige PIN-codes, biometrie of getekende handtekeningen op touchscreen gebruiken.' },
+  { vraag: 'Wat met handtekeningen en goedkeuringen?', antwoord: 'Digitale handtekeningen zijn juridisch geldig (eIDAS regelgeving). U kunt eenvoudige PIN-codes, biometrie of getekende handtekeningen op touchscreen gebruiken.' },
 ];
 
 export default function ProductievloerDigitaliseringPage() {
@@ -150,7 +150,7 @@ export default function ProductievloerDigitaliseringPage() {
 
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
             Werkbonnen, checklists, kwaliteitsregistraties—weg met die papierberg! Ontdek hoe
-            je je productievloer digitaliseert met een praktisch 90-dagen stappenplan.
+            u uw productievloer digitaliseert met een praktisch 90-dagen stappenplan.
             Inclusief technology keuzes, ROI berekening en praktijkcases.
           </p>
 
@@ -240,7 +240,7 @@ export default function ProductievloerDigitaliseringPage() {
 
           <p className="text-gray-300 mb-8">
             Papier op de werkvloer is een overblijfsel uit de vorige eeuw. Het kost tijd, veroorzaakt
-            fouten en blokkeert real-time inzicht. Dit zijn de problemen die je oplost met digitalisering:
+            fouten en blokkeert real-time inzicht. Dit zijn de problemen die u oplost met digitalisering:
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -548,7 +548,7 @@ export default function ProductievloerDigitaliseringPage() {
               Klaar om papierloos te produceren?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Laat ons een quick scan doen van je processen en een digitaliseringsplan opstellen.
+              Laat ons een quick scan doen van uw processen en een digitaliseringsplan opstellen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -575,7 +575,7 @@ export default function ProductievloerDigitaliseringPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Smart Manufacturing Trends 2025",
+                title: "Smart Manufacturing Trends 2026",
                 description: "De belangrijkste ontwikkelingen in slimme productie.",
                 href: "/blog/smart-manufacturing-trends-2025",
                 tag: "Trends"

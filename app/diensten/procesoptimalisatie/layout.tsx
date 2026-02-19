@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   keywords: ['procesoptimalisatie', 'lean manufacturing', 'workflow optimalisatie', 'bottleneck analyse', 'waste reductie', '5S', 'kaizen', 'value stream mapping'],
   openGraph: {
     title: 'Procesoptimalisatie | Lean Manufacturing - Proces360',
-    description: 'Optimaliseer je productieprocessen met bewezen lean-methodes.',
+    description: 'Optimaliseer uw productieprocessen met bewezen lean-methodes.',
     url: 'https://proces360.com/diensten/procesoptimalisatie',
   },
   alternates: { canonical: '/diensten/procesoptimalisatie' },

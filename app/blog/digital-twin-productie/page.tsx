@@ -144,9 +144,9 @@ export default function DigitalTwinProductiePage() {
           </p>
 
           <p className="text-lg text-text-secondary leading-relaxed">
-            Een <strong>digital twin</strong> is een virtuele replica van je fysieke productieomgeving:
+            Een <strong>digital twin</strong> is een virtuele replica van uw fysieke productieomgeving:
             machines, processen, materiaalstromen en zelfs medewerkers. Deze replica wordt continu
-            gevoed met real-time data en stelt je in staat om te simuleren, te voorspellen en te
+            gevoed met real-time data en stelt u in staat om te simuleren, te voorspellen en te
             optimaliseren—zonder risico voor de echte productie.
           </p>
 
@@ -155,7 +155,7 @@ export default function DigitalTwinProductiePage() {
               Kernbelofte Digital Twin
             </p>
             <p className="text-purple-800">
-              &quot;Test 100 scenario&apos;s virtueel voordat je één wijziging fysiek doorvoert.
+              &quot;Test 100 scenario&apos;s virtueel voordat u één wijziging fysiek doorvoert.
               Maak fouten in de simulatie, niet op de productievloer.&quot;
             </p>
           </div>
@@ -578,7 +578,7 @@ export default function DigitalTwinProductiePage() {
                     1. Real-time Productie Monitoring
                   </h3>
                   <p className="text-text-secondary mb-4">
-                    Volledige zichtbaarheid op je productievloer vanuit één unified view.
+                    Volledige zichtbaarheid op uw productievloer vanuit één unified view.
                     Zie direct welke machines draaien, met welke efficiency, en waar problemen ontstaan.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -610,7 +610,7 @@ export default function DigitalTwinProductiePage() {
                     2. Productie Simulatie & Planning
                   </h3>
                   <p className="text-text-secondary mb-4">
-                    Test scenario&apos;s voordat je ze uitvoert. Simuleer productieplanningen,
+                    Test scenario&apos;s voordat u ze uitvoert. Simuleer productieplanningen,
                     ombouwtijden, nieuwe producten en capaciteitsveranderingen virtueel.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -1038,7 +1038,7 @@ export default function DigitalTwinProductiePage() {
                 <ul className="text-yellow-800 text-sm space-y-1">
                   <li>• <strong>Executive sponsorship</strong> - Zonder commitment van management stopt het project</li>
                   <li>• <strong>Data quality first</strong> - Garbage in = garbage out, investeer in datakwaliteit</li>
-                  <li>• <strong>Start klein</strong> - Pilot bewijst waarde voordat je opschaalt</li>
+                  <li>• <strong>Start klein</strong> - Pilot bewijst waarde voordat u opschaalt</li>
                   <li>• <strong>Change management</strong> - Mensen moeten de twin willen gebruiken</li>
                 </ul>
               </div>
@@ -1386,7 +1386,7 @@ export default function DigitalTwinProductiePage() {
 
           <p className="text-text-secondary mb-8">
             De ROI van een digital twin komt uit meerdere bronnen. Hier is een
-            framework om de business case voor jouw situatie te berekenen.
+            framework om de business case voor uw situatie te berekenen.
           </p>
 
           <div className="bg-bg-secondary rounded-xl p-8 mb-8">
@@ -1556,14 +1556,14 @@ export default function DigitalTwinProductiePage() {
                 number: 1,
                 title: "Te groot beginnen",
                 problem: "Complete fabriek willen digitaliseren in één keer",
-                solution: "Start met één machine of lijn. Bewijs waarde voordat je opschaalt.",
+                solution: "Start met één machine of lijn. Bewijs waarde voordat u opschaalt.",
                 icon: Target
               },
               {
                 number: 2,
                 title: "Data quality onderschatten",
                 problem: "Uitgaan dat bestaande data compleet en betrouwbaar is",
-                solution: "Investeer in datakwaliteit voordat je gaat modelleren. Garbage in = garbage out.",
+                solution: "Investeer in datakwaliteit voordat u gaat modelleren. Garbage in = garbage out.",
                 icon: Database
               },
               {
@@ -1642,11 +1642,11 @@ export default function DigitalTwinProductiePage() {
               },
               {
                 q: "Hoe lang duurt een digital twin implementatie?",
-                a: "Een pilot op één machine of lijn duurt typisch 3-6 maanden. Een complete fabriek-brede implementatie kan 12-18 maanden duren. We adviseren altijd te starten met een pilot van 3-4 maanden om waarde te bewijzen voordat je opschaalt."
+                a: "Een pilot op één machine of lijn duurt typisch 3-6 maanden. Een complete fabriek-brede implementatie kan 12-18 maanden duren. We adviseren altijd te starten met een pilot van 3-4 maanden om waarde te bewijzen voordat u opschaalt."
               },
               {
                 q: "Hebben we speciale IT-kennis nodig voor een digital twin?",
-                a: "Voor de implementatie is technische expertise nodig, die je kunt inhuren of uitbesteden. Voor het dagelijks gebruik zijn moderne digital twin platforms zo ontworpen dat operators en engineers ze kunnen gebruiken zonder diepgaande IT-kennis. Training is wel essentieel."
+                a: "Voor de implementatie is technische expertise nodig, die u kunt inhuren of uitbesteden. Voor het dagelijks gebruik zijn moderne digital twin platforms zo ontworpen dat operators en engineers ze kunnen gebruiken zonder diepgaande IT-kennis. Training is wel essentieel."
               },
               {
                 q: "Kunnen we onze bestaande machines koppelen aan een digital twin?",
@@ -1654,11 +1654,11 @@ export default function DigitalTwinProductiePage() {
               },
               {
                 q: "Wat is het verschil tussen een digital twin en een SCADA/MES systeem?",
-                a: "SCADA en MES zijn operationele systemen voor monitoring en productiebesturing. Een digital twin voegt daar simulatie, voorspelling en 'what-if' analyses aan toe. Je kunt een digital twin bouwen bovenop je bestaande SCADA/MES infrastructuur."
+                a: "SCADA en MES zijn operationele systemen voor monitoring en productiebesturing. Een digital twin voegt daar simulatie, voorspelling en 'what-if' analyses aan toe. U kunt een digital twin bouwen bovenop uw bestaande SCADA/MES infrastructuur."
               },
               {
                 q: "Hoe accuraat moet een digital twin zijn?",
-                a: "Dit hangt af van het gebruik. Voor monitoring is 90-95% accuraatheid voldoende. Voor kritieke simulaties (bijv. safety) streef je naar >98%. Start met een 'good enough' model en verbeter iteratief op basis van vergelijking met werkelijke data."
+                a: "Dit hangt af van het gebruik. Voor monitoring is 90-95% accuraatheid voldoende. Voor kritieke simulaties (bijv. safety) streeft u naar >98%. Start met een 'good enough' model en verbeter iteratief op basis van vergelijking met werkelijke data."
               },
               {
                 q: "Kunnen we klein beginnen met een digital twin?",
@@ -1681,7 +1681,7 @@ export default function DigitalTwinProductiePage() {
         <section className="mb-16">
           <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">
-              Klaar om je Fabriek te Digitaliseren?
+              Klaar om uw Fabriek te Digitaliseren?
             </h2>
             <p className="text-purple-100 mb-6">
               Een digital twin is geen science fiction meer—het is een bewezen technologie
@@ -1733,10 +1733,10 @@ export default function DigitalTwinProductiePage() {
         <section className="mb-12">
           <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Benieuwd wat een Digital Twin voor jouw bedrijf kan betekenen?
+              Benieuwd wat een Digital Twin voor uw bedrijf kan betekenen?
             </h2>
             <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-              Plan een kennismaking om de mogelijkheden voor jouw productieomgeving te bespreken.
+              Plan een kennismaking om de mogelijkheden voor uw productieomgeving te bespreken.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

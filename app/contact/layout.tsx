@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact | Proces360 - Neem Contact Op',
-  description: 'Neem contact op met Rob Derks van Proces360 voor vragen over procesoptimalisatie, OEE-verbetering, cobot integratie of een 360Scan van jouw productie.',
+  description: 'Neem contact op met Rob Derks van Proces360 voor vragen over procesoptimalisatie, OEE-verbetering, cobot integratie of een 360Scan van uw productie.',
   keywords: [
     'contact proces360',
     'procesoptimalisatie contact',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Contact | Proces360',
-    description: 'Neem contact op voor een 360Scan van jouw productie.',
+    description: 'Neem contact op voor een 360Scan van uw productie.',
     url: 'https://proces360.com/contact',
     siteName: 'Proces360',
     locale: 'nl_NL',
