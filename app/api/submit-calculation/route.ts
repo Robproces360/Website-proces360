@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 const FORMSPREE_IDS: Record<string, string> = {
   'OEE Calculator': 'xpqwawzl',
   'Robot ROI Calculator': 'xkogwgnv',
+  'Productie Profit Scan': 'xpqwawzl',
 };
 
 // Allowed calculator types

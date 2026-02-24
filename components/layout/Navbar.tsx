@@ -261,6 +261,23 @@ export default function Navbar() {
                 </div>
               </Link>
               <Link
+                href="/tools/productie-profit-scan"
+                onClick={() => setToolsOpen(false)}
+                className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/5 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-1.5 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
+                    <BarChart3 className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-white text-sm group-hover:text-primary-500 transition-colors">
+                      Productie Profit Scan
+                    </div>
+                    <div className="text-xs text-gray-500">Hoeveel winst laat u liggen?</div>
+                  </div>
+                </div>
+              </Link>
+              <Link
                 href="/tools/automatisering-scan"
                 onClick={() => setToolsOpen(false)}
                 className="block px-4 py-3 hover:bg-primary-500/10 transition-all duration-200 border-b border-white/10 group"
@@ -441,6 +458,13 @@ export default function Navbar() {
                     className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
                   >
                     1% OEE Waarde
+                  </Link>
+                  <Link
+                    href="/tools/productie-profit-scan"
+                    onClick={closeMobileMenu}
+                    className="block py-2 px-4 text-text-secondary hover:text-primary-500 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    Productie Profit Scan
                   </Link>
                   <Link
                     href="/tools/automatisering-scan"
